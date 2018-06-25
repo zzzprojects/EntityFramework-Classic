@@ -1,6 +1,6 @@
 # Features
 
-EF Classic has been released on 2018-07-01. The current beta version doesn’t have any new features yet, but we are planning to integrated or support features from all our third parties libraries and more:
+EF Classic has been released on 2018-07-01. The current beta version doesn't have any new features yet, but we are planning to integrated or support features from all our third parties libraries and more:
 - Entity Framework Extensions
 - Entity Framework Plus
 - Entity Framework Dynamic Filters
