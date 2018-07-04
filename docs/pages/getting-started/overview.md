@@ -24,7 +24,7 @@ If you are using an existing config file, you will need to change some reference
 - `PublicKeyToken=b77a5c561934e089` public token to `PublicKeyToken=afc61983f100d280`
 
 ### Before
-```xml
+```csharp
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
   <configSections>
@@ -44,7 +44,7 @@ If you are using an existing config file, you will need to change some reference
 ```
 
 ### After
-```xml
+```csharp
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
   <configSections>
