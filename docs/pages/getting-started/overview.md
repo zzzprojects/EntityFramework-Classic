@@ -70,7 +70,7 @@ Unfortunately, migrations tools for .NET Core is not yet supported by our librar
 
 ## Database First & .NET Core
 
-You can use your Database First Model with your .NET Core project. However, since the `EntityDeploy` is not part of .NET Core, you will need to specify your model name:
+You can use your Database First Model with your .NET Core project. However, since the `EntityDeploy` is not part of .NET Core, you will need to change the [ModelName].edmx `Copy to Output Directory` to `Copy always` or `Copy if newer` and specify your model name:
 
 ```csharp
 EntityFramework.EntityFrameworkManager.UseDatabaseFirst("ModelName.edmx");
