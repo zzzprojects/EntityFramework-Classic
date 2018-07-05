@@ -81,6 +81,7 @@ You must also ensure that you use the model copied to the directory output
 ```csharp
 // BAD
 // <add name="Entities" connectionString="metadata=res://*/Model.csdl|res://*/Model.ssdl|res://*/Model.msl;..." providerName="System.Data.EntityClient" />
+
 // Good
 <add name="Entities" connectionString="metadata=.\Model.csdl|.\Model.ssdl|.\Model.msl;..." providerName="System.Data.EntityClient" />
 ```
