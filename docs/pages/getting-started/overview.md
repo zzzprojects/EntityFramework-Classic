@@ -49,7 +49,7 @@ If you are using an existing config file, you will need to change some reference
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
   <configSections>
-    <section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=7.0.0.0, Culture=neutral, PublicKeyToken=afc61983f100d280" requirePermission="false" />
+    <section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, Z.EntityFramework.Classic, Version=7.0.0.0, Culture=neutral, PublicKeyToken=afc61983f100d280" requirePermission="false" />
   </configSections>
   <entityFramework>
     <providers>
