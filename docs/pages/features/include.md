@@ -31,9 +31,3 @@ ctx.OrderDetails
 		.AlsoInclude(product => product.Supplier)
 	.ToList();
 ```
-
-## Options
-None
-
-## Limitations
-None
