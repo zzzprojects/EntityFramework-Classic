@@ -15,15 +15,6 @@ ctx.OrderDetails
 	.Include(orderDetail => orderDetail.Product)
 		.AlsoInclude(product => product.Category)
 		.AlsoInclude(product => product.Supplier)
-	.Where(orderDetail => orderDetail.Quantity > 1)
-	.ToList();
-	
-ctx.OrderDetails
-	.Where(orderDetail => orderDetail.Quantity > 1)
-	.AsDbQuery()
-	.Include(orderDetail => orderDetail.Product)
-		.AlsoInclude(product => product.Category)
-		.AlsoInclude(product => product.Supplier)
 	.ToList();
 ```
 
