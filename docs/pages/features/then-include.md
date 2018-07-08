@@ -35,4 +35,18 @@ ctx.OrderDetails
 None
 
 ## Limitations
-None
+
+### DbQuery
+Chaining includes only work if the first include call is from a `DbQuery`. If you used some LINQ and the query is currently a `IQueryable`, you can use the method `AsDbQuery` to tell the compiler that’s a `DbQuery`.
+This restriction is currently required to avoid some side impact with queries that are not directly using `DbQuery` class.
+
+```csharp
+ctx.OrderDetails
+	.Where(orderDetail => orderDetail.Quantity > 1)
+	.AsDbQuery()
+	.Include(orderDetail => orderDetail.Product)
+		.ThenInclude(product => product.Category);
+	.Include(orderDetail => orderDetail.Product)
+		.ThenInclude(product => product.Supplier);
+	.ToList();
+```
