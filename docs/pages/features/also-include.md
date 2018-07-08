@@ -27,9 +27,6 @@ ctx.OrderDetails
 	.ToList();
 ```
 
-## Options
-None
-
 ## Limitations
 
 ### DbQuery
