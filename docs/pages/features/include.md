@@ -5,6 +5,8 @@ You can add related objects to the query result by using the `Include` method.
 
 In EF Classic, the `Include` method doesn’t longer return an `IQueryable` but instead an `IncludeDbQuery` that allows you to chain multiples related objects to the query result by using the `AlsoInclude` and `ThenInclude` methods.
 
+You can convert the `IQueryable` to `DbQuery` by using the `AsDbQuery` method.
+
 It’s recommended to create and resolve multiple different queries than trying to include everything in the query.
 
 ### Note
@@ -19,6 +21,14 @@ ctx.Customers
 		.ThenInclude(orderDetail => orderDetail.Product)
 			.AlsoInclude(product => product.Category)
 			.AlsoInclude(product => product.Supplier)
+	.ToList();
+
+ctx.OrderDetails
+	.Where(orderDetail => orderDetail.Quantity > 1)
+	.AsDbQuery()
+	.Include(orderDetail => orderDetail.Product)
+		.AlsoInclude(product => product.Category)
+		.AlsoInclude(product => product.Supplier)
 	.ToList();
 ```
 
