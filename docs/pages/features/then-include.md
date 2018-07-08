@@ -1,5 +1,5 @@
 
-# AlsoInclude Feature
+# ThenInclude Feature
 
 ## Description
 You can chain multiples related objects to the query result by using the `AlsoInclude` and `ThenInclude` methods. The `ThenInclude` method moves the chaining level to the property included. It allows to include related objects from the next level.
@@ -30,9 +30,6 @@ ctx.OrderDetails
 		.ThenInclude(product => product.Supplier);
 	.ToList();
 ```
-
-## Options
-None
 
 ## Limitations
 
