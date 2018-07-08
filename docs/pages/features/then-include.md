@@ -8,7 +8,7 @@ You can chain multiples related objects to the query result by using the `AlsoIn
 
 ### Note
 - If you want to reset the level to the root, use [`Include`](include.md)
-- If you want to include items from the same level, use [`AlsoInclude`](https://github.com/zzzprojects/EntityFramework-Classic/blob/master/docs/pages/features/also-include.md)
+- If you want to include items from the same level, use [`AlsoInclude`](also-include.md)
 
 ## Examples
 ```csharp
