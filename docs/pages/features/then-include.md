@@ -2,7 +2,7 @@
 # AlsoInclude Feature
 
 ## Description
-You can chain multiples related objects to the query result by using the ‘AlsoInclude’ and `ThenInclude` methods. The `ThenInclude` method moves the chaining level to the property included. It allows to include related objects from the next level.
+You can chain multiples related objects to the query result by using the `AlsoInclude` and `ThenInclude` methods. The `ThenInclude` method moves the chaining level to the property included. It allows to include related objects from the next level.
 
 `ThenInclude` is a syntactic sugar method to make it easier and clearer to include multiples related objects.
 
