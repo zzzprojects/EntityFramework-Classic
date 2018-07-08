@@ -21,7 +21,7 @@ Here are some features in EF6 which are not supported in EF Core:
 - Seed data
 - Automatic migration
 
-_Reference: [Entity Framework Tutorial](http://www.entityframeworktutorial.net/efcore/entity-framework-core.aspx#efcore-vs-ef6)_
+_Reference: [Entity Framework Tutorial](http://www.entityframeworktutorial.net/efcore/entity-framework-core.aspx#efcore-vs-ef6){target:_blank}_
 
 ## Limitations
 
