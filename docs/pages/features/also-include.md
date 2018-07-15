@@ -1,9 +1,9 @@
 # AlsoInclude Feature
 
 ## Description
-You can chain multiples related objects to the query result by using the `AlsoInclude` and `ThenInclude` methods. The `AlsoInclude` method doesn't move the chaining level. It allows to include multiple related objects from the same level.
+You can chain multiple related objects to the query result by using the `AlsoInclude` and `ThenInclude` methods. The `AlsoInclude` method doesn't move the chaining level. It allows to include multiple related objects from the same level.
 
-`AlsoInclude` is a syntactic sugar method to make it easier and clearer to include multiples related objects.
+`AlsoInclude` is a syntactic sugar method to make it easier and clearer to include multiple related objects.
 
 ### Note
 - If you want to reset the level to the root, use [`Include`](include.md)
