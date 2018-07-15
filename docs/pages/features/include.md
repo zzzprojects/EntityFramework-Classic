@@ -7,7 +7,7 @@ In EF Classic, the `Include` method doesn't longer return an `IQueryable` but in
 
 You can convert the `IQueryable` to `DbQuery` by using the `AsDbQuery` method.
 
-It's recommended to create and resolve multiple different queries than trying to include everything in the query.
+It's recommended to create and resolve multiple different queries than trying to include everything in one query.
 
 ### Note
 - If you want to include items from the same level, use [`AlsoInclude`](also-include.md)
