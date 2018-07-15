@@ -14,3 +14,9 @@
 ## 2018-07-11
 - Added support to `new Guid("xyz")`. Pull: https://github.com/aspnet/EntityFramework6/pull/402
 - [SqlServer Compact](provider-sqlserver-compact.md)
+
+## 2018-07-13
+- Performance Optimization. A scenario that requires to include thousands of entities related to one entity got the performance improved by more than 10x times.
+
+## 2018-07-15
+- Added support to [Effort (In Memory Provider)](provider-effort-inmemory.md)
