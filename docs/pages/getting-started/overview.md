@@ -11,7 +11,7 @@ Entity Framework Classic is the supported EF6 Fork that's compatible with .NET S
 Only the SQL Server provider is supported currently, but we plan to add providers through the year.
 
 ## Installing
-Download the following NuGet Package:
+Download the [NuGet Package](/download)
 
 ## Config Change
 
