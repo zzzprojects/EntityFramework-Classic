@@ -1,7 +1,8 @@
 # Effort (In Memory) Provider
 
 ## Description
-Effort (**E**ntity **F**ramework **F**ake **O**bjectContext **R**ealization **T**ool) is the official `In Memory` provider for Entity Framework Classic. It allow to create a fake or mock database so you can test your Business Logic Layer (BLL) without worrying about your Data Access Layer (DAL).
+Effort (**E**ntity **F**ramework **F**ake **O**bjectContext **R**ealization **T**ool) is the official `In Memory` provider for Entity Framework Classic. It creates a fake or mock database that allows you to test the Business Logic Layer (BLL) without worrying about your Data Access Layer (DAL).
+
 
 NuGet: https://www.nuget.org/packages/Z.EntityFramework.Classic.Effort
 
