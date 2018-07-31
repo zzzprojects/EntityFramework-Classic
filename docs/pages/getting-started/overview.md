@@ -8,7 +8,7 @@ Entity Framework Classic is the supported EF6 Fork that's compatible with .NET S
 - .NET Standard 2.0 or higher
 
 ## Limitations
-Currently, only the SQL Server provider, SQL Compact, and Effort is supported. However, we plan to add providers throughout the year. 
+Currently, only the SQL Server, SQL Compact, and Effort is supported. However, we plan to add providers throughout the year. 
 
 ## Installing
 Download the [NuGet Package](/download)
