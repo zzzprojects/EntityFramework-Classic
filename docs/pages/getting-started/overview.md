@@ -17,7 +17,7 @@ Download the [NuGet Package](/download)
 
 A new library name, a new assembly name, a new public Token!
 
-If you are using an existing config file, you will need to change some reference:
+If you are using an existing config file, you will need to change some references:
 
 - `EntityFramework` assembly name to `Z.EntityFramework.Classic`
 - `EntityFramework.SqlServer` assembly name to `Z.EntityFramework.Classic.SqlServer`
