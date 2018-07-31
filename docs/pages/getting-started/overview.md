@@ -66,7 +66,7 @@ If you are using an existing config file, you will need to change some reference
 
 ## Code First Migrations & .NET Core
 
-Unfortunately, migrations tools for .NET Core is not yet supported by our library. However, you can create a side project in .NET Framework to generate the migrations.
+Unfortunately, migrations tool for .NET Core is not yet supported by our library. However, you can create a side project in .NET Framework to generate the migrations.
 
 ## Database First & .NET Core
 
