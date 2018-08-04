@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>44277782-3493-47e1-bb3e-33386f0e40e6</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>FunctionalTests.ProviderAgnostic.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)CodeFirst\EntitySplittingTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeFirst\InheritanceScenarioTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeFirst\NameUniquificationTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeFirst\NonPublicPropertyTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Configuration\MySqlConnectionFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Configuration\MySqlHistoryContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Configuration\ProviderAgnosticConfiguration.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\ChangeTrackingProxyTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\ExtraLazyLoadingTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\GetHashCodeTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\HasChangesTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\PluralizationServiceTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\StreamingTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\LinqToEntities\EnumTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\LinqToEntities\FunctionsTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\LinqToEntities\IncludeTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\LinqToEntities\MaterializationTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\LinqToEntities\OrderByLiftingTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\QueryTestHelpers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ExtraLazyLoading\CachingCollectionInitializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ExtraLazyLoading\CollectionExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ExtraLazyLoading\IHasIsLoaded.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ExtraLazyLoading\LazyBlogContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ExtraLazyLoading\QueryableCollection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ExtraLazyLoading\QueryableCollectionInitializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ProviderAgnosticModel\AllTypes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ProviderAgnosticModel\Bug.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ProviderAgnosticModel\City.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ProviderAgnosticModel\CogTag.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ProviderAgnosticModel\Config.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ProviderAgnosticModel\Failure.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ProviderAgnosticModel\Gear.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ProviderAgnosticModel\HeavyWeapon.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ProviderAgnosticModel\MachineConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ProviderAgnosticModel\MilitaryRank.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ProviderAgnosticModel\Owner.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ProviderAgnosticModel\ProviderAgnosticContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ProviderAgnosticModel\ProviderAgnosticContextInitializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ProviderAgnosticModel\Run.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ProviderAgnosticModel\Squad.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ProviderAgnosticModel\StandardWeapon.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ProviderAgnosticModel\Task.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ProviderAgnosticModel\Weapon.cs" />
+  </ItemGroup>
+</Project>

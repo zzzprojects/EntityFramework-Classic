@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>da96e079-575a-407e-a828-adb6c5775ebf</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>VBTests.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)TemplateTests.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)TranslatorTests.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbAdvancedPatterns\AddressMf.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbAdvancedPatterns\AdvancedPatternsModelFirstInitializer.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbAdvancedPatterns\BuildingDetailMf.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbAdvancedPatterns\BuildingMf.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbAdvancedPatterns\CurrentEmployeeMf.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbAdvancedPatterns\EmployeeMf.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbAdvancedPatterns\MailRoomMf.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbAdvancedPatterns\OfficeMf.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbAdvancedPatterns\Partials\AddressMf.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbAdvancedPatterns\Partials\AdvancedPatternsModelFirstContext.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbAdvancedPatterns\Partials\BuildingMf.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbAdvancedPatterns\Partials\CurrentEmployeeMf.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbAdvancedPatterns\Partials\EmployeeMf.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbAdvancedPatterns\Partials\OfficeMf.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbAdvancedPatterns\Partials\PastEmployeeMf.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbAdvancedPatterns\Partials\SiteInfoMf.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbAdvancedPatterns\PastEmployeeMf.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbAdvancedPatterns\SiteInfoMf.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbAdvancedPatterns\VbAdvancedPatterns.Context.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbAdvancedPatterns\VbAdvancedPatterns.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbAdvancedPatterns\WhiteboardMf.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbAdvancedPatterns\WorkOrderMf.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\BackOrderLine2Mm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\BackOrderLineMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\BarcodeDetailMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\BarcodeMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\ComplaintMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\ComputerDetailMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\ComputerMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\ConcurrencyInfoMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\ContactDetailsMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\CustomerInfoMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\DimensionsMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\DiscontinuedProductMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\DriverMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\ExternalTypes\AuditInfoMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\ExternalTypes\CustomerMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\ExternalTypes\LicenseStateMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\ExternalTypes\LoginMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\ExternalTypes\PhoneMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\ExternalTypes\PhoneTypeMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\IncorrectScanMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\LastLoginMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\LicenseMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\MessageMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\OrderLineMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\OrderMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\OrderNoteMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\OrderQualityCheckMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\PageViewMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\PasswordResetMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\ProductDetailMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\ProductMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\ProductPageViewMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\ProductPhotoMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\ProductReviewMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\ProductWebFeatureMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\ResolutionMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\RSATokenMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\SmartCardMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\SupplierInfoMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\SupplierLogoMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\SupplierMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\SuspiciousActivityMm.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\VbMonsterModel.Context.vb" />
+    <Compile Include="$(MSBuildThisFileDirectory)VbMonsterModel\VbMonsterModel.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)VbAdvancedPatterns\VbAdvancedPatterns.Context.tt" />
+    <None Include="$(MSBuildThisFileDirectory)VbAdvancedPatterns\VbAdvancedPatterns.tt" />
+    <None Include="$(MSBuildThisFileDirectory)VbMonsterModel\VbMonsterModel.Context.tt" />
+    <None Include="$(MSBuildThisFileDirectory)VbMonsterModel\VbMonsterModel.tt" />
+  </ItemGroup>
+</Project>

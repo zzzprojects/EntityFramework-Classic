@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>9d5d16eb-dad6-4a09-8985-2c79fcc1d508</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>EntityFramework.SqlServerCompact.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)ADP1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AliasGenerator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CommandTreeUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CommonUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GlobalSuppressions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ParameterHelpers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProviderManifest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RemoteProviderHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlCeFunctions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlCeMigrationSqlGenerator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlCeMultiCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlCeProviderManifest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlCeProviderServices.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlCeTableExistenceChecker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlDdlBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\DmlSqlGenerator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\ISqlFragment.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\JoinSymbol.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\SkipClause.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\SqlBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\SqlGenerator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\SqlSelectStatement.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\SqlStringBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\SqlWriter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\Symbol.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\SymbolPair.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\SymbolTable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\TopClause.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TypeHelpers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TypeSemantics.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\Microsoft.SqlServerCe.Client.Resources.Entity.SqlCeProviderServices.StoreSchemaDefinition.ssdl">
+      <LogicalName>Microsoft.SqlServerCe.Client.Resources.Entity.SqlCeProviderServices.StoreSchemaDefinition.ssdl</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\System.Data.Resources.SqlServerCe.Entity.Legacy.SqlCeProviderServices.StoreSchemaDefinition.ssdl">
+      <LogicalName>System.Data.Resources.SqlServerCe.Entity.Legacy.SqlCeProviderServices.StoreSchemaDefinition.ssdl</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\System.Data.Resources.SqlServerCe.Entity.SqlCeProviderServices.StoreSchemaDefinition.ssdl">
+      <LogicalName>System.Data.Resources.SqlServerCe.Entity.SqlCeProviderServices.StoreSchemaDefinition.ssdl</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\System.Data.Resources.SqlServerCe.Entity.SqlCeProviderServices.StoreSchemaMapping.msl">
+      <LogicalName>System.Data.Resources.SqlServerCe.Entity.SqlCeProviderServices.StoreSchemaMapping.msl</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\System.Data.Resources.SqlServerCe.Entity.SqlCeProviderServices.ProviderManifest.xml">
+      <LogicalName>System.Data.Resources.SqlServerCe.Entity.SqlCeProviderServices.ProviderManifest.xml</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

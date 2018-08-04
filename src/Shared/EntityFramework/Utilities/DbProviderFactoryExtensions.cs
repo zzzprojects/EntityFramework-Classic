@@ -1,0 +1,66 @@
+// Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
+
+using System.Data.SqlClient;
+
+namespace System.Data.Entity.Utilities
+{
+    using System.Data.Common;
+    using System.Data.Entity.Core.Common;
+    using System.Data.Entity.Core.EntityClient;
+    using System.Data.Entity.Core.EntityClient.Internal;
+    using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Infrastructure.DependencyResolution;
+    using System.Data.Entity.Resources;
+    using System.Diagnostics;
+    using System.Linq;
+
+    internal static class DbProviderFactoryExtensions
+    {
+        public static string GetProviderInvariantName(this DbProviderFactory factory)
+        {
+            DebugCheck.NotNull(factory);
+
+            const int invariantNameIndex = 2;
+
+#if NETSTANDARD
+            var dataRows = DbProviderFactoriesCore.GetFactoryClasses().Rows.OfType<DataRow>();
+
+            var row = new ProviderRowFinder().FindRow(
+                        factory.GetType(),
+                        r => DbProviderFactoriesCore.GetFactory(r).GetType() == factory.GetType(),
+                        dataRows);
+#else
+            var dataRows = DbProviderFactories.GetFactoryClasses().Rows.OfType<DataRow>();
+
+            var row = new ProviderRowFinder().FindRow(
+                factory.GetType(),
+                r => DbProviderFactories.GetFactory(r).GetType() == factory.GetType(),
+                dataRows);
+#endif
+
+            if (row == null)
+            {
+                throw new NotSupportedException(Strings.ProviderNameNotFound(factory));
+            }
+
+            return (string)row[invariantNameIndex];
+        }
+
+        internal static DbProviderServices GetProviderServices(this DbProviderFactory factory)
+        {
+            DebugCheck.NotNull(factory);
+
+            // The EntityClient provider invariant name is not normally registered so we can't use
+            // the normal method for looking up this factory.
+            if (factory is EntityProviderFactory)
+            {
+                return EntityProviderServices.Instance;
+            }
+
+            var invariantName = DbConfiguration.DependencyResolver.GetService<IProviderInvariantName>(factory);
+            Debug.Assert(invariantName != null);
+
+            return DbConfiguration.DependencyResolver.GetService<DbProviderServices>(invariantName.Name);
+        }
+    }
+}

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>9c4b0b9a-0964-49e1-9b61-79eec84427ab</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>EntityFramework.SqlServer</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)DbGeographyAdapter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DbGeometryAdapter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DefaultSqlExecutionStrategy.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Expressions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GlobalSuppressions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IDbSpatialValue.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IDbSpatialValueExtensionMethods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ServerType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlAzureExecutionStrategy.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlAzureRetriableExceptionDetector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlDdlBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlFunctions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\BoolWrapper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\DmlFunctionSqlGenerator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\DmlSqlGenerator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\ISqlFragment.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\JoinSymbol.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\OptionalColumn.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\SkipClause.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\Sql8ConformanceChecker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\Sql8ExpressionRewriter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\SqlBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\SqlFunctionCallHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\SqlGenerator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\SqlSelectClauseBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\SqlSelectStatement.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\SqlStringBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\SqlWriter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\Symbol.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\SymbolPair.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\SymbolTable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\SymbolUsageManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlGen\TopClause.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlProviderManifest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlProviderServices.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlProviderUtilities.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlServerMigrationSqlGenerator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlSpatialDataReader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlSpatialFunctions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlSpatialServices.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlTableExistenceChecker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlTypesAssembly.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlTypesAssemblyLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlVersion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlVersionUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\DbExpressionExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\EdmFunctionExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\FuncExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\IDictionaryExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\MetdataItemExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\PrimitiveTypeExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\SqlDataReaderWrapper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\TypeUsageExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\System\Data\SqlClient\System.Data.Resources.SqlClient.SqlProviderServices.ProviderManifest.xml">
+      <LogicalName>System.Data.Resources.SqlClient.SqlProviderServices.ProviderManifest.xml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\System\Data\SqlClient\System.Data.Resources.SqlClient.SqlProviderServices.StoreSchemaDefinition.ssdl">
+      <LogicalName>System.Data.Resources.SqlClient.SqlProviderServices.StoreSchemaDefinition.ssdl</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\System\Data\SqlClient\System.Data.Resources.SqlClient.SqlProviderServices.StoreSchemaDefinitionVersion3.ssdl">
+      <LogicalName>System.Data.Resources.SqlClient.SqlProviderServices.StoreSchemaDefinitionVersion3.ssdl</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\System\Data\SqlClient\System.Data.Resources.SqlClient.SqlProviderServices.StoreSchemaDefinitionVersion3_Sql8.ssdl">
+      <LogicalName>System.Data.Resources.SqlClient.SqlProviderServices.StoreSchemaDefinitionVersion3_Sql8.ssdl</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\System\Data\SqlClient\System.Data.Resources.SqlClient.SqlProviderServices.StoreSchemaDefinition_Sql8.ssdl">
+      <LogicalName>System.Data.Resources.SqlClient.SqlProviderServices.StoreSchemaDefinition_Sql8.ssdl</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\System\Data\SqlClient\System.Data.Resources.SqlClient.SqlProviderServices.StoreSchemaMapping.msl">
+      <LogicalName>System.Data.Resources.SqlClient.SqlProviderServices.StoreSchemaMapping.msl</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\System\Data\SqlClient\System.Data.Resources.SqlClient.SqlProviderServices.StoreSchemaMappingVersion3.msl">
+      <LogicalName>System.Data.Resources.SqlClient.SqlProviderServices.StoreSchemaMappingVersion3.msl</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

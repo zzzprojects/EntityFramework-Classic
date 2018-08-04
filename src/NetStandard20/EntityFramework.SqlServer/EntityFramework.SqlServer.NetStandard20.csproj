@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\..\Key.snk</AssemblyOriginatorKeyFile>
+    <AssemblyName>Z.EntityFramework.Classic.SqlServer</AssemblyName>
+    <RootNamespace>System.Data.Entity.SqlServer</RootNamespace>
+    <DelaySign>false</DelaySign>
+    <Version>7.0.0-beta1</Version>
+    <Authors>Z.EntityFramework.Classic</Authors>
+    <Company>Microsoft Corporation</Company>
+    <Product>Microsoft Entity Framework</Product>
+    <Description>Z.EntityFramework.Classic.dll</Description>
+    <Copyright>© Microsoft Corporation.  All rights reserved.</Copyright>
+    <AssemblyVersion>7.0.0.0</AssemblyVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG;SQLSERVER;ENTITYFRAMEWORK_SQLSERVER;NETSTANDARD;NETSTANDARD2_0</DefineConstants>
+    <DocumentationFile>bin\Debug\netstandard2.0\Z.EntityFramework.Classic.SqlServer.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>TRACE;RELEASE;NETSTANDARD;NETSTANDARD2_0;ENTITYFRAMEWORK_SQLSERVER;RELEASE;NETSTANDARD;NETSTANDARD2_0;RELEASE;NETSTANDARD;NETSTANDARD2_0;RELEASE;NETSTANDARD;SQLSERVER;NETSTANDARD2_0</DefineConstants>
+    <DocumentationFile>bin\Release\netstandard2.0\Z.EntityFramework.Classic.SqlServer.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <Import Project="..\..\Shared\EntityFramework.SqlServer\EntityFramework.SqlServer.Shared.projitems" Label="Shared" />
+
+  <Import Project="..\..\Shared\EntityFramework.Common\EntityFramework.Common.Shared.projitems" Label="Shared" />
+
+  <ItemGroup>
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.5.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EntityFramework\EntityFramework.NetStandard20.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Resources.SqlServer.tt">
+      <Generator></Generator>
+    </None>
+  </ItemGroup>
+
+</Project>

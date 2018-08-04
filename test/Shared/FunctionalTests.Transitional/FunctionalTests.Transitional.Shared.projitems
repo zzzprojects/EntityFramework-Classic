@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>6052d9a0-bfa9-41d4-a3d7-e02b5ab290e0</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>FunctionalTests.Transitional.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)! DON'T ADD TESTS HERE\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)CodeFirst\AdvancedMappingScenarioTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeFirst\AssociationScenarioTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeFirst\AttributeToAnnotationScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeFirst\BasicMappingScenarioTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeFirst\ComplexTypeScenarioTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeFirst\ConfigurationScenarioTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeFirst\ConventionsScenarioTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeFirst\DataAnnotationScenarioTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeFirst\DataServicesTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeFirst\EnumsScenarioTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeFirst\FunctionsScenarioTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeFirst\IndexScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeFirst\InheritanceScenarioTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeFirst\PropertyConfigurationScenarioTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeFirst\SpatialScenarioTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeFirst\TableSplittingTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeFirst\TestHelpers\EndToEndFunctionsTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeFirst\TptMappingTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Design\BasicDesignTimeScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MetadataMapping\EnumOCMappingTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\TestHelpers\InfoContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\TestModel\TestModels.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Standard\Loader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Standard\ModuleInitializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\DbContextTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\AdventureWorksModelBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\AnyValueParameter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\AssemblyResourceLookup.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\CodeFirstScaffoldingContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\CodeFirstScaffoldingContextWithConnection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\CollationAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\CollationCSharpCodeGenerator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\CollationSerializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\ConnectionEventsTracker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\ConstructionStrategies.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\CsdlToClrAssemblyConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\DatabaseTestHelpers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\DbContextExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\DbDatabaseMappingExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\DbDispatchersHelpers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\DefaultFunctionalTestsConnectionFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\DefaultUnitTestsConnectionFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\DynamicAssembly.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\DynamicTypeDescriptor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\ExceptionHelpers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\ExceptionTestExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\ExtendedFactAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\ExtendedSqlAzureExecutionStrategy.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\FakeProviderFactoryResolver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\FakeProviderServicesResolver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\FunctionalTestBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\FunctionalTestsConfiguration.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\GenericConnection.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\GenericProviderFactory`.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\GenericProviderServices.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\HashSetBasedDbSet.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\IndexAnnotationEqualityComparer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\IndexAttributeEqualityComparer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\IOHelpers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\LocalizationTestHelpers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\ModelAssertions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\ModelHelpers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\MutableResolver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\ObservableListSource`.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\ProviderRegistry.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\RegisterMutableResolver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\ResourceUtilities.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\SqlServerMigrationSqlGeneratorWtihCollations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\StringResourceVerifier.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\SuspendableSqlAzureExecutionStrategy.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\TestBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\TestGroup.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\TestLoadedInterceptor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\TypeAssertion`.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ConcurrencyModel\Chassis.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ConcurrencyModel\ConcurrencyModelInitializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ConcurrencyModel\Driver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ConcurrencyModel\Engine.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ConcurrencyModel\EngineSupplier.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ConcurrencyModel\F1Context.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ConcurrencyModel\Gearbox.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ConcurrencyModel\Location.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ConcurrencyModel\Sponsor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ConcurrencyModel\SponsorDetails.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ConcurrencyModel\Team.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ConcurrencyModel\TestDriver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ConcurrencyModel\TitleSponsor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SimpleModel\Blog.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SimpleModel\Category.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SimpleModel\EmptyContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SimpleModel\ExtraEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SimpleModel\FeaturedProduct.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SimpleModel\FuncyContexts.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SimpleModel\LiveWriterContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SimpleModel\Login.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SimpleModel\Product.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SimpleModel\ProductBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SimpleModel\SimpleModelContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SimpleModel\SimpleModelContextLegacy.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SimpleModel\SimpleModelContextWithNoData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SimpleModel\SimpleModelInitializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SimpleModel\SimpleModelLegacyInitializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\AbstractType1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\AbstractType1_1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\Address.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\AddressType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\BillOfMaterials.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\ColoredProduct.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\ConcreteType1_1_1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\ConcreteType1_2.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\Contact.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\ContactCreditCard.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\ContactType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\CountryRegion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\CountryRegionCurrency.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\CreditCard.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\Culture.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\Currency.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\CurrencyRate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\Customer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\CustomerAddress.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\CustomerDiscount.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\Department.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\DiscontinuedProduct.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\Document.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\Employee.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\EmployeeAddress.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\EmployeeDepartmentHistory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\EmployeePayHistory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\FixupCollection'.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\Illustration.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\Individual.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\JobCandidate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\Location.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\Product.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\ProductCategory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\ProductCostHistory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\ProductDescription.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\ProductDocument.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\ProductInventory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\ProductListPriceHistory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\ProductModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\ProductModelIllustration.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\ProductModelProductDescriptionCulture.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\ProductPhoto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\ProductProductPhoto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\ProductReview.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\ProductSubcategory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\ProductVendor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\PurchaseOrderDetail.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\PurchaseOrderHeader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\RowDetails.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\SalesOrderDetail.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\SalesOrderHeader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\SalesPerson.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\SalesPersonQuotaHistory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\SalesReason.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\SalesTaxRate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\SalesTerritory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\SalesTerritoryHistory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\ScrapReason.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\Shift.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\ShipMethod.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\ShoppingCartItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\SpecialOffer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\SpecialOfferProduct.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\StateProvince.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\Store.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\StoreContact.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\StyledProduct.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\TransactionHistory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\TransactionHistoryArchive.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\UnitMeasure.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\User.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\Vendor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\VendorAddress.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\VendorContact.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\WorkOrder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\WorkOrderRouting.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MetadataMapping\Enum.csdl" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MetadataMapping\Enum.msl" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MetadataMapping\Enum.ssdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Standard\x64\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Standard\x86\" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>eced960d-3135-4671-bcdb-409b844b308e</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>EntityFramework.Common.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)AssemblyExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ByteExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Check.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DatabaseName.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DebugCheck.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MemberInfoExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PropertyInfoExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StringExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TaskExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TypeExtensions.cs" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,583 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>ecb8c563-b7be-43c4-a268-526cb5b9f41e</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>FunctionalTests.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)CodeFirst\CodePlex2169.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeFirst\ConfigurationScenarioTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeFirst\FunctionsScenarioTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeFirst\ModificationFunctionsEndToEndTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeFirst\PropertyConfigurationScenarioTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeFirst\QueryCachingTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeFirst\SpecialCharacterTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)EntityClient\AsyncScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)EntityClient\DependencyResolverTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interception\BlogContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interception\BlogContextNoInit.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interception\CommandInterceptionTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interception\CommandTreeInterceptionTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interception\CommitFailureTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interception\DatabaseLogFormatterTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interception\DatabaseLoggerTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Metadata\MetadataAnnotationTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Metadata\MetadataCachingTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Metadata\MetadataCollectionTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Metadata\MetadataEnumTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Metadata\MetadataFunctionsTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Metadata\MetadataSpatialTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MetaTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\AddColumnScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\AddForeignKeyScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\AddPrimaryKeyScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\AlterColumnScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\AlterTableAnnotationsScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\AutoAndGenerateScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\AutoAndGenerateTestCase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\BasicMigrationScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\CreateIndexScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\CreateStoredProcedureScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\CreateTableScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\CrossDatabaseScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\CustomHistoryScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\CustomOperationScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\CustomSqlScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\DatabaseGeneratedScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\DbPermissionsScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\DefaultValueScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\DropColumnScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\DropForeignKeyScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\DropIndexScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\InitializerScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\LoggingScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\MappingScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\ModificationFunctionsScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\MultiTenantScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\NoTestInfraScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\SchemaScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\ScriptingScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\SeedingScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\SpatialScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\TestHelpers\DatabaseProviderFixture.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\TestHelpers\DbMigratorExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\TestHelpers\DbProviders.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\TestHelpers\DbTestCase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\TestHelpers\MigrationCompiler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\TestHelpers\MigrationMetadataHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\TestHelpers\MigrationsTheoryAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\TestHelpers\MigrationsTheoryCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\TestHelpers\TestDatabase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\TestHelpers\VariantAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\TestModel\CommentOperation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\TestModel\CustomOperationExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\TestModel\CustomOperationMigration.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\TestModel\CustomSqlGenerator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\TestModel\TestMigration.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\ToolingScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\TransactionScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Migrations\UpgradeScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Objects\AttributeBasedOCLoading.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Objects\LazyLoadingTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Objects\SerializationScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Objects\TransactionsTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PlanCompiler\AnonymousTypeTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PlanCompiler\LimitExpressionTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PlanCompiler\LinqGroupByTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\ComplexTypeTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\ConcurrencyTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\ConnectionTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\DatabaseInitializationTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\DatabaseTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\DatabindingTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\DbConfigurationTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\DbConnectionFactoryTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\DbContextTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\DbContextTestsForSqlCe.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\DbEntityEntryTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\DbFunctionScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\DbModelTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\DbPropertyValuesTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\DbSetTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\DbSqlQueryTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\DeadlockTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\DefaultDbModelStoreTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\DetectChangesTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\DisposeTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\enumtests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\FindTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\IncludeTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\InvalidTypeTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\LinqTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\ModelNamespaceAndContainerTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\MultiThreadingTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\NamespaceAndNestingTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\NoTrackingTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\PartialTrustTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\PropertyApiTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\ScaffoldingScenarioTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\SimpleScenarios.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\SimpleScenariosForLocalDb.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\SimpleScenariosForSqlCe.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\SimpleScenariosForSqlCe35.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\SpatialTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\TemplateBasedModelnitializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\TemplateTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\TimeoutTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\TransactionTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\ValidationTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProductivityApi\WriteEdmxTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\ApplyOpRulesTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\Bug2612.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\Bug952621.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\ComparisonTestst.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\CompiledQuery\CompiledQueryTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\ConditionalTranslatorTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\FilterOpRulesTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\FunctionTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\GroupAggregateTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\JoinEliminationTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\LinqToEntities\ContainsTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\LinqToEntities\ConvertEliminationTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\LinqToEntities\DefaultIfEmptyTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\LinqToEntities\EnumTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\LinqToEntities\ExpressionTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\LinqToEntities\FuncletizationTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\LinqToEntities\FunctionsTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\LinqToEntities\GroupByOptimizationTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\LinqToEntities\HasFlagTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\LinqToEntities\IncludeTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\LinqToEntities\JoinTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\LinqToEntities\MaterializationTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\LinqToEntities\OrderByLiftingTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\LinqToEntities\OrderByTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\LinqToEntities\ProjectionTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\LinqToEntities\SqlCeFunctionsTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\LinqToEntities\StringConcatTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\LinqToEntities\ToStringTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\ModelDefinedFunctionTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\NullSemanticsTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\PredicateScalarizationTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\ProductModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\QueryEnumTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\QueryTestHelpers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\SpatialTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\SqlCeCanonicalFunctionsTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\SqlGeneratorTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\StoredProcedures\IceAndFireModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Query\StoredProcedures\StoredProceduresTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlClient\DatabaseExistsInInitializerTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlClient\DatabaseExistsTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlClient\SqlProviderServicesTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlServerCompact\CodePlex2197.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SqlServerCompact\SqlGeneratorTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestDoubles\InMemoryAsyncQueryable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestDoubles\InMemoryAsyncQueryProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestDoubles\InMemoryDbAsyncEnumerator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestDoubles\InMemoryDbSet.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestDoubles\InMemoryDbSetTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestDoubles\InMemoryNonGenericDbSet.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestDoubles\InMemoryNonGenericDbSetTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestDoubles\InMemoryNonGenericSqlQuery.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestDoubles\InMemorySqlQuery.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestDoubles\MockableDbSetTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestDoubles\MockableNonGenericDbSetTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestDoubles\UnimplementedDbSetTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestDoubles\UnimplementedNonGenericDbSetTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\EntityTypeConfigurationExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\EnumeratorExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\FullTrustAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\IEnumerableExtentions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\IUseDefaultExecutionStrategy.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\ListExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\PartialTrustClassCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\PartialTrustCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\PartialTrustFactAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\PartialTrustFixtureAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\PartialTrustSandbox.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\StringExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestHelpers\UseDefaultExecutionStrategyAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\AdvancedPatternsModel\Address.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\AdvancedPatternsModel\AdvancedPatternsEmployeeContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\AdvancedPatternsModel\AdvancedPatternsInitializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\AdvancedPatternsModel\AdvancedPatternsMasterContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\AdvancedPatternsModel\AdvancedPatternsModelFirstInitializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\AdvancedPatternsModel\Building.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\AdvancedPatternsModel\BuildingDetail.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\AdvancedPatternsModel\CurrentEmployee.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\AdvancedPatternsModel\Employee.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\AdvancedPatternsModel\MailRoom.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\AdvancedPatternsModel\Office.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\AdvancedPatternsModel\PastEmployee.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\AdvancedPatternsModel\SiteInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\AdvancedPatternsModel\UnMappedOffice.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\AdvancedPatternsModel\UnMappedOfficeBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\AdvancedPatternsModel\UnMappedPersonBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\AdvancedPatternsModel\Whiteboard.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\AdvancedPatternsModel\WorkOrder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\AllTypeKeysModel\AllTypeKeysContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\AllTypeKeysModel\AllTypeKeysModelInitializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\AllTypeKeysModel\BoolKeyEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\AllTypeKeysModel\ByteKeyEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\AllTypeKeysModel\CompositeKeyEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\AllTypeKeysModel\CompositeKeyEntityWithOrderingAnnotations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\AllTypeKeysModel\DateTimeKeyEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\AllTypeKeysModel\DateTimeOffsetKeyEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\AllTypeKeysModel\DecimalKeyEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\AllTypeKeysModel\DoubleKeyEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\AllTypeKeysModel\FloatKeyEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\AllTypeKeysModel\GuidKeyEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\AllTypeKeysModel\LongKeyEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\AllTypeKeysModel\ShortKeyEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\AllTypeKeysModel\TimeSpanKeyEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ArubaCeModel\ArubaAllCeTypes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ArubaCeModel\ArubaCeContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ArubaCeModel\ArubaCeInitializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ArubaModel\ArubaAllTypes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ArubaModel\ArubaBaseline.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ArubaModel\ArubaBug.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ArubaModel\ArubaConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ArubaModel\ArubaContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ArubaModel\ArubaDatabaseSeeder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ArubaModel\ArubaFailure.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ArubaModel\ArubaInitializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ArubaModel\ArubaMachineConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ArubaModel\ArubaOwner.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ArubaModel\ArubaPerson.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ArubaModel\ArubaRun.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ArubaModel\ArubaStoredProceduresContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ArubaModel\ArubaStoredProceduresInitializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ArubaModel\ArubaTask.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ArubaModel\ArubaTaskInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\ArubaModel\ArubaTestFailure.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\FantasyModel\Attributes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\FantasyModel\Building.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\FantasyModel\City.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\FantasyModel\Creature.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\FantasyModel\DamageType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\FantasyModel\FantasyContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\FantasyModel\FantasyDatabaseSeeder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\FantasyModel\FantasyInitializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\FantasyModel\FantasyStoredProceduresContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\FantasyModel\FantasyStoredProceduresInitializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\FantasyModel\Landmark.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\FantasyModel\Npc.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\FantasyModel\Perk.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\FantasyModel\Province.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\FantasyModel\Race.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\FantasyModel\Skill.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\FantasyModel\Spell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\FantasyModel\Tower.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\GearsOfWarModel\City.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\GearsOfWarModel\CogTag.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\GearsOfWarModel\Gear.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\GearsOfWarModel\GearsOfWarContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\GearsOfWarModel\GearsOfWarDatabaseSeeder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\GearsOfWarModel\GearsOfWarInitializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\GearsOfWarModel\GearsOfWarStoredProceduresContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\GearsOfWarModel\GearsOfWarStoredProceduresInitializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\GearsOfWarModel\HeavyWeapon.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\GearsOfWarModel\MilitaryRank.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\GearsOfWarModel\Squad.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\GearsOfWarModel\StandardWeapon.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\GearsOfWarModel\Weapon.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\InvalidMappingModel\InvalidMappingContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\InvalidTypeModel\Person.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\InvalidTypeModel\PersonContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\LinqModels\BaseTypeForLinq.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\LinqModels\BaseTypeForLinqComparer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\LinqModels\CustomerForLinq.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\LinqModels\FeaturedProductForLinq.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\LinqModels\NumberForLinq.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\LinqModels\OrderForLinq.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\LinqModels\ProductForLinq.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\LinqModels\SimpleModelForLinq.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\LinqModels\SimpleModelForLinqInitializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SimpleMigrationsModel\201112202056275_InitialCreate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SimpleMigrationsModel\201112202056275_InitialCreate.designer.cs">
+      <DependentUpon>201112202056275_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SimpleMigrationsModel\201112202056573_AddUrlToBlog.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SimpleMigrationsModel\201112202056573_AddUrlToBlog.designer.cs">
+      <DependentUpon>201112202056573_AddUrlToBlog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SimpleMigrationsModel\Blog.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SimpleMigrationsModel\MigrateInitializerConfiguration.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SimpleMigrationsModel\MigrateInitializerContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SimpleModel\BadMappingModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SimpleModel\CeLoginsContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SimpleModel\DisabledInitializerContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SimpleModel\EntityConnectionForSimpleModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SimpleModel\LocalDbLoginsContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SimpleModel\LoginsContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SimpleModel\ModelWithWideProperties.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SimpleModel\SimpleLocalDbModelContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SimpleModel\SimpleLocalDbModelContextWithNoData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SimpleModel\SimpleLocalDbModelInitializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SpatialTvfsModel\SpatialNorthwindContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\SpatialTvfsModel\SpatialNorthwindInitializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\AWBuildVersion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\ConcreteType1_3.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\DatabaseLog.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\StoreModel\ErrorLog.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsAdvancedPatterns\AddressMf.cs">
+      <DependentUpon>CsAdvancedPatterns.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsAdvancedPatterns\BuildingDetailMf.cs">
+      <DependentUpon>CsAdvancedPatterns.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsAdvancedPatterns\BuildingMf.cs">
+      <DependentUpon>CsAdvancedPatterns.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsAdvancedPatterns\CsAdvancedPatterns.Context.cs">
+      <DependentUpon>CsAdvancedPatterns.Context.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsAdvancedPatterns\CsAdvancedPatterns.cs">
+      <DependentUpon>CsAdvancedPatterns.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsAdvancedPatterns\CurrentEmployeeMf.cs">
+      <DependentUpon>CsAdvancedPatterns.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsAdvancedPatterns\EmployeeMf.cs">
+      <DependentUpon>CsAdvancedPatterns.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsAdvancedPatterns\MailRoomMf.cs">
+      <DependentUpon>CsAdvancedPatterns.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsAdvancedPatterns\OfficeMf.cs">
+      <DependentUpon>CsAdvancedPatterns.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsAdvancedPatterns\Partials\AddressMf.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsAdvancedPatterns\Partials\AdvancedPatternsModelFirstContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsAdvancedPatterns\Partials\BuildingMf.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsAdvancedPatterns\Partials\CurrentEmployeeMf.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsAdvancedPatterns\Partials\EmployeeMf.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsAdvancedPatterns\Partials\OfficeMf.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsAdvancedPatterns\Partials\PastEmployeeMf.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsAdvancedPatterns\Partials\SiteInfoMf.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsAdvancedPatterns\PastEmployeeMf.cs">
+      <DependentUpon>CsAdvancedPatterns.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsAdvancedPatterns\SiteInfoMf.cs">
+      <DependentUpon>CsAdvancedPatterns.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsAdvancedPatterns\WhiteboardMf.cs">
+      <DependentUpon>CsAdvancedPatterns.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsAdvancedPatterns\WorkOrderMf.cs">
+      <DependentUpon>CsAdvancedPatterns.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\BackOrderLine2Mm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\BackOrderLineMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\BarcodeDetailMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\BarcodeMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\ComplaintMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\ComputerDetailMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\ComputerMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\ConcurrencyInfoMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\ContactDetailsMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\CsMonsterModel.Context.cs">
+      <DependentUpon>CsMonsterModel.Context.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\CsMonsterModel.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\CustomerInfoMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\DimensionsMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\DiscontinuedProductMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\DriverMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\ExternalTypes\AuditInfoMm.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\ExternalTypes\CustomerMm.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\ExternalTypes\LicenseStateMm.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\ExternalTypes\LoginMm.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\ExternalTypes\PhoneMm.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\ExternalTypes\PhoneTypeMm.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\IncorrectScanMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\LastLoginMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\LicenseMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\MessageMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\OrderLineMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\OrderMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\OrderNoteMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\OrderQualityCheckMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\PageViewMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\PasswordResetMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\ProductDetailMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\ProductMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\ProductPageViewMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\ProductPhotoMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\ProductReviewMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\ProductWebFeatureMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\ResolutionMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\RSATokenMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\SmartCardMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\SupplierInfoMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\SupplierLogoMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\SupplierMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\SuspiciousActivityMm.cs">
+      <DependentUpon>CsMonsterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\Schemas\AdvancedPatterns.Designer.cs">
+      <DependentUpon>AdvancedPatterns.edmx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\UnSpecifiedOrderingModel\CompositeKeyEntityWithNoOrdering.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TestModels\UnSpecifiedOrderingModel\NoOrderingContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Update\GuidIdentityColumnUpdateTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Update\TruncationTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Update\UpdateTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewGeneration\PregenContextEdmxViews.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewGeneration\PregenContextViews.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewGeneration\PregeneratedViewsTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewGeneration\PregenObjectContextViews.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewGeneration\ViewGenerationTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WrappingProvider\LogItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WrappingProvider\WrappingAdoNetProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WrappingProvider\WrappingCommand.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)WrappingProvider\WrappingCommandDefinition.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WrappingProvider\WrappingConnection.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)WrappingProvider\WrappingEfProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WrappingProvider\WrappingProviderFactoryResolver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WrappingProvider\WrappingProviderInvariantName.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WrappingProvider\WrappingProviderTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WrappingProvider\WrappingSqlGenerator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WrappingProvider\WrappingTransaction.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)_Community\GuidTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Metadata\MetadataCachingModel.csdl" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Metadata\MetadataCachingModel.msl" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Metadata\MetadataCachingModel.ssdl" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Objects\TransactionsModel.csdl" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Objects\TransactionsModel.msl" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Objects\TransactionsModel.ssdl" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Query\CompiledQuery\CompiledQueryModel.csdl" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Query\CompiledQuery\CompiledQueryModel.msl" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Query\CompiledQuery\CompiledQueryModel.ssdl" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Query\StoredProcedures\IceAndFireModel.csdl" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Query\StoredProcedures\IceAndFireModel.msl" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Query\StoredProcedures\IceAndFireModel.ssdl" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)TestModels\SpatialTvfsModel\226644SpatialModel.csdl" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)TestModels\SpatialTvfsModel\226644SpatialModel.msl" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)TestModels\SpatialTvfsModel\226644SpatialModel.ssdl" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\Schemas\AdvancedPatterns.edmx">
+      <LastGenOutput>AdvancedPatterns.Designer.cs</LastGenOutput>
+      <Generator>EntityModelCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\Schemas\MonsterModel.csdl" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\Schemas\MonsterModel.msl" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\Schemas\MonsterModel.ssdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsAdvancedPatterns\CsAdvancedPatterns.Context.tt">
+      <CustomToolNamespace>FunctionalTests.ProductivityApi.TemplateModels.CsAdvancedPatterns</CustomToolNamespace>
+      <LastGenOutput>CsAdvancedPatterns.Context.cs</LastGenOutput>
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsAdvancedPatterns\CsAdvancedPatterns.tt">
+      <CustomToolNamespace>FunctionalTests.ProductivityApi.TemplateModels.CsAdvancedPatterns</CustomToolNamespace>
+      <LastGenOutput>CsAdvancedPatterns.cs</LastGenOutput>
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\CsMonsterModel.Context.tt">
+      <CustomToolNamespace>FunctionalTests.ProductivityApi.TemplateModels.CsMonsterModel</CustomToolNamespace>
+      <LastGenOutput>CsMonsterModel.Context.cs</LastGenOutput>
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\CsMonsterModel\CsMonsterModel.tt">
+      <CustomToolNamespace>FunctionalTests.ProductivityApi.TemplateModels.CsMonsterModel</CustomToolNamespace>
+      <LastGenOutput>CsMonsterModel.cs</LastGenOutput>
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\ProcessCsTemplate.bat" />
+    <None Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\ProcessTemplates.bat" />
+    <None Include="$(MSBuildThisFileDirectory)TestModels\TemplateModels\ProcessVbTemplate.bat" />
+  </ItemGroup>
+</Project>

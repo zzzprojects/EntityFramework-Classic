@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>7af403f9-7b98-45b0-9055-ff0addac95b0</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>EntityFramework.Community.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)EntityFrameworkClassicExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)EntityFrameworkManager\EntityFrameworkManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\IQueryable`\GetObjectQuery`.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\IQueryable`\AsDbQuery.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Include\AlsoInclude\IIncludeDbQuery`2.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Include\IIncludeDbQuery`2.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Include\IncludeDbQuery`2.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Include\ThenInclude\IIncludeDbQuery`2.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QueryDeferred\Extensions\IQueryable`\DeferredAggregate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QueryDeferred\Extensions\IQueryable`\DeferredAll.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QueryDeferred\Extensions\IQueryable`\DeferredAny.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QueryDeferred\Extensions\IQueryable`\DeferredAverage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QueryDeferred\Extensions\IQueryable`\DeferredContains.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QueryDeferred\Extensions\IQueryable`\DeferredCount.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QueryDeferred\Extensions\IQueryable`\DeferredElementAt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QueryDeferred\Extensions\IQueryable`\DeferredElementAtOrDefault.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QueryDeferred\Extensions\IQueryable`\DeferredFirst.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QueryDeferred\Extensions\IQueryable`\DeferredFirstOrDefault.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QueryDeferred\Extensions\IQueryable`\DeferredLast.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QueryDeferred\Extensions\IQueryable`\DeferredLastOrDefault.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QueryDeferred\Extensions\IQueryable`\DeferredLongCount.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QueryDeferred\Extensions\IQueryable`\DeferredMax.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QueryDeferred\Extensions\IQueryable`\DeferredMin.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QueryDeferred\Extensions\IQueryable`\DeferredSequenceEqual.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QueryDeferred\Extensions\IQueryable`\DeferredSingle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QueryDeferred\Extensions\IQueryable`\DeferredSingleOrDefault.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QueryDeferred\Extensions\IQueryable`\DeferredSum.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QueryDeferred\QueryDeferred.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QueryDeferred\QueryDeferredExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QueryResultFilter\FilterRemovedEntityWrapper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QueryResultFilter\QueryResultFilter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QueryResultFilter\QueryResultFilterManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QueryResultFilter\QueryResultFilter`.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UseFiddleSqlCompact\UseFiddleSqlCompact.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UseDatabaseFirst\EntityDesignerUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UseDatabaseFirst\StorageMslConstructs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UseDatabaseFirst\UseDatabaseFirstManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UseDatabaseFirst\XmlConstants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)_Internal\ExtensionUtils.cs" />
+  </ItemGroup>
+</Project>
