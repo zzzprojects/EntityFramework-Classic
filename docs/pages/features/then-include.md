@@ -33,11 +33,13 @@ ctx.Customers
 ```csharp
 ctx.OrderDetails
 	.Include(orderDetail => orderDetail.Product)
-		.ThenInclude(product => product.Category);
+		.ThenInclude(product => product.Category)
 	.Include(orderDetail => orderDetail.Product)
-		.ThenInclude(product => product.Supplier);
+		.ThenInclude(product => product.Supplier)
 	.ToList();
 ```
+
+[Try it](https://dotnetfiddle.net/DzQzed)
 
 ## Limitations
 
