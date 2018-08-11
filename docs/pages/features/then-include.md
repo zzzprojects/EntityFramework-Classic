@@ -42,8 +42,8 @@ ctx.OrderDetails
 	.Where(orderDetail => orderDetail.Quantity > 1)
 	.AsDbQuery()
 	.Include(orderDetail => orderDetail.Product)
-		.ThenInclude(product => product.Category);
+		.ThenInclude(product => product.Category)
 	.Include(orderDetail => orderDetail.Product)
-		.ThenInclude(product => product.Supplier);
+		.ThenInclude(product => product.Supplier)
 	.ToList();
 ```
