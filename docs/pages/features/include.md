@@ -35,3 +35,5 @@ ctx.OrderDetails
 		.AlsoInclude(product => product.Supplier)
 	.ToList();
 ```
+
+[Try it](https://dotnetfiddle.net/33OIDZ)
