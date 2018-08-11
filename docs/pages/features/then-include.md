@@ -19,6 +19,8 @@ ctx.Customers
 	.ToList();
 ```
 
+[Try it](https://dotnetfiddle.net/o3xWDl)
+
 ```csharp
 ctx.Customers
 	.Include(customer => customer.Orders)
