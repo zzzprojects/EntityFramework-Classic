@@ -24,9 +24,11 @@ ctx.Customers
 ```csharp
 ctx.Customers
 	.Include(customer => customer.Orders)
-		.ThenInclude(order => order.OrderDetails.Select(orderDetail => orderDetail.Product);
+		.ThenInclude(order => order.OrderDetails.Select(orderDetail => orderDetail.Product))
 	.ToList();
 ```
+
+[Try it](https://dotnetfiddle.net/0VC0W1)
 
 ```csharp
 ctx.OrderDetails
