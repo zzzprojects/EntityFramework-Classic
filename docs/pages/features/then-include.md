@@ -47,3 +47,5 @@ ctx.OrderDetails
 		.ThenInclude(product => product.Supplier)
 	.ToList();
 ```
+
+[Try it](https://dotnetfiddle.net/CFPbYm)
