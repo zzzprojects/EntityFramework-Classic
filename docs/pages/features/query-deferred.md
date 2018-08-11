@@ -56,8 +56,6 @@ var count = ctx.Customers.DeferredCount().FromCache();
 
 ```
 
-
-
 ## EF+ Query Deferred
 
 Defer the execution of a query which is normally executed to allow some features like Query Cache and Query Future.
@@ -113,28 +111,3 @@ EF Query Deferred brings advantages to other third party features:
  - Allows to use Immediate Method with EF+ Query Cache.
  - Allows to use Immediate Method with EF+ Query Future.
  - Allows to use Immediate Method with YOUR own features.
-
-## Behind the code
-
-When a deferred method is used, the query expression is created exactly like a non-deferred method but instead of invoking the execute method from the query provider, a new instance of a class QueryDeferred<TResult> is created using the query and the expression.
-
-The QueryDeferred instance has methods to either execute the expression from the query provider or let a third party library use the object query.
-
-## Limitations
-
-None.
-
-## Requirements
-
- - **EF+ Query Deferred:** Full version or Standalone version
- - **Database Provider:** All supported
- - **Entity Framework Version:** EF5, EF6, EF Core
- - **Minimum Framework Version:** .NET Framework 4
-
-## Conclusion
-
-As we saw, EF+ **Query Deferred** brings considerable advantages to other libraries by letting them use immediate methods without removing any of their features.
-
-Need help getting started? [info@zzzprojects.com](mailto:info@zzzprojects.com)
-
-We welcome all comments, ideas and suggestions to improve our library.
