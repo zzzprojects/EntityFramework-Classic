@@ -18,6 +18,8 @@ ctx.OrderDetails
 	.ToList();
 ```
 
+[Try it](https://dotnetfiddle.net/tuONVZ)
+
 ## Limitations
 
 ### DbQuery
