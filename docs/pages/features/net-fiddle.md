@@ -28,7 +28,6 @@ using (var context = new EntityContext())
 [Try it](https://dotnetfiddle.net/aw6MDk)
 
 ## Effort Example
-```csharp
-TBD
-```
+ .NET Fiddle doesn't support Effort yet.
 
+However, this feature is under development by our company. We expect to be able to release a new version of .NET Fiddle that allows creating examples with Effort in September.
