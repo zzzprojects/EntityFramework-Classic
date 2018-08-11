@@ -5,6 +5,8 @@ You can use SqlServer Compact by adding a reference to the provider package.
 
 NuGet: https://www.nuget.org/packages/Z.EntityFramework.Classic.SqlServerCompact/
 
+[Try it](https://dotnetfiddle.net/aw6MDk)
+
 ## Limitations
 
 ### NET Standard
