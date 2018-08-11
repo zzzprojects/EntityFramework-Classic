@@ -24,6 +24,8 @@ ctx.Customers
 	.ToList();
 ```
 
+[Try it](https://dotnetfiddle.net/MkpoSo)
+
 ```csharp
 ctx.OrderDetails
 	.Where(orderDetail => orderDetail.Quantity > 1)
