@@ -12,10 +12,24 @@ However, this feature is under development by our company. We expect to be able 
 
 ## SQL Server Compact Example
 ```csharp
-TBD
+// Custom configuration specific for .NET Fiddle
+Z.EntityFramework.Classic.EntityFrameworkManager.UseFiddleSqlCompact(System.Data.Entity.SqlServerCompact.SqlCeProviderServices.Instance, System.Data.SqlServerCe.SqlCeProviderFactory.Instance);
+
+GenerateData();
+
+// Update: UPDATE all rows from the database using a LINQ Query without loading entities in the context.
+using (var context = new EntityContext())
+{
+	var list = context.Customers.ToList();
+	
+	FiddleHelper.WriteTable("Customers", list);			
+}
 ```
+
+[Try it](https://dotnetfiddle.net/aw6MDk)
 
 ## Effort Example
 ```csharp
 TBD
 ```
+
