@@ -3,6 +3,9 @@
 ## 2018-07-21
 - [.NET Fiddle Support](net-fiddle.md)
 
+## 2018-07-14
+- [Query Deferred](query-deferred.md)
+
 ## 2018-07-04
 - [.NET Core Support](net-core.md)
 
