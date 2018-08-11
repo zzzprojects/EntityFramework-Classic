@@ -17,12 +17,16 @@ ctx.Customers
 		.ThenInclude(order => order.OrderDetails)
 		.ThenInclude(orderDetail => orderDetail.Product)
 	.ToList();
-	
+```
+
+```csharp
 ctx.Customers
 	.Include(customer => customer.Orders)
 		.ThenInclude(order => order.OrderDetails.Select(orderDetail => orderDetail.Product);
 	.ToList();
-	
+```
+
+```csharp
 ctx.OrderDetails
 	.Include(orderDetail => orderDetail.Product)
 		.ThenInclude(product => product.Category);
