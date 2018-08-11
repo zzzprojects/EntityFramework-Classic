@@ -17,7 +17,6 @@ Z.EntityFramework.Classic.EntityFrameworkManager.UseFiddleSqlCompact(System.Data
 
 GenerateData();
 
-// Update: UPDATE all rows from the database using a LINQ Query without loading entities in the context.
 using (var context = new EntityContext())
 {
 	var list = context.Customers.ToList();
