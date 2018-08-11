@@ -22,7 +22,9 @@ ctx.Customers
 			.AlsoInclude(product => product.Category)
 			.AlsoInclude(product => product.Supplier)
 	.ToList();
+```
 
+```csharp
 ctx.OrderDetails
 	.Where(orderDetail => orderDetail.Quantity > 1)
 	.AsDbQuery()
