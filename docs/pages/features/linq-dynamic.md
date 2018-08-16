@@ -61,7 +61,6 @@ The Execute method is the LINQ Dynamic ultimate methods which let you evaluate a
  - Execute
  - Execute< TResult >
 
-{% include template-example.html %} 
 ```csharp
 var list = context.Customers.Execute<IEnumerable<Customer>>("Where(x => x.IsActif == true)").ToList();
 ```
