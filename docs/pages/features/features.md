@@ -2,9 +2,14 @@
 
 ## 2018-08-16
 - [Query Future](query-future.md)
+- [C# Eval Function](csharp-eval-function.md)
 
 ## 2018-08-15
 - [BatchSaveChanges](batch-save-changes.md)
+- [LINQ Dynamic](linq-dynamic.md)
+
+## 2018-08-15
+- [Attach & AttachRange](attach.md)
 
 ## 2018-07-21
 - [.NET Fiddle Support](net-fiddle.md)
