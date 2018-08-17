@@ -1,5 +1,11 @@
 # EF Classic Features
 
+## 2018-08-16
+- [Query Future](query-future.md)
+
+## 2018-08-15
+- [BatchSaveChanges](batch-save-changes.md)
+
 ## 2018-07-21
 - [.NET Fiddle Support](net-fiddle.md)
 
