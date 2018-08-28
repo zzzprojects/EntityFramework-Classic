@@ -1,8 +1,19 @@
 # EF Classic Features
 
+## 2018-08-26
+- [Delete from Query](delete-from-query.md)
+- [Update from Query](update-from-query.md)
+- [Bulk SaveChanges](bulk-save-changes.md)
+- [Bulk Insert](bulk-insert.md)
+- [Bulk Update](bulk-upate.md)
+- [Bulk Delete](bulk-delete.md)
+- [Bulk Merge](bulk-merge.md)
+- [Bulk Synchronize](bulk-synchronize.md)
+
 ## 2018-08-16
 - [Query Future](query-future.md)
 - [C# Eval Function](csharp-eval-function.md)
+- [Attach & AttachRange](attach.md)
 
 ## 2018-08-15
 - [BatchSaveChanges](batch-save-changes.md)
