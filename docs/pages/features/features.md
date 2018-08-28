@@ -5,7 +5,7 @@
 - [Update from Query](update-from-query.md)
 - [Bulk SaveChanges](bulk-save-changes.md)
 - [Bulk Insert](bulk-insert.md)
-- [Bulk Update](bulk-upate.md)
+- [Bulk Update](bulk-update.md)
 - [Bulk Delete](bulk-delete.md)
 - [Bulk Merge](bulk-merge.md)
 - [Bulk Synchronize](bulk-synchronize.md)
