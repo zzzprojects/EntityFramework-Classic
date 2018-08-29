@@ -1,8 +1,9 @@
-# Bulk SaveChanges
+# Bulk SaveChanges (Enterprise Feature)
 
-## Definition
-
+## Description
 BulkSaveChanges method is the upgraded version of `SaveChanges`.
+
+This feature is provided by [Z.EntityFramework.Extensions](http://entityframework-extensions.net/bulk-savechanges) that's used by more than 2000 customers all over the world.
 
 All changes made in the context are persisted in the database but way faster by reducing the number of database round-trip required!
 
@@ -27,7 +28,8 @@ context.BulkSaveChanges();
 // Easy to customize
 context.BulkSaveChanges(bulk => bulk.BatchSize = 100);
 ```
-{% include component-try-it.html href='https://dotnetfiddle.net/z73RVE' %}
+
+[Try it](https://dotnetfiddle.net/z73RVE)
 
 ## Purpose
 Using the `ChangeTracker` to detect and persist changes automatically is great! However, it leads very fast to some problems when multiple entities need to be saved.
@@ -42,45 +44,3 @@ Using the `ChangeTracker` to detect and persist changes automatically is great! 
 | :-------------- | -------------: | -------------: | -------------: |
 | SaveChanges     | 1,000 ms       | 2,000 ms       | 5,000 ms       |
 | BulkSaveChanges | 90 ms          | 150 ms         | 350 ms         |
-
-{% include section-faq-begin.html %}
-## FAQ
-
-### How can I specify more than one option?
-You can specify more than one option using anonymous block.
-
-
-```csharp
-context.BulkSaveChanges(options => {
-	options.BatchSize = 100;
-	options.AllowConcurrency = false;
-});
-```
-{% include component-try-it.html href='https://dotnetfiddle.net/JhiKpo' %}
-
-### How can I specify the Batch Size?
-You can specify a custom batch size using the `BatchSize` option.
-
-Read more: [BatchSize](/batch-size)
-
-
-```csharp
-context.BulkSaveChanges(options => options.BatchSize = 100);
-```
-{% include component-try-it.html href='https://dotnetfiddle.net/TU8LON' %}
-
-### How can I turn off Concurrency Check?
-You can turn off concurrency check using the `AllowConcurrency` option.
-
-Read more: [AllowConcurrency](/allow-concurrency)
-
-
-```csharp
-context.BulkSaveChanges(options => options.AllowConcurrency = false);
-```
-{% include section-faq-end.html %}
-
-## Related Articles
-
-- [How to Benchmark?](benchmark)
-- [How to Improve Bulk SaveChanges Performances?](improve-bulk-savechanges)
