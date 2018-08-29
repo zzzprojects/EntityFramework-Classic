@@ -14,7 +14,7 @@ If the provider doesn't support multiple statement, the logic will automatically
 // context.SaveChanges();	
 context.BatchSaveChanges();	
 ```
-[Try it](https://dotnetfiddle.net/dJK5Vr)
+[Try it](https://dotnetfiddle.net/7PnUvq)
 
 ## Options
 
