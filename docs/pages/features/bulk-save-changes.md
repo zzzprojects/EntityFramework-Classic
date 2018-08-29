@@ -3,7 +3,7 @@
 ## Description
 BulkSaveChanges method is the upgraded version of `SaveChanges`.
 
-This feature is provided by [Z.EntityFramework.Extensions](http://entityframework-extensions.net/bulk-savechanges) that's used by more than 2000 customers all over the world.
+This feature is provided by [Z.EntityFramework.Extensions](http://entityframework-extensions.net/) that's used by more than 2000 customers all over the world.
 
 All changes made in the context are persisted in the database but way faster by reducing the number of database round-trip required!
 
