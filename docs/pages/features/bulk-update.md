@@ -1,4 +1,4 @@
-# Bulk Update
+# Bulk Update (Enterprise Feature)
 
 ## Definition
 `UPDATE` all entities in the database.
