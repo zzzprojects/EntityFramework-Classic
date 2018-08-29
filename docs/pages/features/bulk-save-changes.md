@@ -29,7 +29,7 @@ context.BulkSaveChanges();
 context.BulkSaveChanges(bulk => bulk.BatchSize = 100);
 ```
 
-[Try it](https://dotnetfiddle.net/z73RVE)
+[Try it](https://dotnetfiddle.net/1JFvZe)
 
 ## Purpose
 Using the `ChangeTracker` to detect and persist changes automatically is great! However, it leads very fast to some problems when multiple entities need to be saved.
