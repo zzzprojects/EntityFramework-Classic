@@ -1,4 +1,4 @@
-# Bulk Insert
+# Bulk Insert (Enterprise Feature)
 
 ## Description
 `INSERT` all entities in the database.
