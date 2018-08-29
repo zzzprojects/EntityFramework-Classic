@@ -1,4 +1,4 @@
-# C# Eval Function
+# C# Eval Function (Enterprise Feature)
 
 ## Description
 You can evaluate code dynamically at runtime using the [Eval Expression.NET](http://eval-expression.net/) library.
