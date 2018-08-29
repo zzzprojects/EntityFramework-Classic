@@ -20,19 +20,19 @@ EF Classic is a EF6 fork compatible with .NET Core. It's a limitless version tha
 - [Also Include](http://entityframework-classic.net/also-include)
 - [Then Include](http://entityframework-classic.net/then-include)
 - [.NET Fiddle Support](http://entityframework-classic.net/net-fiddle)
-- [SqlServer](http://entityframework-classic.net/provider-sql-server)
 - [Effort (In Memory)](http://entityframework-classic.net/provider-effort-inmemory)
+- [SqlServer](http://entityframework-classic.net/provider-sql-server)
 - [SqlServer Compact](http://entityframework-classic.net/provider-sqlserver-compact)
 
 ### Enterprise
 - [Batch SaveChanges](http://entityframework-classic.net/batch-save-changes)
 - [Bulk SaveChanges](http://entityframework-classic.net/bulk-save-changes)
-- [C# Eval Function](http://entityframework-classic.net/csharp-eval-function)
 - [Bulk Insert](http://entityframework-classic.net/bulk-insert)
 - [Bulk Update](http://entityframework-classic.net/bulk-update)
 - [Bulk Delete](http://entityframework-classic.net/bulk-delete)
 - [Bulk Merge](http://entityframework-classic.net/bulk-merge)
 - [Bulk Synchronize](http://entityframework-classic.net/bulk-synchronize)
+- [C# Eval Function](http://entityframework-classic.net/csharp-eval-function)
 
 ### Upcoming
 - Audit
