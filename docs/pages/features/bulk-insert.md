@@ -1,6 +1,6 @@
 # Bulk Insert
 
-## Definition
+## Description
 `INSERT` all entities in the database.
 
 All entities are considered as new rows and are `INSERTED` in the database.
