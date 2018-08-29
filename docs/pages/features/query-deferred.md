@@ -35,7 +35,7 @@ However, some features like **Query Cache** and **Query Future** cannot be used 
 
 ---
 
-# The following documentation is about EF+ since `FromCache` feature has not beed added yet on EF Classic. A better documentation should be soon available related to EF Classic.
+### The following documentation is about EF+ since `FromCache` feature has not beed added yet on EF Classic. A better documentation should be soon available related to EF Classic.
 
 ```csharp
 // Oops! The query is already executed, we cannot cache it.
