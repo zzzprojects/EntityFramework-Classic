@@ -14,7 +14,8 @@ context.BulkInsert(list);
 // Easy to customize
 context.BulkInsert(list, options => options.BatchSize = 100);
 ```
-{% include component-try-it.html href='https://dotnetfiddle.net/Y1NxKL' %}
+
+[Try it](https://dotnetfiddle.net/7PnUvq)
 
 ## Purpose
 `Inserting` thousand of entities for an initial load or a file importation is a typical scenario.
