@@ -5,7 +5,7 @@
 
 All entities are considered as new rows and are `INSERTED` in the database.
 
-This feature is provided by [Z.EntityFramework.Extensions](http://entityframework-extensions.net/bulk-insert) that's used by more than 2000 customers all over the world.
+This feature is provided by [Z.EntityFramework.Extensions](http://entityframework-extensions.net/) that's used by more than 2000 customers all over the world.
 
 ```csharp
 // Easy to use
