@@ -1,4 +1,4 @@
-# Bulk Synchronize
+# Bulk Synchronize (Enterprise Feature)
 
 ## Definition
 `SYNCHRONIZE` all entities from the database.
