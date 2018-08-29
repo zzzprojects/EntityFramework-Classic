@@ -1,10 +1,11 @@
 # Bulk Merge
 
-## Definition
+## Description
 `MERGE` all entities from the database.
 
 A merge is an `UPSERT` operation. All rows that match the entity key are considered as existing and are `UPDATED`, other rows are considered as new rows and are `INSERTED` in the database. 
 
+This feature is provided by [Z.EntityFramework.Extensions](http://entityframework-extensions.net) that's used by more than 2000 customers all over the world.
 
 ```csharp
 // Easy to use
@@ -13,7 +14,7 @@ ctx.BulkMerge(list);
 // Easy to customize
 context.BulkMerge(customers, options => options.ColumnPrimaryKeyExpression = customer => customer.Code);
 ```
-{% include component-try-it.html href='https://dotnetfiddle.net/FsJKnV' %}
+[Try it](https://dotnetfiddle.net/HxfhEn)
 
 ## Purpose
 `Merging` entities using a custom key from file importation is a typical scenario.
@@ -30,93 +31,3 @@ Despite the `ChangeTracker` being outstanding to track what's modified, it lacks
 | :-------------- | -------------: | -------------: | -------------: |
 | SaveChanges     | 1,000 ms       | 2,000 ms       | 5,000 ms       |
 | BulkMerge       | 65 ms          | 80 ms          | 110 ms         |
-
-{% include section-faq-begin.html %}
-## FAQ
-
-### How can I specify more than one option?
-You can specify more than one option using anonymous block.
-
-
-```csharp
-context.BulkMerge(list, options => {
-	options.BatchSize = 100;
-	options.ColumnInputExpression = c => new {c.ID, c.Name, c.Description};
-});
-```
-{% include component-try-it.html href='https://dotnetfiddle.net/8wVTP6' %}
-
-### How can I specify the Batch Size?
-You can specify a custom batch size using the `BatchSize` option.
-
-Read more: [BatchSize](/batch-size)
-
-
-```csharp
-context.BulkMerge(list, options => options.BatchSize = 100);
-```
-{% include component-try-it.html href='https://dotnetfiddle.net/RJtqZq' %}
-
-### How can I specify custom columns to Merge?
-You can specify custom columns using the `ColumnInputExpression` option.
-
-Read more: [ColumnInputExpression](/column-input-expression)
-
-
-```csharp
-context.BulkMerge(list, options => options.ColumnInputExpression = c => new {c.Name, c.Description});
-```
-{% include component-try-it.html href='https://dotnetfiddle.net/ei5SRo' %}
-
-### How can I specify custom columns to exclude on insert or update?
-You can specify custom columns to exclude using the `IgnoreOnMergeInsertExpression` and `IgnoreOnMergeUpdateExpression` option.
-
-Read more: [IgnoreOnMergeInsertExpression](/ignore-on-merge-insert-expression)
-
-Read more: [IgnoreOnMergeUpdateExpression](/ignore-on-merge-update-expression)
-
-
-```csharp
-context.BulkMerge(list, options =>
-	{
-		options.IgnoreOnMergeInsertExpression = customer => new { customer.UpdatedDate, customer.UpdatedUser };
-		options.IgnoreOnMergeUpdateExpression = customer => customer.Code, customer.Col2;
-	});
-```
-
-### How can I specify custom keys to use?
-You can specify custom keys using the `ColumnPrimaryKeyExpression` option.
-
-Read more: [ColumnPrimaryKeyExpression](/column-primary-key-expression)
-
-
-```csharp
-// Single Key
-context.BulkMerge(customers, options => options.ColumnPrimaryKeyExpression = customer => customer.Code);
-
-// Surrogate Key
-context.BulkMerge(customers, options => options.ColumnPrimaryKeyExpression = customer => new { customer.Code1, customer.Code2 });
-```
-{% include component-try-it.html href='https://dotnetfiddle.net/g9vjpx' %}
-
-### How can I include child entities (Entity Graph)?
-You can include child entities using the `IncludeGraph` option. Make sure to read about the `IncludeGraph` since this option is not as trivial as others.
-
-Read more: [IncludeGraph](/include-graph)
-
-
-```csharp
-context.BulkMerge(list, options => options.IncludeGraph = true);
-```
-{% include component-try-it.html href='https://dotnetfiddle.net/Rc2zlv' %}
-
-### Why BulkMerge doesn't use the ChangeTracker?
-To provide the best performance possible!
-
-Since using the `ChangeTracker` can greatly reduce performance, we chose to let `BulkSaveChanges` method handle scenarios with `ChangeTracker` and `BulkMerge`, scenarios without it.
-{% include section-faq-end.html %}
-
-## Related Articles
-- [How to Benchmark?](benchmark)
-- [How to use Custom Column?](custom-column)
-- [How to use Custom Key?](custom-key)
