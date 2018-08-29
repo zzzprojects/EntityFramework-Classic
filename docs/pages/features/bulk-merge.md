@@ -1,4 +1,4 @@
-# Bulk Merge
+# Bulk Merge (Enterprise Feature)
 
 ## Description
 `MERGE` all entities from the database.
