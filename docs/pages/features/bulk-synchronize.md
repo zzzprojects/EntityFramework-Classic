@@ -1,6 +1,6 @@
 # Bulk Synchronize (Enterprise Feature)
 
-## Definition
+## Description
 `SYNCHRONIZE` all entities from the database.
 
 A synchronize is a mirror operation from the data source to the database. All rows that match the entity key are `UPDATED`, non-matching rows that exist from the source are `INSERTED`, non-matching rows that exist in the database are `DELETED`.
