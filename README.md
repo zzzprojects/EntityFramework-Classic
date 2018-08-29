@@ -44,7 +44,7 @@ EF Classic is a EF6 fork compatible with .NET Core. It's a limitless version tha
 - Instance Filter
 - ProjectTo
 
-## What's will happen to your other prime & free library on Entity Framework?
+## What will happen to your other prime & free library on Entity Framework?
 Basically, nothing will change, we keep to support them all.
 
 - [Entity Framework Extensions](http://entityframework-extensions.net/): EF Classic has a dependency to this library.
