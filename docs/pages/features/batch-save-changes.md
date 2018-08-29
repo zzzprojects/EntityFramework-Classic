@@ -1,4 +1,4 @@
-# BatchSaveChanges
+# BatchSaveChanges (Enterprise Feature)
 
 ## Description
 You can reduce the number of database roundtrip by batching multiple command in the same command. The BatchSaveChanges and BatchSaveChangesAsync methods work exactly like SaveChanges but way faster.
