@@ -1,4 +1,4 @@
-# Bulk Delete
+# Bulk Delete (Enterprise Feature)
 
 ## Definition
 `DELETE` all entities from the database.
