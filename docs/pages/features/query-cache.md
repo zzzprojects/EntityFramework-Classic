@@ -8,6 +8,10 @@ Caching is very simple to understand, the first time a query is invoked, data ar
 
 To use caching, simply append to the query "Cache" method before using an immediate resolution method like "ToList()" or "FirstOrDefault()".
 
+## Query Cache
+
+Return the query result from the cache. If the query is not cached yet, it will be materialized and cached before being returned.
+
 ```csharp
 var ctx = new EntitiesContext();
 
@@ -19,20 +23,6 @@ var countries2 = ctx.Countries.FromCache().ToList();
 ```
 
 [Try it](https://dotnetfiddle.net/lXIiex)
-
-## Query Cache
-
-Return the query result from the cache. If the query is not cached yet, it will be materialized and cached before being returned.
-
-{% include template-example.html %} 
-```csharp
-var ctx = new EntitiesContext();
-
-// The query is cached using default QueryCacheManager options
-var countries = ctx.Countries.Where(x => x.IsActive).FromCache();
-
-var states = ctx.States.Where(x => x.IsActive).FromCache(DateTime.Now.AddHours(2));
-```
 
 ## Query Cache Async
 
