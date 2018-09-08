@@ -1,6 +1,6 @@
 # Query Cache
 
-## Introduction
+## Description
 
 Caching entities or query results to improve an application's performance is a very frequent scenario.
 
