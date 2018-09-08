@@ -1,4 +1,6 @@
 # EF Classic Features
+## 20108-09-06
+- [Query Cache](query-cache.md)
 
 ## 2018-08-26
 - [Delete from Query](delete-from-query.md)
