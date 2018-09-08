@@ -2,13 +2,11 @@
 
 ## Introduction
 
-Caching entities or query results to improve an application's performance is a very frequent scenario. Major ORM like NHibernate had this feature for a long time but, unfortunately for Entity Framework users, second level caching is only available through third party libraries.
+Caching entities or query results to improve an application's performance is a very frequent scenario.
 
 Caching is very simple to understand, the first time a query is invoked, data are retrieved from the database and stored in the memory before being returned. All future calls will retrieve data from the memory to avoid making additional database round trips which drastically increases an application's performance.
 
-**EF Classic Query Cache** opens up all caching features for Entity Framework users.
-
-To use caching, simply append to the query "FromCache" method before using an immediate resolution method like "ToList()" or "FirstOrDefault()".
+To use caching, simply append to the query "Cache" method before using an immediate resolution method like "ToList()" or "FirstOrDefault()".
 
 ```csharp
 var ctx = new EntitiesContext();
@@ -19,6 +17,8 @@ var countries1 = ctx.Countries.FromCache().ToList();
 // Subsequent calls will take the value from the memory instead
 var countries2 = ctx.Countries.FromCache().ToList();
 ```
+
+[Try it](https://dotnetfiddle.net/lXIiex)
 
 ## Query Cache
 
