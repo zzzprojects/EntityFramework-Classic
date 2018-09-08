@@ -95,6 +95,7 @@ var ctx = new EntitiesContext();
 var options = new CacheItemPolicy() { SlidingExpiration = TimeSpan.FromHours(2)};
 var states = ctx.States.FromCache(options);
 ```
+[Try it](https://dotnetfiddle.net/i2VOeg)
 
 ## Query Cache Control
 
