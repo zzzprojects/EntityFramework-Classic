@@ -49,18 +49,18 @@ Immediate resolution methods like **Count()** and **FirstOrDefault()** cannot be
 var count = ctx.Customers.Count();
 
 // Oops! All customers are cached instead of customer count.
-var count = ctx.Customers.FromCache().Count();
+var count = ctx.Customers.Cache().Count();
 ```
 
 **Query Deferred** has been created to resolve this issue, the resolution is now deferred instead of being immediate which lets us cache the expected result.
 
 ```csharp
-// using Z.EntityFramework.Plus; // Don't forget to include this.
-var ctx = new EntitiesContext();
-
 // The count is deferred, it is now cached.
-var count = ctx.Customers.DeferredCount().FromCache();
+var count = context.Countries.DeferredCount().Cache();
+
+Console.WriteLine("Countries Count: " + count);
 ```
+[Try it](https://dotnetfiddle.net/ouZ2wI)
 
 Query Deferred supports all Queryable extension methods and overloads.
 
