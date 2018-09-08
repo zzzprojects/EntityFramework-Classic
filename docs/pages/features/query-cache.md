@@ -88,12 +88,11 @@ QueryCacheManager.ExpireTag("countries");
 All common caching features like absolute expiration, sliding expiration, removed callback are supported.
 
 ```csharp
-var ctx = new EntitiesContext();
-
 // Make the query expire after 2 hours of inactivity
-
 var options = new CacheItemPolicy() { SlidingExpiration = TimeSpan.FromHours(2)};
-var states = ctx.States.FromCache(options);
+
+var countries = context.Countries.Cache(options).ToList();			
+FiddleHelper.WriteTable(countries);
 ```
 [Try it](https://dotnetfiddle.net/i2VOeg)
 
