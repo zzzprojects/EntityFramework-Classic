@@ -16,10 +16,10 @@ Return the query result from the cache. If the query is not cached yet, it will 
 var ctx = new EntitiesContext();
 
 // The first call perform a database round trip
-var countries1 = ctx.Countries.FromCache().ToList();
+var countries1 = ctx.Countries.Cache().ToList();
 
 // Subsequent calls will take the value from the memory instead
-var countries2 = ctx.Countries.FromCache().ToList();
+var countries2 = ctx.Countries.Cache().ToList();
 ```
 
 [Try it](https://dotnetfiddle.net/lXIiex)
@@ -28,16 +28,16 @@ var countries2 = ctx.Countries.FromCache().ToList();
 
 Return the query result from the cache. If the query is not cached yet, the query will be materialized asynchronously and cached before being returned.
 
-**FromCacheAsync** methods are available starting from .NET Framework 4.5 and support all the same options as "FromCache" methods.
+**CacheAsync** methods are available starting from .NET Framework 4.5 and support all the same options as "Cache" methods.
 
 ```csharp
-// using Z.EntityFramework.Plus; // Don't forget to include this.
 var ctx = new EntitiesContext();
 
-// The query is cached using default QueryCacheManager options
-var task = ctx.Countries.Where(x => x.IsActive).FromCacheAsync();
+// The first call perform a database round trip
+var countries1 = ctx.Countries.CacheAsync().ConfigureAwait(false);
 
-var task = ctx.States.Where(x => x.IsActive).FromCacheAsync(DateTime.Now.AddHours(2));
+// Subsequent calls will take the value from the memory instead
+var countries2 = ctx.Countries.CacheAsync().ConfigureAwait(false);
 ```
 
 ## Query Cache Query Deferred
