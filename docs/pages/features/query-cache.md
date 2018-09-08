@@ -114,3 +114,9 @@ You can set default policy
 // The query is cached for 2 hours of inactivity
 QueryCacheManager.CacheItemPolicyFactory = () => new CacheItemPolicy() { SlidingExpiration = TimeSpan.FromHours(2) };
 ```
+[Try it](https://dotnetfiddle.net/rKmdXl)
+
+## Redis Cache
+This feature is currently in beta,
+
+
