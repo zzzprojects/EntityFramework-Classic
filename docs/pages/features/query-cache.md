@@ -71,15 +71,17 @@ Tagging the cache lets you expire later on all cached entries with a specific ta
 For example, the daily countries & states importation has been completed and you need to refresh from the database all queries related to the country table. You can now simply expire the tag **countries** to remove all related cached entries.
 
 ```csharp
-var ctx = new EntitiesContext();
-
 // Cache queries with related tags
-var states = ctx.States.FromCache("countries", "states");
-var stateCount = ctx.States.DeferredCount().FromCache("countries", "states", "stats");
+var countries = context.Countries.Cache(new string[] { "countries", "states" });
+var count = context.Countries.DeferredCount().Cache(new string[] { "countries", "states", "stats" });
+
+FiddleHelper.WriteTable(countries);
+Console.WriteLine("Countries Count: " + count);
 
 // Expire all cache entries using the "countries" tag
 QueryCacheManager.ExpireTag("countries");
 ```
+[Try it](https://dotnetfiddle.net/bCEdyg)
 
 ## Query Cache Expiration
 
