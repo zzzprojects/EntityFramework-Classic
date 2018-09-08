@@ -117,6 +117,11 @@ QueryCacheManager.CacheItemPolicyFactory = () => new CacheItemPolicy() { Sliding
 [Try it](https://dotnetfiddle.net/rKmdXl)
 
 ## Redis Cache
-This feature is currently in beta,
+This feature is currently in beta, you can try it but be aware it some code such as parameter order might change when it is officially released.
+
+```csharp
+var connectionMultiplexer =  ConnectionMultiplexer.Connect("127.0.0.1:6379,allowAdmin=true");
+            QueryCacheManager.Cache = new RedisObjectCacheBeta(connectionMultiplexer.GetDatabase(), Newtonsoft.Json.JsonConvert.SerializeObject, (type, s) => Newtonsoft.Json.JsonConvert.DeserializeObject(s, type));
+```
 
 
