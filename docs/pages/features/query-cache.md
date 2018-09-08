@@ -121,7 +121,7 @@ This feature is currently in beta, you can try it but be aware it some code such
 
 ```csharp
 var connectionMultiplexer =  ConnectionMultiplexer.Connect("127.0.0.1:6379,allowAdmin=true");
-            QueryCacheManager.Cache = new RedisObjectCacheBeta(connectionMultiplexer.GetDatabase(), Newtonsoft.Json.JsonConvert.SerializeObject, (type, s) => Newtonsoft.Json.JsonConvert.DeserializeObject(s, type));
+QueryCacheManager.Cache = new RedisObjectCacheBeta(connectionMultiplexer.GetDatabase(), Newtonsoft.Json.JsonConvert.SerializeObject, (type, s) => Newtonsoft.Json.JsonConvert.DeserializeObject(s, type));
 ```
 
 
