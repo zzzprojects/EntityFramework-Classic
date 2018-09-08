@@ -13,13 +13,11 @@ To use caching, simply append to the query "Cache" method before using an immedi
 Return the query result from the cache. If the query is not cached yet, it will be materialized and cached before being returned.
 
 ```csharp
-var ctx = new EntitiesContext();
-
 // The first call perform a database round trip
-var countries1 = ctx.Countries.Cache().ToList();
+var countries1 = context.Countries.Cache().ToList();
 
 // Subsequent calls will take the value from the memory instead
-var countries2 = ctx.Countries.Cache().ToList();
+var countries2 = context.Countries.Cache().ToList();
 ```
 
 [Try it](https://dotnetfiddle.net/lXIiex)
@@ -31,13 +29,11 @@ Return the query result from the cache. If the query is not cached yet, the quer
 **CacheAsync** methods are available starting from .NET Framework 4.5 and support all the same options as "Cache" methods.
 
 ```csharp
-var ctx = new EntitiesContext();
-
 // The first call perform a database round trip
-var countries1 = ctx.Countries.CacheAsync().ConfigureAwait(false);
+var countries1 = await context.Countries.CacheAsync().ConfigureAwait(false);
 
 // Subsequent calls will take the value from the memory instead
-var countries2 = ctx.Countries.CacheAsync().ConfigureAwait(false);
+var countries2 = await context.Countries.CacheAsync().ConfigureAwait(false);
 ```
 
 ## Query Cache Query Deferred
@@ -46,10 +42,10 @@ Immediate resolution methods like **Count()** and **FirstOrDefault()** cannot be
 
 ```csharp
 // Oops! The query is already executed, we cannot cache it.
-var count = ctx.Customers.Count();
+var count = context.Customers.Count();
 
 // Oops! All customers are cached instead of customer count.
-var count = ctx.Customers.Cache().Count();
+var count = context.Customers.Cache().Count();
 ```
 
 **Query Deferred** has been created to resolve this issue, the resolution is now deferred instead of being immediate which lets us cache the expected result.
