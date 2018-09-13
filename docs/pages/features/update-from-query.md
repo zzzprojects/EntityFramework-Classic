@@ -12,10 +12,10 @@ This feature is provided by [Z.EntityFramework.Extensions](http://entityframewor
 var date = DateTime.Now.AddYears(-2);
 context.Customers
     .Where(x => x.Actif && x.LastLogin < date)
-    .UpdateFromQuery(x => new Customer {Actif = false});
+    .UpdateFromQuery(x => new Customer {Active = false});
 	
 // UPDATE customers by id
-context.Customers.Where(x => x.ID == userId).UpdateFromQuery(x => new Customer {Actif = false});
+context.Customers.Where(x => x.ID == userId).UpdateFromQuery(x => new Customer {Active = false});
 ```
 
 [Try it](https://dotnetfiddle.net/gSJJeh)
