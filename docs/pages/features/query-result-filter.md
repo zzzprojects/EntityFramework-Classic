@@ -12,7 +12,7 @@ public class EntityContext : DbContext
 	public EntityContext() : base(@"Data Source=ZZZ_Projects.sdf")
 	{
 		// Add your QueryResultFilter here
-		this.Configuration.QueryResultFilter.Filter<Customer>(customer => customer.IsActif);
+		this.Configuration.QueryResultFilter.Filter<Customer>(customer => customer.IsActive);
 	}
 	
 	public DbSet<Customer> Customers { get; set; }
