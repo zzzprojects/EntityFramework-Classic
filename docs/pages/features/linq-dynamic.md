@@ -27,8 +27,8 @@ All LINQ predicate methods are supported. A string expression which return a Boo
 
 {% include template-example.html %} 
 ```csharp
-var list = context.Customers.Where(x => "x.IsActif").ToList();
-var list2 = context.Customers.Where(x => "x.IsActif == isActif", new { isActif = false }).ToList();
+var list = context.Customers.Where(x => "x.IsActive").ToList();
+var list2 = context.Customers.Where(x => "x.IsActive == IsActive", new { IsActive = false }).ToList();
 ```
 [Try it](https://dotnetfiddle.net/GTttpq)
 
@@ -57,8 +57,8 @@ The Execute method is the LINQ Dynamic ultimate methods which let you evaluate a
  - Execute< TResult >
 
 ```csharp
-var list = context.Customers.Execute<IEnumerable<Customer>>("Where(x => x.IsActif == true)").ToList();
-var list2 = context.Customers.Execute<IEnumerable<Customer>>("Where(x => x.IsActif == isActif)", new { isActif = false }).ToList();
+var list = context.Customers.Execute<IEnumerable<Customer>>("Where(x => x.IsActive == true)").ToList();
+var list2 = context.Customers.Execute<IEnumerable<Customer>>("Where(x => x.IsActive == IsActive)", new { IsActive = false }).ToList();
 ```
 [Try it](https://dotnetfiddle.net/7S3JS0)
 
