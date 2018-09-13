@@ -11,11 +11,11 @@ This feature is provided by [Z.EntityFramework.Extensions](http://entityframewor
 // UPDATE all customers that are inactive for more than two years
 var date = DateTime.Now.AddYears(-2);
 context.Customers
-    .Where(x => x.Actif && x.LastLogin < date)
-    .UpdateFromQuery(x => new Customer {Active = false});
+    .Where(x => x.IsActive && x.LastLogin < date)
+    .UpdateFromQuery(x => new Customer {IsActive = false});
 	
 // UPDATE customers by id
-context.Customers.Where(x => x.ID == userId).UpdateFromQuery(x => new Customer {Active = false});
+context.Customers.Where(x => x.ID == userId).UpdateFromQuery(x => new Customer {IsActive = false});
 ```
 
 [Try it](https://dotnetfiddle.net/gSJJeh)
