@@ -16,7 +16,7 @@ To batch multiple queries, simply append **Future** or **FutureValue** method to
 ```csharp
 // CREATE a pending list of future queries
 var customers = context.Customers.Future();
-var actifCustomers = context.Customers.Where(x => x.IsActif).Future();
+var actifCustomers = context.Customers.Where(x => x.IsActive).Future();
 
 // TRIGGER all pending queries in one database round trip			
 FiddleHelper.WriteTable("Customers", customers.ToList());		
