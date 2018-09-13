@@ -20,6 +20,6 @@ var actifCustomers = context.Customers.Where(x => x.IsActive).Future();
 
 // TRIGGER all pending queries in one database round trip			
 FiddleHelper.WriteTable("Customers", customers.ToList());		
-FiddleHelper.WriteTable("Actif Customers", actifCustomers);		
+FiddleHelper.WriteTable("Active Customers", actifCustomers);		
 ```
 [Try it](https://dotnetfiddle.net/DoWJ3t)
