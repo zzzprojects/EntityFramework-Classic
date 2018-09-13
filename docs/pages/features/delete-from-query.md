@@ -9,7 +9,7 @@ This feature is provided by [Z.EntityFramework.Extensions](http://entityframewor
 
 ```csharp
 // DELETE all customers that are inactive
-context.Customers.Where(x => !x.IsActif).DeleteFromQuery();
+context.Customers.Where(x => !x.IsActive).DeleteFromQuery();
 
 // DELETE customers by id
 context.Customers.Where(x => x.ID == userId).DeleteFromQuery();
