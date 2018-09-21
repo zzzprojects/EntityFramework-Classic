@@ -1,5 +1,5 @@
 # EF Classic Features
-## 20108-09-06
+## 2018-09-06
 - [Query Cache](query-cache.md)
 
 ## 2018-08-26
