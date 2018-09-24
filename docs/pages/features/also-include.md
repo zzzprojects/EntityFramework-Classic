@@ -1,4 +1,4 @@
-# AlsoInclude Feature
+# AlsoInclude
 
 ## Description
 You can chain multiple related objects to the query result by using the `AlsoInclude` and `ThenInclude` methods. The `AlsoInclude` method doesn't move the chaining level. It allows to include multiple related objects from the same level.
