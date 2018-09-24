@@ -1,4 +1,4 @@
-# Include Feature
+# Include
 
 ## Description
 You can add related objects to the query result by using the `Include` method.
