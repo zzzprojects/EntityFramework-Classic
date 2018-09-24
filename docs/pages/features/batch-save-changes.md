@@ -4,7 +4,7 @@
 You can reduce the number of database roundtrip by batching multiple command in the same command. The BatchSaveChanges and BatchSaveChangesAsync methods work exactly like SaveChanges but way faster.
 If the provider doesn't support multiple statement, the logic will automatically fall back to SaveChanges.
 
-> For provider supporting `BatchSaveChanges`, we recommand to always use `BatchSaveChanges` over `SaveChanges` or to enable the option `UseBatchForSaveChanges`
+> For provider supporting `BatchSaveChanges`, we recommend to always use `BatchSaveChanges` over `SaveChanges` or to enable the option `UseBatchForSaveChanges`
 
 ### Provider Supported
 - SQL Server
