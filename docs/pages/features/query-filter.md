@@ -11,7 +11,7 @@ It's always recommended to use the QueryFilter over the QueryResultFilter whenev
 ```csharp
 public class EntityContext : DbContext
 {
-	public EntityContext() : base(@"Data Source=ZZZ_Projects.sdf")
+	public EntityContext() : base(FiddleHelper.GetConnectionStringSqlServer())
 	{
 		// Add your QueryResultFilter here
 		this.Configuration.QueryFilter.Filter<Customer>(customer => customer.IsActive);
