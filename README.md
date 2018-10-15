@@ -47,11 +47,11 @@ EF Classic is a EF6 fork compatible with .NET Core. It's a limitless version tha
 - ProjectTo
 
 ## What will happen to your other prime & free libraries on Entity Framework?
-Basically, nothing will change, we keep to support them all.
+Basically, nothing will change, we will keep supporting them all.
 
 - [Entity Framework Extensions](http://entityframework-extensions.net/): EF Classic has a dependency to this library.
 - [Eval Expression.NET](http://eval-expression.net/): EF Classic has a dependency to this library.
 - [EF Effort](https://www.nuget.org/packages/Z.EntityFramework.Classic.Effort/): A version is available compatible with EF Classic
-- [EF GraphDiff](https://github.com/zzzprojects/GraphDiff): We are currently investigating to either re-write this library or to release a version compatible with EF Classic
-- [Entity Framework Dynamic Filter](http://entityframework-dynamicfilters.net/): We will continue to support this library, but all features will be re-write in EF Classic for adding more flexibility.
+- [EF GraphDiff](https://github.com/zzzprojects/GraphDiff): We are currently investigating to either rewrite this library or to release a version compatible with EF Classic
+- [Entity Framework Dynamic Filter](http://entityframework-dynamicfilters.net/): We will continue to support this library, but all features will be rewritten in EF Classic to add more flexibility.
 - [Entity Framework Plus](http://entityframework-plus.net/): We will continue to support this library, but all features will be re-write in EF Classic for adding more flexibility.
