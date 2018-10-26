@@ -1,4 +1,4 @@
-# SqlServer Compact Provider
+# SqlServer Provider
 
 ## Description
 You can use SQL Server/SQL Azure with Entity Framework Classic.
