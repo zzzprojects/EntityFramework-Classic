@@ -302,6 +302,7 @@ using (var context = new EntityContext())
 
 <details>
 <summary>Why should I use `Query Filter` over `Query ResultFilter`?</summary>
+
 The **Query Filter** in most cases filters on the database side, so less rows are returned which leads to better performance.
 
 The **Query ResultFilter** should only be used when the predicate cannot be interpreted as a query expression.
