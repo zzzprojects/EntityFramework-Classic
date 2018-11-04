@@ -274,7 +274,7 @@ For example:
 
 That is because both loaded customers are the same object instance. You can use `AsNoTracking` or use a new context instance if you need the customer with his invoice filtered.
 
-That is not a bug, that’s how the `ChangeTracker` works.
+That is not a bug, that's how the `ChangeTracker` works.
 
 ```csharp
 using (var context = new EntityContext())
