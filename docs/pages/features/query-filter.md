@@ -24,7 +24,7 @@ The filter is applied in the database and application side:
 - **Database side**: Whenever possible, the filter is applied in the SQL query.
 - **Application side**: The filter is always applied to the query result.
 
-This feature allows to exclude some entities or include only specific entities to handle some scenarios such as:
+This feature allows to exclude or include specific entities to handle scenarios such as:
 - [Soft Delete](#soft-delete)
 - [Multi-Tenancy](#multi-tenancy)
 - [Logical Data Partitioning](#logical-data-partitioning)
@@ -48,7 +48,7 @@ All cases are supported:
 ## Getting Started
 
 ### Global Query Filter
-You can create **Global Query Filter** by creating the filter in your context constructor. All your context instances will use created `QueryFilter`.
+You can create a **Global Query Filter** inside your context constructor. This filter will be used by all your context instances.
 
 ```csharp
 public class EntityContext : DbContext
@@ -68,7 +68,7 @@ var list = context.Customers.ToList();
 [Try it](https://dotnetfiddle.net/7cKY2x)
 
 ### Instance Query Filter
-You can create **Instance Query Filter** by creating the filter after your context is instanced. Only this specific context instance will use created `Query Filter`.
+You can create an **Instance Query Filter** after a context instanced has been created. This filter will be specific to this context instance. If you context instance already have query filter both filter will be enabled.
 
 ```csharp
 using (var context = new EntityContext())
