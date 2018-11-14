@@ -4,13 +4,10 @@
 
 Even if Microsoft has created a new library named `EF Core`, we also added the support for the .NET Core to Entity Framework Classic since we believe that a lot of developers still prefer `EF6` over `EF Core`.
 
-Here are some features in EF6 which are not supported in EF Core:
+Here are some features present in EF6 that still hasn’t been implemented in EF Core. By using EF Classic, you will be able to use those feature in a .NET Core Environment:
 
-- EDMX/ Graphical Visualization of Model
-- Entity Data Model Wizard (for DB-First approach)
 - ObjectContext API
 - Querying using Entity SQL.
-- Automated Migration
 - Inheritance: Table per type (TPT)
 - Inheritance: Table per concrete class (TPC)
 - Many-to-Many without join entity
@@ -19,7 +16,6 @@ Here are some features in EF6 which are not supported in EF Core:
 - Lazy loading of related data
 - Stored procedure mapping with DbContext for CUD operation
 - Seed data
-- Automatic migration
 
 _Reference: [Entity Framework Tutorial](http://www.entityframeworktutorial.net/efcore/entity-framework-core.aspx#efcore-vs-ef6)_
 
