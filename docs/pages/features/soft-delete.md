@@ -6,11 +6,11 @@ The **Soft Delete** feature allows you to flag record as deleted instead of dele
 ```csharp
 public class SoftDeleteEntitiesContext : DbContext
 {
-    public SoftDeleteEntitiesContext() : base("EntitiesContext")
-    {
-          this.Configuration.SoftDelete.Trigger<SoftDeleteEntity>((context, delete) =>{delete.IsDeleted = false;});
-     }
-     public DbSet<SoftDeleteEntity> SoftDeleteEntities { get; set; }
+	public SoftDeleteEntitiesContext() : base("EntitiesContext")
+	{
+		this.Configuration.SoftDelete.Trigger<SoftDeleteEntity>((context, delete) =>{delete.IsDeleted = false;});
+	}
+	public DbSet<SoftDeleteEntity> SoftDeleteEntities { get; set; }
 }
 
 ```
@@ -33,14 +33,15 @@ Any entity that inherit this intefaced will be soft delete instead of completly 
 You can use the default soft delete by inheriting the IEFSoftDelete interface.
 
 ```csharp
-        public class SoftDeleteEntity : IEFSoftDelete
-        {
-            public int SoftDeleteEntityID { get; set; }
-            public int ColumnInt { get; set; }
-            public string ColumnString { get; set; }
-            public bool IsDeleted { get; set; }
-            public bool AutoDelete { get; set; }
-        }```
+public class SoftDeleteEntity : IEFSoftDelete
+{
+	public int SoftDeleteEntityID { get; set; }
+      	public int ColumnInt { get; set; }
+   	public string ColumnString { get; set; }
+     	public bool IsDeleted { get; set; }
+    	public bool AutoDelete { get; set; }
+}
+```
 [Try it](https://dotnetfiddle.net/7cKY2x)
 
 ### Custom Action
