@@ -59,7 +59,7 @@ You can create an custom soft delete trigger by adding it to the manager
 ```
 [Try it](https://dotnetfiddle.net/qjRFbZ)
 
-### Enable/Disable Query Filter
+### Enable/Disable Soft Delete Trigger
 You can enable/disable your **Query Filter** with the `Enable()`, `Disable()`, `EnableFilter(id)`, and `DisableFilder(id)` methods.
 
 ```csharp
