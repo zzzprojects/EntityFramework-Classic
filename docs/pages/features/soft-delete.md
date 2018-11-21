@@ -12,7 +12,6 @@ public class SoftDeleteEntitiesContext : DbContext
 	}
 	public DbSet<SoftDeleteEntity> SoftDeleteEntities { get; set; }
 }
-
 ```
 [Try it](https://dotnetfiddle.net/aDsTWW)
 
@@ -56,7 +55,8 @@ You can create an custom soft delete trigger by adding it to the manager
             }
 
             public DbSet<SoftDeleteEntity> SoftDeleteEntities { get; set; }
-        }```
+        }
+```
 [Try it](https://dotnetfiddle.net/qjRFbZ)
 
 ### Enable/Disable Query Filter
