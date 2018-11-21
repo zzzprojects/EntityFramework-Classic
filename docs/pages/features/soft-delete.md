@@ -36,10 +36,10 @@ You can use the default soft delete by inheriting the IEFSoftDelete interface.
 public class SoftDeleteEntity : IEFSoftDelete
 {
 	public int SoftDeleteEntityID { get; set; }
-      	public int ColumnInt { get; set; }
-   	public string ColumnString { get; set; }
-     	public bool IsDeleted { get; set; }
-    	public bool AutoDelete { get; set; }
+	public int ColumnInt { get; set; }
+	public string ColumnString { get; set; }
+	public bool IsDeleted { get; set; }
+	public bool AutoDelete { get; set; }
 }
 ```
 [Try it](https://dotnetfiddle.net/7cKY2x)
