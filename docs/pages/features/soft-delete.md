@@ -147,14 +147,14 @@ var list = context.Customers.ToList();
 | Name | Description | Example |
 | :--- | :---------- | :------ |
 | `EntityType` | Gets the `SofDeleteTrigger` entity type. | [Try it](https://dotnetfiddle.net/8z8spq) |
-| `IsEnabled` | Gets if the `SofDeleteTrigger` is enabled. Use `Enable()` and `Disable()` method to change the state. Always return false if the `QueryFilter` feature is disabled. | [Try it](https://dotnetfiddle.net/28AdvH) |
+| `IsEnabled` | Gets if the `SofDeleteTrigger` is enabled. Use `Enable()` and `Disable()` method to change the state. Always return false if the `SoftDeleteTrigger` feature is disabled. | [Try it](https://dotnetfiddle.net/28AdvH) |
 
 ###### Methods
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `Enable()` | Enable the `QueryFilter`. | [Try it](https://dotnetfiddle.net/H7cqIU) |
-| `Disable()` | Disable the `QueryFilter`. | [Try it](https://dotnetfiddle.net/ArFGJh) |
+| `Enable()` | Enable the `SoftDeleteTrigger`. | [Try it](https://dotnetfiddle.net/H7cqIU) |
+| `Disable()` | Disable the `SoftDeleteTrigger`. | [Try it](https://dotnetfiddle.net/ArFGJh) |
 
 ### SoftDeleteManager
 
@@ -168,11 +168,11 @@ var list = context.Customers.ToList();
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `Filter<T>(Expression<Func<T, bool>> filter)`) | Filter an entity type using a predicate. | [Try it](https://dotnetfiddle.net/lqfF8b) |
+| `Trigger<TEntityType>(Action<DbContext, TEntityType> action)`) | Execute an action when an entity type state is set to Deleted and set the state to modified afterward | [Try it](https://dotnetfiddle.net/lqfF8b) |
 | `Filter<T>(string id, Expression<Func<T, bool>> filter)` | Filter an entity type using a predicate. The `QueryFilter` will be created with the specified ID. | [Try it](https://dotnetfiddle.net/dBOdw2) |
-| `EnableFilter(string id)` | Enable the `QueryFilter` with the specified id.  | [Try it](https://dotnetfiddle.net/q7T7nl)  |
-| `DisableFilter(string id)` | Disable the `QueryFilter` with the specified id. | [Try it](https://dotnetfiddle.net/Zoric3)  |
-| `GetFilter(string id)` | Get the `QueryFilter` with the specified id. | [Try it](https://dotnetfiddle.net/2IBfGq) |
+| `EnableTrigger<TEntityType>` | Enable the `SoftDeleteTrigger` with the specified id.  | [Try it](https://dotnetfiddle.net/q7T7nl)  |
+| `DisableTrigger<TEntityType>` | Disable the `SoftDeleteTrigger` with the specified id. | [Try it](https://dotnetfiddle.net/Zoric3)  |
+| `GetTrigger<TEntityType>` | Get the `SoftDeleteTrigger` with the specified id. | [Try it](https://dotnetfiddle.net/2IBfGq) |
 
 ## Limitations
 
