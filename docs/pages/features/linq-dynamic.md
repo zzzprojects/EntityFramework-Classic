@@ -32,7 +32,7 @@ var list2 = context.Customers.Where(x => "x.IsActive == IsActive", new { IsActiv
 ```
 [Try it](https://dotnetfiddle.net/GTttpq)
 
-## Order && Select
+## Order & Select
 
 All LINQ selector and order are supported. Most of them require the "Dynamic" suffix to not override default behavior (Ordering or selecting by a string is valid).
 
