@@ -112,10 +112,6 @@ using (var context = new EntityContext())
 ```
 [Try it](https://dotnetfiddle.net/tctGi0)
 
-> DANGER: DO NOT disable `Global Query Filter` unless you want to disable the filter for all your context instances.
-
-> HINT: Use an `enum` when using a specified ID `QueryFilterType.FilterName.ToString()` to advoid hardcoding a `string`.
-
 ## Real Life Scenarios
 
 ### Soft Delete
@@ -142,74 +138,16 @@ var list = context.Customers.ToList();
 
 > HINT: The filter is usually applied to an interface named `ISoftDelete` inherited by all entity type that uses Soft Delete. 
 
-### Multi-Tenancy
-Your application uses a single instance to serve multiple tenants.
-
-The **Query Filter** allows you to include only data that's related to the specified `TenantID` to all your queries.
-
-```csharp
-public static int ApplicationTenantID = 1;
-
-public class EntityContext : DbContext
-{
-	public EntityContext() : base(FiddleHelper.GetConnectionStringSqlServer())
-	{
-		// Add your Global Query Filter here
-		this.Configuration.QueryFilter.Filter<ITenant>(x => x.TenantID == ApplicationTenantID);
-	}
-	
-	public DbSet<Customer> Customers { get; set; }
-}
-
-// SELECT * FROM Customers WHERE TenantID = 1
-var list = context.Customers.ToList();
-```
-[Try it](https://dotnetfiddle.net/WuWGCy)
-
-> HINT: The filter is usually applied to an interface named `ITenant` inherited by all entity types that uses multi-tenancy.
-
-### Logical Data Partitioning
-Your application store data in the same table but only a specific range should be available by example for a country.
-
-The **Query Filter** allows you to include only data available for the specified country to all your queries.
-
-```csharp
-// TODO
-// [Try it](8c3zgI)
-```
-
-### Security Access
-Your application has security access. The logged user can only view some data depending on his role.
-
-The `Query Filter` allows you to include only data the user has access to all your queries.
-
-```csharp
-public static int CurrentRoleId = 1; // admin
-
-public class EntityContext : DbContext
-{
-	public EntityContext() : base(FiddleHelper.GetConnectionStringSqlServer())
-	{
-		this.Configuration.QueryFilter.Filter<ISoftDelete>(customer => !customer.IsDeleted || CurrentRoleId == 1);
-		this.Configuration.QueryFilter.Filter<Customer>(customer => customer.Type == CustomerType.Web || CurrentRoleId == 1);
-	}
-	
-	public DbSet<Customer> Customers { get; set; }
-}
-```
-[Try it](https://dotnetfiddle.net/HP9Fbe)
-
 ## Documentation
 
-### QueryFilter
+### SoftDeleteTrigger
 
 ###### Properties
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `ID` | Gets the `QueryFilter` ID. | [Try it](https://dotnetfiddle.net/8z8spq) |
-| `EntityType` | Gets the `QueryFilter` entity type on which the filter is applied. | [Try it](https://dotnetfiddle.net/DP6Del) |
-| `IsEnabled` | Gets if the `QueryFilter` is enabled. Use `Enable()` and `Disable()` method to change the state. Always return false if the `QueryFilter` feature is disabled. | [Try it](https://dotnetfiddle.net/28AdvH) |
+| `EntityType` | Gets the `SofDeleteTrigger` entity type. | [Try it](https://dotnetfiddle.net/8z8spq) |
+| `IsEnabled` | Gets if the `SofDeleteTrigger` is enabled. Use `Enable()` and `Disable()` method to change the state. Always return false if the `QueryFilter` feature is disabled. | [Try it](https://dotnetfiddle.net/28AdvH) |
 
 ###### Methods
 
@@ -218,13 +156,13 @@ public class EntityContext : DbContext
 | `Enable()` | Enable the `QueryFilter`. | [Try it](https://dotnetfiddle.net/H7cqIU) |
 | `Disable()` | Disable the `QueryFilter`. | [Try it](https://dotnetfiddle.net/ArFGJh) |
 
-### QueryFilterManager
+### SoftDeleteManager
 
 ###### Properties
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `IsEnabled` | Gets or sets if the `QueryFilter` feature is enabled. | [Try it](https://dotnetfiddle.net/ykhwxO) |
+| `IsEnabled` | Gets or sets if the `Soft Delete` feature is enabled. | [Try it](https://dotnetfiddle.net/ykhwxO) |
 
 ###### Methods
 
@@ -238,47 +176,4 @@ public class EntityContext : DbContext
 
 ## Limitations
 
-### Change Tracker
-If an entity is already loaded in the `ChangeTracker`, the filter may not apply due to how the `ChangeTracker` works.
-
-For example: 
-1. You load a customer with all his invoices
-2. You add a filter to the invoice entity type
-3. You load the same customer with all his invoices
-4. The customer invoices have not been filtered
-
-That is because both loaded customers are the same object instance. You can use `AsNoTracking` or use a new context instance if you need the customer with his invoice filtered.
-
-That is not a bug, that's how the `ChangeTracker` works.
-
-```csharp
-using (var context = new EntityContext())
-{
-	// 1. You load a customer with all his invoices
-	var customerA = context.Customers.Include(x => x.Invoices).FirstOrDefault();
-	FiddleHelper.WriteTable(customerA.Invoices);
-	
-	// 2. You add a filter to the invoice entity type
-	var filter = context.Configuration.QueryFilter.Filter<ISoftDelete>(customer => !customer.IsDeleted);
-	
-	// 3. You load the same customer with all his invoices
-	var customerB = context.Customers.Include(x => x.Invoices).FirstOrDefault();
-	
-	// 4. The customer invoices have not been filtered
-	FiddleHelper.WriteTable(customerB.Invoices);
-	
-	// Cause: That is because both loaded customers are the same object instance
-	Console.WriteLine("Object reference equals: " + object.ReferenceEquals(customerA, customerB));				
-}
-```
-[Try it](https://dotnetfiddle.net/oPE2ve)
-
-## FAQ
-
-<details>
-<summary>Why should I use `Query Filter` over `Query ResultFilter`?</summary>
-
-The **Query Filter** in most cases filters on the database side, so less rows are returned which leads to better performance.
-
-The **Query ResultFilter** should only be used when the predicate cannot be interpreted as a query expression.
-</details>
+The SoftDeleteFeature is not supported by the bulkSynchronize operation.
