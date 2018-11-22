@@ -176,4 +176,6 @@ var list = context.Customers.ToList();
 
 ## Limitations
 
+There can be only one trigger by entity type. If a second trigger try to be added an exception will be raised.
+
 The SoftDeleteFeature is not supported by the bulkSynchronize operation.
