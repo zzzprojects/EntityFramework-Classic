@@ -145,7 +145,8 @@ var list = context.Customers.ToList();
 | `Filter<T>(string id, Expression<Func<T, bool>> filter)` | Filter an entity type using a predicate. The `QueryFilter` will be created with the specified ID. | [Try it](https://dotnetfiddle.net/dBOdw2) |
 | `EnableTrigger<TEntityType>` | Enable the `SoftDeleteTrigger` with the specified id.  | [Try it](https://dotnetfiddle.net/7GZbyO)  |
 | `DisableTrigger<TEntityType>` | Disable the `SoftDeleteTrigger` with the specified id. | [Try it](https://dotnetfiddle.net/7GZbyO)  |
-| `GetTrigger<TEntityType>` | Get the `SoftDeleteTrigger` with the specified id. | [Try it](https://dotnetfiddle.net/2IBfGq) |
+| `Triggers` | Get a list of `SoftDeleteTrigger`. | [Try it](https://dotnetfiddle.net/OtNX16) |
+| `GetTrigger<TEntityType>` | Get the `SoftDeleteTrigger` with the specified id. | [Try it](https://dotnetfiddle.net/OtNX16) |
 
 ## Limitations
 
