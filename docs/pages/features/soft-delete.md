@@ -13,7 +13,7 @@ public class SoftDeleteEntitiesContext : DbContext
 	public DbSet<SoftDeleteEntity> SoftDeleteEntities { get; set; }
 }
 ```
-[Try it](https://dotnetfiddle.net/m6lnqs#)
+[Try it](https://dotnetfiddle.net/pkMR5w)
 
 The soft delete feature can be acheived by using the IEFSoftDelete interface. This interface is always added to the manager by defaut. Otherwise you can add your own trigger by specifing the action and the type on which to execute a soft delete.
 
@@ -41,76 +41,49 @@ public class SoftDeleteEntity : IEFSoftDelete
 	public bool AutoDelete { get; set; }
 }
 ```
-[Try it](https://dotnetfiddle.net/7cKY2x)
+[Try it](https://dotnetfiddle.net/m6lnqs)
 
 ### Custom Action
 You can create an custom soft delete trigger by adding it to the manager
 
 ```csharp
-        public class SoftDeleteEntitiesContext : DbContext
-        {
-            public SoftDeleteEntitiesContext() : base("EntitiesContext")
-            {
-               this.Configuration.SoftDelete.Trigger<SoftDeleteEntity>((context, delete) =>{delete.IsDeleted = false;});
-            }
-
-            public DbSet<SoftDeleteEntity> SoftDeleteEntities { get; set; }
-        }
+	public class EntityContext : DbContext
+	{
+		public EntityContext() : base(FiddleHelper.GetConnectionStringSqlServer())
+		{
+			this.Configuration.SoftDelete.Trigger<ICustomeSoftDelete>((context, customer) =>			
+			{															  			customer.isActive = false;														customer.DeletionDate = DateTime.UtcNow;							
+			});
+		}
+		
+		public DbSet<Customer> Customers { get; set; }
+	}
 ```
-[Try it](https://dotnetfiddle.net/pkMR5w)
+[Try it](https://dotnetfiddle.net/8yyF40)
 
 ### Enable/Disable Soft Delete Trigger
 You can enable/disable all existing triggers by using `IsEnabled` on the manager or individual trigger and use with the `EnableTrigger(T)` and `DisableTrigger(T)` methods.
 
 ```csharp
 using (var context = new EntityContext())
-{
-	var filter = context.Configuration.QueryFilter.Filter<ISoftDelete>(QueryFilterType.SoftDelete.ToString(), customer => !customer.IsDeleted);
-	
-	// QueryFilter.Disable()
 	{
-		filter.Disable();
-
-		// SELECT * FROM Customers
-		var list = context.Customers.ToList();
-
-		FiddleHelper.WriteTable("Customers", list);
+		context.Configuration.SoftDelete.DisableTrigger<IEFSoftDelete>();  
+		
+		// Delete A from Customers as A where Name = 'Customer_A'
+		var list = context.Customers.Where(x => x.Name == "Customer_A").ToList();
+		context.Customers.RemoveRange(list);
+		context.SaveChanges();	
+			
+		FiddleHelper.WriteTable("After Delete With DisableTrigger", context.Customers.ToList());		
+			
+		context.Configuration.SoftDelete.EnableTrigger<IEFSoftDelete>();  
+			
+		// UPDATE Customers SET IsDeleted = 1
+		context.Customers.RemoveRange(context.Customers.ToList());
+		context.SaveChanges();	
 	}
-
-	// QueryFilter.Enable()
-	{
-		filter.Enable();
-
-		// SELECT * FROM Customers WHERE IsActive = 1
-		var list = context.Customers.ToList();
-
-		FiddleHelper.WriteTable("Customers", list);
-	}
-	
-	// QueryFilterManager.DisableFilter(string id)
-	{
-		// DOC: You can enable/disable your `QueryFilter` with the `Enable()`, `Disable()`, `EnableFilter(id)`, and `DisableFilder(id)` methods.
-		context.Configuration.QueryFilter.DisableFilter(QueryFilterType.SoftDelete.ToString());
-
-		// SELECT * FROM Customers
-		var list = context.Customers.ToList();
-
-		FiddleHelper.WriteTable("Customers", list);
-	}
-
-	// QueryFilterManager.EnableFilter(string id)
-	{
-		// DOC: You can enable/disable your `QueryFilter` with the `Enable()`, `Disable()`, `EnableFilter(id)`, and `DisableFilder(id)` methods.
-		context.Configuration.QueryFilter.EnableFilter(QueryFilterType.SoftDelete.ToString());
-
-		// SELECT * FROM Customers WHERE IsActive = 1
-		var list = context.Customers.ToList();
-
-		FiddleHelper.WriteTable("Customers", list);
-	}
-}
 ```
-[Try it](https://dotnetfiddle.net/tctGi0)
+[Try it](https://dotnetfiddle.net/7GZbyO)
 
 ## Real Life Scenarios
 
