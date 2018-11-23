@@ -13,7 +13,7 @@ public class SoftDeleteEntitiesContext : DbContext
 	public DbSet<SoftDeleteEntity> SoftDeleteEntities { get; set; }
 }
 ```
-[Try it](https://dotnetfiddle.net/aDsTWW)
+[Try it](https://dotnetfiddle.net/m6lnqs#)
 
 The soft delete feature can be acheived by using the IEFSoftDelete interface. This interface is always added to the manager by defaut. Otherwise you can add your own trigger by specifing the action and the type on which to execute a soft delete.
 
@@ -57,7 +57,7 @@ You can create an custom soft delete trigger by adding it to the manager
             public DbSet<SoftDeleteEntity> SoftDeleteEntities { get; set; }
         }
 ```
-[Try it](https://dotnetfiddle.net/qjRFbZ)
+[Try it](https://dotnetfiddle.net/pkMR5w)
 
 ### Enable/Disable Soft Delete Trigger
 You can enable/disable all existing triggers by using `IsEnabled` on the manager or individual trigger and use with the `EnableTrigger(T)` and `DisableTrigger(T)` methods.
