@@ -15,10 +15,10 @@ public class SoftDeleteEntitiesContext : DbContext
 ```
 [Try it](https://dotnetfiddle.net/pkMR5w)
 
-The soft delete feature can be acheived by using the IEFSoftDelete interface. This interface is always added to the manager by defaut. Otherwise you can add your own trigger by specifing the action and the type on which to execute a soft delete.
+The soft delete feature can be acheived by using the IEFSoftDelete interface. By default this interface is always added to the manager. Otherwise you can add your own triggers by specifing the action and the type on which to execute a soft delete.
 
 The IEFSoftDelete interface will handle any entities that has a column named IsDeleted with the boolean type.
-Any entity that inherit this intefaced will be soft delete instead of completly delete when saving changes from a context.
+Any entity that inherit this intefaced will be soft deleted instead of being completly delete when saving changes from a context.
 
 ### Advantage
 
@@ -93,21 +93,35 @@ Your application uses Soft Delete/Logical Delete to delete entities.
 The **Query Filter** allows you to exclude all entities that are soft deleted from all your queries.
 
 ```csharp
-public class EntityContext : DbContext
-{
-	public EntityContext() : base(FiddleHelper.GetConnectionStringSqlServer())
+	public class EntityContext : DbContext
 	{
-		// Add your Global Query Filter here
-		this.Configuration.QueryFilter.Filter<ISoftDelete>(customer => !customer.IsDeleted);
+		public EntityContext() : base(FiddleHelper.GetConnectionStringSqlServer())
+		{
+			this.Configuration.SoftDelete.Trigger<ICustomSoftDelete>((context, customer) =>								{
+				customer.isActive = false;
+				customer.DeletionDate = DateTime.UtcNow;
+			});
+		}
+		
+		public DbSet<Customer> Customers { get; set; }
+	}
+		
+	public class Customer : ICustomSoftDelete
+	{
+		public int CustomerID { get; set; }
+		public string Name { get; set; }
+		public string Description { get; set; }
+		public bool isActive { get; set; }
+		public DateTime? DeletionDate   { get; set; }
 	}
 	
-	public DbSet<Customer> Customers { get; set; }
-}
-
-// SELECT * FROM Customers WHERE IsDeleted = 0
-var list = context.Customers.ToList();
+	public interface ICustomSoftDelete
+	{
+		bool isActive  { get; set; }
+		DateTime? DeletionDate   { get; set; }
+	}
 ```
-[Try it](https://dotnetfiddle.net/b1kwHs)
+[Try it](https://dotnetfiddle.net/m6lnqs)
 
 > HINT: The filter is usually applied to an interface named `ISoftDelete` inherited by all entity type that uses Soft Delete. 
 
