@@ -120,7 +120,7 @@ var list = context.Customers.ToList();
 | Name | Description | Example |
 | :--- | :---------- | :------ |
 | `EntityType` | Gets the `SofDeleteTrigger` entity type. | [Try it](https://dotnetfiddle.net/8z8spq) |
-| `IsEnabled` | Gets if the `SofDeleteTrigger` is enabled. Use `Enable()` and `Disable()` method to change the state. Always return false if the `SoftDeleteTrigger` feature is disabled. | [Try it](https://dotnetfiddle.net/28AdvH) |
+| `IsEnabled` | Gets if the `SofDeleteTrigger` is enabled. Use `Enable()` and `Disable()` method to change the state. Always return false if the `SoftDeleteTrigger` feature is disabled. | [Try it](https://dotnetfiddle.net/xchNsI) |
 
 ###### Methods
 
@@ -135,7 +135,7 @@ var list = context.Customers.ToList();
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `IsEnabled` | Gets or sets if the `Soft Delete` feature is enabled. | [Try it](https://dotnetfiddle.net/ykhwxO) |
+| `IsEnabled` | Gets or sets if the `Soft Delete` feature is enabled. | [Try it](https://dotnetfiddle.net/xchNsI) |
 
 ###### Methods
 
