@@ -126,8 +126,8 @@ var list = context.Customers.ToList();
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `Enable()` | Enable the `SoftDeleteTrigger`. | [Try it](https://dotnetfiddle.net/H7cqIU) |
-| `Disable()` | Disable the `SoftDeleteTrigger`. | [Try it](https://dotnetfiddle.net/ArFGJh) |
+| `Enable()` | Enable the `SoftDeleteTrigger`. | [Try it](https://dotnetfiddle.net/00reiu) |
+| `Disable()` | Disable the `SoftDeleteTrigger`. | [Try it](https://dotnetfiddle.net/00reiu) |
 
 ### SoftDeleteManager
 
