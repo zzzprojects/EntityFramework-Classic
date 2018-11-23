@@ -143,8 +143,8 @@ var list = context.Customers.ToList();
 | :--- | :---------- | :------ |
 | `Trigger<TEntityType>(Action<DbContext, TEntityType> action)`) | Execute an action when an entity type state is set to Deleted and set the state to modified afterward | [Try it](https://dotnetfiddle.net/lqfF8b) |
 | `Filter<T>(string id, Expression<Func<T, bool>> filter)` | Filter an entity type using a predicate. The `QueryFilter` will be created with the specified ID. | [Try it](https://dotnetfiddle.net/dBOdw2) |
-| `EnableTrigger<TEntityType>` | Enable the `SoftDeleteTrigger` with the specified id.  | [Try it](https://dotnetfiddle.net/q7T7nl)  |
-| `DisableTrigger<TEntityType>` | Disable the `SoftDeleteTrigger` with the specified id. | [Try it](https://dotnetfiddle.net/Zoric3)  |
+| `EnableTrigger<TEntityType>` | Enable the `SoftDeleteTrigger` with the specified id.  | [Try it](https://dotnetfiddle.net/7GZbyO)  |
+| `DisableTrigger<TEntityType>` | Disable the `SoftDeleteTrigger` with the specified id. | [Try it](https://dotnetfiddle.net/7GZbyO)  |
 | `GetTrigger<TEntityType>` | Get the `SoftDeleteTrigger` with the specified id. | [Try it](https://dotnetfiddle.net/2IBfGq) |
 
 ## Limitations
