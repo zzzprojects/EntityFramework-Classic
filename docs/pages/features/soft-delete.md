@@ -15,10 +15,10 @@ public class SoftDeleteEntitiesContext : DbContext
 ```
 [Try it](https://dotnetfiddle.net/pkMR5w)
 
-The soft delete feature can be acheived by using the IEFSoftDelete interface. By default this interface is always added to the manager. Otherwise you can add your own triggers by specifing the action and the type on which to execute a soft delete.
+The soft delete feature can be acheived by using the 'IEFSoftDelete' interface. By default this interface is always added to the manager. Otherwise you can add your own triggers by specifing the action and the type on which to execute a soft delete.
 
-The `IEFSoftDelete` interface will handle any entities that has a column named IsDeleted with the boolean type.
-Any entity that inherit this intefaced will be soft deleted instead of being completly delete when saving changes from a context.
+The `IEFSoftDelete` interface will handle any entities that has a column named 'IsDeleted' with the boolean type.
+Any entity that inherit this intefaced will be soft deleted instead of being completly deleted when saving changes from a context.
 
 ### Advantage
 
@@ -29,7 +29,7 @@ Any entity that inherit this intefaced will be soft deleted instead of being com
 ## Getting Started
 
 ### Default Interface
-You can use the default soft delete by inheriting the IEFSoftDelete interface.
+You can use the default soft delete by inheriting the 'IEFSoftDelete' interface.
 
 ```csharp
 public class SoftDeleteEntity : IEFSoftDelete
@@ -90,7 +90,7 @@ using (var context = new EntityContext())
 ### Soft Delete
 Your application uses Soft Delete/Logical Delete to delete entities.
 
-The **Query Filter** allows you to exclude all entities that are soft deleted from all your queries.
+The **Soft Delete** allows you to mark entities as deleted instead of physically deleted them.
 
 ```csharp
 	public class EntityContext : DbContext
@@ -122,8 +122,6 @@ The **Query Filter** allows you to exclude all entities that are soft deleted fr
 	}
 ```
 [Try it](https://dotnetfiddle.net/m6lnqs)
-
-> HINT: The filter is usually applied to an interface named `ISoftDelete` inherited by all entity type that uses Soft Delete. 
 
 ## Documentation
 
