@@ -41,7 +41,7 @@ public class SoftDeleteEntity : IEFSoftDelete
 	public bool AutoDelete { get; set; }
 }
 ```
-[Try it](https://dotnetfiddle.net/m6lnqs)
+[Try it](https://dotnetfiddle.net/bRqZHn)
 
 ### Custom Action
 You can create an custom soft delete trigger by adding it to the manager
@@ -121,7 +121,7 @@ The **Soft Delete** allows you to mark entities as deleted instead of physically
 		DateTime? DeletionDate   { get; set; }
 	}
 ```
-[Try it](https://dotnetfiddle.net/m6lnqs)
+[Try it](https://dotnetfiddle.net/rpWuks)
 
 ## Documentation
 
