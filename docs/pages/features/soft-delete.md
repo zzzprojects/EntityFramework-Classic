@@ -17,7 +17,7 @@ public class SoftDeleteEntitiesContext : DbContext
 
 The soft delete feature can be acheived by using the IEFSoftDelete interface. By default this interface is always added to the manager. Otherwise you can add your own triggers by specifing the action and the type on which to execute a soft delete.
 
-The IEFSoftDelete interface will handle any entities that has a column named IsDeleted with the boolean type.
+The `IEFSoftDelete` interface will handle any entities that has a column named IsDeleted with the boolean type.
 Any entity that inherit this intefaced will be soft deleted instead of being completly delete when saving changes from a context.
 
 ### Advantage
