@@ -1,7 +1,7 @@
 # Soft Delete
 
 ## Description
-The **Soft Delete** feature allows you to flag record as deleted instead of deleting them (Hard Delete).
+The **Soft Delete** feature allows you to flag records as deleted (Soft Delete) instead of deleting them physically (Hard Delete).
 
 ```csharp
 public class SoftDeleteEntitiesContext : DbContext
