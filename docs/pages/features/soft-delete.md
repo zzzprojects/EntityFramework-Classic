@@ -47,17 +47,18 @@ public class SoftDeleteEntity : IEFSoftDelete
 You can create an custom soft delete trigger by adding it to the manager
 
 ```csharp
-	public class EntityContext : DbContext
+public class EntityContext : DbContext
+{
+	public EntityContext() : base(FiddleHelper.GetConnectionStringSqlServer())
 	{
-		public EntityContext() : base(FiddleHelper.GetConnectionStringSqlServer())
+		this.Configuration.SoftDelete.Trigger<ICustomeSoftDelete>((context, customer) =>			
 		{
-			this.Configuration.SoftDelete.Trigger<ICustomeSoftDelete>((context, customer) =>			
-			{															  			customer.isActive = false;														customer.DeletionDate = DateTime.UtcNow;							
-			});
-		}
-		
-		public DbSet<Customer> Customers { get; set; }
+		customer.isActive = false;														customer.DeletionDate = DateTime.UtcNow;							
+		});
 	}
+		
+	public DbSet<Customer> Customers { get; set; }
+}
 ```
 [Try it](https://dotnetfiddle.net/8yyF40)
 
@@ -66,22 +67,21 @@ You can enable/disable all existing soft delete triggers by using `IsEnabled` on
 
 ```csharp
 using (var context = new EntityContext())
-	{
-		context.Configuration.SoftDelete.DisableTrigger<IEFSoftDelete>();  
+{
+	context.Configuration.SoftDelete.DisableTrigger<IEFSoftDelete>();  
 		
-		// Delete A from Customers as A where Name = 'Customer_A'
-		var list = context.Customers.Where(x => x.Name == "Customer_A").ToList();
-		context.Customers.RemoveRange(list);
-		context.SaveChanges();	
+	// Delete A from Customers as A where Name = 'Customer_A'
+	var list = context.Customers.Where(x => x.Name == "Customer_A").ToList();
+	context.Customers.RemoveRange(list);
+	context.SaveChanges();	
 			
-		FiddleHelper.WriteTable("After Delete With DisableTrigger", context.Customers.ToList());		
+	FiddleHelper.WriteTable("After Delete With DisableTrigger", context.Customers.ToList());		
 			
-		context.Configuration.SoftDelete.EnableTrigger<IEFSoftDelete>();  
+	context.Configuration.SoftDelete.EnableTrigger<IEFSoftDelete>();  
 			
-		// UPDATE Customers SET IsDeleted = 1
-		context.Customers.RemoveRange(context.Customers.ToList());
-		context.SaveChanges();	
-	}
+	context.Customers.RemoveRange(context.Customers.ToList());
+	context.SaveChanges();	
+}
 ```
 [Try it](https://dotnetfiddle.net/7GZbyO)
 
@@ -93,18 +93,17 @@ Your application uses Soft Delete/Logical Delete to delete entities.
 The **Soft Delete** allows you to mark entities as deleted instead of physically deleted them.
 
 ```csharp
-	public class EntityContext : DbContext
+public class EntityContext : DbContext
+{
+	public EntityContext() : base(FiddleHelper.GetConnectionStringSqlServer())
 	{
-		public EntityContext() : base(FiddleHelper.GetConnectionStringSqlServer())
-		{
-			this.Configuration.SoftDelete.Trigger<ICustomSoftDelete>((context, customer) =>								{
-				customer.isActive = false;
-				customer.DeletedAt = DateTime.UtcNow;
-			});
-		}
-		
-		public DbSet<Customer> Customers { get; set; }
+		this.Configuration.SoftDelete.Trigger<ICustomSoftDelete>((context, customer) =>								{
+			customer.isActive = false;
+			customer.DeletedAt = DateTime.UtcNow;
+		});
 	}
+		
+	public DbSet<Customer> Customers { get; set; }
 		
 	public class Customer : ICustomSoftDelete
 	{
@@ -120,6 +119,7 @@ The **Soft Delete** allows you to mark entities as deleted instead of physically
 		bool isActive  { get; set; }
 		DateTime? DeletedAt   { get; set; }
 	}
+}
 ```
 [Try it](https://dotnetfiddle.net/rpWuks)
 
@@ -154,10 +154,10 @@ The **Soft Delete** allows you to mark entities as deleted instead of physically
 | Name | Description | Example |
 | :--- | :---------- | :------ |
 | `Trigger<TEntityType>(Action<DbContext, TEntityType> action)`) | Execute an action when an entity type state is set to Deleted and set the state to modified afterward | [Try it](https://dotnetfiddle.net/eAimu3) |
-| `EnableTrigger<TEntityType>` | Enable the `SoftDeleteTrigger` with the specified id.  | [Try it](https://dotnetfiddle.net/7GZbyO)  |
-| `DisableTrigger<TEntityType>` | Disable the `SoftDeleteTrigger` with the specified id. | [Try it](https://dotnetfiddle.net/7GZbyO)  |
-| `Triggers` | Get a list of `SoftDeleteTrigger`. | [Try it](https://dotnetfiddle.net/OtNX16) |
-| `GetTrigger<TEntityType>` | Get the `SoftDeleteTrigger` with the specified id. | [Try it](https://dotnetfiddle.net/OtNX16) |
+| `EnableTrigger<TEntityType>()` | Enable the `SoftDeleteTrigger` with the specified id.  | [Try it](https://dotnetfiddle.net/7GZbyO)  |
+| `DisableTrigger<TEntityType>()` | Disable the `SoftDeleteTrigger` with the specified id. | [Try it](https://dotnetfiddle.net/7GZbyO)  |
+| `Triggers()` | Get a list of `SoftDeleteTrigger`. | [Try it](https://dotnetfiddle.net/OtNX16) |
+| `GetTrigger<TEntityType>()` | Get the `SoftDeleteTrigger` with the specified id. | [Try it](https://dotnetfiddle.net/OtNX16) |
 
 ## Limitations
 
