@@ -153,7 +153,7 @@ public class EntityContext : DbContext
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `Trigger<TEntityType>(Action<DbContext, TEntityType> action)`) | Execute an action when an entity type state is set to Deleted and set the state to modified afterward | [Try it](https://dotnetfiddle.net/eAimu3) |
+| `Trigger<TEntityType>(Action<DbContext, TEntityType> action)` | Execute an action when an entity type state is set to Deleted and set the state to modified afterward | [Try it](https://dotnetfiddle.net/eAimu3) |
 | `EnableTrigger<TEntityType>()` | Enable the `SoftDeleteTrigger` with the specified id.  | [Try it](https://dotnetfiddle.net/7GZbyO)  |
 | `DisableTrigger<TEntityType>()` | Disable the `SoftDeleteTrigger` with the specified id. | [Try it](https://dotnetfiddle.net/7GZbyO)  |
 | `Triggers()` | Get a list of `SoftDeleteTrigger`. | [Try it](https://dotnetfiddle.net/OtNX16) |
