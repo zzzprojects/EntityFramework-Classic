@@ -54,7 +54,7 @@ public class EntityContext : DbContext
 		this.Configuration.SoftDelete.Trigger<ICustomeSoftDelete>((context, customer) =>			
 		{
 			customer.isActive = false;
-			customer.DeletionDate = DateTime.UtcNow;							
+			customer.DeletedAt = DateTime.UtcNow;							
 		});
 	}
 		
