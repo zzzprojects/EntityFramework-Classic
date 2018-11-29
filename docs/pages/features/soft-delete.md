@@ -15,7 +15,7 @@ public class SoftDeleteEntitiesContext : DbContext
 ```
 [Try it](https://dotnetfiddle.net/pkMR5w)
 
-The soft delete feature can be acheived by using the 'IEFSoftDelete' interface. By default this interface is always added to the manager. Otherwise you can add your own triggers by specifing the action and the type on which to execute a soft delete.
+The soft delete feature can be acheived by using the 'IEFSoftDelete' interface. By default this interface is always added to the manager. Otherwise you can add your own interface and trigger action to perform a soft delete.
 
 The `IEFSoftDelete` interface will handle any entities that has a column named 'IsDeleted' with the boolean type.
 Any entity that inherit this intefaced will be soft deleted instead of being completly deleted when saving changes from a context.
@@ -43,7 +43,7 @@ public class SoftDeleteEntity : IEFSoftDelete
 ```
 [Try it](https://dotnetfiddle.net/bRqZHn)
 
-### Custom Action
+### Custom Interface
 You can create an custom soft delete trigger by adding it to the manager
 
 ```csharp
@@ -62,7 +62,7 @@ You can create an custom soft delete trigger by adding it to the manager
 [Try it](https://dotnetfiddle.net/8yyF40)
 
 ### Enable/Disable Soft Delete Trigger
-You can enable/disable all existing triggers by using `IsEnabled` on the manager or individual trigger and use with the `EnableTrigger(T)` and `DisableTrigger(T)` methods.
+You can enable/disable all existing soft delete triggers by using `IsEnabled` on the manager or individual trigger and use with the `EnableTrigger(T)` and `DisableTrigger(T)` methods.
 
 ```csharp
 using (var context = new EntityContext())
@@ -99,7 +99,7 @@ The **Soft Delete** allows you to mark entities as deleted instead of physically
 		{
 			this.Configuration.SoftDelete.Trigger<ICustomSoftDelete>((context, customer) =>								{
 				customer.isActive = false;
-				customer.DeletionDate = DateTime.UtcNow;
+				customer.DeletedAt = DateTime.UtcNow;
 			});
 		}
 		
@@ -112,13 +112,13 @@ The **Soft Delete** allows you to mark entities as deleted instead of physically
 		public string Name { get; set; }
 		public string Description { get; set; }
 		public bool isActive { get; set; }
-		public DateTime? DeletionDate   { get; set; }
+		public DateTime? DeletedAt   { get; set; }
 	}
 	
 	public interface ICustomSoftDelete
 	{
 		bool isActive  { get; set; }
-		DateTime? DeletionDate   { get; set; }
+		DateTime? DeletedAt   { get; set; }
 	}
 ```
 [Try it](https://dotnetfiddle.net/rpWuks)
