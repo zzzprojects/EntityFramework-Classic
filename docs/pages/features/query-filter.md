@@ -255,7 +255,7 @@ public class EntityContext : DbContext
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `Filter<T>(Expression<Func<T, bool>> filter)`) | Filter an entity type using a predicate. | [Try it](https://dotnetfiddle.net/lqfF8b) |
+| `Filter<T>(Expression<Func<T, bool>> filter)` | Filter an entity type using a predicate. | [Try it](https://dotnetfiddle.net/lqfF8b) |
 | `Filter<T>(string id, Expression<Func<T, bool>> filter)` | Filter an entity type using a predicate. The `QueryFilter` will be created with the specified ID. | [Try it](https://dotnetfiddle.net/dBOdw2) |
 | `EnableFilter(string id)` | Enable the `QueryFilter` with the specified id.  | [Try it](https://dotnetfiddle.net/q7T7nl)  |
 | `DisableFilter(string id)` | Disable the `QueryFilter` with the specified id. | [Try it](https://dotnetfiddle.net/Zoric3)  |
