@@ -1,4 +1,14 @@
 # EF Classic Features
+## 2018-12-19
+- [Audit](audit.md)
+
+## 2018-12-12
+- [IncludeFilter](https://www.nuget.org/packages/Z.EntityFramework.Plus.QueryIncludeFilter.EFClassic/)
+- [IncludeOptimized](https://www.nuget.org/packages/Z.EntityFramework.Plus.QueryIncludeOptimized.EFClassic/)
+
+## 2018-11-15
+- [Soft Delete](soft-delete.md)
+
 ## 2018-09-06
 - [Query Cache](query-cache.md)
 
