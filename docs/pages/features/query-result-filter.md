@@ -14,11 +14,56 @@ public class EntityContext : DbContext
 	public EntityContext() : base(FiddleHelper.GetConnectionStringSqlServer())
 	{
 		// Add your QueryResultFilter here
-		this.Configuration.QueryResultFilter.Filter<Customer>(customer => customer.IsActive);
+		this.Configuration.QueryResultFilter.Filter<ISoftDelete>(customer => !customer.IsDeleted || DisplaySoftDelete());
+	}
+	
+	public bool DisplaySoftDelete()
+	{
+		// Check for example if current user has admin right
+		return false;
 	}
 	
 	public DbSet<Customer> Customers { get; set; }
 }
+
+var list = context.Customers.ToList();
 ```
 
 [Try it](https://dotnetfiddle.net/39wJxN)
+
+## Documentation
+
+### QueryResultFilter
+
+###### Properties
+
+| Name | Description | Example |
+| :--- | :---------- | :------ |
+| `ID` | Gets the `QueryFilter` ID. | [Coming soon](#) |
+| `EntityType` | Gets the `QueryFilter` entity type on which the filter is applied. | [Coming soon](#) |
+| `IsEnabled` | Gets if the `QueryFilter` is enabled. Use `Enable()` and `Disable()` method to change the state. Always return false if the `QueryFilter` feature is disabled. | [Coming soon](#) |
+
+###### Methods
+
+| Name | Description | Example |
+| :--- | :---------- | :------ |
+| `Enable()` | Enable the `QueryFilter`. | [Coming soon](#) |
+| `Disable()` | Disable the `QueryFilter`. | [Coming soon](#) |
+
+### QueryResultFilterManager
+
+###### Properties
+
+| Name | Description | Example |
+| :--- | :---------- | :------ |
+| `IsEnabled` | Gets or sets if the `QueryFilter` feature is enabled. | [Coming soon](#) |
+
+###### Methods
+
+| Name | Description | Example |
+| :--- | :---------- | :------ |
+| `Filter<T>(Expression<Func<T, bool>> filter)` | Filter an entity type using a predicate. | [Coming soon](#) |
+| `Filter<T>(string id, Expression<Func<T, bool>> filter)` | Filter an entity type using a predicate. The `QueryFilter` will be created with the specified ID. | [Coming soon](#) |
+| `EnableFilter(string id)` | Enable the `QueryFilter` with the specified id.  | [Coming soon](#)  |
+| `DisableFilter(string id)` | Disable the `QueryFilter` with the specified id. | [Coming soon](#)  |
+| `GetFilter(string id)` | Get the `QueryFilter` with the specified id. | [Coming soon](#) |
