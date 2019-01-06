@@ -9,21 +9,26 @@ This feature is available for free in the EF Classic Community.
 
 All LINQ predicate methods are supported. A string expression which return a Boolean function can be used as parameter.
 
- - Deferred
- - SkipWhile
- - TakeWhile
- - Where
- - Immediate
- - All
- - Any
- - Count
- - First
- - FirstOrDefault
- - Last
- - LastOrDefault
- - LongCount
- - Single
- - SingleOrDefault
+###### Deferred Methods
+| Name | Description | Example |
+| :--- | :---------- | :------ |
+| `SkipWhile` | | [Coming soon](#) |
+| `TakeWhile` | | [Coming soon](#) |
+| `Where` | | [Coming soon](#) |
+
+###### Immediate Methods
+| Name | Description | Example |
+| :--- | :---------- | :------ |
+| `All` | | [Coming soon](#) |
+| `Any` | | [Coming soon](#) |
+| `Count` | | [Coming soon](#) |
+| `First` | | [Coming soon](#) |
+| `FirstOrDefault` | | [Coming soon](#) |
+| `Last` | | [Coming soon](#) |
+| `LastOrDefault` | | [Coming soon](#) |
+| `LongCount` | | [Coming soon](#) |
+| `Single` | | [Coming soon](#) |
+| `SingleOrDefault` | | [Coming soon](#) |
 
 {% include template-example.html %} 
 ```csharp
@@ -36,12 +41,15 @@ var list2 = context.Customers.Where(x => "x.IsActive == IsActive", new { IsActiv
 
 All LINQ selector and order are supported. Most of them require the "Dynamic" suffix to not override default behavior (Ordering or selecting by a string is valid).
 
- - OrderByDescendingDynamic
- - OrderByDynamic
- - SelectDynamic
- - SelectMany
- - ThenByDescendingDynamic
- - ThenByDynamic
+###### Deferred  Methods
+| Name | Description | Example |
+| :--- | :---------- | :------ |
+| `OrderByDescendingDynamic` | | [Coming soon](#) |
+| `OrderByDynamic` | | [Coming soon](#) |
+| `SelectDynamic` | | [Coming soon](#) |
+| `SelectManyDynamic` | | [Coming soon](#) |
+| `ThenByDescendingDynamic` | | [Coming soon](#) |
+| `ThenByDynamic` | | [Coming soon](#) |
 
 {% include template-example.html %} 
 ```csharp
@@ -53,8 +61,11 @@ var list = context.Customers.OrderByDescendingDynamic(x => "x.Name").ToList();
 
 The Execute method is the LINQ Dynamic ultimate methods which let you evaluate and execute a dynamic expression and return the result.
 
- - Execute
- - Execute< TResult >
+###### Methods
+| Name | Description | Example |
+| :--- | :---------- | :------ |
+| `Execute` | | [Coming soon](#) |
+| `Execute<TResult>` | | [Coming soon](#) |
 
 ```csharp
 var list = context.Customers.Execute<IEnumerable<Customer>>("Where(x => x.IsActive == true)").ToList();
