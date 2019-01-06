@@ -13,101 +13,54 @@ However, some features like **Query Cache** and **Query Future** cannot be used 
 
 ### All LINQ IQueryable extension methods and overloads are supported:
 
- - DeferredAggregate
- - DeferredAll
- - DeferredAny
- - DeferredAverage
- - DeferredContains
- - DeferredCount
- - DeferredElementAt
- - DeferredElementAtOrDefault
- - DeferredFirst
- - DeferredFirstOrDefault
- - DeferredLast
- - DeferredLastOrDefault
- - DeferredLongCount
- - DeferredMax
- - DeferredMin
- - DeferredSequenceEqual
- - DeferredSingle
- - DeferredSingleOrDefault
- - DeferredSum
-
----
-
-### The following documentation is about EF+ since `FromCache` feature has not beed added yet on EF Classic. A better documentation should be soon available related to EF Classic.
-
-```csharp
-// Oops! The query is already executed, we cannot cache it.
-var count = ctx.Customers.Count();
-
-// Oops! All customers are cached instead of the customer count.
-var count = ctx.Customers.FromCache().Count();
-```
-
-Here comes in play the deferred query which acts exactly like deferred methods, by modifying the query expression without resolving it.
-
-```csharp
-// using Z.EntityFramework.Plus; // Don't forget to include this.
-var ctx = new EntitiesContext();
-
-// The count is deferred and cached.
-var count = ctx.Customers.DeferredCount().FromCache();
-
-```
-
-## EF+ Query Deferred
-
-Defer the execution of a query which is normally executed to allow some features like Query Cache and Query Future.
-
-{% include template-example.html %} 
-```csharp
-
-// using Z.EntityFramework.Plus; // Don't forget to include this.
-var ctx = new EntitiesContext();
-
-// Query Cache
-ctx.Customers.DeferredCount().FromCache();
-
-// Query Future
-ctx.Customers.DeferredCount().FutureValue();
-
-```
-
-## EF+ Query Deferred Execute
-
-Execute the deferred query and return the result.
-
-```csharp
-
-// using Z.EntityFramework.Plus; // Don't forget to include this.
-var ctx = new EntitiesContext();
-
-var countDeferred = ctx.Customers.DeferredCount();
-var count = countDeferred.Execute();
-
-```
-
-## EF+ Query Deferred Execute Async
-
-Execute the Deferred query asynchronously and return the result.
-
-**ExecuteAsync** methods are available starting from .NET Framework 4.5 and support all the same options than **Execute** methods.
-
-```csharp
-
-// using Z.EntityFramework.Plus; // Don't forget to include this.
-var ctx = new EntitiesContext();
-
-var countDeferred = ctx.Customers.DeferredCount();
-var taskCount = countDeferred.ExecuteAsync();
-
-```
+| Name | Description | Example |
+| :--- | :---------- | :------ |
+| `DeferredAggregate` | QueryDeferred extension method. Applies an accumulator function over a sequence. | [Coming soon](#) |
+| `DeferredAll` | | [Coming soon](#) |
+| `DeferredAny` | | [Coming soon](#) |
+| `DeferredAverage` | | [Coming soon](#) |
+| `DeferredContains` | | [Coming soon](#) |
+| `DeferredCount` | | [Coming soon](#) |
+| `DeferredElementAt` | | [Coming soon](#) |
+| `DeferredElementAtOrDefault` | | [Coming soon](#) |
+| `DeferredFirst` | | [Coming soon](#) |
+| `DeferredFirstOrDefault` | | [Coming soon](#) |
+| `DeferredLast` | | [Coming soon](#) |
+| `DeferredLastOrDefault` | | [Coming soon](#) |
+| `DeferredLongCount` | | [Coming soon](#) |
+| `DeferredMax` | | [Coming soon](#) |
+| `DeferredMin` | | [Coming soon](#) |
+| `DeferredSequenceEqual` | | [Coming soon](#) |
+| `DeferredSingle` | | [Coming soon](#) |
+| `DeferredSingleOrDefault` | | [Coming soon](#) |
+| `DeferredSum` | | [Coming soon](#) |
 
 ## Real Life Scenarios
+### Query Cache
+You want to cache the customer count (immediate method) with the [Query Cache](query-cache) feature. You can defer the customer count with the `DeferredCount` method.
 
-EF Query Deferred brings advantages to other third party features:
+```csharp
+// ... Coming soon...
+```
+[Coming soon](#)
 
- - Allows to use Immediate Method with EF+ Query Cache.
- - Allows to use Immediate Method with EF+ Query Future.
- - Allows to use Immediate Method with YOUR own features.
+### Query Future
+You want to return the customer count (immediate method) with a paged list using the [Query Future](query-future) feature. You can defer the customer count with the `DeferredCount` method.
+
+```csharp
+// ... Coming soon...
+```
+[Coming soon](#)
+
+## Documnentation
+
+### QueryDeferred<TResult>
+
+###### Methods
+| Name | Description | Example |
+| :--- | :---------- | :------ |
+| `Execute()` | Execute the deferred expression and return the result. | [Coming soon](#) |
+| `ExecuteAsync()` | Execute asynchrounously the deferred expression and return the result. | [Coming soon](#) |
+| `ExecuteAsync(CancellationToken cancellationToken)` | Execute asynchrounously the deferred expression and return the result.  | [Coming soon](#)  |
+
+
