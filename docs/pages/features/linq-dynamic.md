@@ -30,7 +30,6 @@ All LINQ predicate methods are supported. A string expression which return a Boo
 | `Single` | | [Coming soon](#) |
 | `SingleOrDefault` | | [Coming soon](#) |
 
-{% include template-example.html %} 
 ```csharp
 var list = context.Customers.Where(x => "x.IsActive").ToList();
 var list2 = context.Customers.Where(x => "x.IsActive == IsActive", new { IsActive = false }).ToList();
@@ -51,7 +50,6 @@ All LINQ selector and order are supported. Most of them require the "Dynamic" su
 | `ThenByDescendingDynamic` | | [Coming soon](#) |
 | `ThenByDynamic` | | [Coming soon](#) |
 
-{% include template-example.html %} 
 ```csharp
 var list = context.Customers.OrderByDescendingDynamic(x => "x.Name").ToList();
 ```
