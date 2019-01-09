@@ -1,19 +1,10 @@
 # Include
 
 ## Description
-You can add related objects to the query result by using the `Include` method.
+The `Include` method let you to add related entities to the query result.
 
 In EF Classic, the `Include` method doesn't longer return an `IQueryable` but instead an `IncludeDbQuery` that allows you to chain multiple related objects to the query result by using the `AlsoInclude` and `ThenInclude` methods.
 
-You can convert the `IQueryable` to `DbQuery` by using the `AsDbQuery` method.
-
-We recommend creating and resolving multiple different queries rather than trying to included everything in a single query. 
-
-### Note
-- If you want to include items from the same level, use [`AlsoInclude`](also-include.md)
-- If you want to include items from the next level, use [`ThenInclude`](then-include.md)
-
-### Examples
 ```csharp
 ctx.Customers
 	.Include(customer => customer.Orders)
@@ -23,8 +14,17 @@ ctx.Customers
 			.AlsoInclude(product => product.Supplier)
 	.ToList();
 ```
-
 [Try it](https://dotnetfiddle.net/MkpoSo)
+
+### Note
+- If you want to include items from the same level, use [`AlsoInclude`](also-include.md)
+- If you want to include items from the next level, use [`ThenInclude`](then-include.md)
+
+## Limitation
+
+### DbQuery
+Chaining includes only work if the first include call is from a `DbQuery`. If you used some LINQ and the query is currently an `IQueryable`, you can use the method `AsDbQuery` to tell the compiler that's a `DbQuery`.
+This restriction is currently required to avoid some side impact with queries that are not directly using `DbQuery` class.
 
 ```csharp
 ctx.OrderDetails
@@ -35,5 +35,7 @@ ctx.OrderDetails
 		.AlsoInclude(product => product.Supplier)
 	.ToList();
 ```
-
 [Try it](https://dotnetfiddle.net/33OIDZ)
+
+> It's planned to remove this limitation
+
