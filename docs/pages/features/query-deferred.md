@@ -15,25 +15,18 @@ However, some features like **Query Cache** and **Query Future** cannot be used 
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `DeferredAggregate` | QueryDeferred extension method. Applies an accumulator function over a sequence. | [Coming soon](#) |
-| `DeferredAll` | | [Coming soon](#) |
-| `DeferredAny` | | [Coming soon](#) |
-| `DeferredAverage` | | [Coming soon](#) |
-| `DeferredContains` | | [Coming soon](#) |
-| `DeferredCount` | | [Coming soon](#) |
-| `DeferredElementAt` | | [Coming soon](#) |
-| `DeferredElementAtOrDefault` | | [Coming soon](#) |
-| `DeferredFirst` | | [Coming soon](#) |
-| `DeferredFirstOrDefault` | | [Coming soon](#) |
-| `DeferredLast` | | [Coming soon](#) |
-| `DeferredLastOrDefault` | | [Coming soon](#) |
-| `DeferredLongCount` | | [Coming soon](#) |
-| `DeferredMax` | | [Coming soon](#) |
-| `DeferredMin` | | [Coming soon](#) |
-| `DeferredSequenceEqual` | | [Coming soon](#) |
-| `DeferredSingle` | | [Coming soon](#) |
-| `DeferredSingleOrDefault` | | [Coming soon](#) |
-| `DeferredSum` | | [Coming soon](#) |
+| `DeferredAll` | QueryDeferred extension method. Determines whether all elements of a sequence satisfy a condition. | [Try it](https://dotnetfiddle.net/R4nKJc) |
+| `DeferredAny` | QueryDeferred extension method. Determines whether a sequence contains any elements. | [Try it](https://dotnetfiddle.net/Nnv3fB) |
+| `DeferredAverage` | QueryDeferred extension method. Computes the average of a sequence of Single values. | [Try it](https://dotnetfiddle.net/KUPPPf) |
+| `DeferredCount` | QueryDeferred extension method. Returns the number of elements in a sequence. | [Try it](https://dotnetfiddle.net/GAEt8F) |
+| `DeferredFirst` | QueryDeferred extension method. Returns the first element of a sequence. | [Try it](https://dotnetfiddle.net/VNtEF2) |
+| `DeferredFirstOrDefault` | QueryDeferred extension method. Returns the first element of a sequence, or a default value if the sequence contains no elements. | [Try it](https://dotnetfiddle.net/MEM6Ub) |
+| `DeferredLongCount` | QueryDeferred extension method. Returns an Int64 that represents how many elements in a sequence satisfy a condition. | [Try it](https://dotnetfiddle.net/0wPWSF) |
+| `DeferredMax` | QueryDeferred extension method. Returns the maximum value in a sequence | [Try it](https://dotnetfiddle.net/9GljhW) |
+| `DeferredMin` | QueryDeferred extension method. Returns the minimum value in a sequence | [Try it](https://dotnetfiddle.net/8h3Fjt) |
+| `DeferredSingle` | QueryDeferred extension method. Returns the minimum value in a sequence of Single values. | [Try it](https://dotnetfiddle.net/YmhLeU) |
+| `DeferredSingleOrDefault` | QueryDeferred extension method. Returns the minimum value in a sequence of nullable Single values. | [Try it](https://dotnetfiddle.net/8k6V4Q) |
+| `DeferredSum` | QueryDeferred extension method. Computes the sum of a sequence | [Try it](https://dotnetfiddle.net/ugoMmG) |
 
 ## Real Life Scenarios
 ### Query Cache
@@ -48,9 +41,16 @@ You want to cache the customer count (immediate method) with the [Query Cache](q
 You want to return the customer count (immediate method) with a paged list using the [Query Future](query-future) feature. You can defer the customer count with the `DeferredCount` method.
 
 ```csharp
-// ... Coming soon...
+// Not do Select
+var futurValue = context.Customers.DeferredCount().FutureValue();
+
+context.Customers.Add(new Customer() { Name = "Customer_D", Description = "Description"});
+context.SaveChanges();	
+
+// SELECT COUNT(1) FROM Customers
+Console.WriteLine("Count Customer is : " +   futurValue.Value);	
 ```
-[Coming soon](#)
+[Try it](https://dotnetfiddle.net/OshIRK)
 
 ## Documnentation
 
@@ -59,7 +59,7 @@ You want to return the customer count (immediate method) with a paged list using
 ###### Methods
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `Execute()` | Execute the deferred expression and return the result. | [Coming soon](#) |
+| `Execute()` | Execute the deferred expression and return the result. | [Try it](https://dotnetfiddle.net/byuQpD) |
 | `ExecuteAsync()` | Execute asynchrounously the deferred expression and return the result. | [Coming soon](#) |
 | `ExecuteAsync(CancellationToken cancellationToken)` | Execute asynchrounously the deferred expression and return the result.  | [Coming soon](#)  |
 
