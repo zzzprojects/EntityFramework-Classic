@@ -39,16 +39,16 @@ var list = context.Customers.ToList();
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `ID` | Gets the `QueryFilter` ID. | [Coming soon](#) |
-| `EntityType` | Gets the `QueryFilter` entity type on which the filter is applied. | [Coming soon](#) |
-| `IsEnabled` | Gets if the `QueryFilter` is enabled. Use `Enable()` and `Disable()` method to change the state. Always return false if the `QueryFilter` feature is disabled. | [Coming soon](#) |
+| `ID` | Gets the `QueryFilter` ID. | [Try it](https://dotnetfiddle.net/pWIl86) |
+| `ElementType` | Gets the `QueryFilter` entity type on which the filter is applied. | [Try it](https://dotnetfiddle.net/Scty5l) |
+| `IsEnabled` | Gets if the `QueryFilter` is enabled. Use `Enable()` and `Disable()` method to change the state. Always return false if the `QueryFilter` feature is disabled. | [Try it](https://dotnetfiddle.net/rZzXUv) |
 
 ###### Methods
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `Enable()` | Enable the `QueryFilter`. | [Coming soon](#) |
-| `Disable()` | Disable the `QueryFilter`. | [Coming soon](#) |
+| `Enable()` | Enable the `QueryFilter`. | [Try it](https://dotnetfiddle.net/R4nKJc) |
+| `Disable()` | Disable the `QueryFilter`. | [Try it](https://dotnetfiddle.net/27CbSm) |
 
 ### QueryResultFilterManager
 
@@ -56,14 +56,14 @@ var list = context.Customers.ToList();
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `IsEnabled` | Gets or sets if the `QueryFilter` feature is enabled. | [Coming soon](#) |
+| `IsEnabled` | Gets or sets if the `QueryFilter` feature is enabled. | [Try it](https://dotnetfiddle.net/47jkME) |
 
 ###### Methods
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `Filter<T>(Expression<Func<T, bool>> filter)` | Filter an entity type using a predicate. | [Coming soon](#) |
-| `Filter<T>(string id, Expression<Func<T, bool>> filter)` | Filter an entity type using a predicate. The `QueryFilter` will be created with the specified ID. | [Coming soon](#) |
-| `EnableFilter(string id)` | Enable the `QueryFilter` with the specified id.  | [Coming soon](#)  |
-| `DisableFilter(string id)` | Disable the `QueryFilter` with the specified id. | [Coming soon](#)  |
-| `GetFilter(string id)` | Get the `QueryFilter` with the specified id. | [Coming soon](#) |
+| `Filter<T>(Expression<Func<T, bool>> filter)` | Filter an entity type using a predicate. | [Try it](https://dotnetfiddle.net/zcIngq) |
+| `Filter<T>(string id, Expression<Func<T, bool>> filter)` | Filter an entity type using a predicate. The `QueryFilter` will be created with the specified ID. | [Try it](https://dotnetfiddle.net/g2Hj0r) |
+| `EnableFilter(string id)` | Enable the `QueryFilter` with the specified id.  | [Try it](https://dotnetfiddle.net/WSTNTV)  |
+| `DisableFilter(string id)` | Disable the `QueryFilter` with the specified id. | [Try it](https://dotnetfiddle.net/9B3fnF)  |
+| `GetFilter(string id)` | Get the `QueryFilter` with the specified id. | [Try it](https://dotnetfiddle.net/feGJtz) |
