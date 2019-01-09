@@ -23,3 +23,41 @@ FiddleHelper.WriteTable("Customers", customers.ToList());
 FiddleHelper.WriteTable("Active Customers", ActiveCustomers);			
 ```
 [Try it](https://dotnetfiddle.net/DoWJ3t)
+
+## Documentation
+
+### QueryFutureManager
+
+###### Properties
+
+| Name | Description | Default | Example |
+| :--- | :---------- | :-----: | :------ |
+| `IsEnabled` | Gets or sets if the `QueryFuture` feature is enabled. | true | [Coming soon](#) |
+
+### QueryFutureEnumerable<TEntityType>
+  
+The `QueryFutureEnumerable<TEntityType>` inherit from the `IEnumerable<T>` interfaces.
+
+###### Methods
+
+| Name | Description | Example |
+| :--- | :---------- | :------ |
+| `ToArrayAsync()` | Converts this object to an array asynchronous. | [Coming soon](#) |
+| `ToArrayAsync(CancellationToken cancellationToken)` | Converts this object to an array asynchronous. | [Coming soon](#) |
+| `ToListAsync()` | Converts this object to a list asynchronous. | [Coming soon](#) |
+| `ToListAsync(CancellationToken cancellationToken)` | Converts this object to a list asynchronous. | [Coming soon](#) |
+  
+### QueryFutureValue<TResult>
+  
+###### Properties
+
+| Name | Description | Default | Example |
+| :--- | :---------- | :-----: | :------ |
+| `Value` | Gets the value of the future query. | null | [Coming soon](#) |
+
+###### Methods
+
+| Name | Description | Example |
+| :--- | :---------- | :------ |
+| `ValueAsync()` | Gets the value of the future query. | [Coming soon](#) |
+| `ValueAsync(CancellationToken cancellationToken)` | Gets the value of the future query. | [Coming soon](#) |
