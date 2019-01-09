@@ -6,11 +6,6 @@ You can chain multiple related objects to the query result by using the `AlsoInc
 
 `ThenInclude` is a syntactic sugar method to make it easier and clearer to include multiple related objects.
 
-### Note
-- If you want to reset the level to the root, use [`Include`](include.md)
-- If you want to include items from the same level, use [`AlsoInclude`](also-include.md)
-
-## Examples
 ```csharp
 ctx.Customers
 	.Include(customer => customer.Orders)
@@ -40,6 +35,10 @@ ctx.OrderDetails
 ```
 
 [Try it](https://dotnetfiddle.net/DzQzed)
+
+### Note
+- If you want to reset the level to the root, use [`Include`](include.md)
+- If you want to include items from the same level, use [`AlsoInclude`](also-include.md)
 
 ## Limitations
 
