@@ -35,7 +35,7 @@ ctx.OrderDetails
 		.AlsoInclude(product => product.Supplier)
 	.ToList();
 ```
-[Try it](https://dotnetfiddle.net/33OIDZ)
+[Try it](https://dotnetfiddle.net/2XJrc5)
 
 > It's planned to remove this limitation
 
