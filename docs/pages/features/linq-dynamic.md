@@ -12,23 +12,20 @@ All LINQ predicate methods are supported. A string expression which return a Boo
 ###### Deferred Methods
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `SkipWhile` | | [Coming soon](#) |
-| `TakeWhile` | | [Coming soon](#) |
-| `Where` | | [Coming soon](#) |
+| `Where` | | [Try it](https://dotnetfiddle.net/QhVfRW) |
 
 ###### Immediate Methods
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `All` | | [Coming soon](#) |
-| `Any` | | [Coming soon](#) |
-| `Count` | | [Coming soon](#) |
-| `First` | | [Coming soon](#) |
-| `FirstOrDefault` | | [Coming soon](#) |
-| `Last` | | [Coming soon](#) |
-| `LastOrDefault` | | [Coming soon](#) |
-| `LongCount` | | [Coming soon](#) |
-| `Single` | | [Coming soon](#) |
-| `SingleOrDefault` | | [Coming soon](#) |
+| `All` | | [Try it](https://dotnetfiddle.net/YCT73M) |
+| `Any` | | [Try it](https://dotnetfiddle.net/vEbwLr) |
+| `Count` | | [Try it](https://dotnetfiddle.net/v8rqKV) |
+| `First` | | [Try it](https://dotnetfiddle.net/CfxUKL) |
+| `FirstOrDefault` | | [Try it](https://dotnetfiddle.net/UX3Ymb) |
+| `LongCount` | | [Try it](https://dotnetfiddle.net/4xrM1d) |
+| `SelectMany` | | [Try it](https://dotnetfiddle.net/KLF5e7) |
+| `Single` | | [Try it](https://dotnetfiddle.net/onW4hW) |
+| `SingleOrDefault` | | [Try it](https://dotnetfiddle.net/nU97uw) |
 
 ```csharp
 var list = context.Customers.Where(x => "x.IsActive").ToList();
@@ -43,12 +40,11 @@ All LINQ selector and order are supported. Most of them require the "Dynamic" su
 ###### Deferred  Methods
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `OrderByDescendingDynamic` | | [Coming soon](#) |
-| `OrderByDynamic` | | [Coming soon](#) |
-| `SelectDynamic` | | [Coming soon](#) |
-| `SelectManyDynamic` | | [Coming soon](#) |
-| `ThenByDescendingDynamic` | | [Coming soon](#) |
-| `ThenByDynamic` | | [Coming soon](#) |
+| `OrderByDescendingDynamic` | | [Try it](https://dotnetfiddle.net/doNrVQ) |
+| `OrderByDynamic` | | [Try it](https://dotnetfiddle.net/rzKycR) |
+| `SelectDynamic` | | [Try it](https://dotnetfiddle.net/YE83om) |
+| `ThenByDescendingDynamic` | | [Try it](https://dotnetfiddle.net/8FxroD) |
+| `ThenByDynamic` | | [Try it](https://dotnetfiddle.net/pVCcRf) |
 
 ```csharp
 var list = context.Customers.OrderByDescendingDynamic(x => "x.Name").ToList();
@@ -62,8 +58,8 @@ The Execute method is the LINQ Dynamic ultimate methods which let you evaluate a
 ###### Methods
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `Execute` | | [Coming soon](#) |
-| `Execute<TResult>` | | [Coming soon](#) |
+| `Execute` | | [Try it](https://dotnetfiddle.net/z1jIkv) |
+| `Execute<TResult>` | | [Try it](https://dotnetfiddle.net/jgOyFi) |
 
 ```csharp
 var list = context.Customers.Execute<IEnumerable<Customer>>("Where(x => x.IsActive == true)").ToList();
