@@ -32,7 +32,7 @@ FiddleHelper.WriteTable("Active Customers", ActiveCustomers);
 
 | Name | Description | Default | Example |
 | :--- | :---------- | :-----: | :------ |
-| `IsEnabled` | Gets or sets if the `QueryFuture` feature is enabled. | true | [Coming soon](#) |
+| `IsEnabled` | Gets or sets if the `QueryFuture` feature is enabled. | true | [Try it](https://dotnetfiddle.net/n6VcfE) |
 
 ### QueryFutureEnumerable<TEntityType>
   
@@ -42,10 +42,10 @@ The `QueryFutureEnumerable<TEntityType>` inherit from the `IEnumerable<T>` inter
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `ToArrayAsync()` | Converts this object to an array asynchronous. | [Coming soon](#) |
-| `ToArrayAsync(CancellationToken cancellationToken)` | Converts this object to an array asynchronous. | [Coming soon](#) |
-| `ToListAsync()` | Converts this object to a list asynchronous. | [Coming soon](#) |
-| `ToListAsync(CancellationToken cancellationToken)` | Converts this object to a list asynchronous. | [Coming soon](#) |
+| `ToArrayAsync()` | Converts this object to an array asynchronous. |  |
+| `ToArrayAsync(CancellationToken cancellationToken)` | Converts this object to an array asynchronous. |  |
+| `ToListAsync()` | Converts this object to a list asynchronous. |  |
+| `ToListAsync(CancellationToken cancellationToken)` | Converts this object to a list asynchronous. |  |
   
 ### QueryFutureValue<TResult>
   
@@ -53,11 +53,11 @@ The `QueryFutureEnumerable<TEntityType>` inherit from the `IEnumerable<T>` inter
 
 | Name | Description | Default | Example |
 | :--- | :---------- | :-----: | :------ |
-| `Value` | Gets the value of the future query. | null | [Coming soon](#) |
+| `Value` | Gets the value of the future query. | null | [Try it](https://dotnetfiddle.net/ObIY3v) |
 
 ###### Methods
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `ValueAsync()` | Gets the value of the future query. | [Coming soon](#) |
-| `ValueAsync(CancellationToken cancellationToken)` | Gets the value of the future query. | [Coming soon](#) |
+| `ValueAsync()` | Gets the value of the future query. |  |
+| `ValueAsync(CancellationToken cancellationToken)` | Gets the value of the future query. |  |
