@@ -9,9 +9,9 @@ The feature work exactly like [Query Include Filter](/query-include-filter), but
 The query is split in multiples queries which reduce the amount of data transferred.
 
 ```csharp
-var blogs = ctx.Blogs.IncludeFilter(x => x.Posts.Where(y => !y.IsSoftDeleted)).ToList();
+var customers = context.Customers.IncludeOptimized(x => x.Invoices.Where(y => !y.IsSoftDeleted)).ToList();
 ```
-[Coming soon](#)
+[Try it](https://dotnetfiddle.net/K0gPht)
 
 > The **Query Include Optimized** feature may sometimes reduce the performance. For example, when some database index are missing.
 
@@ -29,13 +29,13 @@ It's planned that this feature get a major revamp to work more easily with inclu
 
 | Name | Description | Default | Example |
 | :--- | :---------- | :-----: | :------ |
-| `AllowQueryBatch` | Gets or sets if queries should be batched (executed in the same SQL Command) | `true` | [Coming soon](#) |
-| `AllowIncludeSubPath` | Gets or sets if include path should be included automatically. | `false` | [Coming soon](#) |
+| `AllowQueryBatch` | Gets or sets if queries should be batched (executed in the same SQL Command) | `true` | [Try it](https://dotnetfiddle.net/TREjVl) |
+| `AllowIncludeSubPath` | Gets or sets if include path should be included automatically. | `false` | [Try it](https://dotnetfiddle.net/DUD1Ar) |
 
 ### Extension Methods
 
 ###### Methods
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `IncludeOptimized<TEntityType, TRelatedEntity>(this IQueryable<TEntityType> query, Expression<Func<TEntityType, IEnumerable<TRelatedEntity>>> filter)` | An `IQueryable<TEntityType>` extension method that includes and filter a collection of related entities. | [Coming soon](#) |
-| `IncludeOptimized<TEntityType, TRelatedEntity>(this IQueryable<TEntityType> query, Expression<Func<TEntityType, TRelatedEntity>> filter)` | An `IQueryable<TEntityType>` extension method that includes and filter a single related entities. | [Coming soon](#) |
+| `IncludeOptimized<TEntityType, TRelatedEntity>(this IQueryable<TEntityType> query, Expression<Func<TEntityType, IEnumerable<TRelatedEntity>>> filter)` | An `IQueryable<TEntityType>` extension method that includes and filter a collection of related entities. | [Try it](https://dotnetfiddle.net/rpw6Ip) |
+| `IncludeOptimized<TEntityType, TRelatedEntity>(this IQueryable<TEntityType> query, Expression<Func<TEntityType, TRelatedEntity>> filter)` | An `IQueryable<TEntityType>` extension method that includes and filter a single related entities. | [Try it](https://dotnetfiddle.net/jiHkDP) |
