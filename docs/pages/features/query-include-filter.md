@@ -84,7 +84,7 @@ You need to load `Customer` and include related `Invoice` and `InvoiceItem`, but
 // using Z.EntityFramework.Plus; // Don't forget to include this.
 var context = new EntityContext()
 
-// LOAD customers and related active invoices and InvoiceItems[NEEDGOODWORD!!!].
+// LOAD customers and related active invoices, and InvoiceItems.
 var customers = context.Customers.IncludeFilter(x => x.Invoices.Where(y => !y.IsSoftDeleted))
 				.IncludeFilter(x => x.Invoices.Where(y => !y.IsSoftDeleted)
 							   .Select(y => y.InvoiceItems
@@ -105,10 +105,7 @@ var ctx = new EntitiesContext();
 // LOAD posts and available comments for the role level.
 var posts= ctx.Posts.IncludeFilter(x => x.Comments.Where(y => y.RoleID >= myRoleID))
                     .ToList();
-		    
-[GO SEE FIDDLE, for said like or not?!]
 ```
-[Try it](https://dotnetfiddle.net/gRbbzY)
 
 ### Include paginated entities
 You need to load a post and include related comments, but only the first 10 related comments sorted by views.
