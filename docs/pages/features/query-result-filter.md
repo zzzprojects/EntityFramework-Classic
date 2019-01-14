@@ -40,7 +40,7 @@ var list = context.Customers.ToList();
 | Name | Description | Example |
 | :--- | :---------- | :------ |
 | `ID` | Gets the `QueryFilter` ID. | [Try it](https://dotnetfiddle.net/pWIl86) |
-| `ElementType` | Gets the `QueryFilter` entity type on which the filter is applied. | [Try it](https://dotnetfiddle.net/Scty5l) |
+| `EntityType` | Gets the `QueryFilter` entity type on which the filter is applied. | [Try it](https://dotnetfiddle.net/Scty5l) |
 | `IsEnabled` | Gets if the `QueryFilter` is enabled. Use `Enable()` and `Disable()` method to change the state. Always return false if the `QueryFilter` feature is disabled. | [Try it](https://dotnetfiddle.net/rZzXUv) |
 
 ###### Methods
