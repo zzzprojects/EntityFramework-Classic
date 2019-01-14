@@ -32,12 +32,6 @@ var list2 = context.Customers.Where(x => "x.IsActive == IsActive", new { IsActiv
 | `Single` | Returns a single, specific element of a sequence using a dynamic expression. | [Try it](https://dotnetfiddle.net/onW4hW) |
 | `SingleOrDefault` | Returns a single, specific element of a sequence, or a default value if that element is not found using a dynamic expression. | [Try it](https://dotnetfiddle.net/nU97uw) |
 
-```csharp
-var list = context.Customers.Where(x => "x.IsActive").ToList();
-var list2 = context.Customers.Where(x => "x.IsActive == IsActive", new { IsActive = false }).ToList();
-```
-[Try it](https://dotnetfiddle.net/GTttpq)
-
 ## Order & Select
 
 All LINQ selector and order are supported. Most of them require the "Dynamic" suffix to not override default behavior (Ordering or selecting by a string is valid).
