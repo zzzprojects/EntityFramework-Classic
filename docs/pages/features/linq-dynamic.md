@@ -5,7 +5,7 @@ You can execute query dynamically through free extensions provided by the librar
 
 This feature is available for free in the EF Classic Community.
 
-### Predicate
+## Predicate
 
 All LINQ predicate methods are supported.
 
