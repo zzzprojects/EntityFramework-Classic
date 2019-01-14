@@ -12,20 +12,20 @@ All LINQ predicate methods are supported. A string expression which return a Boo
 ###### Deferred Methods
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `Where` | | [Try it](https://dotnetfiddle.net/QhVfRW) |
+| `Where` | Filters a sequence of values based on a predicate using a dynamic expression. | [Try it](https://dotnetfiddle.net/QhVfRW) |
 
 ###### Immediate Methods
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `All` | | [Try it](https://dotnetfiddle.net/YCT73M) |
-| `Any` | | [Try it](https://dotnetfiddle.net/vEbwLr) |
-| `Count` | | [Try it](https://dotnetfiddle.net/v8rqKV) |
-| `First` | | [Try it](https://dotnetfiddle.net/CfxUKL) |
-| `FirstOrDefault` | | [Try it](https://dotnetfiddle.net/UX3Ymb) |
-| `LongCount` | | [Try it](https://dotnetfiddle.net/4xrM1d) |
-| `SelectMany` | | [Try it](https://dotnetfiddle.net/KLF5e7) |
-| `Single` | | [Try it](https://dotnetfiddle.net/onW4hW) |
-| `SingleOrDefault` | | [Try it](https://dotnetfiddle.net/nU97uw) |
+| `All` | Determines whether all elements of a sequence satisfy a condition using a dynamic expression. | [Try it](https://dotnetfiddle.net/YCT73M) |
+| `Any` | Determines whether any element of a sequence exists or satisfies a condition using a dynamic expression. | [Try it](https://dotnetfiddle.net/vEbwLr) |
+| `Count` | Returns the number of elements in a sequence using a dynamic expression. | [Try it](https://dotnetfiddle.net/v8rqKV) |
+| `First` | Returns the first element of a sequence using a dynamic expression. | [Try it](https://dotnetfiddle.net/CfxUKL) |
+| `FirstOrDefault` | Returns the first element of a sequence, or a default value if no element is found using a dynamic expression. | [Try it](https://dotnetfiddle.net/UX3Ymb) |
+| `LongCount` | Returns an Int64 that represents the number of elements in a sequence using a dynamic expression. | [Try it](https://dotnetfiddle.net/4xrM1d) |
+| `SelectMany` | Projects each element of a sequence to an IEnumerable<T> and flattens the resulting sequences into one sequence using a dynamic expression. | [Try it](https://dotnetfiddle.net/KLF5e7) |
+| `Single` | Returns a single, specific element of a sequence using a dynamic expression. | [Try it](https://dotnetfiddle.net/onW4hW) |
+| `SingleOrDefault` | Returns a single, specific element of a sequence, or a default value if that element is not found using a dynamic expression. | [Try it](https://dotnetfiddle.net/nU97uw) |
 
 ```csharp
 var list = context.Customers.Where(x => "x.IsActive").ToList();
@@ -40,11 +40,11 @@ All LINQ selector and order are supported. Most of them require the "Dynamic" su
 ###### Deferred  Methods
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `OrderByDescendingDynamic` | | [Try it](https://dotnetfiddle.net/doNrVQ) |
-| `OrderByDynamic` | | [Try it](https://dotnetfiddle.net/rzKycR) |
-| `SelectDynamic` | | [Try it](https://dotnetfiddle.net/YE83om) |
-| `ThenByDescendingDynamic` | | [Try it](https://dotnetfiddle.net/8FxroD) |
-| `ThenByDynamic` | | [Try it](https://dotnetfiddle.net/pVCcRf) |
+| `OrderByDescendingDynamic` | Sorts the elements of a sequence in descending order using a dynamic expression. | [Try it](https://dotnetfiddle.net/doNrVQ) |
+| `OrderByDynamic` | Sorts the elements of a sequence in ascending order using a dynamic expression. | [Try it](https://dotnetfiddle.net/rzKycR) |
+| `SelectDynamic` | Projects each element of a sequence into a new form using a dynamic expression. | [Try it](https://dotnetfiddle.net/YE83om) |
+| `ThenByDescendingDynamic` | Performs a subsequent ordering of the elements in a sequence in descending order using a dynamic expression. | [Try it](https://dotnetfiddle.net/8FxroD) |
+| `ThenByDynamic` | Performs a subsequent ordering of the elements in a sequence in ascending order using a dynamic expression. | [Try it](https://dotnetfiddle.net/pVCcRf) |
 
 ```csharp
 var list = context.Customers.OrderByDescendingDynamic(x => "x.Name").ToList();
@@ -58,8 +58,8 @@ The Execute method is the LINQ Dynamic ultimate methods which let you evaluate a
 ###### Methods
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `Execute` | | [Try it](https://dotnetfiddle.net/z1jIkv) |
-| `Execute<TResult>` | | [Try it](https://dotnetfiddle.net/jgOyFi) |
+| `Execute` | Execute LINQ dynamic using an expression. | [Try it](https://dotnetfiddle.net/z1jIkv) |
+| `Execute<TResult>` | Execute LINQ dynamic using an expression. | [Try it](https://dotnetfiddle.net/jgOyFi) |
 
 ```csharp
 var list = context.Customers.Execute<IEnumerable<Customer>>("Where(x => x.IsActive == true)").ToList();
