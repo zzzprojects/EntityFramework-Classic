@@ -8,7 +8,7 @@ EF Classic is an `EF6` fork that supports both frameworks:
 The library comes with everything you love from `EF6`, and with some awesome new features.
 
 ## Community Features
-All these features are **free** and can be used even in a commercial application:
+All these features are **free** and can be used in a commercial application:
 
 - Batch Query
    - [Delete from Query](delete-from-query.md)
