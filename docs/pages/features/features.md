@@ -5,7 +5,7 @@ EF Classic is an `EF6` fork that supports both frameworks:
 - .NET Framework 4.0 or higher
 - .NET Standard 2.0 or higher
 
-The library comes with everything `EF6` have, but with also some new awesome features.
+The library comes with everything you love from `EF6`, and with some awesome new features.
 
 ## Community Features
 All these features are **free** and can be used even in a commercial application:
