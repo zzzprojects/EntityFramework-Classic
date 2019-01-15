@@ -1,59 +1,54 @@
-# EF Classic Features
-## 2018-12-19
-- [Audit](audit.md)
+# Features
 
-## 2018-12-12
-- [IncludeFilter](https://www.nuget.org/packages/Z.EntityFramework.Plus.QueryIncludeFilter.EFClassic/)
-- [IncludeOptimized](https://www.nuget.org/packages/Z.EntityFramework.Plus.QueryIncludeOptimized.EFClassic/)
+EF Classic is an `EF6` fork that supports both frameworks:
 
-## 2018-11-15
-- [Soft Delete](soft-delete.md)
+- .NET Framework 4.0 or higher
+- .NET Standard 2.0 or higher
 
-## 2018-09-06
-- [Query Cache](query-cache.md)
+The library comes with everything `EF6` have, but with also some new awesome features.
 
-## 2018-08-26
-- [Delete from Query](delete-from-query.md)
-- [Update from Query](update-from-query.md)
+## Community Features
+All these features are **free** and can be used even in a commercial application:
+
+- Batch Query
+   - [Delete from Query](delete-from-query.md)
+   - [Update from Query](update-from-query.md)
+- Change Tracker
+   - [Audit](audit.md)
+   - [Soft Delete](soft-delete.md)
+- Include
+   - [Include](include.md)
+   - [AlsoInclude](also-include.md)
+   - [ThenInclude](then-include.md)
+   - [Include Filter](query-include-filter.md)
+   - [Include Optimized](query-include-optimized.md)
+- Query
+   - [LINQ Dynamic](linq-dynamic.md)
+   - [Query Cache](query-cache.md)
+   - [Query Deferred](query-deferred.md)
+   - [Query Filter](query-filter.md)
+   - [Query Future](query-future.md)
+   - [Query Result Filter](query-result-filter.md)
+- Utilities
+   - [Attach & AttachRange](attach.md)
+   - [DateTime & Datetime2 (Coming Soon)](#)
+   - [.NET Fiddle Support](net-fiddle.md)
+- Providers
+   - [SqlServer](provider-sqlserver.md)
+   - [SqlServer Compact](provider-sqlserver-compact.md)
+   - [Effort (In Memory Provider)](provider-effort-inmemory.md)
+
+## Entreprise Features
+All these features require to purchase a license:
+
+- [Batch SaveChanges](batch-save-changes.md)
 - [Bulk SaveChanges](bulk-save-changes.md)
 - [Bulk Insert](bulk-insert.md)
 - [Bulk Update](bulk-update.md)
 - [Bulk Delete](bulk-delete.md)
 - [Bulk Merge](bulk-merge.md)
 - [Bulk Synchronize](bulk-synchronize.md)
+- [C# Eval Expression](csharp-eval-function.md)
 
-## 2018-08-16
-- [Query Future](query-future.md)
-- [C# Eval Function](csharp-eval-function.md)
-- [Attach & AttachRange](attach.md)
-
-## 2018-08-15
-- [BatchSaveChanges](batch-save-changes.md)
-- [LINQ Dynamic](linq-dynamic.md)
-
-## 2018-07-21
-- [.NET Fiddle Support](net-fiddle.md)
-
-## 2018-07-14
-- [Query Deferred](query-deferred.md)
-
-## 2018-07-04
-- [.NET Core Support](net-core.md)
-
-## 2018-07-08
-- [AlsoInclude](also-include.md)
-- [Include](include.md)
-- [ThenInclude](then-include.md)
-
-## 2018-07-10
-- Added support to `NET40`
-
-## 2018-07-11
-- Added support to `new Guid("xyz")`. Pull: https://github.com/aspnet/EntityFramework6/pull/402
-- [SqlServer Compact](provider-sqlserver-compact.md)
-
-## 2018-07-13
-- Performance Optimization. A scenario that requires to include thousands of entities related to one entity got the performance improved by more than 10x times.
-
-## 2018-07-15
-- Added support to [Effort (In Memory Provider)](provider-effort-inmemory.md)
+## Future Features
+This library is still under development. You can expect a lot of more features in future months.
