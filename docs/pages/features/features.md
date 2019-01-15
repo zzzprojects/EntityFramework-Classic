@@ -34,7 +34,7 @@ All these features are **free** and can be used in a commercial application:
    - [DateTime & Datetime2 (Coming Soon)](#)
    - [.NET Fiddle Support](net-fiddle.md)
 - Providers
-   - [SqlServer](provider-sqlserver.md)
+   - [SqlServer](provider-sql-server.md)
    - [SqlServer Compact](provider-sqlserver-compact.md)
    - [Effort (In Memory Provider)](provider-effort-inmemory.md)
 
