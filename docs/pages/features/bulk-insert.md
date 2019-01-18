@@ -14,7 +14,7 @@ context.BulkInsert(list, options => options.BatchSize = 100);
 ```
 [Try it](https://dotnetfiddle.net/7PnUvq)
 
-## Performance Comparisons
+## Performance Comparison
 
 | Operations      | 1,000 Entities | 2,000 Entities | 5,000 Entities |
 | :-------------- | -------------: | -------------: | -------------: |
