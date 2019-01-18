@@ -19,7 +19,7 @@ context.BulkInsert(list, options => options.BatchSize = 100);
 | Operations      | 1,000 Entities | 2,000 Entities | 5,000 Entities |
 | :-------------- | -------------: | -------------: | -------------: |
 | SaveChanges     | 1,200 ms       | 2,400 ms       | 6,000 ms       |
-| BulkInsert      | 50 ms         | 55 ms         | 75 ms          |
+| BulkInsert      | 50 ms          | 55 ms          | 75 ms          |
 
 [Try it](https://dotnetfiddle.net/hfbiys)
 
