@@ -56,7 +56,7 @@ context.BulkInsert(customers, options => {
 ```
 [Try it](https://dotnetfiddle.net/CtwBQw)
 
-### Bulk Insert specific column
+### Bulk Insert specific columns
 You need to insert a list of `Customer` but only insert some specific column. The [ColumnInput](https://entityframework-extensions.net/column#column-input) option let you to choose column to insert.
 
 ```csharp
