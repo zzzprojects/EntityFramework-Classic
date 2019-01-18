@@ -68,4 +68,4 @@ context.BulkInsert(customers, options => {
 
 ## Learn more
 
-More documentation can be found here: [EF Extensions](https://entityframework-extensions.net/bulk-insert)
+More documentation can be found here: [EF Extensions - Bulk Insert](https://entityframework-extensions.net/bulk-insert)
