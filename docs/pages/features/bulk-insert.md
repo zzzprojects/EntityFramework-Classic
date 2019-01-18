@@ -30,7 +30,7 @@ Inserting thousand of entities for an initial load or a file importation is a ty
 
 The `SaveChanges` method makes it quite impossible to handle this kind of situation due to the number of database round-trips required. The `SaveChanges` perform one database round-trip for every entity to insert. So if you need to insert 10,000 entities, 10,000 database round-trips will be performed which is **INSANELY** slow.
 
-The `BulkInsert` in counterpart requires the minimum database round-trips as possible. By example under the hood for SQL Server, a `SqlBulkCopy` is performed to insert 10,000 entities which is the fastest technic available.
+The `BulkInsert` in counterpart requires the minimum database round-trips as possible. By example under the hood for SQL Server, a `SqlBulkCopy` is performed to insert 10,000 entities which is the most effective tactics available.
 
 ## Real Life Scenarios
 
