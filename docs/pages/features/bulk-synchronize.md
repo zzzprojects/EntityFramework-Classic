@@ -1,13 +1,13 @@
 # Bulk Synchronize (Enterprise Feature)
 
 ## Description
-`SYNCHRONIZE` all entities from the database.
+The **EF Bulk Synchronize** feature let you synchronize the database with the source.
 
 A synchronize is a mirror operation from the data source to the database. All rows that match the entity key are `UPDATED`, non-matching rows that exist from the source are `INSERTED`, non-matching rows that exist in the database are `DELETED`.
 
 The database table becomes a mirror of the entity list provided.
 
-This feature is provided by [Z.EntityFramework.Extensions](http://entityframework-extensions.net/) that's used by more than 2000 customers all over the world.
+This feature is provided by the library [EF Extensions](https://entityframework-extensions.net/bulk-synchronize) _(Included with EF Classic)_. EF Extensions it's used by over 2000 customers all over the world and support all Entity Framework version (EF4, EF5, EF6, EF Core, EF Classic).
 
 ```csharp
 // Easy to use
@@ -17,14 +17,8 @@ ctx.BulkSynchronize(list);
 context.BulkSynchronize(customers, options => options.ColumnPrimaryKeyExpression = customer => customer.Code);
 ```
 
-## Purpose
-`Synchronizing` entities with the database is a very rare scenario, but it may happen when two databases need to be synchronized.
+[Try it](https://dotnetfiddle.net/4KVPJn)
 
-`BulkSynchronize` give you the scalability and flexibility required when if you encounter this situation.
+## Learn more
 
-## Performance Comparisons
-
-| Operations      | 1,000 Entities | 2,000 Entities | 5,000 Entities |
-| :-------------- | -------------: | -------------: | -------------: |
-| SaveChanges     | 1,000 ms       | 2,000 ms       | 5,000 ms       |
-| BulkSynchronize | 55 ms          | 65 ms          | 85 ms          |
+More documentation can be found here: [EF Extensions - Bulk Synchronize](https://entityframework-extensions.net/bulk-synchronize)
