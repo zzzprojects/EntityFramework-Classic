@@ -1,54 +1,66 @@
-# Batch SaveChanges (Enterprise Feature)
+# Batch SaveChanges
 
 ## Description
-You can reduce the number of database roundtrip by batching multiple command in the same command. The BatchSaveChanges and BatchSaveChangesAsync methods work exactly like SaveChanges but way faster.
-If the provider doesn't support multiple statement, the logic will automatically fall back to SaveChanges.
+The **Batch SaveChanges** feature allows you to reduce the number of database roundtrip by internally batching multiple commands in the same commands when saving your entities.
 
-> For provider supporting `BatchSaveChanges`, we recommend to always use `BatchSaveChanges` over `SaveChanges` or to enable the option `UseBatchForSaveChanges`
-
-### Provider Supported
-- SQL Server
-
-## Examples
 ```csharp
-// context.SaveChanges();	
-context.BatchSaveChanges();	
+// context.SaveChanges();    
+context.BatchSaveChanges();    
 ```
 [Try it](https://dotnetfiddle.net/dJK5Vr)
 
-## Options
+> HINT: We recommand to always use `BatchSaveChanges` over `SaveChanges` or enable the option `UseBatchForSaveChanges`.
 
-### IsEnabled
-When disabled, the BatchSaveChanges will use SaveChanges instead.
+## Performance Comparison
+
+| Operations      | 1,000 Entities | 2,000 Entities | 5,000 Entities |
+| :-------------- | -------------: | -------------: | -------------: |
+| SaveChanges     | 1,200 ms       | 2,400 ms       | 6,000 ms       |
+| BatchSaveChanges| 100 ms         | 200 ms         | 500 ms          |
+
+> HINT: Performance may differ from a database to another. A lot of factors might affect the benchmark time such as index, column type, latency, throttling, etc.
+
+### Why BatchSaveChanges is faster then SaveChanges?
+For both methods, the same SQL Syntax to perform the save operation is used.
+
+So if you have 10 rows to insert:
+- `SaveChanges`: Will execute one database roundtrip for every row. So 10 database round-trip will be performed.
+- `BatchSaveChanges`: Will batch all SQL in one command and will perform one database round-trip. So 1 database round-trip will be performed.
+
+## Getting Started
+
+### Use BatchSaveChanges
 ```csharp
-public EntityContext() : base(@"Data Source=ZZZ_Projects.sdf")
+// context.SaveChanges();    
+context.BatchSaveChanges();    
+```
+[Try it](https://dotnetfiddle.net/PQHDLC)
+
+### Internally replace SaveChanges by BatchSaveChanges
+```csharp
+public class EntityContext : DbContext
 {
-	// Disable BatchSaveChanges
-	this.Configuration.BatchSaveChanges.IsEnabled = false;
+    public EntityContext() : base(FiddleHelper.GetConnectionStringSqlServer())
+    {
+        this.Configuration.BatchSaveChanges.UseBatchForSaveChanges = true;
+    }
+    
+    public DbSet<Customer> Customers { get; set; }
 }
 
-// ...code...
-
-// The BatchSaveChanges will automatically use SaveChanges because the features have been disabled in the constructor.
-context.BatchSaveChanges();	
+context.Customers.AddRange(customers);
+context.SaveChanges();
 ```
-[Try it](https://dotnetfiddle.net/jo6QN1)
+[Try it](https://dotnetfiddle.net/SQ58gU)
 
-### UseBatchForSaveChanges
-When enabled, the SaveChanges will use BatchSaveChanges if the provider support multiple statements.
-```csharp
-public EntityContext() : base(@"Data Source=ZZZ_Projects.sdf")
-{
-	// Force to BatchSaveChanges instead of SaveChanges
-	this.Configuration.BatchSaveChanges.UseBatchForSaveChanges = true;
-}
+## Documentation
 
-// ...code...
+###### Properties
 
-// The SaveChanges will automatically use BeachSaveChanges because the features have been forced in the constructor.
-context.SaveChanges();	
-```
-[Try it](https://dotnetfiddle.net/ceeM0J)
+| Name | Description | Default | Example |
+| :--- | :---------- | :-----: | :------ |
+| `IsEnabled` | Gets or sets if the `BatchSaveChanges` feature is enabled. When disabled, a `SaveChanges` will be performed instead. | `true` | [Try it](https://dotnetfiddle.net/jo6QN1) |
+| `UseBatchForSaveChanges` | Gets or sets if all `SaveChanges` call should be replaced internally by `BatchSaveChanges`. If you own a commercial license, we recommend to always set this value to true. | `false` | [Try it](https://dotnetfiddle.net/ceeM0J) |
 
 ## Limitations
-- Stored Procedure will continue to use SaveChanges
+- All providers that don't support multi statements such as SQL Compact and Effort will automatically use `SaveChanges` instead.
