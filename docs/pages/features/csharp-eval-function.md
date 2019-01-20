@@ -1,55 +1,97 @@
-# C# Eval Function (Enterprise Feature)
+# C# Eval Expression
 
 ## Description
-You can evaluate code dynamically at runtime using the [Eval Expression.NET](http://eval-expression.net/) library.
-
-This library is automatically included for FREE when purchasing a EF Classic license.
-
-The library support nearly everything:
-- Anonymous Type
-- Extension Method
-- Lambda Expression
-- LINQ DYnamic
-- Method Overloads
-
-## Eval.Execute
-
-### Example
+The **C# Eval Expression** features let you to execute code dynamically.
 
 ```csharp
-// Parameter: Anonymous Type
-int result = Eval.Execute<int>("X + Y", new { X = 1, Y = 2} );
-
-// Parameter: Argument Position
-int result = Eval.Execute<int>("{0} + {1}", 1, 2);
-
-// Parameter: Class Member
-dynamic expandoObject = new ExpandoObject();
-expandoObject.X = 1;
-expandoObject.Y = 2;
-int result = Eval.Execute<int>("X + Y", expandoObject);
-
-// Parameter: Dictionary Key
-var values = new Dictionary<string, object>() { {"X", 1}, {"Y", 2} };
-int result = Eval.Execute<int>("X + Y", values);
+var result = Eval.Execute("X + Y", new { X = 1, Y = 2 }); // return 3
 ```
-
 [Try it](https://dotnetfiddle.net/W9TwcP)
 
-## Eval.Compile
+This feature is provided by the library [C# Eval Epression](https://eval-expression.net/) _(Included with EF Classic)_.
+
+## Real Life Scenarios
+
+### Sets entity value from json
+Your application need to set property value from a json file you receive.
 
 ```csharp
-// Delegate Func
-var compiled = Eval.Compile<Func<int, int, int>>("{0} + {1}");
-int result = compiled(1, 2);
+var json = @"
+[
+	{
+	  'Type': 'Customer',
+	  'Properties': {
+		  'Code': 'Z0',
+	 	  'FirstName': 'ZZZ',
+		  'LastName': 'Projects'
+	  }
+	},
+	{
+	  'Type': 'Customer',
+	  'Properties': {
+		  'Code': 'Z1',
+	 	  'FirstName': 'Jonathan',
+		  'LastName': 'Magnan'
+	  }
+	}
+]
+";
 
-// Delegate Action
-var compiled = Eval.Compile<Action<int, int>>("{0} + {1}");
-compiled(1, 2);
+var listToMerge = new List<object>();
+foreach(var item in list)
+{
+	var obj = Eval.Execute("new " + item.Type + "()");
+	listToMerge.Add(obj);
 
-// Named Parameter
-var compiled = Eval.Compile<Func<int, int, int>>("X + Y", "X", "Y");
-int result = compiled(1, 2);
+	foreach(var property in item.Properties)
+	{
+		Eval.Execute(property.Name + " = '" + property.Value + "'", obj);
+	}
+}
 ```
+[Try it](https://dotnetfiddle.net/2sAvrj)
 
-[Try it](https://dotnetfiddle.net/MBHlX8)
+### Executing LINQ from json
+Your application need to filter returning entities depending of a json you receive.
+
+```csharp
+var json = @"
+[
+	{
+	  'Method': 'Where',
+	  'Field': 'Name',
+	  'Operation': '==',
+	  'Value': '""Customer_A""',
+	},
+	{
+	  'Method': 'Where',
+	  'Expression': 'Description.Contains(""ZZZ Projects"")',
+	}
+]
+";
+
+foreach(var qc in queryCriterias)
+{
+	if(qc.Method == "Where") 
+	{
+		if(!string.IsNullOrEmpty(qc.Expression))
+		{
+			query = query.Where(x => "x." + qc.Expression);
+		}
+		else
+		{
+			var expression = "x.[Field] [Operation] [Value]"
+			.Replace("[Field]", qc.Field)
+			.Replace("[Operation]", qc.Operation)
+			.Replace("[Value]", qc.Value);
+			
+			query = query.Where(x => expression);
+		}
+	}
+}
+```
+[Try it](https://dotnetfiddle.net/UptHy0)
+
+## Learn more
+
+More documentation can be found here: [C# Eval Expression](https://eval-expression.net/)
