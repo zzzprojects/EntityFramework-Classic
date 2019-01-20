@@ -1,4 +1,4 @@
-# Bulk Synchronize (Enterprise Feature)
+# Bulk Synchronize
 
 ## Description
 The **EF Bulk Synchronize** feature let you synchronize the database with the source.
