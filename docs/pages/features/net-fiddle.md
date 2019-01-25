@@ -6,9 +6,19 @@
 [Try it](https://dotnetfiddle.net/)
 
 ## SQL Server Example
- .NET Fiddle doesn't support SQL Server yet.
+```csharp
+public class EntityContext : DbContext
+{
+	public EntityContext() : base(FiddleHelper.GetConnectionStringSqlServer())
+	{
 
-However, this feature is under development by our company. We expect to be able to release a new version of .NET Fiddle that allows creating examples with SQL Server in September.
+	}
+	
+	public DbSet<Customer> Customers { get; set; }
+}
+```
+
+[Try it](https://dotnetfiddle.net/thNOFY)
 
 ## SQL Server Compact Example
 ```csharp
