@@ -14,17 +14,27 @@ EF Classic is a EF6 fork compatible with .NET Core. It's a limitless version tha
 ## Features
 
 ### Community (Free)
-- [.NET Core Support](https://entityframework-classic.net/net-core)
-- [Batch Delete](https://entityframework-classic.net/delete-from-query)
-- [Batch Update](https://entityframework-classic.net/update-from-query)
-- [LINQ Dynamic](https://entityframework-classic.net/linq-dynamic)
-- [Query Future](https://entityframework-classic.net/query-future)
-- [Also Include](https://entityframework-classic.net/also-include)
-- [Then Include](https://entityframework-classic.net/then-include)
-- [.NET Fiddle Support](https://entityframework-classic.net/net-fiddle)
-- [Effort (In Memory)](https://entityframework-classic.net/provider-effort-inmemory)
-- [SqlServer](https://entityframework-classic.net/provider-sql-server)
-- [SqlServer Compact](https://entityframework-classic.net/provider-sqlserver-compact)
+- Change Tracker
+   - [Audit](https://entityframework-classic.net/audit)
+   - [Soft Delete](https://entityframework-classic.net/soft-delete)
+- Batch Query
+   - [Batch Delete](https://entityframework-classic.net/delete-from-query)
+   - [Batch Update](https://entityframework-classic.net/update-from-query)
+- Include
+   - [Also Include](https://entityframework-classic.net/also-include)
+   - [Then Include](https://entityframework-classic.net/then-include)
+   - [Include Filter](https://entityframework-classic.net/query-include-filter)
+   - [Include Optimized](https://entityframework-classic.net/query-include-optimized)
+- Query
+   - [LINQ Dynamic](https://entityframework-classic.net/linq-dynamic)
+   - [Query Cache](https://entityframework-classic.net/query-cache)
+   - [Query Deferred](https://entityframework-classic.net/query-deferred)
+   - [Query Filter](https://entityframework-classic.net/query-filter)
+   - [Query Future](https://entityframework-classic.net/query-future)
+   - [Query Result Filter](https://entityframework-classic.net/query-result-filter)
+- Utilities
+   - [Attach & Attach Range](https://entityframework-classic.net/attach)
+   - [.NET Fiddle](https://entityframework-classic.net/net-fiddle)
 
 ### Enterprise
 - [Batch SaveChanges](https://entityframework-classic.net/batch-save-changes)
@@ -35,16 +45,6 @@ EF Classic is a EF6 fork compatible with .NET Core. It's a limitless version tha
 - [Bulk Merge](https://entityframework-classic.net/bulk-merge)
 - [Bulk Synchronize](https://entityframework-classic.net/bulk-synchronize)
 - [C# Eval Function](https://entityframework-classic.net/csharp-eval-function)
-
-### Upcoming
-- Audit
-- Caching
-- Global Filter
-- GraphDiff
-- Include Filter
-- Include Optimized
-- Instance Filter
-- ProjectTo
 
 ## What will happen to your other prime & free libraries on Entity Framework?
 Basically, nothing will change, we will keep supporting them all.
