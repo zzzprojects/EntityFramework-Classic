@@ -20,7 +20,7 @@ context.BatchSaveChanges();
 
 > HINT: Performance may differ from a database to another. A lot of factors might affect the benchmark time such as index, column type, latency, throttling, etc.
 
-### Why BatchSaveChanges is faster then SaveChanges?
+### Why BatchSaveChanges is faster than SaveChanges?
 For both methods, the same SQL Syntax to perform the save operation is used.
 
 So if you have 10 rows to insert:
