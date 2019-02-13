@@ -25,7 +25,7 @@ context.BulkInsert(list, options => options.BatchSize = 100);
 
 > HINT: Performance may differ from a database to another. A lot of factors might affect the benchmark time such as index, column type, latency, throttling, etc.
 
-### Why BulkInsert is faster then SaveChanges?
+### Why BulkInsert is faster than SaveChanges?
 Inserting thousand of entities for an initial load or a file importation is a typical scenario.
 
 The `SaveChanges` method makes it quite impossible to handle this kind of situation due to the number of database round-trips required. The `SaveChanges` perform one database round-trip for every entity to insert. So if you need to insert 10,000 entities, 10,000 database round-trips will be performed which is **INSANELY** slow.
