@@ -25,7 +25,7 @@ context.BulkMerge(customers, options => options.ColumnPrimaryKeyExpression = cus
 
 > HINT: Performance may differ from a database to another. A lot of factors might affect the benchmark time such as index, column type, latency, throttling, etc.
 
-### Why BulkMerge is faster then AddOrUpdate + SaveChanges?
+### Why BulkMerge is faster than AddOrUpdate + SaveChanges?
 Merging thousand of entities for a file importation is a typical scenario.
 
 The `AddOrUpdate` method perform a database round-trips for every entity to check if it already exists. The `DetectChanges` change method is also called for every entity which makes this method even slower (it's like using the `Add` method instead of `AddRange`).
