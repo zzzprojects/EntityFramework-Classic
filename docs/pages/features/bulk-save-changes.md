@@ -30,7 +30,7 @@ context.BulkSaveChanges(bulk => bulk.BatchSize = 100);
 
 > HINT: Performance may differ from a database to another. A lot of factors might affect the benchmark time such as index, column type, latency, throttling, etc.
 
-### Why BulkSaveChanges is faster then SaveChanges?
+### Why BulkSaveChanges is faster than SaveChanges?
 
 Using the `ChangeTracker` to detect and persist changes automatically is great! However, it leads very fast to some problems when multiple entities need to be saved.
 
