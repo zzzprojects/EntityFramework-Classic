@@ -25,7 +25,7 @@ context.BulkDelete(customers, options => options.ColumnPrimaryKeyExpression = cu
 
 > HINT: Performance may differ from a database to another. A lot of factors might affect the benchmark time such as index, column type, latency, throttling, etc.
 
-### Why BulkDelete is faster then SaveChanges?
+### Why BulkDelete is faster than SaveChanges?
 Deleting thousand of entities for a file importation is a typical scenario.
 
 The `SaveChanges` method makes it quite impossible to handle this kind of situation due to the number of database round-trips required. The `SaveChanges` perform one database round-trip for every entity to delete. So if you need to delete 10,000 entities, 10,000 database round-trips will be performed which is **INSANELY** slow.
