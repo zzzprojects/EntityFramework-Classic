@@ -6,7 +6,7 @@ Effort (**E**ntity **F**ramework **F**ake **O**bjectContext **R**ealization **T*
 
 NuGet: https://www.nuget.org/packages/Z.EntityFramework.Classic.Effort
 
-Official Documentation: http://entityframework-effort.net/
+Official Documentation: https://entityframework-effort.net/
 
 ## Installing
 
