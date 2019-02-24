@@ -19,7 +19,7 @@ context.BulkMerge(customers, options => options.ColumnPrimaryKeyExpression = cus
 | Operations      | 1,000 Entities | 2,000 Entities | 5,000 Entities |
 | :-------------- | -------------: | -------------: | -------------: |
 | SaveChanges     | 4,000 ms       | To long...     | Way way to long... |
-| BulkUpdate      | 80 ms          | 110 ms         | 170 ms         |
+| BulkMerge       | 80 ms          | 110 ms         | 170 ms         |
 
 [Try it](https://dotnetfiddle.net/L1yqaL)
 
