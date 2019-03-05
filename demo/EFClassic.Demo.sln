@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFClassic.Demo.Net45", "EFC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFClassic.Demo.NetCore", "EFClassic.Demo.NetCore\EFClassic.Demo.NetCore.csproj", "{BD21527B-ED20-441F-939A-48E3B644B789}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFClassic.Demo.WebCore", "EFClassic.Demo.WebCore\EFClassic.Demo.WebCore.csproj", "{F1377D0E-9235-4731-A32A-BD7A03BF5611}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BD21527B-ED20-441F-939A-48E3B644B789}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD21527B-ED20-441F-939A-48E3B644B789}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD21527B-ED20-441F-939A-48E3B644B789}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1377D0E-9235-4731-A32A-BD7A03BF5611}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1377D0E-9235-4731-A32A-BD7A03BF5611}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1377D0E-9235-4731-A32A-BD7A03BF5611}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1377D0E-9235-4731-A32A-BD7A03BF5611}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
