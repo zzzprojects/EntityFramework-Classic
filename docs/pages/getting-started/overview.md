@@ -85,3 +85,9 @@ You must also ensure that you use the model copied to the directory output
 // Good
 <add name="Entities" connectionString="metadata=.\Model.csdl|.\Model.ssdl|.\Model.msl;..." providerName="System.Data.EntityClient" />
 ```
+
+## Demo
+
+You can find very light demo using EF Classic here: https://github.com/zzzprojects/EntityFramework-Classic/tree/master/demo
+
+You can find a lot of online example using EF Classic here: https://entityframework-classic.net/online-examples
