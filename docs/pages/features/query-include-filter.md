@@ -64,7 +64,7 @@ If you need to include without a filter, you can still use the `IncludeFilter` m
 // using Z.EntityFramework.Plus; // Don't forget to include this.
 var context = new EntityContext()
 
-// LOAD customers and related active invoices and InvoiceItems[NEEDGOODWORD!!!].
+// LOAD customers and related active invoices and InvoiceItems.
 var customers = context.Customers.IncludeFilter(x => x.Invoices.Where(y => !y.IsSoftDeleted))
 				.IncludeFilter(x => x.Invoices.Where(y => !y.IsSoftDeleted)
 							   .Select(y => y.InvoiceItems
