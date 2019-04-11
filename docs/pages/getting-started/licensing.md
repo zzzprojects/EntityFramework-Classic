@@ -29,7 +29,7 @@ The license name and key can be added directly in the app.config or web.config f
 </appSettings>
 ```
 
-## Setup License from appsettings.json file
+## Setup License from appsettings.json file (.NET Core)
 The license name and key can be added directly in the appsettings.json.
 
 ```csharp
