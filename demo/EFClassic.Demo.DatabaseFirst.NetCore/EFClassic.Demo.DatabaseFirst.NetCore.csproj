@@ -1,0 +1,65 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="EFClassic_Demo_Model.Context.tt" />
+    <None Remove="EFClassic_Demo_Model.tt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="EFClassic_Demo_Model.Context.tt">
+      <DependentUpon>EFClassic_Demo_Model.edmx</DependentUpon>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EFClassic_Demo_Model.tt">
+      <DependentUpon>EFClassic_Demo_Model.edmx</DependentUpon>
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Z.EntityFramework.Classic" Version="7.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Customer.cs">
+      <DependentUpon>EFClassic_Demo_Model.tt</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="EFClassic_Demo_Model.Context.cs">
+      <DependentUpon>EFClassic_Demo_Model.Context.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="EFClassic_Demo_Model.cs">
+      <DependentUpon>EFClassic_Demo_Model.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="EFClassic_Demo_Model.Designer.cs">
+      <DependentUpon>EFClassic_Demo_Model.edmx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="EFClassic_Demo_Model.edmx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="EFClassic_Demo_Model.edmx.diagram">
+      <DependentUpon>EFClassic_Demo_Model.edmx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
