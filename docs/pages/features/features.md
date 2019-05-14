@@ -38,7 +38,7 @@ All these features are **free** and can be used in a commercial application:
    - [SqlServer Compact](provider-sqlserver-compact.md)
    - [Effort (In Memory Provider)](provider-effort-inmemory.md)
 
-## Entreprise Features
+## Enterprise Features
 All these features require to purchase a license:
 
 - [Batch SaveChanges](batch-save-changes.md)
