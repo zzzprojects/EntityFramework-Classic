@@ -12,7 +12,7 @@ NuGet: https://www.nuget.org/packages/Z.EntityFramework.Classic.MySql/
 
 From
 
-```xml
+```csharp
 <entityFramework>
 	<defaultConnectionFactory type="MySql.Data.Entity.MySqlConnectionFactory, EntityFramework"></defaultConnectionFactory>
 	<providers>
@@ -23,7 +23,7 @@ From
 
 To
 
-```xml
+```csharp
 <entityFramework>
 	<defaultConnectionFactory type="MySql.Data.Entity.MySqlConnectionFactory, Z.EntityFramework.Classic"></defaultConnectionFactory>
 	<providers>
