@@ -11,12 +11,15 @@ NuGet: https://www.nuget.org/packages/Z.EntityFramework.Classic.MySql/
 - In the provider: `MySql.Data.Entity.EF6, Version=6.8.3.0` must be replaced by `Z.EntityFramework.Classic.MySql, Version=7.0.0.0`
 
 From
+
+```xml
 <entityFramework>
 	<defaultConnectionFactory type="MySql.Data.Entity.MySqlConnectionFactory, EntityFramework"></defaultConnectionFactory>
 	<providers>
 		<provider invariantName="MySql.Data.MySqlClient" type="MySql.Data.MySqlClient.MySqlProviderServices, MySql.Data.Entity.EF6, Version=6.8.3.0, Culture=neutral, PublicKeyToken=afc61983f100d280"></provider>
 	</providers>
 </entityFramework>
+```
 
 To
 
