@@ -111,7 +111,4 @@ var employees = context.Employees.Where(x => x.Name.StartsWith("Employee_"))
 
 ## Limitations
 
-- Support EF6 only
 - Support SQL Server only
-
-_EF Core support is under development_
