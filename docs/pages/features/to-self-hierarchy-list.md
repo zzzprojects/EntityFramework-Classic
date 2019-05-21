@@ -8,7 +8,7 @@ The `ToSelfHierarchyList` method extend your Entity Framework `DbContext` to let
 var employees = context.Employees.Where(x => x.Name.StartsWith("Employee_"))
 	.ToSelfHierarchyList(x => x.Boss);
 ```
-[Try it](https://dotnetfiddle.net/DxcWZv)
+[Try it](https://dotnetfiddle.net/RPc9ag)
 
 ## Real Life Scenarios
 
@@ -31,7 +31,7 @@ var employees = context.Employees.Where(x => x.Name.StartsWith("Employee_"))
 	.ToSelfHierarchyList(x => x.Boss, 
 		options => options.FlatListRecursionLevel = 1);
 ```
-[Try it](https://dotnetfiddle.net/ayQSS2)
+[Try it](https://dotnetfiddle.net/IDXEKV)
 
 ### Include boss, and filter them
 The employee can be filtered as you normally do within Entity Framework. 
@@ -44,7 +44,7 @@ var employees = context.Employees.Where(x => x.Name.StartsWith("Employee_"))
 	.ToSelfHierarchyList(x => x.Boss, options => 
 		options.SelfHierarchyQuery = q => q.Where(x => !x.Name.Contains("2")));
 ```
-[Try it](https://dotnetfiddle.net/qO9xxc)
+[Try it](https://dotnetfiddle.net/Sl92lm)
 
 ### Include boss, but only direct one
 By default, the library make 10 recursions when retriving the boss hierarchy.
@@ -57,7 +57,7 @@ var employees = context.Employees.Where(x => x.Name.StartsWith("Employee_"))
 	.ToSelfHierarchyList(x => x.Boss, options => 
 		options.MaxRecursion = 1);
 ```
-[Try it](https://dotnetfiddle.net/k3v62H)
+[Try it](https://dotnetfiddle.net/PwnmRp)
 
 ### Include boss, but with custom mapping
 If your entity doesn't has navigation property toward boss or employee, it's impossible to use the join expression.
@@ -71,7 +71,7 @@ var employees = context.Employees.Where(x => x.Name.StartsWith("Employee_"))
 		options.FlatListRecursionLevel = int.MaxValue;
 	});
 ```
-[Try it](https://dotnetfiddle.net/8f8bRZ)
+[Try it](https://dotnetfiddle.net/CMWRpU)
 
 ### Include boss, but with an inverse navigation
 If your entity has only a reference to a list of employee and no navigation property toward the boss, it's impossible to use the `JoinExpression` to include the boss.
@@ -85,7 +85,7 @@ var employees = context.Employees.Where(x => x.Name.StartsWith("Employee_"))
 		options.FlatListRecursionLevel = int.MaxValue;
 	});
 ```
-[Try it](https://dotnetfiddle.net/02j86m)
+[Try it](https://dotnetfiddle.net/HmRBgB)
 
 ## Documentation
 
@@ -95,19 +95,19 @@ var employees = context.Employees.Where(x => x.Name.StartsWith("Employee_"))
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `ToSelfHierarchyList(Expression<Func<T, object>> joinExpression)` | Materialize a list of entity and include the self hierarchy. | [Try it](https://dotnetfiddle.net/9GOCnF) |
-| `ToSelfHierarchyList(Expression<Func<T, object>> joinExpression, Action<SelfHierarchyListOptions<T>> options)` | Materialize a list of entity and include the self hierarchy. | [Try it](https://dotnetfiddle.net/lQmiyh) |
+| `ToSelfHierarchyList(Expression<Func<T, object>> joinExpression)` | Materialize a list of entity and include the self hierarchy. | [Try it](https://dotnetfiddle.net/woE71l) |
+| `ToSelfHierarchyList(Expression<Func<T, object>> joinExpression, Action<SelfHierarchyListOptions<T>> options)` | Materialize a list of entity and include the self hierarchy. | [Try it](https://dotnetfiddle.net/sThJ7K) |
 
 
 ##### Options
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `ColumnMappings` | Gets or sets the column mappings. | [Try it](https://dotnetfiddle.net/YTDUZh) |
-| `FlatListRecursionLevel` | Gets or sets the flat list recursion level. Default = 0 which return only item from the query. | [Try it](https://dotnetfiddle.net/2pQQSC) |
-| `InverseMapping` | Gets or sets a value indicating whether the mapping is inversed. | [Try it](https://dotnetfiddle.net/A1nAje) |
-| `JoinExpression` | Gets or sets the join expression. | [Try it](https://dotnetfiddle.net/et5k7e) |
-| `MaxRecursion` | Gets or sets the maximum recursion to perform. Default = 10. | [Try it](https://dotnetfiddle.net/olEspi) |
-| `SelfHierarchyQuery` | Gets or sets the filtered self hierarchy query to use. | [Try it](https://dotnetfiddle.net/vSzefx) |
+| `ColumnMappings` | Gets or sets the column mappings. | [Try it](https://dotnetfiddle.net/eQCHEe) |
+| `FlatListRecursionLevel` | Gets or sets the flat list recursion level. Default = 0 which return only item from the query. | [Try it](https://dotnetfiddle.net/052avY) |
+| `InverseMapping` | Gets or sets a value indicating whether the mapping is inversed. | [Try it](https://dotnetfiddle.net/zte9Uw) |
+| `JoinExpression` | Gets or sets the join expression. | [Try it](https://dotnetfiddle.net/HE8Nzz) |
+| `MaxRecursion` | Gets or sets the maximum recursion to perform. Default = 10. | [Try it](https://dotnetfiddle.net/YA2C3g) |
+| `SelfHierarchyQuery` | Gets or sets the filtered self hierarchy query to use. | [Try it](https://dotnetfiddle.net/ddz55Q) |
 
 ## Limitations
 
