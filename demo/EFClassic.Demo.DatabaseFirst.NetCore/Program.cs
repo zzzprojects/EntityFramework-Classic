@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 
 namespace EFClassic.Demo.DatabaseFirst.NetCore
 {
@@ -13,8 +15,8 @@ namespace EFClassic.Demo.DatabaseFirst.NetCore
 			// The 'ConnectionString' is used in the file: \demo\EFClassic.Demo.DatabaseFirst.NetCore\EFClassic_Demo_Model.Context.cs
 
 			EnsureDatabaseCreated();
-			 
-			Z.EntityFramework.Classic.EntityFrameworkManager.UseDatabaseFirst("EFClassic_Demo_Model.edmx");
+
+            Z.EntityFramework.Classic.EntityFrameworkManager.UseDatabaseFirst("EFClassic_Demo_Model.edmx");
 
 			// CLEAR
 			using (var context = new EntityContext())
