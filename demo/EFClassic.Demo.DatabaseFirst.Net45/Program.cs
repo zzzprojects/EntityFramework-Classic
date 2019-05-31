@@ -10,7 +10,7 @@ namespace EFClassic.Demo.DatabaseFirst.Net45
 	
 		static void Main(string[] args)
 		{
-			// The 'ConnectionString' is used in the file: \demo\EFClassic.Demo.DatabaseFirst.Net45\EFClassic_Demo_Model.Context.cs
+			// The 'ConnectionString' is used in the file: /demo/EFClassic.Demo.DatabaseFirst.Net45/EFClassic_Demo_Model.Context.cs
 
 			EnsureDatabaseCreated();
 
