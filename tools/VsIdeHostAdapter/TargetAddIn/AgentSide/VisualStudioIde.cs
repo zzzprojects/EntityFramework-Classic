@@ -354,7 +354,7 @@ namespace Microsoft.VisualStudio.TestTools.HostAdapters.VsIde
                                     {
                                         // Some unexpected failure.
                                         // E.g. you get RpcServerUnavailableErrorCode if for some reason devenv is not available anymore -- maybe
-                                        // the process has died or killed by the user. In other cases you may get rpc call failed.
+                                        // the process has died or was killed by the user. In other cases you may get rpc call failed.
                                         // In these cases devenv is quitted unexpectedly, test run should have already reported error.
                                         // If it doesn't, since this will throw a invalidoperationexception below, trun will fail. 
                                         //Debug.Assert(!RegistrySettings.VerboseAssertionsEnabled, ex.ToString());
