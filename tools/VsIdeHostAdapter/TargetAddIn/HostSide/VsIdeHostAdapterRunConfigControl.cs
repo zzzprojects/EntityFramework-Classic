@@ -100,7 +100,7 @@ namespace Microsoft.VisualStudio.TestTools.HostAdapters.VsIde
         /// <summary>
         /// Verify the data in the editor. Prompt the user when neccessary.
         /// </summary>
-        /// <returns>true if the data are correct and don't need correction; otherwise, false.</returns>
+        /// <returns>true if the data is correct and don't need correction; otherwise, false.</returns>
         bool IRunConfigurationEditor.VerifyData()
         {
             return true;
@@ -209,13 +209,13 @@ namespace Microsoft.VisualStudio.TestTools.HostAdapters.VsIde
         private void AdditionalCommandLineArgumentsEdit_TextChanged(object sender, EventArgs e)
         {
             SetDirty();
-            // Note: we set the data the text when we get data from the control, there's no need to that here.
+            // Note: we set the data text when we get data from the control, there's no need to do that here.
         }
 
         private void m_additionalTestDataEdit_TextChanged(object sender, EventArgs e)
         {
             SetDirty();
-            // Note: we set the data the text when we get data from the control, there's no need to that here.
+            // Note: we set the data text when we get data from the control, there's no need to do that here.
         }
         #endregion
     }
