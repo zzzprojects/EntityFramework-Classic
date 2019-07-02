@@ -6,7 +6,7 @@ Relevant parameters:
 * NuSpecFile property:
   The name of the project's nuspec file, relative to the project or with full path.
 * NuSpecCreateOnMissing property:
-  When true and the NuSpecFile does not exists, one can be created from params defined by the project.
+  When true and the NuSpecFile does not exist, one can be created from params defined by the project.
 * NuGetConent, NuSpecMeatadata, NuSpecDependency and NuSpecFrameworkAssembly item groups: 
   Represent the nuspec schema.  See item definitions.
 * NuSpecProperties property:
@@ -169,7 +169,7 @@ GetNuGetProjectInputs: get the project inputs.
 
   <!--
 ****************************************************************************************************
-GetNuGetProjectOutputs: Reads build-generated files from outputs file.
+GetNuGetProjectOutputs: Reads build-generated files from output files.
 **************************************************************************************************** -->
   <Target Name="GetNuGetProjectOutputs">
     <PropertyGroup>
@@ -184,8 +184,8 @@ GetNuGetProjectOutputs: Reads build-generated files from outputs file.
 
   <!--
 ****************************************************************************************************
-ReadNuGetCleanOutputs: Reads build-generated files from outputs file into Clean item collection to
-get them re-written into outputs file so they can be cleaned up later.
+ReadNuGetCleanOutputs: Reads build-generated files from output files into Clean item collection to
+get them re-written into output files so they can be cleaned up later.
 **************************************************************************************************** -->
   <Target Name="ReadNuGetCleanOutputs">
     <ReadLinesFromFile File="$(NuGetProjectOutputsFile)">
@@ -195,7 +195,7 @@ get them re-written into outputs file so they can be cleaned up later.
 
   <!--
 ****************************************************************************************************
-WriteNuGetProjectOutputs: write the list of build-generated files into outputs file which is used for
+WriteNuGetProjectOutputs: write the list of build-generated files into output files which are used for
 cleaning and incremental build.
 **************************************************************************************************** -->
   <Target Name="WriteNuGetProjectOutputs" Condition="'$(OutputsOutdated)' == 'true'">
