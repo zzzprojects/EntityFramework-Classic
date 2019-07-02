@@ -34,7 +34,7 @@ namespace Microsoft.VisualStudio.TestTools.HostAdapters.VsIde
         [NonPersistable]
         // For debugging only. The idea is that as soon as the user changes host type to VS.IDE we create an instance of this data.
         // Note: in Orcas this is obsolete as we introduced debugger extensibility. 
-        // TODO: remove in internal version, the sample has been already changed.
+        // TODO: remove in internal version, the sample has already been changed.
         private string m_sessionId = VsIdeHostSession.Id;
         #endregion
 
