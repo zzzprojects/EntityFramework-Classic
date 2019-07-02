@@ -67,7 +67,7 @@ namespace Microsoft.VisualStudio.TestTools.HostAdapters.VsIde
             }
             finally
             {
-                // If there's some problem, do not try removing next time.
+                // If there's some problems, do not try removing next time.
                 m_attachedProcesses.Remove(processId);
             }
         }
