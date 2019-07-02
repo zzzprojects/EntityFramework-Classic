@@ -54,4 +54,4 @@ Basically, nothing will change, we will keep supporting them all.
 - [EF Effort](https://www.nuget.org/packages/Z.EntityFramework.Classic.Effort/): A version is available compatible with EF Classic
 - [EF GraphDiff](https://github.com/zzzprojects/GraphDiff): We are currently investigating to either rewrite this library or to release a version compatible with EF Classic
 - [Entity Framework Dynamic Filter](https://entityframework-dynamicfilters.net/): We will continue to support this library, but all features will be rewritten in EF Classic to add more flexibility.
-- [Entity Framework Plus](https://entityframework-plus.net/): We will continue to support this library, but all features will be re-write in EF Classic for adding more flexibility.
+- [Entity Framework Plus](https://entityframework-plus.net/): We will continue to support this library, but all features will be re-written in EF Classic to add more flexibility.
