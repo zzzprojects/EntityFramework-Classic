@@ -61,9 +61,9 @@ namespace Microsoft.VisualStudio.TestTools.HostAdapters.VsIde
         private IVsIdeHostDebugger m_hostSession;
         private string m_vsRegistryHive;    // This is like <version> or <version>Exp.
         private string m_additionalCommandLine;
-        private bool m_isHostSideDirty;     // Means: there was at least 1 tests that used the IDE.
+        private bool m_isHostSideDirty;     // Means: there was at least 1 test that used the IDE.
         private RetryMessageFilter m_comMessageFilter;
-        private static TimeSpan s_addinWaitTimeout = TimeSpan.FromMilliseconds(RegistrySettings.BaseTimeout * 270); // For how long time to poll VS to load plugins.
+        private static TimeSpan s_addinWaitTimeout = TimeSpan.FromMilliseconds(RegistrySettings.BaseTimeout * 270); // For how long to poll VS to load plugins.
         private object m_loadRunLock = new object();
         #endregion
 
@@ -158,7 +158,7 @@ namespace Microsoft.VisualStudio.TestTools.HostAdapters.VsIde
         /// <param name="testContext">The Test conext for this test invocation</param>
         void ILoadTestAdapter.LoadRun(ITestElement testElement, ITestContext testContext)
         {
-            // We want to be able to run under a load test, but at least for now we don't support actually producing load for
+            // We want to be able to run under a load test, but at least for now we don't support producing load for
             // more than one user (one test at a time). So, we enforce that with a lock. The load test should still be
             // configured to use only one user in the scenario in which this test is included.
             lock (m_loadRunLock)
@@ -337,7 +337,7 @@ namespace Microsoft.VisualStudio.TestTools.HostAdapters.VsIde
                     {
                         SendResult("Remoting Exception in InitHostSide(): " + remotingException.Message, TestOutcome.Warning);
                     }
-                    // If test run was started under debugger, attach debugger.
+                    // If the test run was started under debugger, attach debugger.
                     CheckAttachDebugger();
                 }
             }
@@ -362,8 +362,8 @@ namespace Microsoft.VisualStudio.TestTools.HostAdapters.VsIde
         /// <summary>
         /// Determine which registry hive to use:
         ///     If override value is set, use it, don't use anything else.
-        ///     Else If using RunConfig, get it from RunConfig
-        ///     Else get it from environment.
+        ///     Else, If using RunConfig, get it from RunConfig
+        ///     Else, get it from environment.
         /// </summary>
         /// <returns></returns>
         private string GetRegistryHive()
@@ -483,7 +483,7 @@ namespace Microsoft.VisualStudio.TestTools.HostAdapters.VsIde
         }
 
         /// <summary>
-        /// If run under debugger, attaches to the host session of test runner IDE.
+        /// If run under debugger, attach to the host session of test runner IDE.
         /// </summary>
         private void InitHostSession()
         {
@@ -492,8 +492,8 @@ namespace Microsoft.VisualStudio.TestTools.HostAdapters.VsIde
 
             if (m_runConfig.IsExecutedUnderDebugger)
             {
-                // First check if there is Host Data in Run Config.
-                // There is not host data when using HostType attribute (not using Run Config).
+                // First, check if there is Host Data in Run Config.
+                // There is no host data when using HostType attribute (not using Run Config).
                 string sessionId = null;
                 VsIdeHostRunConfigData hostData = m_runConfig.HostData[Name] as VsIdeHostRunConfigData;
                 if (hostData != null)
@@ -520,7 +520,7 @@ namespace Microsoft.VisualStudio.TestTools.HostAdapters.VsIde
 
                 if (!string.IsNullOrEmpty(sessionId))
                 {
-                    // Now get the IDE runner session, the Uri is ipc://ServerPortName/AppName.
+                    // Now, get the IDE runner session, the Uri is ipc://ServerPortName/AppName.
                     string uri = string.Format(
                         CultureInfo.InvariantCulture, "ipc://{0}/{1}",
                         sessionId,
@@ -566,7 +566,7 @@ namespace Microsoft.VisualStudio.TestTools.HostAdapters.VsIde
                     }
                 }
 
-                // m_runConfig can be null if cleanup is called too early, i.e. before we comleted init.
+                // m_runConfig can be null if cleanup is called too early, i.e. before we completed init.
                 if (m_runConfig != null && m_runConfig.IsExecutedUnderDebugger)
                 {
                     // Detach debugger for VS we are going to shut down.
@@ -614,7 +614,7 @@ namespace Microsoft.VisualStudio.TestTools.HostAdapters.VsIde
 
         private void CleanupHostSession()
         {
-            // m_runConfig can be null if cleanup is called too early, i.e. before we comleted init.
+            // m_runConfig can be null if cleanup is called too early, i.e. before we completed init.
             if (m_runConfig != null && m_runConfig.IsExecutedUnderDebugger)
             {
                 Debug.Assert(m_hostSession != null);
@@ -651,13 +651,13 @@ namespace Microsoft.VisualStudio.TestTools.HostAdapters.VsIde
             string                              clientChannelName   = channelPrefix + "_ClientChannel";
 
             // Server channel is required for callbacks from client side.
-            // Actually it is not required when running from vstesthost as vstesthost already sets up the channels
+            // Actually, it is not required when running from vstesthost as vstesthost already sets up the channels
             // but since we have /noisolation (~ no vstesthost) mode we need to create this channel. 
             // RunConfig.IsExecutedOutOfProc exists but it's internal so we cannot say if we are mstest-inproc or not.
             serverProvider.TypeFilterLevel = TypeFilterLevel.Full;  // Enable remoting objects as arguments.
 
             // portName:        Must be different from Clients Port.
-            // authorizedGroup: Default IpcChannel security is allow for all users who can authorize this machine.
+            // authorizedGroup: Default IpcChannel security is allowed for all users who can authorize this machine.
             properties["name"]              = serverChannelName;
             properties["portName"]          = serverChannelName;           
             properties["authorizedGroup"]   = WindowsIdentity.GetCurrent().Name;
