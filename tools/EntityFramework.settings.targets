@@ -102,7 +102,7 @@ Project global pre-settings.
 
   <PropertyGroup>
     <!-- Use CustomAfterMicrosoftCommonTargets property (Microsoft.Common.targets) to inject project post-targets  -->
-    <!-- Note: this is how common properties are defined that must be set _after_ the properties in the .csproj files e.g. VS11 -->
+    <!-- Note: this is how common properties are defined, they must be set _after_ the properties in the .csproj files e.g. VS11 -->
     <CustomAfterMicrosoftCommonTargets>$(MSBuildThisFileDirectory)EntityFramework.targets</CustomAfterMicrosoftCommonTargets>
     <CustomAfterNuGetProjTargets>$(MSBuildThisFileDirectory)EntityFramework.targets</CustomAfterNuGetProjTargets>
     <CustomAfterWixTargets>$(MSBuildThisFileDirectory)EntityFramework.targets</CustomAfterWixTargets>
