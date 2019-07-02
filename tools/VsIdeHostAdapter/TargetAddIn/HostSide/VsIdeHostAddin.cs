@@ -29,7 +29,7 @@ namespace Microsoft.VisualStudio.TestTools.HostAdapters.VsIde
     [SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "Addin", Justification = "Public interface, cannot rename")]
     public interface IVsIdeTestHostAddin
     {
-        [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate")]   // This is not a simle property and does things behind the scene.
+        [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate")]   // This is not a simple property and it does things behind the scene.
         HostAdapterHostSide GetHostSide();
     }
 
@@ -52,7 +52,7 @@ namespace Microsoft.VisualStudio.TestTools.HostAdapters.VsIde
         private VsIdeHostDebugger m_debugger;
         private object m_hostLock = new object();
         private ManualResetEvent m_hostInitializedEvent = new ManualResetEvent(false);
-        private bool m_hostInitialized; // Whether VS we use to run the tests is initialized; static in case if VS creaes 2 instances.
+        private bool m_hostInitialized; // Whether VS we use to run the tests is initialized; static in case if VS creates 2 instances.
 
         /// <summary>Implements the constructor for the Add-in object. Place your initialization code within this method.</summary>
         public VsIdeTestHostAddin()
@@ -84,7 +84,7 @@ namespace Microsoft.VisualStudio.TestTools.HostAdapters.VsIde
 
             // The idea about connection modes is to make sure we are initialized
             // after 1st OnConnection is called. Because this is when VS thinks that
-            // addin is ready and returns it to outside.
+            // addin is ready and returns it outside.
             if (connectMode == ext_ConnectMode.ext_cm_UISetup ||    // When VS sets up UI for Addin.
                 connectMode == ext_ConnectMode.ext_cm_Startup ||    // When VS is started.
                 connectMode == ext_ConnectMode.ext_cm_AfterStartup) // When loading from Tools->Addin Manager.
@@ -171,7 +171,7 @@ namespace Microsoft.VisualStudio.TestTools.HostAdapters.VsIde
         {
         }
 
-        /// <summary>Implements the OnStartupComplete method of the IDTExtensibility2 interface. Receives notification that the host application has completed loading.</summary>
+        /// <summary>Implements the OnStartupComplete method of the IDTExtensibility2 interface. Receives notification that the host aplication completed loading.</summary>
         /// <param term='custom'>Array of parameters that are host application specific.</param>
         /// <seealso class='IDTExtensibility2' />
         public void OnStartupComplete(ref Array custom)
@@ -185,7 +185,7 @@ namespace Microsoft.VisualStudio.TestTools.HostAdapters.VsIde
         {
         }
 
-        [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate")]   // This is not a simle property and does things behind the scene.
+        [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate")]   // This is not a simple property and does things behind the scene.
         HostAdapterHostSide IVsIdeTestHostAddin.GetHostSide()
         {
             // Wait for OnConnection to initialize the addin.
