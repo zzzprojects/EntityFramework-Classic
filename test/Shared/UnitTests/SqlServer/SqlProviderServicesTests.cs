@@ -352,7 +352,7 @@ namespace System.Data.Entity.SqlServer
             }
 
             [Fact]
-            public void GetService_returns_null_for_spatail_services_for_other_providers()
+            public void GetService_returns_null_for_spatial_services_for_other_providers()
             {
                 Assert.Null(
                     SqlProviderServices.Instance.GetService<DbSpatialServices>(new DbProviderInfo("System.Data.SqlServerCe.4.0", "")));
