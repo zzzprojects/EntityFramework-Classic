@@ -25,7 +25,7 @@ namespace System.Data.Entity
 
         public class ShimAssembly : Assembly
         {
-            // So Moq can mock Assembly
+            // So, Moq can mock Assembly.
         }
     }
 }
