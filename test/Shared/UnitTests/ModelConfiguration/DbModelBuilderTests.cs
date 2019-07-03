@@ -230,7 +230,7 @@ namespace System.Data.Entity.ModelConfiguration
                 Assert.True(
                     false,
                     String.Format(
-                        "The number of fields on {0} was expected to be {1} but is {2}. If a field has been added then make sure it is being properly copied by Clone and then update this test.",
+                        "The number of fields on {0} was expected to be {1} but is {2}. If a field has been added make sure it is being properly copied by Clone and then update this test.",
                         typeof(T).Name, expectedCount, actualCount));
             }
         }
