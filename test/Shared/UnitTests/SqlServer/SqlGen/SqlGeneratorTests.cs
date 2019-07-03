@@ -876,7 +876,7 @@ namespace System.Data.Entity.SqlServer.SqlGen
             }
 
             [Fact]
-            public void MatchTargetPatternForForcingNonUnicode_returns_false_for_matching_three_arg_canonical_function_with_non_matching_arg
+            public void MatchTargetPatternForForcingNonUnicode_returns_false_for_matching_three_arg_canonical_functions_with_non_matching_arg
                 ()
             {
                 Assert.False(
@@ -893,7 +893,7 @@ namespace System.Data.Entity.SqlServer.SqlGen
             }
 
             [Fact]
-            public void MatchTargetPatternForForcingNonUnicode_returns_true_for_matching_three_arg_store_function()
+            public void MatchTargetPatternForForcingNonUnicode_returns_true_for_matching_three_arg_store_functions()
             {
                 Assert.True(
                     new SqlGenerator().MatchTargetPatternForForcingNonUnicode(
@@ -909,7 +909,7 @@ namespace System.Data.Entity.SqlServer.SqlGen
             }
 
             [Fact]
-            public void MatchTargetPatternForForcingNonUnicode_returns_false_for_matching_three_arg_store_function_with_non_matching_arg()
+            public void MatchTargetPatternForForcingNonUnicode_returns_false_for_matching_three_arg_store_functions_with_non_matching_arg()
             {
                 Assert.False(
                     new SqlGenerator().MatchTargetPatternForForcingNonUnicode(
