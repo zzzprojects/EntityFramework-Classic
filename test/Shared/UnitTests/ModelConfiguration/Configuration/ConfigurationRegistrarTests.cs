@@ -50,7 +50,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
         }
 
         [Fact]
-        public void AddFromAssembly_throw_if_assembly_is_null()
+        public void AddFromAssembly_throws_if_assembly_is_null()
         {
             var registrar = new ConfigurationRegistrar(new ModelConfiguration());
 
