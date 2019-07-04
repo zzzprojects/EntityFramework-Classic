@@ -390,7 +390,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
         }
 
         [Fact]
-        public void Property_throws_when_not_exists()
+        public void Property_throws_when_not_exist()
         {
             var type = typeof(AType);
             var innerConfig = new EntityTypeConfiguration(type);
