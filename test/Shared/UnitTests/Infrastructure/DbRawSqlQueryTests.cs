@@ -81,14 +81,14 @@ namespace System.Data.Entity.Infrastructure
         public class AsStreaming
         {
             [Fact]
-            public void Generic_DbSqlQuery_AsStreaming_returns_new_object_with_streamin_flag_set()
+            public void Generic_DbSqlQuery_AsStreaming_returns_new_object_with_streaming_flag_set()
             {
                 var query = new DbRawSqlQuery<FakeEntity>(MockHelper.CreateInternalSqlSetQuery("query", false, 1, 2));
                 DynamicAsStreamingTest(query);
             }
 
             [Fact]
-            public void Non_generic_DbSqlQuery_AsStreaming_returns_new_object_with_streamin_flag_set()
+            public void Non_generic_DbSqlQuery_AsStreaming_returns_new_object_with_streaming_flag_set()
             {
                 var query = new DbRawSqlQuery(MockHelper.CreateInternalSqlSetQuery("query", false, 1, 2));
                 DynamicAsStreamingTest(query);
