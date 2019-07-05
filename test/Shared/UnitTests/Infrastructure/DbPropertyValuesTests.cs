@@ -305,7 +305,7 @@ namespace System.Data.Entity.Infrastructure
         }
 
         [Fact]
-        public void Attempt_to_copy_values_from_object_of_differnt_type_copies_no_properties_if_no_properties_match()
+        public void Attempt_to_copy_values_from_object_of_different_type_copies_no_properties_if_no_properties_match()
         {
             var properties = new Dictionary<string, object>
                                  {
@@ -339,7 +339,7 @@ namespace System.Data.Entity.Infrastructure
         }
 
         [Fact]
-        public void Attempt_to_copy_values_from_object_of_differnt_type_copies_only_properties_that_match()
+        public void Attempt_to_copy_values_from_object_of_different_type_copies_only_properties_that_match()
         {
             Attempt_to_copy_values_from_object_of_differnt_type_copies_only_properties_that_match_implementation(
                 new FakeTypeWithSomeProps("PublicStringPropValue", 3, 4));
@@ -354,7 +354,7 @@ namespace System.Data.Entity.Infrastructure
                               PrivateIntProp = 3,
                               SomeDifferentIntProp = 4
                           };
-            Attempt_to_copy_values_from_object_of_differnt_type_copies_only_properties_that_match_implementation(obj);
+            Attempt_to_copy_values_from_object_of_different_type_copies_only_properties_that_match_implementation(obj);
         }
 
         private void Attempt_to_copy_values_from_object_of_differnt_type_copies_only_properties_that_match_implementation(object obj)
