@@ -2,26 +2,26 @@
 
 ## Description
 
-The **EF Query Include Optimized** feature let you to filter related entities that will be included. However, instead to make one big query like **Query Include Filter**, the queries is split in several queries to optimize the performance like `EF Core` does.
+The **EF Query Include Optimized** feature let you filter related entities that will be included. However, instead to make one big query like **Query Include Filter**, the queries are split in several queries to optimize the performance like `EF Core` does.
 
-The feature work exactly like [Query Include Filter](/query-include-filter), but you use the `IncludeOptimized` method instead.
+The feature works exactly like [Query Include Filter](/query-include-filter), but you use the `IncludeOptimized` method instead.
 
-The query is split in multiples queries which reduce the amount of data transferred.
+The query is split in multiple queries which reduce the amount of data transferred.
 
 ```csharp
 var customers = context.Customers.IncludeOptimized(x => x.Invoices.Where(y => !y.IsSoftDeleted)).ToList();
 ```
 [Try it](https://dotnetfiddle.net/K0gPht)
 
-> The **Query Include Optimized** feature may sometimes reduce the performance. For example, when some database index are missing.
+> The **Query Include Optimized** feature may sometimes reduce the performance. For example, when some database indexes are missing.
 
 ### Download
 To use this feature, you need to download the following [NuGet Package](https://www.nuget.org/packages/Z.EntityFramework.Plus.QueryIncludeOptimized.EFClassic/)
 
 ### Entity Framework Classic - Integration
-The **Query Include Optimized** feature will be eventually integrated directly in **Entity Framework Classic**.
+The **Query Include Optimized** feature will eventually integrate directly in **Entity Framework Classic**.
 
-It's planned that this feature get a major revamp to work more easily with include methods such as `Include` and `IncludeFilter`.
+It's planned that this feature gets a major revamp to work more easily with include methods such as `Include` and `IncludeFilter`.
 
 ## Documentation
 
