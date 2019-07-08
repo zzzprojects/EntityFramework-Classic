@@ -1,7 +1,7 @@
 # QueryFuture
 
 ## Description
-Every time an immediate method like **ToList** or **FirstOrDefault** is invoked on a query, a database round trip is made to retrieve data. While most applications don't have performance issues with making multiple round trips, batching multiple queries into one can be critical for some heavy traffic applications for scalability.
+Every time an immediate method like **ToList** or **FirstOrDefault** is invoked on a query, a database round trip is made to retrieve data. While most applications don't have performance issues with making multiple round trips, batching multiple queries into one can be critical for some heavy traffic applications scalability.
 
 **EF Classic Query Future** opens up all batching future queries features for Entity Framework users.
 
