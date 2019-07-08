@@ -2,7 +2,7 @@
 
 ## Description
 
-The **EF Query Include Filter** feature let you to filter related entities that will be included.
+The **EF Query Include Filter** feature let you filter related entities that will be included.
 
 For example, you want to load your customers and their invoices, but only related invoices that are not soft deleted.
 
@@ -11,7 +11,7 @@ var customers = context.Customers.IncludeFilter(x => x.Invoices.Where(y => !y.Is
 ```
 [Try it](https://dotnetfiddle.net/pesV1x)
 
-This feature allows you to handle various scenario such as:
+This feature allows you to handle various scenarios such as:
 - [Exclude soft deleted entities](#exclude-soft-deleted-entities)
 - [Include with security access](#include-with-security-access)
 - [Include paginated entities](#include-paginated-entities)
@@ -19,7 +19,7 @@ This feature allows you to handle various scenario such as:
 ### Download
 To use this feature, you need to download the following [NuGet Package](https://www.nuget.org/packages/Z.EntityFramework.Plus.QueryIncludeFilter.EFClassic/)
 
-It's planned in 2019 to improve the **Query Include Filter** feature, remove some limitations, and integrated the code directly in Entity Framework Classic package.
+It's planned in 2019 to improve the **Query Include Filter** feature, remove some limitations, and integrate the code directly in Entity Framework Classic package.
 
 ## Getting Started
 
@@ -56,7 +56,7 @@ var customers = context.Customers.IncludeFilter(x => x.Invoices.Where(y => !y.Is
 > The limitations to include every level will be removed when the feature will be integrated into **Entity Framework Classic**.
 
 ### Include chaining
-You can chain multiple `IncludeFilter` methods one after another but you cannot mixte it with other include methods such as `Include`, `AlsoInclude`, `ThenInclude`, `IncludeOptimized`.
+You can chain multiple `IncludeFilter` methods one after another but you cannot mix it with other include methods such as `Include`, `AlsoInclude`, `ThenInclude`, `IncludeOptimized`.
 
 If you need to include without a filter, you can still use the `IncludeFilter` method.
 
@@ -140,7 +140,7 @@ context.Invoices.IncludeFilter(x => x.InvoiceItems.Take(10));
  > Most of those limitations will be removed when the **Query Include Filter** code will be integrated  directly in **Entity Framework Classic**.
 
 ### Cannot filter entities already loaded
-If an entity is already part of the `ChangeTracker` (the context), it's impossible to exclude it even with the `IncludeFilter`. That's how the `ChangeTracker` work.
+If an entity is already part of the `ChangeTracker` (the context), it's impossible to exclude it even with the `IncludeFilter`. That's how the `ChangeTracker` works.
 
 ```csharp
 // using Z.EntityFramework.Plus; // Don't forget to include this.
