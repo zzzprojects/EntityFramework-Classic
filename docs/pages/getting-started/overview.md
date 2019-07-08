@@ -8,7 +8,7 @@ Entity Framework Classic is the supported EF6 Fork that's compatible with .NET S
 - .NET Standard 2.0 or higher
 
 ## Limitations
-Currently, only the SQL Server, SQL Compact, and Effort is supported. However, we plan to add providers throughout the year. 
+Currently, only the SQL Server, SQL Compact, and Effort are supported. However, we plan to add providers throughout the year. 
 
 ## Installing
 Download the [NuGet Package](/download)
@@ -76,7 +76,7 @@ You can use your Database First Model with your .NET Core project. However, sinc
 EntityFramework.EntityFrameworkManager.UseDatabaseFirst("ModelName.edmx");
 ```
 
-You must also ensure that you use the model copied to the directory output
+You must also ensure that you use the model copied to the directory output.
 
 ```csharp
 // BAD
