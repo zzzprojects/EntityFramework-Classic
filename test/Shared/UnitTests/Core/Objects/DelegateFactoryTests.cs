@@ -263,7 +263,7 @@ namespace System.Data.Entity.Core.Objects
             }
 
             [Fact]
-            public void CreatePropertyGetter_creates_getter_delegate_for_Nullable_property_that_returns_null_if_the_Nullable_as_no_value()
+            public void CreatePropertyGetter_creates_getter_delegate_for_Nullable_property_that_returns_null_if_the_Nullable_has_no_value()
             {
                 Assert.Null(
                     DelegateFactory.CreatePropertyGetter(
