@@ -1,9 +1,9 @@
 # Include
 
 ## Description
-The `Include` method let you to add related entities to the query result.
+The `Include` method let you add related entities to the query result.
 
-In EF Classic, the `Include` method doesn't longer return an `IQueryable` but instead an `IncludeDbQuery` that allows you to chain multiple related objects to the query result by using the `AlsoInclude` and `ThenInclude` methods.
+In EF Classic, the `Include` method no longer returns an `IQueryable` but instead an `IncludeDbQuery` that allows you to chain multiple related objects to the query result by using the `AlsoInclude` and `ThenInclude` methods.
 
 ```csharp
 ctx.Customers
@@ -37,5 +37,5 @@ ctx.OrderDetails
 ```
 [Try it](https://dotnetfiddle.net/2XJrc5)
 
-> It's planned to remove this limitation
+> It's planned to remove this limitation.
 
