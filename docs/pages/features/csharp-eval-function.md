@@ -1,7 +1,7 @@
 # C# Eval Expression
 
 ## Description
-The **C# Eval Expression** features let you to execute code dynamically.
+The **C# Eval Expression** features let you execute code dynamically.
 
 ```csharp
 var result = Eval.Execute("X + Y", new { X = 1, Y = 2 }); // return 3
@@ -52,7 +52,7 @@ foreach(var item in list)
 [Try it](https://dotnetfiddle.net/2sAvrj)
 
 ### Executing LINQ from json
-Your application need to filter returning entities depending of a json you receive.
+Your application need to filter returning entities depending on the json you receive.
 
 ```csharp
 var json = @"
