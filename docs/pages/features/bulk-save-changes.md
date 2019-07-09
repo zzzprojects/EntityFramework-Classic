@@ -3,7 +3,7 @@
 ## Description
 The **EF Bulk SaveChanges** feature let you save thousands of entities in your database efficiently.
 
-This feature is provided by the library [EF Extensions](https://entityframework-extensions.net/bulk-savechanges) _(Included with EF Classic)_. EF Extensions it's used by over 2000 customers all over the world and support all Entity Framework version (EF4, EF5, EF6, EF Core, EF Classic).
+This feature is provided by the library [EF Extensions](https://entityframework-extensions.net/bulk-savechanges) _(Included with EF Classic)_. EF Extensions is used by over 2000 customers all over the world and supports all Entity Framework versions (EF4, EF5, EF6, EF Core, EF Classic).
 
 ```csharp
 context.Customers.AddRange(listToAdd); // add
@@ -34,12 +34,12 @@ context.BulkSaveChanges(bulk => bulk.BatchSize = 100);
 
 Using the `ChangeTracker` to detect and persist changes automatically is great! However, it leads very fast to some problems when multiple entities need to be saved.
 
-`SaveChanges` method makes a database round-trip for every change. So if you need to insert 10000 entities, then 10000 database round-trips will be performed which is INSANELY slow.
+`SaveChanges` method makes a database round-trip for every change. So, if you need to insert 10000 entities, then 10000 database round-trips will be performed which is INSANELY slow.
 
 `BulkSaveChanges` works exactly like `SaveChanges` but reduces the number of database round-trips required to help significantly improve the performance.
 
 ### Why BulkSaveChanges(false) is faster than BulkSaveChanges?
-The `BulkSaveChanges` methods use a lot of method coming from `Entity Framework`. When passing `false` in parameter, some logic such as identity propagation use custom logic that has been optimized. Learn more about [EF Extensions - Improve BulkSaveChanges](https://entityframework-extensions.net/improve-bulk-savechanges)
+The `BulkSaveChanges` method uses a lot of methods coming from `Entity Framework`. When passing `false` in parameter, some logic such as identity propagation use custom logic that has been optimized. Learn more about [EF Extensions - Improve BulkSaveChanges](https://entityframework-extensions.net/improve-bulk-savechanges)
 
 ## Learn more
 
