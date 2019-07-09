@@ -145,7 +145,7 @@ public static void Main()
 ### Last Audit
 The latest audit can be accessed with the `LastAudit` property.
 
-The `LastAudit` property give you additional information that are not saved such as:
+The `LastAudit` property gives you additional information that are not saved such as:
 - Entity
 - Entry
 - OldValueRaw
@@ -169,8 +169,8 @@ One of those following set must be added to your context:
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `AuditEntry` | The `AuditEntry` class allow you to save one row per property (Only recommand for `Enterprise` version). The `DbSet<AuditEntry>` and `DbSet<AuditEntryProperty>` must be added to your context. | [Try it](https://dotnetfiddle.net/cg2SVF) |
-| `XmlAuditEntry` | The `XmlAuditEntry` class allow you to save your properties in an XML format. The `DbSet<XmlAuditEntry>` must be added to your context. | [Try it](https://dotnetfiddle.net/2HLtF4) |
+| `AuditEntry` | The `AuditEntry` class allows you to save one row per property (Only recommended for `Enterprise` version). The `DbSet<AuditEntry>` and `DbSet<AuditEntryProperty>` must be added to your context. | [Try it](https://dotnetfiddle.net/cg2SVF) |
+| `XmlAuditEntry` | The `XmlAuditEntry` class allows you to save your properties in an XML format. The `DbSet<XmlAuditEntry>` must be added to your context. | [Try it](https://dotnetfiddle.net/2HLtF4) |
 
 ### AutoSave Action
 To automatically save the audit trail in another context or a log file, you need to specify an `AutoSaveAction`. This action will be executed after all saves are completed.
@@ -379,7 +379,7 @@ public static void Main()
 [Try it](https://dotnetfiddle.net/JMVLsE)
 
 ### Displaying audit trail history
-Your application need to display the audit trail of all changes in an user interface. If your audit trail is saved in a database, you can retrieve and display audit entries by using your audit `DbSet<>`.
+Your application need to display the audit trail of all changes in a user interface. If your audit trail is saved in a database, you can retrieve and display audit entries by using your audit `DbSet<>`.
 
 ```csharp
 // Display
@@ -397,7 +397,7 @@ using (var context = new EntityContext())
 
 ### AuditManager
 
-The `AuditManager` allow you to configure how the audit trail will be created, saved, and retrieved.
+The `AuditManager` allows you to configure how the audit trail will be created, saved, and retrieved.
 
 ###### Properties
 
@@ -437,7 +437,7 @@ The `AuditManager` allow you to configure how the audit trail will be created, s
 | `ExcludePropertyUnchanged()` | Excludes all properties value unchanged from the audit. Key values are never excluded. | [Try it](https://dotnetfiddle.net/9Aw0vq) |
 | `ExcludePropertyUnchanged<TEntityType>()` | Excludes all properties value unchanged of a `TEntityType` type from the audit. Key values are never excluded. | [Try it](https://dotnetfiddle.net/EKOk3a) |
 | `ExcludePropertyUnchanged(Func<object, bool> predicate)` | Excludes all properties value that satistfy the predicate from the audit. Key values are never excluded. | [Try it](https://dotnetfiddle.net/qhTX5h) |
-| `IncludeEntity()` | Inclues all entities in the audit. | [Try it](https://dotnetfiddle.net/r0Rq73) |
+| `IncludeEntity()` | Includes all entities in the audit. | [Try it](https://dotnetfiddle.net/r0Rq73) |
 | `IncludeEntity<TEntityType>()` | Includes all entities of `TEntityType` type in the audit. | [Try it](https://dotnetfiddle.net/rjhUQb) |
 | `IncludeEntity(Func<object, bool> predicate)` | Includes all entities that satisfy the predicate in the audit. | [Try it](https://dotnetfiddle.net/TdqHmK)  |
 | `IncludeEntity<TEntityType>(Func<TEntityType, bool> predicate)` | Includes all entities of `TEntityType` that satisfy the predicate in the audit. | [Try it](https://dotnetfiddle.net/KiLBLq)  |
@@ -448,9 +448,9 @@ The `AuditManager` allow you to configure how the audit trail will be created, s
 | `IncludeProperty()` | Includes all properties in the audit. | [Try it](https://dotnetfiddle.net/CN9Zq1) |
 | `IncludeProperty<TEntityType>()` | Includes all properties of a `TEntityType` type in the audit. | [Try it](https://dotnetfiddle.net/e74jy7)  |
 | `IncludeProperty<TEntityType>(Expression<Func<TEntityType, object>> propertySelector)` | Includes specified properties of a `TEntityType` type in the audit. | [Try it](https://dotnetfiddle.net/c7YrfX)  |
-| `IncludePropertyUnchanged()` | Includes all properties value unchanged in the audit. | [Try it](https://dotnetfiddle.net/RPfZEl) |
-| `IncludePropertyUnchanged<TEntityType>()` | Includes all properties value unchanged of a `TEntityType` type in the audit. | [Try it](https://dotnetfiddle.net/bYmNVq) |
-| `IncludePropertyUnchanged(Func<object, bool> predicate)` | Includes all properties value that satistfy the predicate in the audit. | [Try it](https://dotnetfiddle.net/HpJ5mz) |
+| `IncludePropertyUnchanged()` | Includes all property values unchanged in the audit. | [Try it](https://dotnetfiddle.net/RPfZEl) |
+| `IncludePropertyUnchanged<TEntityType>()` | Includes all property values unchanged of a `TEntityType` type in the audit. | [Try it](https://dotnetfiddle.net/bYmNVq) |
+| `IncludePropertyUnchanged(Func<object, bool> predicate)` | Includes all property values that satistfy the predicate in the audit. | [Try it](https://dotnetfiddle.net/HpJ5mz) |
 | `UseIncludeDataAnnotation(bool value)` | Exclude all entities and properties from the Audit. Only entities and properties with `Include` data annotations or specified with the fluent API will be included. | [Try it](https://dotnetfiddle.net/mGBM7i) |
 
 ###### Methods (Soft Delete)
@@ -515,7 +515,7 @@ The `AuditEntryProperty` contains information about `property`.
 
 ###### Properties (Mapped)
 
-This properties values are saved in a database.
+These property values are saved in a database.
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
@@ -529,7 +529,7 @@ This properties values are saved in a database.
 
 ###### Properties (Unmapped)
 
-This properties values are only accessible via the `LastAudit` property.
+These property values are only accessible via the `LastAudit` property.
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
