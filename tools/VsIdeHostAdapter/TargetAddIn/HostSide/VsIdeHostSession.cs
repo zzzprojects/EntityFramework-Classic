@@ -12,7 +12,7 @@ namespace Microsoft.VisualStudio.TestTools.HostAdapters.VsIde
     /// </summary>
     internal static class VsIdeHostSession
     {
-        [SuppressMessage("Microsoft.Performance", "CA1802:UseLiteralsWhereAppropriate")]    // Can be used in a friend assembly.
+        [SuppressMessage("Microsoft.Performance", "CA1802:UseLiteralsWhereAppropriate")]    // Can be used in friend assembly.
         internal static readonly string RemoteObjectName = "EqtAddinSessionDebugging";
         internal const string Prefix = "EqtAddinSession_";
 
