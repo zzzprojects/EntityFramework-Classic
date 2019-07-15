@@ -29,7 +29,7 @@ namespace Microsoft.VisualStudio.TestTools.HostAdapters.VsIde
     [SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "Addin", Justification = "Public interface, cannot rename")]
     public interface IVsIdeTestHostAddin
     {
-        [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate")]   // This is not a simle property and it does things behind the scene.
+        [SuppressMessage("Microsoft.Design", "CA1024:UsePropertiesWhereAppropriate")]   // This is not a simle property and does things behind the scene.
         HostAdapterHostSide GetHostSide();
     }
 
