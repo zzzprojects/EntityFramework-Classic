@@ -28,7 +28,7 @@ namespace System.Data.Entity.Infrastructure.Design
             }
         }
 
-        // TODO: ZZZ - Must do something here...  need  public T GetTransparentProxy() 
+        // TODO: ZZZ - Must do something here...  neeed  public T GetTransparentProxy() 
 #if NOT_MIKAEL
          [Fact]
         public void Invoke_forwards_messages_to_target()
@@ -88,7 +88,7 @@ namespace System.Data.Entity.Infrastructure.Design
 ";
 
 
-        // TODO: ZZZ - Must do something here, need  public T GetTransparentProxy() 
+        // TODO: ZZZ - Must do something here, neeed  public T GetTransparentProxy() 
 #if NOT_MIKAEL
 
         [Fact]
