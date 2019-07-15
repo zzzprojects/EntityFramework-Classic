@@ -870,7 +870,7 @@ namespace System.Data.Entity.Infrastructure.Interception
                     m => m.NonQueryExecuting(mockCommand.Object, It.Is<DbCommandInterceptionContext<int>>(c => c.IsAsync)));
 
                 // Note that if the command is not executed then there is no async operation and "after" interceptors are
-                // executed immediately and synchronously.
+                // executed immediately and synchronously
                 mockInterceptor.Verify(m => m.NonQueryExecuted(mockCommand.Object, It.IsAny<DbCommandInterceptionContext<int>>()));
 
                 var awaited = AwaitMe(interceptResult);
@@ -1243,7 +1243,7 @@ namespace System.Data.Entity.Infrastructure.Interception
             }
 
             [Fact]
-            public void Dispatch_method_executes_command_and_dispatches_to_interceptors_even_if_operation_cancelled()
+            public void Dispatch_method_executes_command_and_dispatches_to_interceptors_even_if_operation_canceled()
             {
                 var cancellationTokenSource = new CancellationTokenSource();
                 var cancellationToken = cancellationTokenSource.Token;
@@ -1474,7 +1474,7 @@ namespace System.Data.Entity.Infrastructure.Interception
                         It.Is<DbCommandInterceptionContext<DbDataReader>>(c => c.IsAsync && c.CommandBehavior == CommandBehavior.SequentialAccess)));
 
                 // Note that if the command is not executed then there is no async operation and "after" interceptors are
-                // executed immediately and synchronously.
+                // executed immediately and synchronously
                 mockInterceptor.Verify(
                     m => m.ReaderExecuted(
                         mockCommand.Object, It.Is<DbCommandInterceptionContext<DbDataReader>>(
