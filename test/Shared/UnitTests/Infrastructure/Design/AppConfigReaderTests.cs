@@ -28,7 +28,7 @@ namespace System.Data.Entity.Infrastructure.Design
         }
 
         [Fact]
-        public void GetProviderServices_returns_null_when_not_exist()
+        public void GetProviderServices_returns_null_when_not_exists()
         {
             var reader = new AppConfigReader(
                 CreateConfig("<provider invariantName='My.Invariant1' type='MyProvider1'/>"));
