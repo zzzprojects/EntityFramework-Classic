@@ -121,7 +121,7 @@ namespace System.Data.Entity.Migrations.Utilities
         }
 
         [Fact]
-        public void FindMigrationsConfiguration_can_throw_if_multiple_types_matching_names_are_found()
+        public void FindMigrationsConfiguration_can_throw_if_multiple_types_matching_name_are_found()
         {
             Assert.Equal(
                 "EntityFramework.UnitTests MultipleConfig",
@@ -134,7 +134,7 @@ namespace System.Data.Entity.Migrations.Utilities
         }
 
         [Fact]
-        public void FindMigrationsConfiguration_can_return_null_if_multiple_types_matching_names_are_found()
+        public void FindMigrationsConfiguration_can_return_null_if_multiple_types_matching_name_are_found()
         {
             Assert.Null(
                 new MigrationsConfigurationFinder(new TypeFinder(typeof(ContextWithMultipleConfigs).Assembly()))
