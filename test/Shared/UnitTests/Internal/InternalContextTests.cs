@@ -35,7 +35,7 @@ namespace System.Data.Entity.Internal
         public class OnDisposing : TestBase
         {
             [Fact]
-            public void OnDisposing_event_is_raised_once_when_context_is_disposed_and_never_again()
+            public void OnDisposing_event_is_raised_when_once_when_context_is_disposed_and_never_again()
             {
                 var eventCount = 0;
                 var context = new EagerInternalContext(new Mock<DbContext>().Object);
@@ -406,7 +406,7 @@ namespace System.Data.Entity.Internal
             }
 
             [Fact]
-            public void Setting_log_again_replaces_the_existing_sink()
+            public void Setting_log_again_reoplaces_the_existing_sink()
             {
                 var mockDispatchers = new Mock<DbDispatchers>();
 
