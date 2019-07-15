@@ -15,14 +15,14 @@ public class SoftDeleteEntitiesContext : DbContext
 ```
 [Try it](https://dotnetfiddle.net/pkMR5w)
 
-The soft delete feature can be acheived by using the 'IEFSoftDelete' interface. By default this interface is always added to the manager. Otherwise you can add your own interface and trigger action to perform a soft delete.
+The soft delete feature can be acheived by using the 'IEFSoftDelete' interface. By default, this interface is always added to the manager. Otherwise you can add your own interface and trigger action to perform a soft delete.
 
 The `IEFSoftDelete` interface will handle any entities that has a column named 'IsDeleted' with the boolean type.
 Any entity that inherit this intefaced will be soft deleted instead of being completly deleted when saving changes from a context.
 
 ### Advantage
 
-- Centralize logic in single inteface to handle the soft delete
+- Centralize logic in single interface to handle the soft delete
 - Reduce the chance of missing a soft delete when introducing a new entity
 - Improve development productivity
 
@@ -91,7 +91,7 @@ using (var context = new EntityContext())
 ### Soft Delete
 Your application uses Soft Delete/Logical Delete to delete entities.
 
-The **Soft Delete** allows you to mark entities as deleted instead of physically deleted them.
+The **Soft Delete** allows you to mark entities as deleted instead of physically deleting them.
 
 ```csharp
 public class EntityContext : DbContext
@@ -162,6 +162,6 @@ public class EntityContext : DbContext
 
 ## Limitations
 
-There can be only one trigger by entity type. If a second trigger try to be added an exception will be raised.
+There can be only one trigger by entity type. If a second trigger tries to be added an exception will be raised.
 
 The SoftDeleteFeature is not supported by the `BulkSynchronize` operation.

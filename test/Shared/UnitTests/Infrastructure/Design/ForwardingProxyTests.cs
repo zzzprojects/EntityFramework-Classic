@@ -88,7 +88,7 @@ namespace System.Data.Entity.Infrastructure.Design
 ";
 
 
-        // TODO: ZZZ - Must do something here neeed  public T GetTransparentProxy() 
+        // TODO: ZZZ - Must do something here, neeed  public T GetTransparentProxy() 
 #if NOT_MIKAEL
 
         [Fact]

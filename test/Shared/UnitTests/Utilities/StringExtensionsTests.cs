@@ -104,7 +104,7 @@ namespace System.Data.Entity.Utilities
             }
 
             [Fact]
-            public void Strings_that_contain_internal_invalid_characeters_are_not_valid()
+            public void Strings_that_contain_internal_invalid_characters_are_not_valid()
             {
                 Assert.False("Rainbow Dash".IsValidUndottedName());
                 Assert.False("Apple-Jack".IsValidUndottedName());

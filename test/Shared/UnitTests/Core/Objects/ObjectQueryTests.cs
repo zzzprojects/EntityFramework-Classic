@@ -295,7 +295,7 @@ namespace System.Data.Entity.Core.Objects
                 MutableResolver.ClearResolvers();
             }
 
-            // Finally verify that ExecutionStrategy.Execute was called
+            // Finally, verify that ExecutionStrategy.Execute was called
             if (async)
             {
 #if !NET40

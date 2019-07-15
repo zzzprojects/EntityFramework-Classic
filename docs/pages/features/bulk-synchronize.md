@@ -7,7 +7,7 @@ A synchronize is a mirror operation from the data source to the database. All ro
 
 The database table becomes a mirror of the entity list provided.
 
-This feature is provided by the library [EF Extensions](https://entityframework-extensions.net/bulk-synchronize) _(Included with EF Classic)_. EF Extensions it's used by over 2000 customers all over the world and support all Entity Framework version (EF4, EF5, EF6, EF Core, EF Classic).
+This feature is provided by the library [EF Extensions](https://entityframework-extensions.net/bulk-synchronize) _(Included with EF Classic)_. EF Extensions is used by over 2000 customers all over the world and supports all Entity Framework versions (EF4, EF5, EF6, EF Core, EF Classic).
 
 ```csharp
 // Easy to use

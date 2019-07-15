@@ -136,7 +136,7 @@ namespace System.Data.Entity.Utilities
                 Assert.True(typeof(ICollection<string>).IsCollection());
                 Assert.True(typeof(IList<string>).IsCollection());
                 Assert.True(typeof(List<int>).IsCollection());
-                Assert.True(typeof(ICollection_should_correctly_detect_collections_fixture).IsCollection());
+                Assert.True(typeof(ICollection_should_correctly_detect_collection_fixtures).IsCollection());
                 Assert.False(typeof(object).IsCollection());
                 Assert.False(typeof(ICollection).IsCollection());
             }

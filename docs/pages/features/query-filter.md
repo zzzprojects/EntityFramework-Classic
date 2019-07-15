@@ -68,7 +68,7 @@ var list = context.Customers.ToList();
 [Try it](https://dotnetfiddle.net/7cKY2x)
 
 ### Instance Query Filter
-You can create an **Instance Query Filter** after a context instanced has been created. This filter will be specific to this context instance. If you context instance already have query filter both filter will be enabled.
+You can create an **Instance Query Filter** after a context instance has been created. This filter will be specific to this context instance. If your context instance already has query filter both filters will be enabled.
 
 ```csharp
 using (var context = new EntityContext())
@@ -139,7 +139,7 @@ using (var context = new EntityContext())
 
 > DANGER: DO NOT disable `Global Query Filter` unless you want to disable the filter for all your context instances.
 
-> HINT: Use an `enum` when using a specified ID `QueryFilterType.FilterName.ToString()` to advoid hardcoding a `string`.
+> HINT: Use an `enum` when using a specified ID `QueryFilterType.FilterName.ToString()` to avoid hardcoding a `string`.
 
 ## Real Life Scenarios
 
@@ -165,12 +165,12 @@ var list = context.Customers.ToList();
 ```
 [Try it](https://dotnetfiddle.net/b1kwHs)
 
-> HINT: The filter is usually applied to an interface named `ISoftDelete` inherited by all entity type that uses Soft Delete. 
+> HINT: The filter is usually applied to an interface named `ISoftDelete` inherited by all entity types that use Soft Delete. 
 
 ### Multi-Tenancy
 Your application uses a single instance to serve multiple tenants.
 
-The **Query Filter** allows you to include only data that's related to the specified `TenantID` to all your queries.
+The **Query Filter** allows you to include only data that is related to the specified `TenantID` to all your queries.
 
 ```csharp
 public static int ApplicationTenantID = 1;
@@ -191,10 +191,10 @@ var list = context.Customers.ToList();
 ```
 [Try it](https://dotnetfiddle.net/WuWGCy)
 
-> HINT: The filter is usually applied to an interface named `ITenant` inherited by all entity types that uses multi-tenancy.
+> HINT: The filter is usually applied to an interface named `ITenant` inherited by all entity types that use multi-tenancy.
 
 ### Logical Data Partitioning
-Your application store data in the same table but only a specific range should be available by example for a country.
+Your application stores data in the same table but only a specific range should be available by example for a country.
 
 The **Query Filter** allows you to include only data available for the specified country to all your queries.
 

@@ -13,7 +13,7 @@ namespace System.Data.Entity
         public void All_DbFunctions_are_attributed_with_DbFunctionAttribute_except_like_and_unicode_methods()
         {
             var entityFunctions = typeof(DbFunctions).GetDeclaredMethods().Where(f => f.IsPublic);
-            Assert.True(entityFunctions.Count() >= 95); // Just make sure Reflection is returning what we expect
+            Assert.True(entityFunctions.Count() >= 95); // Just make sure Reflection is returning what we expect.
 
             foreach (var function in entityFunctions.Where(f => f.Name != "Like" && f.Name != "AsUnicode" && f.Name != "AsNonUnicode"))
             {

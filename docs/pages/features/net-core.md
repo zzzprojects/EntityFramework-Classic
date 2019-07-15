@@ -4,7 +4,7 @@
 
 Even if Microsoft has created a new library named `EF Core`, we also added the support for the .NET Core to Entity Framework Classic since we believe that a lot of developers still prefer `EF6` over `EF Core`.
 
-Here are some features present in `EF6` that still hasn't been implemented in EF Core. By using `EF Classic`, you will be able to use those feature in a .NET Core Environment:
+Here are some features present in `EF6` that still hasn't been implemented in EF Core. By using `EF Classic`, you will be able to use those features in a .NET Core Environment:
 
 - ObjectContext API
 - Querying using Entity SQL.

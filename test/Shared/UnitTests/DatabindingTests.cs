@@ -699,7 +699,7 @@ namespace System.Data.Entity
         }
 
         [Fact]
-        public void BindingList_obtaibed_from_DbLocalView_stays_in_sync_with_the_local_view()
+        public void BindingList_obtained_from_DbLocalView_stays_in_sync_with_the_local_view()
         {
             var entities = new List<FakeEntity>
                                {

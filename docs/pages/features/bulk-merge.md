@@ -3,7 +3,7 @@
 ## Description
 The **EF Bulk Merge** feature let you update thousands of entities in your database efficiently.
 
-This feature is provided by the library [EF Extensions](https://entityframework-extensions.net/bulk-merge) _(Included with EF Classic)_. EF Extensions it's used by over 2000 customers all over the world and support all Entity Framework version (EF4, EF5, EF6, EF Core, EF Classic).
+This feature is provided by the library [EF Extensions](https://entityframework-extensions.net/bulk-merge) _(Included with EF Classic)_. EF Extensions is used by over 2000 customers all over the world and supports all Entity Framework versions (EF4, EF5, EF6, EF Core, EF Classic).
 
 ```csharp
 // Easy to use
@@ -26,20 +26,20 @@ context.BulkMerge(customers, options => options.ColumnPrimaryKeyExpression = cus
 > HINT: Performance may differ from a database to another. A lot of factors might affect the benchmark time such as index, column type, latency, throttling, etc.
 
 ### Why BulkMerge is faster than AddOrUpdate + SaveChanges?
-Merging thousand of entities for a file importation is a typical scenario.
+Merging thousands of entities for a file importation is a typical scenario.
 
-The `AddOrUpdate` method perform a database round-trips for every entity to check if it already exists. The `DetectChanges` change method is also called for every entity which makes this method even slower (it's like using the `Add` method instead of `AddRange`).
+The `AddOrUpdate` method performs a database round-trip for every entity to check if it already exists. The `DetectChanges` change method is also called for every entity which makes this method even slower (it's like using the `Add` method instead of `AddRange`).
 
-The `SaveChanges` method perform one database round-trip for every entity to update.
+The `SaveChanges` method performs one database round-trip for every entity to update.
 
-So if you need to merge 10,000 entities, 20,000 database round-trips will be performed + 10,000 `DetectChanges` call which is **INSANELY** slow.
+So if you need to merge 10,000 entities, 20,000 database round-trips will be performed + 10,000 `DetectChanges` calls which is **INSANELY** slow.
 
-The `BulkMerge` in counterpart requires the minimum database round-trips as possible. By example under the hood for SQL Server, a `SqlBulkCopy` is performed first in a temporary table, then an `MERGE` from the temporary table to the destionation table is performed which is the most effective tactics available.
+The `BulkMerge` in counterpart requires the minimum database round-trips possible. For example, under the hood of SQL Server, a `SqlBulkCopy` is performed first in a temporary table, then an `MERGE` from the temporary table to the destination table is performed which is the most effective tactic available.
 
 ## Real Life Scenarios
 
 ## Bulk Merge with custom key
-You need to update a list of `Customer` but you doesn't have the ID, you only have the unique customer code. The [ColumnPrimaryKeyExpression](https://entityframework-extensions.net/column#column-primary-key) let you to choose the key to use.
+You need to update a list of `Customer` but you dont have the IDs, you only have the unique customer codes. The [ColumnPrimaryKeyExpression](https://entityframework-extensions.net/column#column-primary-key) let you choose the key to use.
 
 ```csharp
 context.BulkMerge(customers, options => options.ColumnPrimaryKeyExpression = customer => customer.Code);
@@ -47,7 +47,7 @@ context.BulkMerge(customers, options => options.ColumnPrimaryKeyExpression = cus
 [Try it](https://dotnetfiddle.net/xItcSY)
 
 ## Bulk Merge specific columns
-You need to update a list of `Customer` but only update some specific column such as FirstName and LastName. The [ColumnInputExpression](https://entityframework-extensions.net/column#column-input) option let you to choose column to update.
+You need to update a list of `Customer` but only update some specific columns such as FirstName and LastName. The [ColumnInputExpression](https://entityframework-extensions.net/column#column-input) option let you to choose columns to update.
 
 ```csharp
 context.BulkMerge(customers, options => { 
@@ -59,8 +59,8 @@ context.BulkMerge(customers, options => {
 
 ## Bulk Merge specific columns on Update or Insert
 You need to update a list of `Customer` but only save the `CreatedDate` on insert and save the `ModifiedDate` on update.
-- The [IgnoreOnMergeInsert](https://entityframework-extensions.net/column#ignore-on-merge-insert) option let you to ignore column when an insert is performed.
-- The [IgnoreOnMergeUpdate](https://entityframework-extensions.net/column#ignore-on-merge-insert) option let you to ignore column when an update is performed.
+- The [IgnoreOnMergeInsert](https://entityframework-extensions.net/column#ignore-on-merge-insert) option let you ignore column when an insert is performed.
+- The [IgnoreOnMergeUpdate](https://entityframework-extensions.net/column#ignore-on-merge-insert) option let you ignore column when an update is performed.
 
 ```csharp
 context.BulkMerge(customers, options => { 

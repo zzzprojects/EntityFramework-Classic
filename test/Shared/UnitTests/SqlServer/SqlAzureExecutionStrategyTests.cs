@@ -11,18 +11,18 @@ namespace System.Data.Entity.SqlServer
     public class SqlAzureExecutionStrategyTests
     {
         [Fact]
-        public void Execute_Action_retries_until_succesful()
+        public void Execute_Action_retries_until_successful()
         {
-            Execute_retries_until_succesful((e, f) => e.Execute(() => { f(); }));
+            Execute_retries_until_successful((e, f) => e.Execute(() => { f(); }));
         }
 
         [Fact]
-        public void Execute_Func_retries_until_succesful()
+        public void Execute_Func_retries_until_successful()
         {
-            Execute_retries_until_succesful((e, f) => e.Execute(f));
+            Execute_retries_until_successful((e, f) => e.Execute(f));
         }
 
-        private void Execute_retries_until_succesful(Action<DbExecutionStrategy, Func<int>> execute)
+        private void Execute_retries_until_successful(Action<DbExecutionStrategy, Func<int>> execute)
         {
             var executionStrategy = new SqlAzureExecutionStrategy();
             var executionCount = 0;
@@ -44,18 +44,18 @@ namespace System.Data.Entity.SqlServer
 #if !NET40
 
         [Fact]
-        public void ExecuteAsync_Action_retries_until_succesful()
+        public void ExecuteAsync_Action_retries_until_successful()
         {
             ExecuteAsync_retries_until_succesful((e, f) => e.ExecuteAsync(() => (Task)f(), CancellationToken.None));
         }
 
         [Fact]
-        public void ExecuteAsync_Func_retries_until_succesful()
+        public void ExecuteAsync_Func_retries_until_successful()
         {
             ExecuteAsync_retries_until_succesful((e, f) => e.ExecuteAsync(f, CancellationToken.None));
         }
 
-        private void ExecuteAsync_retries_until_succesful(Func<DbExecutionStrategy, Func<Task<int>>, Task> executeAsync)
+        private void ExecuteAsync_retries_until_successful(Func<DbExecutionStrategy, Func<Task<int>>, Task> executeAsync)
         {
             var executionStrategy = new SqlAzureExecutionStrategy();
 

@@ -283,18 +283,18 @@ namespace System.Data.Entity.Infrastructure
             }
 
             [Fact]
-            public void Execute_Action_retries_until_succesful()
+            public void Execute_Action_retries_until_successful()
             {
                 Execute_retries_until_succesful((e, f) => e.Execute(() => { f(); }));
             }
 
             [Fact]
-            public void Execute_Func_retries_until_succesful()
+            public void Execute_Func_retries_until_successful()
             {
                 Execute_retries_until_succesful((e, f) => e.Execute(f));
             }
 
-            private void Execute_retries_until_succesful(Action<DbExecutionStrategy, Func<int>> execute)
+            private void Execute_retries_until_successful(Action<DbExecutionStrategy, Func<int>> execute)
             {
                 var executionStrategyMock =
                     new Mock<DbExecutionStrategy>
@@ -625,18 +625,18 @@ namespace System.Data.Entity.Infrastructure
             }
 
             [Fact]
-            public void ExecuteAsync_Action_doesnt_retry_if_succesful()
+            public void ExecuteAsync_Action_doesnt_retry_if_successful()
             {
-                ExecuteAsync_doesnt_retry_if_succesful((e, f) => e.ExecuteAsync(() => (Task)f(), CancellationToken.None));
+                ExecuteAsync_doesnt_retry_if_successful((e, f) => e.ExecuteAsync(() => (Task)f(), CancellationToken.None));
             }
 
             [Fact]
-            public void ExecuteAsync_Func_doesnt_retry_if_succesful()
+            public void ExecuteAsync_Func_doesnt_retry_if_successful()
             {
-                ExecuteAsync_doesnt_retry_if_succesful((e, f) => e.ExecuteAsync(f, CancellationToken.None));
+                ExecuteAsync_doesnt_retry_if_successful((e, f) => e.ExecuteAsync(f, CancellationToken.None));
             }
 
-            private void ExecuteAsync_doesnt_retry_if_succesful(Func<DbExecutionStrategy, Func<Task<int>>, Task> executeAsync)
+            private void ExecuteAsync_doesnt_retry_if_successful(Func<DbExecutionStrategy, Func<Task<int>>, Task> executeAsync)
             {
                 var executionStrategyMock =
                     new Mock<DbExecutionStrategy>
@@ -664,18 +664,18 @@ namespace System.Data.Entity.Infrastructure
             }
 
             [Fact]
-            public void ExecuteAsync_Action_retries_until_succesful()
+            public void ExecuteAsync_Action_retries_until_successful()
             {
                 ExecuteAsync_retries_until_succesful((e, f) => e.ExecuteAsync(() => (Task)f(), CancellationToken.None));
             }
 
             [Fact]
-            public void ExecuteAsync_Func_retries_until_succesful()
+            public void ExecuteAsync_Func_retries_until_successful()
             {
                 ExecuteAsync_retries_until_succesful((e, f) => e.ExecuteAsync(f, CancellationToken.None));
             }
 
-            private void ExecuteAsync_retries_until_succesful(Func<DbExecutionStrategy, Func<Task<int>>, Task> executeAsync)
+            private void ExecuteAsync_retries_until_successful(Func<DbExecutionStrategy, Func<Task<int>>, Task> executeAsync)
             {
                 var executionStrategyMock =
                     new Mock<DbExecutionStrategy>

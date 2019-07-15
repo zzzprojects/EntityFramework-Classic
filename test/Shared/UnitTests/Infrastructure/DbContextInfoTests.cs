@@ -901,21 +901,21 @@ namespace System.Data.Entity.Infrastructure
 
         [Fact]
         public void
-            Should_use_use_default_DefaultConnectionFactory_if_supplied_config_contains_no_DefaultConnectionFactory_normal_constructor()
+            Should_use_default_DefaultConnectionFactory_if_supplied_config_contains_no_DefaultConnectionFactory_normal_constructor()
         {
-            Should_use_use_default_DefaultConnectionFactory_if_supplied_config_contains_no_DefaultConnectionFactory(
+            Should_use_default_DefaultConnectionFactory_if_supplied_config_contains_no_DefaultConnectionFactory(
                 typeof(ContextWithoutDefaultCtor));
         }
 
         [Fact]
-        public void Should_use_use_default_DefaultConnectionFactory_if_supplied_config_contains_no_DefaultConnectionFactory_init_constructor
+        public void Should_use_default_DefaultConnectionFactory_if_supplied_config_contains_no_DefaultConnectionFactory_init_constructor
             ()
         {
-            Should_use_use_default_DefaultConnectionFactory_if_supplied_config_contains_no_DefaultConnectionFactory(
+            Should_use_default_DefaultConnectionFactory_if_supplied_config_contains_no_DefaultConnectionFactory(
                 typeof(ContextWithoutDefaultCtorWithInit));
         }
 
-        private void Should_use_use_default_DefaultConnectionFactory_if_supplied_config_contains_no_DefaultConnectionFactory(
+        private void Should_use_default_DefaultConnectionFactory_if_supplied_config_contains_no_DefaultConnectionFactory(
             Type contextType)
         {
             RunTestWithConnectionFactory(
@@ -938,20 +938,20 @@ namespace System.Data.Entity.Infrastructure
         }
 
         [Fact]
-        public void Should_use_connectioin_string_from_supplied_config_even_if_DefaultConnectionFactory_is_also_present_normal_constructor()
+        public void Should_use_connection_string_from_supplied_config_even_if_DefaultConnectionFactory_is_also_present_normal_constructor()
         {
-            Should_use_connectioin_string_from_supplied_config_even_if_DefaultConnectionFactory_is_also_present(
+            Should_use_connection_string_from_supplied_config_even_if_DefaultConnectionFactory_is_also_present(
                 typeof(ContextWithoutDefaultCtor));
         }
 
         [Fact]
-        public void Should_use_connectioin_string_from_supplied_config_even_if_DefaultConnectionFactory_is_also_present_init_constructor()
+        public void Should_use_connection_string_from_supplied_config_even_if_DefaultConnectionFactory_is_also_present_init_constructor()
         {
-            Should_use_connectioin_string_from_supplied_config_even_if_DefaultConnectionFactory_is_also_present(
+            Should_use_connection_string_from_supplied_config_even_if_DefaultConnectionFactory_is_also_present(
                 typeof(ContextWithoutDefaultCtorWithInit));
         }
 
-        private void Should_use_connectioin_string_from_supplied_config_even_if_DefaultConnectionFactory_is_also_present(Type contextType)
+        private void Should_use_connection_string_from_supplied_config_even_if_DefaultConnectionFactory_is_also_present(Type contextType)
         {
             RunTestWithConnectionFactory(
                 Database.ResetDefaultConnectionFactory,

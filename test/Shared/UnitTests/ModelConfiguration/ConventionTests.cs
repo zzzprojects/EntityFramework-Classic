@@ -17,7 +17,7 @@ namespace System.Data.Entity.ModelConfiguration
     public class ConventionTests
     {
         [Fact]
-        public void Entities_returns_a_new_object()
+        public void Entities_return_a_new_object()
         {
             var convention = new Convention();
             var entities = convention.Types();
@@ -27,7 +27,7 @@ namespace System.Data.Entity.ModelConfiguration
         }
 
         [Fact]
-        public void Generic_Entities_returns_a_new_object()
+        public void Generic_Entities_return_a_new_object()
         {
             var convention = new Convention();
             var entities = convention.Types<object>();
@@ -37,7 +37,7 @@ namespace System.Data.Entity.ModelConfiguration
         }
 
         [Fact]
-        public void Properties_returns_a_new_object()
+        public void Properties_return_a_new_object()
         {
             var convention = new Convention();
             var properties = convention.Properties();
@@ -47,7 +47,7 @@ namespace System.Data.Entity.ModelConfiguration
         }
 
         [Fact]
-        public void Generic_Properties_returns_a_new_object()
+        public void Generic_Properties_return_a_new_object()
         {
             var convention = new Convention();
             var properties = convention.Properties<int>();
@@ -57,7 +57,7 @@ namespace System.Data.Entity.ModelConfiguration
         }
 
         [Fact]
-        public void Generic_Properties_throws_on_invalid_type()
+        public void Generic_Properties_throw_on_invalid_type()
         {
             var convention = new Convention();
             Assert.Equal(
