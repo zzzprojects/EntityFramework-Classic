@@ -332,7 +332,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Properties.Navigat
         }
 
         [Fact]
-        public void Configure_should_ensure_consistency_of_inverse_end_kind_when_already_configured()
+        public void Configure_should_wnsure_consistency_of_inverse_end_kind_when_already_configured()
         {
             var associationType = new AssociationType("A", XmlConstants.ModelNamespace_3, false, DataSpace.CSpace);
             associationType.SourceEnd = new AssociationEndMember("S", new EntityType("E", "N", DataSpace.CSpace));
