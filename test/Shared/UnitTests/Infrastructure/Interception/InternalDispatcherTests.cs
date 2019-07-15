@@ -853,7 +853,7 @@ namespace System.Data.Entity.Infrastructure.Interception
             }
 
             [Fact]
-            public void Async_Dispatch_dispatches_to_all_registered_interceptors_even_if_task_is_cancelled()
+            public void Async_Dispatch_dispatches_to_all_registered_interceptors_even_if_task_is_canceled()
             {
                 var mockInterceptors = CreateMockInterceptors(
                     c =>
