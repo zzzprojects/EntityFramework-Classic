@@ -10,7 +10,7 @@ using PENDINGMSG = Microsoft.VisualStudio.OLE.Interop.PENDINGMSG;
 namespace Microsoft.VisualStudio.TestTools.HostAdapters.VsIde
 {
     /// <summary>
-    /// Redefine the interface as Primary Interop Assembly methods return unit (bug?) and we need to return -1.
+    /// Redefine the interface as Primary Interop Assembly methods return uint (bug?) and we need to return -1.
     /// Refer to http://msdn.microsoft.com/library/en-us/com/html/e12d48c0-5033-47a8-bdcd-e94c49857248.asp
     /// </summary>
     [ComImport()]
