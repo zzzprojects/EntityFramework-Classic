@@ -35,7 +35,7 @@ using EFClassic::System.Data.Entity;
 ## Config Section
 We recommend to use the `entityFrameworkClassic` section name in your config file.
 
-```xml
+```csharp
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
   <configSections>
