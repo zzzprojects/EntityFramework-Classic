@@ -5,7 +5,7 @@ In some special scenario, you might want to use EF Classic in the same project a
 
 By default, it doesn't work since both libraries are the same library (Entity Framework) so share similar code which leads to reference conflict.
 
-To make it work, you need to
+To make it work, you need to:
 - Use an extern alias in one of both libraries
 - Use another config section for entity framework classic
 
