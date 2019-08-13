@@ -63,3 +63,6 @@ and specify the name to the `EntityFrameworkManager` for EF Classic:
 ```csharp
 EntityFrameworkManager.ConfigSectionName = "entityFrameworkClassic";
 ```
+
+## Demo
+You can find a demo here: https://github.com/zzzprojects/EntityFramework-Classic/tree/master/demo
