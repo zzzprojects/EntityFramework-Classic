@@ -57,3 +57,9 @@ We recommend to use the `entityFrameworkClassic` section name in your config fil
   </entityFrameworkClassic>
 </configuration>
 ```
+
+and specify the name to the `EntityFrameworkManager` for EF Classic:
+
+```csharp
+EntityFrameworkManager.ConfigSectionName = "entityFrameworkClassic";
+```
