@@ -88,6 +88,6 @@ You must also ensure that you use the model copied to the directory output.
 
 ## Demo
 
-You can find very light demo using EF Classic here: https://github.com/zzzprojects/EntityFramework-Classic/tree/master/demo
+You can find a very light demo using EF Classic here: https://github.com/zzzprojects/EntityFramework-Classic/tree/master/demo
 
-You can find a lot of online example using EF Classic here: https://entityframework-classic.net/online-examples
+You can find a lot of online examples using EF Classic here: https://entityframework-classic.net/online-examples
