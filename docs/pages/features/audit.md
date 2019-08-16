@@ -582,19 +582,19 @@ Coming soon...
 ###### Property
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `AuditDisplay(string name)` | Attribute to change the Audit entity or property display. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/ePMX3w) |
-| `AuditDisplayFormat(string dataFormatString)` | Attribute to change the Audit property display format. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/rDWKqR) |
-| `AuditExclude` | Attribute to exclude from the audit the entity or property. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/0caNE1) |
-| `AuditInclude` | Attribute to include in the audit the entity or property. Require to enable `Include` with `AuditManager` `UseIncludeDataAnnotation(true)` method.  | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/1aE47U) |
+| `AuditDisplay(string name)` | Attribute to change the Audit entity or property display. | [NET Framework](https://dotnetfiddle.net/ePMX3w) / [NET Core](https://dotnetfiddle.net/Ioly6x) |
+| `AuditDisplayFormat(string dataFormatString)` | Attribute to change the Audit property display format. | [NET Framework](https://dotnetfiddle.net/rDWKqR) / [NET Core](https://dotnetfiddle.net/rXKLKv) |
+| `AuditExclude` | Attribute to exclude from the audit the entity or property. | [NET Framework](https://dotnetfiddle.net/0caNE1) / [NET Core](https://dotnetfiddle.net/iJSkU1) |
+| `AuditInclude` | Attribute to include in the audit the entity or property. Require to enable `Include` with `AuditManager` `UseIncludeDataAnnotation(true)` method.  | [NET Framework](https://dotnetfiddle.net/1aE47U) / [NET Core](https://dotnetfiddle.net/yflmCf) |
 
 ### Extension Methods
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `Where<TEntityType>(this DbSet<AuditEntry> set)` | Gets the audit trail of all entries entry of `TEntityType` type. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/Lm48H8) |
-| `Where<TEntityType>(this DbSet<AuditEntry> set, TEntityType entry)` | Gets the audit trail of the specific entry. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/vSmMSn) |
-| `Where<TEntityType>(this DbSet<AuditEntry> set, params object[] keyValues)` | Gets the audit trail of the specific key. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/dbtkiu) |
-| `Where<TEntityType>(this DbSet<XmlAuditEntry> set)` | Gets the audit trail of all entries entry of `TEntityType` type. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/zIwUYc) |
-| `ToAuditEntries(this IEnumerable<XmlAuditEntry> items)` | Return a list of `XmlAuditEntry` converted into `AuditEntry`. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/dVG40P) |
+| `Where<TEntityType>(this DbSet<AuditEntry> set)` | Gets the audit trail of all entries entry of `TEntityType` type. | [NET Framework](https://dotnetfiddle.net/Lm48H8) / [NET Core](https://dotnetfiddle.net/n5Y5O4) |
+| `Where<TEntityType>(this DbSet<AuditEntry> set, TEntityType entry)` | Gets the audit trail of the specific entry. | [NET Framework](https://dotnetfiddle.net/vSmMSn) / [NET Core](https://dotnetfiddle.net/QZ27xs) |
+| `Where<TEntityType>(this DbSet<AuditEntry> set, params object[] keyValues)` | Gets the audit trail of the specific key. | [NET Framework](https://dotnetfiddle.net/dbtkiu) / [NET Core](https://dotnetfiddle.net/51mC5p) |
+| `Where<TEntityType>(this DbSet<XmlAuditEntry> set)` | Gets the audit trail of all entries entry of `TEntityType` type. | [NET Framework](https://dotnetfiddle.net/zIwUYc) / [NET Core](https://dotnetfiddle.net/QJ1K0y) |
+| `ToAuditEntries(this IEnumerable<XmlAuditEntry> items)` | Return a list of `XmlAuditEntry` converted into `AuditEntry`. | [NET Framework](https://dotnetfiddle.net/dVG40P) / [NET Core](https://dotnetfiddle.net/ocIbKT) |
 
 ## Limitations
 
