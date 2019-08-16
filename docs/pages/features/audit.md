@@ -519,13 +519,13 @@ These property values are saved in a database.
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `Parent` | Gets or sets the parent `AuditEntry`. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/WXpAtA) |
-| `AuditEntryPropertyID` | Gets or sets the `AuditEntryPropertyID`. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/C8GBWu) |
-| `AuditEntryID` | Gets or sets the `AuditEntryID`. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/kJzQ6i) |
-| `RelationName` | Gets or sets the relation name. Only available for `RelationshipAdded` and `RelationshipDeleted` state | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/LTd809) |
-| `PropertyName` | Gets or sets the property name. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/oYqqV0) |
-| `OldValue` | Gets or sets the old value formatted as string. Avalable for `Modified`, `Deleted`, and `RelationshipDeleted` state. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/hNUCx6) |
-| `NewValue` | Gets or sets the new value formatted as string. Avalable for `Insert`, `Modified`, and `RelationshipModified` state. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/lrGw9a) |
+| `Parent` | Gets or sets the parent `AuditEntry`. | [NET Framework](https://dotnetfiddle.net/WXpAtA) / [NET Core](https://dotnetfiddle.net/HGztk6) |
+| `AuditEntryPropertyID` | Gets or sets the `AuditEntryPropertyID`. | [NET Framework](https://dotnetfiddle.net/C8GBWu) / [NET Core](https://dotnetfiddle.net/waTLnZ) |
+| `AuditEntryID` | Gets or sets the `AuditEntryID`. | [NET Framework](https://dotnetfiddle.net/kJzQ6i) / [NET Core](https://dotnetfiddle.net/tRQHR2) |
+| `RelationName` | Gets or sets the relation name. Only available for `RelationshipAdded` and `RelationshipDeleted` state | [NET Framework](https://dotnetfiddle.net/LTd809) / [NET Core](https://dotnetfiddle.net/VDJMnu) |
+| `PropertyName` | Gets or sets the property name. | [NET Framework](https://dotnetfiddle.net/oYqqV0) / [NET Core](https://dotnetfiddle.net/1x8YYl) |
+| `OldValue` | Gets or sets the old value formatted as string. Avalable for `Modified`, `Deleted`, and `RelationshipDeleted` state. | [NET Framework](https://dotnetfiddle.net/hNUCx6) / [NET Core](https://dotnetfiddle.net/rpZJnR) |
+| `NewValue` | Gets or sets the new value formatted as string. Avalable for `Insert`, `Modified`, and `RelationshipModified` state. | [NET Framework](https://dotnetfiddle.net/lrGw9a) / [NET Core](https://dotnetfiddle.net/sE9q1l) |
 
 ###### Properties (Unmapped)
 
@@ -533,8 +533,8 @@ These property values are only accessible via the `LastAudit` property.
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `OldValueRaw` | Gets or sets the old raw value. This is the original raw value without being formatted. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/cxK2Hq) |
-| `NewValueRaw` | Gets or sets the new raw value. This is the original raw value without being formatted. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/zetqj9) |
+| `OldValueRaw` | Gets or sets the old raw value. This is the original raw value without being formatted. | [NET Framework](https://dotnetfiddle.net/cxK2Hq) / [NET Core](https://dotnetfiddle.net/2GQMww) |
+| `NewValueRaw` | Gets or sets the new raw value. This is the original raw value without being formatted. | [NET Framework](https://dotnetfiddle.net/zetqj9) / [NET Core](https://dotnetfiddle.net/h3f9uu) |
 
 <details>
   <summary>Database First SQL</summary>
@@ -552,14 +552,14 @@ The `XmlAuditEntry` class contains information about the entry and all propertie
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `XmlAuditEntryID` | Gets or sets the `AuditEntryID`. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/ohl81V) |
-| `EntitySetName` | Gets or sets the `EntitySet` name. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/r1sti8) |
-| `EntityTypeName` | Gets or sets the `EntityType` name. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/InPE7m) |
-| `State` | Gets or sets the `AuditEntryState`. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/yl2ESG) |
-| `StateName` | Gets or sets the `AuditEntryState` name. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/Gok4r5) |
-| `CreatedBy` | Gets or sets the `AuditEntry` created user. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/SooSeu) |
-| `CreatedDate` | Gets or sets the `AuditEntry` created date. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/LT6aSE) |
-| `XmlProperties` | Gets or sets audit properties formatted as `Xml`. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/Dcldvf) |
+| `XmlAuditEntryID` | Gets or sets the `AuditEntryID`. | [NET Framework](https://dotnetfiddle.net/ohl81V) / [NET Core](https://dotnetfiddle.net/8QgOYK) |
+| `EntitySetName` | Gets or sets the `EntitySet` name. | [NET Framework](https://dotnetfiddle.net/r1sti8) / [NET Core](https://dotnetfiddle.net/svSlcX) |
+| `EntityTypeName` | Gets or sets the `EntityType` name. | [NET Framework](https://dotnetfiddle.net/InPE7m) / [NET Core](https://dotnetfiddle.net/btlslm) |
+| `State` | Gets or sets the `AuditEntryState`. | [NET Framework](https://dotnetfiddle.net/yl2ESG) / [NET Core](https://dotnetfiddle.net/JzAA7I) |
+| `StateName` | Gets or sets the `AuditEntryState` name. | [NET Framework](https://dotnetfiddle.net/Gok4r5) / [NET Core](https://dotnetfiddle.net/3SIlHS) |
+| `CreatedBy` | Gets or sets the `AuditEntry` created user. | [NET Framework](https://dotnetfiddle.net/SooSeu) / [NET Core](https://dotnetfiddle.net/eI8npG) |
+| `CreatedDate` | Gets or sets the `AuditEntry` created date. | [NET Framework](https://dotnetfiddle.net/LT6aSE) / [NET Core](https://dotnetfiddle.net/y72ulW) |
+| `XmlProperties` | Gets or sets audit properties formatted as `Xml`. | [NET Framework](https://dotnetfiddle.net/Dcldvf) / [NET Core](https://dotnetfiddle.net/74ftKB) |
 
 <details>
   <summary>Database First SQL</summary>
@@ -574,9 +574,9 @@ Coming soon...
 ###### Entity
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `AuditDisplay(string name)` | Attribute to change the Audit entity or property display name. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/y0wQ4E) |
-| `AuditExclude` | Attribute to exclude from the audit the entity or property. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/iwD7qc) |
-| `AuditInclude` | Attribute to include in the audit the entity or property. Require to enable `Include` with `AuditManager` `UseIncludeDataAnnotation(true)` method. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/OPkrkn) |
+| `AuditDisplay(string name)` | Attribute to change the Audit entity or property display name. | [NET Framework](https://dotnetfiddle.net/y0wQ4E) / [NET Core](https://dotnetfiddle.net/iPg6XP) |
+| `AuditExclude` | Attribute to exclude from the audit the entity or property. | [NET Framework](https://dotnetfiddle.net/iwD7qc) / [NET Core](https://dotnetfiddle.net/5T418L) |
+| `AuditInclude` | Attribute to include in the audit the entity or property. Require to enable `Include` with `AuditManager` `UseIncludeDataAnnotation(true)` method. | [NET Framework](https://dotnetfiddle.net/OPkrkn) / [NET Core](https://dotnetfiddle.net/kuIqx4) |
 
 
 ###### Property
