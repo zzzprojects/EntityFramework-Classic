@@ -12,7 +12,7 @@ To improve the flexibility, we added an over that let you attach an entity by sp
 ```csharp
 context.Customers.Attach(customer, EntityState.Deleted);
 ```
-[Try it](https://dotnetfiddle.net/oGrm5U)
+Try it: [NET Framework](https://dotnetfiddle.net/oGrm5U) | [NET Core](https://dotnetfiddle.net/gh4uQZ)
 
 ## AttachRange
 
@@ -22,4 +22,4 @@ context.Customers.Attach(customer, EntityState.Deleted);
 context.Customers.AttachRange(customers, EntityState.Deleted);
 ```
 
-[Try it](https://dotnetfiddle.net/jmIlp1)
+Try it: [NET Framework](https://dotnetfiddle.net/jmIlp1) | [NET Core](https://dotnetfiddle.net/H1KSi7)
