@@ -7,7 +7,7 @@ The **Batch SaveChanges** feature allows you to reduce the number of database ro
 // context.SaveChanges();    
 context.BatchSaveChanges();    
 ```
-[Try it](https://dotnetfiddle.net/dJK5Vr)
+Try it: [NET Framework](https://dotnetfiddle.net/dJK5Vr) | [NET Core](https://dotnetfiddle.net/nRotN4)
 
 > HINT: We recommend to always use `BatchSaveChanges` over `SaveChanges` or enable the option `UseBatchForSaveChanges`.
 
@@ -34,7 +34,7 @@ So if you have 10 rows to insert:
 // context.SaveChanges();    
 context.BatchSaveChanges();    
 ```
-[Try it](https://dotnetfiddle.net/PQHDLC)
+Try it: [NET Framework](https://dotnetfiddle.net/PQHDLC) | [NET Core](https://dotnetfiddle.net/CFZhU9)
 
 ### Internally replace SaveChanges by BatchSaveChanges
 ```csharp
@@ -51,7 +51,7 @@ public class EntityContext : DbContext
 context.Customers.AddRange(customers);
 context.SaveChanges();
 ```
-[Try it](https://dotnetfiddle.net/SQ58gU)
+Try it: [NET Framework](https://dotnetfiddle.net/SQ58gU) | [NET Core](https://dotnetfiddle.net/ciy7du)
 
 ## Documentation
 
@@ -59,8 +59,8 @@ context.SaveChanges();
 
 | Name | Description | Default | Example |
 | :--- | :---------- | :-----: | :------ |
-| `IsEnabled` | Gets or sets if the `BatchSaveChanges` feature is enabled. When disabled, a `SaveChanges` will be performed instead. | `true` | [Try it](https://dotnetfiddle.net/jo6QN1) |
-| `UseBatchForSaveChanges` | Gets or sets if all `SaveChanges` call should be replaced internally by `BatchSaveChanges`. If you own a commercial license, we recommend to always set this value to true. | `false` | [Try it](https://dotnetfiddle.net/ceeM0J) |
+| `IsEnabled` | Gets or sets if the `BatchSaveChanges` feature is enabled. When disabled, a `SaveChanges` will be performed instead. | `true` | [NET Framework](https://dotnetfiddle.net/jo6QN1) / [NET Core](https://dotnetfiddle.net/NqAJ1Q) |
+| `UseBatchForSaveChanges` | Gets or sets if all `SaveChanges` call should be replaced internally by `BatchSaveChanges`. If you own a commercial license, we recommend to always set this value to true. | `false` | [NET Framework](https://dotnetfiddle.net/ceeM0J) / [NET Core](https://dotnetfiddle.net/F4NEpM) |
 
 ## Limitations
 - All providers that don't support multi statements such as SQL Compact and Effort will automatically use `SaveChanges` instead.
