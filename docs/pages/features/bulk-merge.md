@@ -12,7 +12,7 @@ context.BulkMerge(customers);
 // Easy to customize
 context.BulkMerge(customers, options => options.ColumnPrimaryKeyExpression = customer => customer.Code);
 ```
-[Try it](https://dotnetfiddle.net/HxfhEn)
+Try it: [NET Framework](https://dotnetfiddle.net/HxfhEn) | [NET Core](https://dotnetfiddle.net/9Z8Cr9)
 
 ## Performance Comparison
 
@@ -21,7 +21,7 @@ context.BulkMerge(customers, options => options.ColumnPrimaryKeyExpression = cus
 | SaveChanges     | 4,000 ms       | To long...     | Way way to long... |
 | BulkMerge       | 80 ms          | 110 ms         | 170 ms         |
 
-[Try it](https://dotnetfiddle.net/L1yqaL)
+Try it: [NET Framework](https://dotnetfiddle.net/L1yqaL) | [NET Core](https://dotnetfiddle.net/3d1KUv)
 
 > HINT: Performance may differ from a database to another. A lot of factors might affect the benchmark time such as index, column type, latency, throttling, etc.
 
@@ -44,7 +44,7 @@ You need to update a list of `Customer` but you dont have the IDs, you only have
 ```csharp
 context.BulkMerge(customers, options => options.ColumnPrimaryKeyExpression = customer => customer.Code);
 ```
-[Try it](https://dotnetfiddle.net/xItcSY)
+Try it: [NET Framework](https://dotnetfiddle.net/xItcSY) | [NET Core](https://dotnetfiddle.net/XJLfKe)
 
 ## Bulk Merge specific columns
 You need to update a list of `Customer` but only update some specific columns such as FirstName and LastName. The [ColumnInputExpression](https://entityframework-extensions.net/column#column-input) option let you to choose columns to update.
@@ -55,7 +55,7 @@ context.BulkMerge(customers, options => {
 	options.ColumnPrimaryKeyExpression = customer => customer.Code;
 });
 ```
-[Try it](https://dotnetfiddle.net/0eArw7)
+Try it: [NET Framework](https://dotnetfiddle.net/0eArw7) | [NET Core](https://dotnetfiddle.net/ServiU)
 
 ## Bulk Merge specific columns on Update or Insert
 You need to update a list of `Customer` but only save the `CreatedDate` on insert and save the `ModifiedDate` on update.
@@ -68,7 +68,7 @@ context.BulkMerge(customers, options => {
 	options.IgnoreOnMergeUpdateExpression = customer => customer.CreatedDate;
 });
 ```
-[Try it](https://dotnetfiddle.net/mycIU1)
+Try it: [NET Framework](https://dotnetfiddle.net/mycIU1) | [NET Core](https://dotnetfiddle.net/dDKgsR)
 
 ## Bulk Merge invoice and related invoice items (Include Graph)
 You need to update a list of `Invoice` and include related `InvoiceItem`. By default, the `BulkUpdate` doesn't include the graph but you can enable it with the [IncludeGraph](https://entityframework-extensions.net/include-graph) option.
@@ -76,7 +76,7 @@ You need to update a list of `Invoice` and include related `InvoiceItem`. By def
 ```csharp
 context.BulkMerge(invoices, options => options.IncludeGraph = true);
 ```
-[Try it](https://dotnetfiddle.net/owLagp)
+Try it: [NET Framework](https://dotnetfiddle.net/owLagp) | [NET Core](https://dotnetfiddle.net/hQfCEO)
 
 ## Learn more
 
