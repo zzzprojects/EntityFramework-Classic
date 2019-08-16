@@ -457,8 +457,8 @@ The `AuditManager` allows you to configure how the audit trail will be created, 
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `SoftDeleted(Func<object, bool> predicate)` | Change the `AuditEntryState` from `EntityModified` to `EntitySoftDeleted` for all entities that satisfy the soft delete predicate. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/k1h8fr) |
-| `SoftDeleted<TEntityType>(Func<TEntityType, bool> predicate)` | Change the `AuditEntryState` from `EntityModified` to `EntitySoftDeleted` for all entities of `TEntityType` type and that satisfy the soft delete predicate. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/OdVFGF) |
+| `SoftDeleted(Func<object, bool> predicate)` | Change the `AuditEntryState` from `EntityModified` to `EntitySoftDeleted` for all entities that satisfy the soft delete predicate. | [NET Framework](https://dotnetfiddle.net/k1h8fr) / [NET Core](https://dotnetfiddle.net/OGgoXq) |
+| `SoftDeleted<TEntityType>(Func<TEntityType, bool> predicate)` | Change the `AuditEntryState` from `EntityModified` to `EntitySoftDeleted` for all entities of `TEntityType` type and that satisfy the soft delete predicate. | [NET Framework](https://dotnetfiddle.net/OdVFGF) / [NET Core](https://dotnetfiddle.net/qit5zp) |
 
 ### Audit
 
@@ -468,9 +468,9 @@ The `Audit` class provide information about the audit trail.
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `Entries` | Gets a list of `AuditEntry`. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/In5zMB) |
-| `EntriesXml` | Gets a list of `XmlAuditEntry`. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/9WKMvp) |
-| `Manager` | Gets the `AuditManager` | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/LVU9UD) |
+| `Entries` | Gets a list of `AuditEntry`. | [NET Framework](https://dotnetfiddle.net/In5zMB) / [NET Core](https://dotnetfiddle.net/lUrJyf) |
+| `EntriesXml` | Gets a list of `XmlAuditEntry`. | [NET Framework](https://dotnetfiddle.net/9WKMvp) / [NET Core](https://dotnetfiddle.net/FKtYmU) |
+| `Manager` | Gets the `AuditManager` | [NET Framework](https://dotnetfiddle.net/LVU9UD) / [NET Core](https://dotnetfiddle.net/6zPnr0) |
 
 ### AuditEntry
 
@@ -482,14 +482,14 @@ This properties values are saved in a database.
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `AuditEntryID` | Gets or sets the `AuditEntryID`. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/bn3OpH) |
-| `EntitySetName` | Gets or sets the `EntitySet` name. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/wEjMFB) |
-| `EntityTypeName` | Gets or sets the `EntityType` name. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/Ulretn) |
-| `State` | Gets or sets the `AuditEntryState`. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/hitoCH) |
-| `StateName` | Gets or sets the `AuditEntryState` name. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/hzefDr) |
-| `CreatedBy` | Gets or sets the `AuditEntry` created user. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/JjBEqS) |
-| `CreatedDate` | Gets or sets the `AuditEntry` created date. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/XG8s4n) |
-| `Properties` | Gets or sets the `AuditEntry` properties. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/FYsJgt) |
+| `AuditEntryID` | Gets or sets the `AuditEntryID`. | [NET Framework](https://dotnetfiddle.net/bn3OpH) / [NET Core](https://dotnetfiddle.net/NlgCch) |
+| `EntitySetName` | Gets or sets the `EntitySet` name. | [NET Framework](https://dotnetfiddle.net/wEjMFB) / [NET Core](https://dotnetfiddle.net/1y64Wo) |
+| `EntityTypeName` | Gets or sets the `EntityType` name. | [NET Framework](https://dotnetfiddle.net/Ulretn) / [NET Core](https://dotnetfiddle.net/Xjoa3T) |
+| `State` | Gets or sets the `AuditEntryState`. | [NET Framework](https://dotnetfiddle.net/hitoCH) / [NET Core](https://dotnetfiddle.net/qINtEL) |
+| `StateName` | Gets or sets the `AuditEntryState` name. | [NET Framework](https://dotnetfiddle.net/hzefDr) / [NET Core](https://dotnetfiddle.net/gjhL3z) |
+| `CreatedBy` | Gets or sets the `AuditEntry` created user. | [NET Framework](https://dotnetfiddle.net/JjBEqS) / [NET Core](https://dotnetfiddle.net/Hp3A2M) |
+| `CreatedDate` | Gets or sets the `AuditEntry` created date. | [NET Framework](https://dotnetfiddle.net/XG8s4n) / [NET Core](https://dotnetfiddle.net/TYP6xQ) |
+| `Properties` | Gets or sets the `AuditEntry` properties. | [NET Framework](https://dotnetfiddle.net/FYsJgt) / [NET Core](https://dotnetfiddle.net/wzACXb) |
 
 ###### Properties (Unmapped)
 
@@ -497,9 +497,9 @@ This properties values are only accessible via the `LastAudit` property.
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `Parent` | Gets or sets the parent `Audit`. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/BwOXVR) |
-| `Entity` | Gets or sets the audited `Entity`. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/4QeyV2) |
-| `Entry` | Gets or sets the audited `ObjectStateEntry`.  | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/zvfkd3) |
+| `Parent` | Gets or sets the parent `Audit`. | [NET Framework](https://dotnetfiddle.net/BwOXVR) / [NET Core](https://dotnetfiddle.net/f1QLhL) |
+| `Entity` | Gets or sets the audited `Entity`. | [NET Framework](https://dotnetfiddle.net/4QeyV2) / [NET Core](https://dotnetfiddle.net/BgcJGB) |
+| `Entry` | Gets or sets the audited `ObjectStateEntry`.  | [NET Framework](https://dotnetfiddle.net/zvfkd3) / [NET Core](https://dotnetfiddle.net/TZFcwE) |
 
 <details>
   <summary>Database First SQL</summary>
