@@ -412,46 +412,46 @@ The `AuditManager` allows you to configure how the audit trail will be created, 
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `DisplayDBNullAsNull(bool value)` | Format DBNull.Value as 'null' value. True by default. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/8dawtN) |
-| `DisplayFormatType<Type>(Func<Type, string> formatter)` | Format the specified type into a string. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/5whaAx) |
-| `DisplayEntityName<TEntityType>(string name)` | Use the specified name for the `EntityName` value. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/xu4yPs)  |
-| `DisplayEntityName<TEntityType>(Func<TEntityType, string, string> formatter)` | Use the factory specified name for the `EntityName` value. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/01IYPh)  |
-| `DisplayPropertyName<TEntityType>(Expression<Func<TEntityType, object>> propertySelector, string name)` | Use the specified name for the `PropertyName` value. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/AxkTW3)  |
-| `DisplayPropertyName<TEntityType>(Expression<Func<TEntityType, object>> propertySelector, Func<TEntityType, string, string> formatter)` | Use the factory specified name for the `PropertyName` value. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/BKBSKc)  |
+| `DisplayDBNullAsNull(bool value)` | Format DBNull.Value as 'null' value. True by default. | [NET Framework](https://dotnetfiddle.net/8dawtN) / [NET Core](https://dotnetfiddle.net/tC4a6r) |
+| `DisplayFormatType<Type>(Func<Type, string> formatter)` | Format the specified type into a string. | [NET Framework](https://dotnetfiddle.net/5whaAx) / [NET Core](https://dotnetfiddle.net/XQ0VF5) |
+| `DisplayEntityName<TEntityType>(string name)` | Use the specified name for the `EntityName` value. | [NET Framework](https://dotnetfiddle.net/xu4yPs) / [NET Core](https://dotnetfiddle.net/7ZgRhL)  |
+| `DisplayEntityName<TEntityType>(Func<TEntityType, string, string> formatter)` | Use the factory specified name for the `EntityName` value. | [NET Framework](https://dotnetfiddle.net/01IYPh) / [NET Core](https://dotnetfiddle.net/biZ8DT)  |
+| `DisplayPropertyName<TEntityType>(Expression<Func<TEntityType, object>> propertySelector, string name)` | Use the specified name for the `PropertyName` value. | [NET Framework](https://dotnetfiddle.net/AxkTW3) / [NET Core](https://dotnetfiddle.net/ZNl7u2)  |
+| `DisplayPropertyName<TEntityType>(Expression<Func<TEntityType, object>> propertySelector, Func<TEntityType, string, string> formatter)` | Use the factory specified name for the `PropertyName` value. | [NET Framework](https://dotnetfiddle.net/BKBSKc) / [NET Core](https://dotnetfiddle.net/t1x5Cy)  |
 
 ###### Methods (Include & Exclude)
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `ExcludeEntity()` | Excludes all entities from the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/MrWtV4) |
-| `ExcludeEntity<TEntityType>()` | Excludes all entities of `TEntityType` type from the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/Nes7be) |
-| `ExcludeEntity(Func<object, bool> predicate)` | Excludes all entities that satisfy the predicate from the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/tWTkaC)  |
-| `ExcludeEntity<TEntityType>(Func<TEntityType, bool> predicate)` | Excludes all entities of `TEntityType` that satisfy the predicate from the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/TfmtL5)  |
-| `ExcludeEntity(AuditEntryState entryState)` | Excludes all entities with specified `AuditEntryState` from the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/vLHfk9)  |
-| `ExcludeEntity<TEntityType>(AuditEntryState entryState)` | Excludes all entities of 'TEntityType' type and with specified `AuditEntryState` from the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/g5t6FB) |
-| `ExcludeEntity(Func<object, bool> predicate, AuditEntryState entryState)` | Excludes all entities that satisfy the predicate and with specified `AuditEntryState` from the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/g22Zlv) |
-| `ExcludeEntity<TEntityType>(Func<TEntityType, bool> predicate, AuditEntryState entryState)` | Excludes all entities of `TEntityType` that satisfy the predicate and with specified `AuditEntryState` from the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/g22Zlv) |
-| `ExcludeProperty()` | Excludes all properties from the audit. Key properties are never excluded. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/2KULLj) |
-| `ExcludeProperty<TEntityType>()` | Excludes all properties of a `TEntityType` type from the audit. Key properties are never excluded. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/5XTmn4)  |
-| `ExcludeProperty<TEntityType>(Expression<Func<TEntityType, object>> propertySelector)` | Excludes specified properties of a `TEntityType` type from the audit. Key properties are never excluded. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/BlIDQY)  |
-| `ExcludePropertyUnchanged()` | Excludes all properties value unchanged from the audit. Key values are never excluded. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/9Aw0vq) |
-| `ExcludePropertyUnchanged<TEntityType>()` | Excludes all properties value unchanged of a `TEntityType` type from the audit. Key values are never excluded. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/EKOk3a) |
-| `ExcludePropertyUnchanged(Func<object, bool> predicate)` | Excludes all properties value that satistfy the predicate from the audit. Key values are never excluded. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/qhTX5h) |
-| `IncludeEntity()` | Includes all entities in the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/r0Rq73) |
-| `IncludeEntity<TEntityType>()` | Includes all entities of `TEntityType` type in the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/rjhUQb) |
-| `IncludeEntity(Func<object, bool> predicate)` | Includes all entities that satisfy the predicate in the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/TdqHmK)  |
-| `IncludeEntity<TEntityType>(Func<TEntityType, bool> predicate)` | Includes all entities of `TEntityType` that satisfy the predicate in the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/KiLBLq)  |
-| `IncludeEntity(AuditEntryState entryState)` | Includes all entities with specified `AuditEntryState` in the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/YA3Gr0)  |
-| `IncludeEntity<TEntityType>(AuditEntryState entryState)` | Includes all entities of 'TEntityType' type and with specified `AuditEntryState` in the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/PFY5Pp) |
-| `IncludeEntity(Func<object, bool> predicate, AuditEntryState entryState)` | Includes all entities that satisfy the predicate and with specified `AuditEntryState` in the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/yPchrX) |
-| `IncludeEntity<TEntityType>(Func<TEntityType, bool> predicate, AuditEntryState entryState)` | Includes all entities of `TEntityType` that satisfy the predicate and with specified `AuditEntryState` in the audit. |[NET Framework]() / [NET Core]() [Try it](https://dotnetfiddle.net/yPchrX) |
-| `IncludeProperty()` | Includes all properties in the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/CN9Zq1) |
-| `IncludeProperty<TEntityType>()` | Includes all properties of a `TEntityType` type in the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/e74jy7)  |
-| `IncludeProperty<TEntityType>(Expression<Func<TEntityType, object>> propertySelector)` | Includes specified properties of a `TEntityType` type in the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/c7YrfX)  |
-| `IncludePropertyUnchanged()` | Includes all property values unchanged in the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/RPfZEl) |
-| `IncludePropertyUnchanged<TEntityType>()` | Includes all property values unchanged of a `TEntityType` type in the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/bYmNVq) |
-| `IncludePropertyUnchanged(Func<object, bool> predicate)` | Includes all property values that satistfy the predicate in the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/HpJ5mz) |
-| `UseIncludeDataAnnotation(bool value)` | Exclude all entities and properties from the Audit. Only entities and properties with `Include` data annotations or specified with the fluent API will be included. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/mGBM7i) |
+| `ExcludeEntity()` | Excludes all entities from the audit. | [NET Framework](https://dotnetfiddle.net/MrWtV4) / [NET Core](https://dotnetfiddle.net/p8o9UE) |
+| `ExcludeEntity<TEntityType>()` | Excludes all entities of `TEntityType` type from the audit. | [NET Framework](https://dotnetfiddle.net/Nes7be) / [NET Core](https://dotnetfiddle.net/7hEYeC) |
+| `ExcludeEntity(Func<object, bool> predicate)` | Excludes all entities that satisfy the predicate from the audit. | [NET Framework](https://dotnetfiddle.net/tWTkaC) / [NET Core](https://dotnetfiddle.net/FeAakc)  |
+| `ExcludeEntity<TEntityType>(Func<TEntityType, bool> predicate)` | Excludes all entities of `TEntityType` that satisfy the predicate from the audit. | [NET Framework](https://dotnetfiddle.net/TfmtL5) / [NET Core](https://dotnetfiddle.net/BwYX8G)  |
+| `ExcludeEntity(AuditEntryState entryState)` | Excludes all entities with specified `AuditEntryState` from the audit. | [NET Framework](https://dotnetfiddle.net/vLHfk9) / [NET Core](https://dotnetfiddle.net/JQ082S) |
+| `ExcludeEntity<TEntityType>(AuditEntryState entryState)` | Excludes all entities of 'TEntityType' type and with specified `AuditEntryState` from the audit. | [NET Framework](https://dotnetfiddle.net/g5t6FB) / [NET Core](https://dotnetfiddle.net/1ZnoT6) |
+| `ExcludeEntity(Func<object, bool> predicate, AuditEntryState entryState)` | Excludes all entities that satisfy the predicate and with specified `AuditEntryState` from the audit. | [NET Framework](https://dotnetfiddle.net/g22Zlv) / [NET Core](https://dotnetfiddle.net/JzGX7h) |
+| `ExcludeEntity<TEntityType>(Func<TEntityType, bool> predicate, AuditEntryState entryState)` | Excludes all entities of `TEntityType` that satisfy the predicate and with specified `AuditEntryState` from the audit. | [NET Framework](https://dotnetfiddle.net/g22Zlv) / [NET Core](https://dotnetfiddle.net/m9bpsL) |
+| `ExcludeProperty()` | Excludes all properties from the audit. Key properties are never excluded. | [NET Framework](https://dotnetfiddle.net/2KULLj) / [NET Core](https://dotnetfiddle.net/dVdTgS) |
+| `ExcludeProperty<TEntityType>()` | Excludes all properties of a `TEntityType` type from the audit. Key properties are never excluded. | [NET Framework](https://dotnetfiddle.net/5XTmn4) / [NET Core](https://dotnetfiddle.net/CD9qRo)  |
+| `ExcludeProperty<TEntityType>(Expression<Func<TEntityType, object>> propertySelector)` | Excludes specified properties of a `TEntityType` type from the audit. Key properties are never excluded. | [NET Framework](https://dotnetfiddle.net/BlIDQY) / [NET Core](https://dotnetfiddle.net/qNo0IN)  |
+| `ExcludePropertyUnchanged()` | Excludes all properties value unchanged from the audit. Key values are never excluded. | [NET Framework](https://dotnetfiddle.net/9Aw0vq) / [NET Core](https://dotnetfiddle.net/DGAmuk) |
+| `ExcludePropertyUnchanged<TEntityType>()` | Excludes all properties value unchanged of a `TEntityType` type from the audit. Key values are never excluded. | [NET Framework](https://dotnetfiddle.net/EKOk3a) / [NET Core](https://dotnetfiddle.net/fgvDZY) |
+| `ExcludePropertyUnchanged(Func<object, bool> predicate)` | Excludes all properties value that satistfy the predicate from the audit. Key values are never excluded. | [NET Framework](https://dotnetfiddle.net/qhTX5h) / [NET Core](https://dotnetfiddle.net/wUaFws) |
+| `IncludeEntity()` | Includes all entities in the audit. | [NET Framework](https://dotnetfiddle.net/r0Rq73) / [NET Core](https://dotnetfiddle.net/qm0ZFS) |
+| `IncludeEntity<TEntityType>()` | Includes all entities of `TEntityType` type in the audit. | [NET Framework](https://dotnetfiddle.net/rjhUQb) / [NET Core](https://dotnetfiddle.net/GqRgNq) |
+| `IncludeEntity(Func<object, bool> predicate)` | Includes all entities that satisfy the predicate in the audit. | [NET Framework](https://dotnetfiddle.net/TdqHmK) / [NET Core](https://dotnetfiddle.net/DvNJiW)  |
+| `IncludeEntity<TEntityType>(Func<TEntityType, bool> predicate)` | Includes all entities of `TEntityType` that satisfy the predicate in the audit. | [NET Framework](https://dotnetfiddle.net/KiLBLq) / [NET Core](https://dotnetfiddle.net/CQtuiY)  |
+| `IncludeEntity(AuditEntryState entryState)` | Includes all entities with specified `AuditEntryState` in the audit. | [NET Framework](https://dotnetfiddle.net/YA3Gr0) / [NET Core](https://dotnetfiddle.net/FmTkkV)  |
+| `IncludeEntity<TEntityType>(AuditEntryState entryState)` | Includes all entities of 'TEntityType' type and with specified `AuditEntryState` in the audit. | [NET Framework](https://dotnetfiddle.net/PFY5Pp) / [NET Core](https://dotnetfiddle.net/xr6PK5) |
+| `IncludeEntity(Func<object, bool> predicate, AuditEntryState entryState)` | Includes all entities that satisfy the predicate and with specified `AuditEntryState` in the audit. | [NET Framework](https://dotnetfiddle.net/yPchrX) / [NET Core](https://dotnetfiddle.net/NYxFBR) |
+| `IncludeEntity<TEntityType>(Func<TEntityType, bool> predicate, AuditEntryState entryState)` | Includes all entities of `TEntityType` that satisfy the predicate and with specified `AuditEntryState` in the audit. | [NET Framework](https://dotnetfiddle.net/yPchrX) / [NET Core](https://dotnetfiddle.net/VhaREm) |
+| `IncludeProperty()` | Includes all properties in the audit. | [NET Framework](https://dotnetfiddle.net/CN9Zq1) / [NET Core](https://dotnetfiddle.net/ZFyTHP) |
+| `IncludeProperty<TEntityType>()` | Includes all properties of a `TEntityType` type in the audit. | [NET Framework](https://dotnetfiddle.net/e74jy7) / [NET Core](https://dotnetfiddle.net/A0QVNT)  |
+| `IncludeProperty<TEntityType>(Expression<Func<TEntityType, object>> propertySelector)` | Includes specified properties of a `TEntityType` type in the audit. | [NET Framework](https://dotnetfiddle.net/c7YrfX) / [NET Core](https://dotnetfiddle.net/QdwTJd)  |
+| `IncludePropertyUnchanged()` | Includes all property values unchanged in the audit. | [NET Framework](https://dotnetfiddle.net/RPfZEl) / [NET Core](https://dotnetfiddle.net/aa0gRO) |
+| `IncludePropertyUnchanged<TEntityType>()` | Includes all property values unchanged of a `TEntityType` type in the audit. | [NET Framework](https://dotnetfiddle.net/bYmNVq) / [NET Core](https://dotnetfiddle.net/ul8tCJ) |
+| `IncludePropertyUnchanged(Func<object, bool> predicate)` | Includes all property values that satistfy the predicate in the audit. | [NET Framework](https://dotnetfiddle.net/HpJ5mz) / [NET Core](https://dotnetfiddle.net/Up4qJT) |
+| `UseIncludeDataAnnotation(bool value)` | Exclude all entities and properties from the Audit. Only entities and properties with `Include` data annotations or specified with the fluent API will be included. | [NET Framework](https://dotnetfiddle.net/mGBM7i) / [NET Core](https://dotnetfiddle.net/4ffqFm) |
 
 ###### Methods (Soft Delete)
 
