@@ -17,7 +17,7 @@ ctx.BulkSynchronize(list);
 context.BulkSynchronize(customers, options => options.ColumnPrimaryKeyExpression = customer => customer.Code);
 ```
 
-[Try it](https://dotnetfiddle.net/4KVPJn)
+Try it: [NET Framework](https://dotnetfiddle.net/4KVPJn) | [NET Core](https://dotnetfiddle.net/PMxuNO)
 
 ## Learn more
 
