@@ -16,7 +16,7 @@ context.BulkSaveChanges();
 // Easy to customize
 context.BulkSaveChanges(bulk => bulk.BatchSize = 100);
 ```
-[Try it](https://dotnetfiddle.net/1JFvZe)
+Try it: [NET Framework](https://dotnetfiddle.net/1JFvZe) | [NET Core](https://dotnetfiddle.net/8Rc5Eg)
 
 ## Performance Comparison
 
@@ -26,7 +26,7 @@ context.BulkSaveChanges(bulk => bulk.BatchSize = 100);
 | BulkSaveChanges | 175 ms         | 325 ms         | 750 ms         |
 | BulkSaveChanges(false) | 125 ms  | 200 ms         | 450 ms         |
 
-[Try it](https://dotnetfiddle.net/Ad1bmZ)
+Try it: [NET Framework](https://dotnetfiddle.net/Ad1bmZ) | [NET Core](https://dotnetfiddle.net/cIGiKE)
 
 > HINT: Performance may differ from a database to another. A lot of factors might affect the benchmark time such as index, column type, latency, throttling, etc.
 
