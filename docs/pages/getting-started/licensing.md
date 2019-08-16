@@ -48,7 +48,7 @@ The license can be added directly in the code of your application. Make sure to 
 Z.EntityFramework.Classic.EntityFrameworkManager.AddLicense([licenseName], [licenseKey]);
 ```
 
-[Try it](https://dotnetfiddle.net/yvFFQU)
+Try it: [NET Framework](https://dotnetfiddle.net/yvFFQU) | [NET Core](https://dotnetfiddle.net/KdhZt3)
 
 ### Recommendations
 - **Web App:** Use Application_Start in global.asax to activate your license.
@@ -69,4 +69,4 @@ if (!Z.EntityFramework.Classic.EntityFrameworkManager.ValidateLicense(out licens
 }
 ```
 
-[Try it](https://dotnetfiddle.net/yvFFQU)
+Try it: [NET Framework](https://dotnetfiddle.net/yvFFQU) | [NET Core](https://dotnetfiddle.net/KdhZt3)
