@@ -35,7 +35,7 @@ public static void Main()
 	}
 }
 ```
-[Try it](https://dotnetfiddle.net/1kVazO)
+Try it: [NET Framework]() | [NET Core]()[Try it](https://dotnetfiddle.net/1kVazO)
 
 This feature allows you to handle various scenario such as:
 - [Saving audit trail in a database](#saving-audit-trail-in-a-database)
@@ -103,7 +103,7 @@ public static void Main()
 	}
 }
 ```
-[Try it](https://dotnetfiddle.net/gmlMIz)
+Try it: [NET Framework]() | [NET Core]()[Try it](https://dotnetfiddle.net/gmlMIz)
 
 #### On Demand enabled
 To have the **Audit** feature on demand enabled, you activate it after the context is created.
@@ -140,7 +140,7 @@ public static void Main()
 	}
 }
 ```
-[Try it](https://dotnetfiddle.net/ewsolr)
+Try it: [NET Framework]() | [NET Core]()[Try it](https://dotnetfiddle.net/ewsolr)
 
 ### Last Audit
 The latest audit can be accessed with the `LastAudit` property.
@@ -160,7 +160,7 @@ var lastAudit = context.Configuration.Audit.LastAudit;
 FiddleHelper.WriteTable("1 - LastAudit - Entries", lastAudit.Entries);
 FiddleHelper.WriteTable("2 - LastAudit - Properties", lastAudit.Entries.SelectMany(x => x.Properties));
 ```
-[Try it](https://dotnetfiddle.net/qoNEMi)
+Try it: [NET Framework]() | [NET Core]()[Try it](https://dotnetfiddle.net/qoNEMi)
 
 ### AutoSave Set
 To automatically save the audit trail in your database, you need to specify the `DbSet<>` in which audit entries will be added then saved.
@@ -212,7 +212,7 @@ using (var context = new EntityContext())
 // Display Audit Trail
 Console.WriteLine(Log.ToString());
 ```
-[Try it](https://dotnetfiddle.net/s7Zk45)
+Try it: [NET Framework]() | [NET Core]()[Try it](https://dotnetfiddle.net/s7Zk45)
 
 ## Real Life Scenarios
 
@@ -267,7 +267,7 @@ public static void Main()
 	}
 }
 ```
-[Try it](https://dotnetfiddle.net/8fBiZj)
+Try it: [NET Framework]() | [NET Core]()[Try it](https://dotnetfiddle.net/8fBiZj)
 
 ### Saving audit trail in a log file
 Your application need to keep an audit trail of all changes in a log file. You can automatically save the audit trail in a log file by specifying an `AutoSaveAction`.
@@ -325,7 +325,7 @@ public static void Main()
 	}
 }
 ```
-[Try it](https://dotnetfiddle.net/1JvBQ8)
+Try it: [NET Framework]() | [NET Core]()[Try it](https://dotnetfiddle.net/1JvBQ8)
 
 ### Saving audit trail in a different database
 Your application need to keep an audit trail of all changes in a different database. You can automatically save the audit trail in a different database file by specifying an `AutoSaveAction`.
@@ -376,7 +376,7 @@ public static void Main()
 	}
 }
 ```
-[Try it](https://dotnetfiddle.net/JMVLsE)
+Try it: [NET Framework]() | [NET Core]()[Try it](https://dotnetfiddle.net/JMVLsE)
 
 ### Displaying audit trail history
 Your application need to display the audit trail of all changes in a user interface. If your audit trail is saved in a database, you can retrieve and display audit entries by using your audit `DbSet<>`.
@@ -391,7 +391,7 @@ using (var context = new EntityContext())
 	FiddleHelper.WriteTable("2 - Audit Properties", auditEntries.SelectMany(x => x.Properties));
 }
 ```
-[Try it](https://dotnetfiddle.net/wfoPB1)
+Try it: [NET Framework]() | [NET Core]()[Try it](https://dotnetfiddle.net/wfoPB1)
 
 ## Documentation
 
@@ -403,62 +403,62 @@ The `AuditManager` allows you to configure how the audit trail will be created, 
 
 | Name | Description | Default | Example |
 | :--- | :---------- | :-----: | :------ |
-| `IsEnabled` | Gets or sets if the `Audit` feature is enabled. By default, this feature is disabled not to impact the performance. | `false` | [Try it](https://dotnetfiddle.net/4xrM1d) |
-| `AutoSaveAction` | Gets or sets the `AutoSaveAction`. This option is usually used to automatically save the audit trail in a log file or different database. | `null` | [Try it](https://dotnetfiddle.net/YzYyE7) |
-| `AutoSaveSet` | Gets or sets the `AutoSaveSet`. This option is usually used to automatically save the audit trail in a database. | `null` | [Try it](https://dotnetfiddle.net/hXzGVu) |
-| `LastAudit` | Gets the last `Audit` trail. | `null` | [Try it](https://dotnetfiddle.net/8ce2Y1) |
+| `IsEnabled` | Gets or sets if the `Audit` feature is enabled. By default, this feature is disabled not to impact the performance. | `false` | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/4xrM1d) |
+| `AutoSaveAction` | Gets or sets the `AutoSaveAction`. This option is usually used to automatically save the audit trail in a log file or different database. | `null` | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/YzYyE7) |
+| `AutoSaveSet` | Gets or sets the `AutoSaveSet`. This option is usually used to automatically save the audit trail in a database. | `null` | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/hXzGVu) |
+| `LastAudit` | Gets the last `Audit` trail. | `null` | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/8ce2Y1) |
 
 ###### Methods (Display)
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `DisplayDBNullAsNull(bool value)` | Format DBNull.Value as 'null' value. True by default. | [Try it](https://dotnetfiddle.net/8dawtN) |
-| `DisplayFormatType<Type>(Func<Type, string> formatter)` | Format the specified type into a string. | [Try it](https://dotnetfiddle.net/5whaAx) |
-| `DisplayEntityName<TEntityType>(string name)` | Use the specified name for the `EntityName` value. | [Try it](https://dotnetfiddle.net/xu4yPs)  |
-| `DisplayEntityName<TEntityType>(Func<TEntityType, string, string> formatter)` | Use the factory specified name for the `EntityName` value. | [Try it](https://dotnetfiddle.net/01IYPh)  |
-| `DisplayPropertyName<TEntityType>(Expression<Func<TEntityType, object>> propertySelector, string name)` | Use the specified name for the `PropertyName` value. | [Try it](https://dotnetfiddle.net/AxkTW3)  |
-| `DisplayPropertyName<TEntityType>(Expression<Func<TEntityType, object>> propertySelector, Func<TEntityType, string, string> formatter)` | Use the factory specified name for the `PropertyName` value. | [Try it](https://dotnetfiddle.net/BKBSKc)  |
+| `DisplayDBNullAsNull(bool value)` | Format DBNull.Value as 'null' value. True by default. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/8dawtN) |
+| `DisplayFormatType<Type>(Func<Type, string> formatter)` | Format the specified type into a string. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/5whaAx) |
+| `DisplayEntityName<TEntityType>(string name)` | Use the specified name for the `EntityName` value. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/xu4yPs)  |
+| `DisplayEntityName<TEntityType>(Func<TEntityType, string, string> formatter)` | Use the factory specified name for the `EntityName` value. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/01IYPh)  |
+| `DisplayPropertyName<TEntityType>(Expression<Func<TEntityType, object>> propertySelector, string name)` | Use the specified name for the `PropertyName` value. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/AxkTW3)  |
+| `DisplayPropertyName<TEntityType>(Expression<Func<TEntityType, object>> propertySelector, Func<TEntityType, string, string> formatter)` | Use the factory specified name for the `PropertyName` value. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/BKBSKc)  |
 
 ###### Methods (Include & Exclude)
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `ExcludeEntity()` | Excludes all entities from the audit. | [Try it](https://dotnetfiddle.net/MrWtV4) |
-| `ExcludeEntity<TEntityType>()` | Excludes all entities of `TEntityType` type from the audit. | [Try it](https://dotnetfiddle.net/Nes7be) |
-| `ExcludeEntity(Func<object, bool> predicate)` | Excludes all entities that satisfy the predicate from the audit. | [Try it](https://dotnetfiddle.net/tWTkaC)  |
-| `ExcludeEntity<TEntityType>(Func<TEntityType, bool> predicate)` | Excludes all entities of `TEntityType` that satisfy the predicate from the audit. | [Try it](https://dotnetfiddle.net/TfmtL5)  |
-| `ExcludeEntity(AuditEntryState entryState)` | Excludes all entities with specified `AuditEntryState` from the audit. | [Try it](https://dotnetfiddle.net/vLHfk9)  |
-| `ExcludeEntity<TEntityType>(AuditEntryState entryState)` | Excludes all entities of 'TEntityType' type and with specified `AuditEntryState` from the audit. | [Try it](https://dotnetfiddle.net/g5t6FB) |
-| `ExcludeEntity(Func<object, bool> predicate, AuditEntryState entryState)` | Excludes all entities that satisfy the predicate and with specified `AuditEntryState` from the audit. | [Try it](https://dotnetfiddle.net/g22Zlv) |
-| `ExcludeEntity<TEntityType>(Func<TEntityType, bool> predicate, AuditEntryState entryState)` | Excludes all entities of `TEntityType` that satisfy the predicate and with specified `AuditEntryState` from the audit. | [Try it](https://dotnetfiddle.net/g22Zlv) |
-| `ExcludeProperty()` | Excludes all properties from the audit. Key properties are never excluded. | [Try it](https://dotnetfiddle.net/2KULLj) |
-| `ExcludeProperty<TEntityType>()` | Excludes all properties of a `TEntityType` type from the audit. Key properties are never excluded. | [Try it](https://dotnetfiddle.net/5XTmn4)  |
-| `ExcludeProperty<TEntityType>(Expression<Func<TEntityType, object>> propertySelector)` | Excludes specified properties of a `TEntityType` type from the audit. Key properties are never excluded. | [Try it](https://dotnetfiddle.net/BlIDQY)  |
-| `ExcludePropertyUnchanged()` | Excludes all properties value unchanged from the audit. Key values are never excluded. | [Try it](https://dotnetfiddle.net/9Aw0vq) |
-| `ExcludePropertyUnchanged<TEntityType>()` | Excludes all properties value unchanged of a `TEntityType` type from the audit. Key values are never excluded. | [Try it](https://dotnetfiddle.net/EKOk3a) |
-| `ExcludePropertyUnchanged(Func<object, bool> predicate)` | Excludes all properties value that satistfy the predicate from the audit. Key values are never excluded. | [Try it](https://dotnetfiddle.net/qhTX5h) |
-| `IncludeEntity()` | Includes all entities in the audit. | [Try it](https://dotnetfiddle.net/r0Rq73) |
-| `IncludeEntity<TEntityType>()` | Includes all entities of `TEntityType` type in the audit. | [Try it](https://dotnetfiddle.net/rjhUQb) |
-| `IncludeEntity(Func<object, bool> predicate)` | Includes all entities that satisfy the predicate in the audit. | [Try it](https://dotnetfiddle.net/TdqHmK)  |
-| `IncludeEntity<TEntityType>(Func<TEntityType, bool> predicate)` | Includes all entities of `TEntityType` that satisfy the predicate in the audit. | [Try it](https://dotnetfiddle.net/KiLBLq)  |
-| `IncludeEntity(AuditEntryState entryState)` | Includes all entities with specified `AuditEntryState` in the audit. | [Try it](https://dotnetfiddle.net/YA3Gr0)  |
-| `IncludeEntity<TEntityType>(AuditEntryState entryState)` | Includes all entities of 'TEntityType' type and with specified `AuditEntryState` in the audit. | [Try it](https://dotnetfiddle.net/PFY5Pp) |
-| `IncludeEntity(Func<object, bool> predicate, AuditEntryState entryState)` | Includes all entities that satisfy the predicate and with specified `AuditEntryState` in the audit. | [Try it](https://dotnetfiddle.net/yPchrX) |
-| `IncludeEntity<TEntityType>(Func<TEntityType, bool> predicate, AuditEntryState entryState)` | Includes all entities of `TEntityType` that satisfy the predicate and with specified `AuditEntryState` in the audit. | [Try it](https://dotnetfiddle.net/yPchrX) |
-| `IncludeProperty()` | Includes all properties in the audit. | [Try it](https://dotnetfiddle.net/CN9Zq1) |
-| `IncludeProperty<TEntityType>()` | Includes all properties of a `TEntityType` type in the audit. | [Try it](https://dotnetfiddle.net/e74jy7)  |
-| `IncludeProperty<TEntityType>(Expression<Func<TEntityType, object>> propertySelector)` | Includes specified properties of a `TEntityType` type in the audit. | [Try it](https://dotnetfiddle.net/c7YrfX)  |
-| `IncludePropertyUnchanged()` | Includes all property values unchanged in the audit. | [Try it](https://dotnetfiddle.net/RPfZEl) |
-| `IncludePropertyUnchanged<TEntityType>()` | Includes all property values unchanged of a `TEntityType` type in the audit. | [Try it](https://dotnetfiddle.net/bYmNVq) |
-| `IncludePropertyUnchanged(Func<object, bool> predicate)` | Includes all property values that satistfy the predicate in the audit. | [Try it](https://dotnetfiddle.net/HpJ5mz) |
-| `UseIncludeDataAnnotation(bool value)` | Exclude all entities and properties from the Audit. Only entities and properties with `Include` data annotations or specified with the fluent API will be included. | [Try it](https://dotnetfiddle.net/mGBM7i) |
+| `ExcludeEntity()` | Excludes all entities from the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/MrWtV4) |
+| `ExcludeEntity<TEntityType>()` | Excludes all entities of `TEntityType` type from the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/Nes7be) |
+| `ExcludeEntity(Func<object, bool> predicate)` | Excludes all entities that satisfy the predicate from the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/tWTkaC)  |
+| `ExcludeEntity<TEntityType>(Func<TEntityType, bool> predicate)` | Excludes all entities of `TEntityType` that satisfy the predicate from the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/TfmtL5)  |
+| `ExcludeEntity(AuditEntryState entryState)` | Excludes all entities with specified `AuditEntryState` from the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/vLHfk9)  |
+| `ExcludeEntity<TEntityType>(AuditEntryState entryState)` | Excludes all entities of 'TEntityType' type and with specified `AuditEntryState` from the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/g5t6FB) |
+| `ExcludeEntity(Func<object, bool> predicate, AuditEntryState entryState)` | Excludes all entities that satisfy the predicate and with specified `AuditEntryState` from the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/g22Zlv) |
+| `ExcludeEntity<TEntityType>(Func<TEntityType, bool> predicate, AuditEntryState entryState)` | Excludes all entities of `TEntityType` that satisfy the predicate and with specified `AuditEntryState` from the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/g22Zlv) |
+| `ExcludeProperty()` | Excludes all properties from the audit. Key properties are never excluded. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/2KULLj) |
+| `ExcludeProperty<TEntityType>()` | Excludes all properties of a `TEntityType` type from the audit. Key properties are never excluded. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/5XTmn4)  |
+| `ExcludeProperty<TEntityType>(Expression<Func<TEntityType, object>> propertySelector)` | Excludes specified properties of a `TEntityType` type from the audit. Key properties are never excluded. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/BlIDQY)  |
+| `ExcludePropertyUnchanged()` | Excludes all properties value unchanged from the audit. Key values are never excluded. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/9Aw0vq) |
+| `ExcludePropertyUnchanged<TEntityType>()` | Excludes all properties value unchanged of a `TEntityType` type from the audit. Key values are never excluded. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/EKOk3a) |
+| `ExcludePropertyUnchanged(Func<object, bool> predicate)` | Excludes all properties value that satistfy the predicate from the audit. Key values are never excluded. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/qhTX5h) |
+| `IncludeEntity()` | Includes all entities in the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/r0Rq73) |
+| `IncludeEntity<TEntityType>()` | Includes all entities of `TEntityType` type in the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/rjhUQb) |
+| `IncludeEntity(Func<object, bool> predicate)` | Includes all entities that satisfy the predicate in the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/TdqHmK)  |
+| `IncludeEntity<TEntityType>(Func<TEntityType, bool> predicate)` | Includes all entities of `TEntityType` that satisfy the predicate in the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/KiLBLq)  |
+| `IncludeEntity(AuditEntryState entryState)` | Includes all entities with specified `AuditEntryState` in the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/YA3Gr0)  |
+| `IncludeEntity<TEntityType>(AuditEntryState entryState)` | Includes all entities of 'TEntityType' type and with specified `AuditEntryState` in the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/PFY5Pp) |
+| `IncludeEntity(Func<object, bool> predicate, AuditEntryState entryState)` | Includes all entities that satisfy the predicate and with specified `AuditEntryState` in the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/yPchrX) |
+| `IncludeEntity<TEntityType>(Func<TEntityType, bool> predicate, AuditEntryState entryState)` | Includes all entities of `TEntityType` that satisfy the predicate and with specified `AuditEntryState` in the audit. |[NET Framework]() / [NET Core]() [Try it](https://dotnetfiddle.net/yPchrX) |
+| `IncludeProperty()` | Includes all properties in the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/CN9Zq1) |
+| `IncludeProperty<TEntityType>()` | Includes all properties of a `TEntityType` type in the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/e74jy7)  |
+| `IncludeProperty<TEntityType>(Expression<Func<TEntityType, object>> propertySelector)` | Includes specified properties of a `TEntityType` type in the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/c7YrfX)  |
+| `IncludePropertyUnchanged()` | Includes all property values unchanged in the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/RPfZEl) |
+| `IncludePropertyUnchanged<TEntityType>()` | Includes all property values unchanged of a `TEntityType` type in the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/bYmNVq) |
+| `IncludePropertyUnchanged(Func<object, bool> predicate)` | Includes all property values that satistfy the predicate in the audit. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/HpJ5mz) |
+| `UseIncludeDataAnnotation(bool value)` | Exclude all entities and properties from the Audit. Only entities and properties with `Include` data annotations or specified with the fluent API will be included. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/mGBM7i) |
 
 ###### Methods (Soft Delete)
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `SoftDeleted(Func<object, bool> predicate)` | Change the `AuditEntryState` from `EntityModified` to `EntitySoftDeleted` for all entities that satisfy the soft delete predicate. | [Try it](https://dotnetfiddle.net/k1h8fr) |
-| `SoftDeleted<TEntityType>(Func<TEntityType, bool> predicate)` | Change the `AuditEntryState` from `EntityModified` to `EntitySoftDeleted` for all entities of `TEntityType` type and that satisfy the soft delete predicate. | [Try it](https://dotnetfiddle.net/OdVFGF) |
+| `SoftDeleted(Func<object, bool> predicate)` | Change the `AuditEntryState` from `EntityModified` to `EntitySoftDeleted` for all entities that satisfy the soft delete predicate. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/k1h8fr) |
+| `SoftDeleted<TEntityType>(Func<TEntityType, bool> predicate)` | Change the `AuditEntryState` from `EntityModified` to `EntitySoftDeleted` for all entities of `TEntityType` type and that satisfy the soft delete predicate. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/OdVFGF) |
 
 ### Audit
 
@@ -468,9 +468,9 @@ The `Audit` class provide information about the audit trail.
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `Entries` | Gets a list of `AuditEntry`. | [Try it](https://dotnetfiddle.net/In5zMB) |
-| `EntriesXml` | Gets a list of `XmlAuditEntry`. | [Try it](https://dotnetfiddle.net/9WKMvp) |
-| `Manager` | Gets the `AuditManager` | [Try it](https://dotnetfiddle.net/LVU9UD) |
+| `Entries` | Gets a list of `AuditEntry`. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/In5zMB) |
+| `EntriesXml` | Gets a list of `XmlAuditEntry`. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/9WKMvp) |
+| `Manager` | Gets the `AuditManager` | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/LVU9UD) |
 
 ### AuditEntry
 
@@ -482,14 +482,14 @@ This properties values are saved in a database.
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `AuditEntryID` | Gets or sets the `AuditEntryID`. | [Try it](https://dotnetfiddle.net/bn3OpH) |
-| `EntitySetName` | Gets or sets the `EntitySet` name. | [Try it](https://dotnetfiddle.net/wEjMFB) |
-| `EntityTypeName` | Gets or sets the `EntityType` name. | [Try it](https://dotnetfiddle.net/Ulretn) |
-| `State` | Gets or sets the `AuditEntryState`. | [Try it](https://dotnetfiddle.net/hitoCH) |
-| `StateName` | Gets or sets the `AuditEntryState` name. | [Try it](https://dotnetfiddle.net/hzefDr) |
-| `CreatedBy` | Gets or sets the `AuditEntry` created user. | [Try it](https://dotnetfiddle.net/JjBEqS) |
-| `CreatedDate` | Gets or sets the `AuditEntry` created date. | [Try it](https://dotnetfiddle.net/XG8s4n) |
-| `Properties` | Gets or sets the `AuditEntry` properties. | [Try it](https://dotnetfiddle.net/FYsJgt) |
+| `AuditEntryID` | Gets or sets the `AuditEntryID`. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/bn3OpH) |
+| `EntitySetName` | Gets or sets the `EntitySet` name. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/wEjMFB) |
+| `EntityTypeName` | Gets or sets the `EntityType` name. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/Ulretn) |
+| `State` | Gets or sets the `AuditEntryState`. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/hitoCH) |
+| `StateName` | Gets or sets the `AuditEntryState` name. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/hzefDr) |
+| `CreatedBy` | Gets or sets the `AuditEntry` created user. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/JjBEqS) |
+| `CreatedDate` | Gets or sets the `AuditEntry` created date. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/XG8s4n) |
+| `Properties` | Gets or sets the `AuditEntry` properties. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/FYsJgt) |
 
 ###### Properties (Unmapped)
 
@@ -497,9 +497,9 @@ This properties values are only accessible via the `LastAudit` property.
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `Parent` | Gets or sets the parent `Audit`. | [Try it](https://dotnetfiddle.net/BwOXVR) |
-| `Entity` | Gets or sets the audited `Entity`. | [Try it](https://dotnetfiddle.net/4QeyV2) |
-| `Entry` | Gets or sets the audited `ObjectStateEntry`.  | [Try it](https://dotnetfiddle.net/zvfkd3) |
+| `Parent` | Gets or sets the parent `Audit`. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/BwOXVR) |
+| `Entity` | Gets or sets the audited `Entity`. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/4QeyV2) |
+| `Entry` | Gets or sets the audited `ObjectStateEntry`.  | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/zvfkd3) |
 
 <details>
   <summary>Database First SQL</summary>
@@ -519,13 +519,13 @@ These property values are saved in a database.
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `Parent` | Gets or sets the parent `AuditEntry`. | [Try it](https://dotnetfiddle.net/WXpAtA) |
-| `AuditEntryPropertyID` | Gets or sets the `AuditEntryPropertyID`. | [Try it](https://dotnetfiddle.net/C8GBWu) |
-| `AuditEntryID` | Gets or sets the `AuditEntryID`. | [Try it](https://dotnetfiddle.net/kJzQ6i) |
-| `RelationName` | Gets or sets the relation name. Only available for `RelationshipAdded` and `RelationshipDeleted` state | [Try it](https://dotnetfiddle.net/LTd809) |
-| `PropertyName` | Gets or sets the property name. | [Try it](https://dotnetfiddle.net/oYqqV0) |
-| `OldValue` | Gets or sets the old value formatted as string. Avalable for `Modified`, `Deleted`, and `RelationshipDeleted` state. | [Try it](https://dotnetfiddle.net/hNUCx6) |
-| `NewValue` | Gets or sets the new value formatted as string. Avalable for `Insert`, `Modified`, and `RelationshipModified` state. | [Try it](https://dotnetfiddle.net/lrGw9a) |
+| `Parent` | Gets or sets the parent `AuditEntry`. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/WXpAtA) |
+| `AuditEntryPropertyID` | Gets or sets the `AuditEntryPropertyID`. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/C8GBWu) |
+| `AuditEntryID` | Gets or sets the `AuditEntryID`. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/kJzQ6i) |
+| `RelationName` | Gets or sets the relation name. Only available for `RelationshipAdded` and `RelationshipDeleted` state | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/LTd809) |
+| `PropertyName` | Gets or sets the property name. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/oYqqV0) |
+| `OldValue` | Gets or sets the old value formatted as string. Avalable for `Modified`, `Deleted`, and `RelationshipDeleted` state. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/hNUCx6) |
+| `NewValue` | Gets or sets the new value formatted as string. Avalable for `Insert`, `Modified`, and `RelationshipModified` state. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/lrGw9a) |
 
 ###### Properties (Unmapped)
 
@@ -533,8 +533,8 @@ These property values are only accessible via the `LastAudit` property.
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `OldValueRaw` | Gets or sets the old raw value. This is the original raw value without being formatted. | [Try it](https://dotnetfiddle.net/cxK2Hq) |
-| `NewValueRaw` | Gets or sets the new raw value. This is the original raw value without being formatted. | [Try it](https://dotnetfiddle.net/zetqj9) |
+| `OldValueRaw` | Gets or sets the old raw value. This is the original raw value without being formatted. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/cxK2Hq) |
+| `NewValueRaw` | Gets or sets the new raw value. This is the original raw value without being formatted. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/zetqj9) |
 
 <details>
   <summary>Database First SQL</summary>
@@ -552,14 +552,14 @@ The `XmlAuditEntry` class contains information about the entry and all propertie
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `XmlAuditEntryID` | Gets or sets the `AuditEntryID`. | [Try it](https://dotnetfiddle.net/ohl81V) |
-| `EntitySetName` | Gets or sets the `EntitySet` name. | [Try it](https://dotnetfiddle.net/r1sti8) |
-| `EntityTypeName` | Gets or sets the `EntityType` name. | [Try it](https://dotnetfiddle.net/InPE7m) |
-| `State` | Gets or sets the `AuditEntryState`. | [Try it](https://dotnetfiddle.net/yl2ESG) |
-| `StateName` | Gets or sets the `AuditEntryState` name. | [Try it](https://dotnetfiddle.net/Gok4r5) |
-| `CreatedBy` | Gets or sets the `AuditEntry` created user. | [Try it](https://dotnetfiddle.net/SooSeu) |
-| `CreatedDate` | Gets or sets the `AuditEntry` created date. | [Try it](https://dotnetfiddle.net/LT6aSE) |
-| `XmlProperties` | Gets or sets audit properties formatted as `Xml`. | [Try it](https://dotnetfiddle.net/Dcldvf) |
+| `XmlAuditEntryID` | Gets or sets the `AuditEntryID`. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/ohl81V) |
+| `EntitySetName` | Gets or sets the `EntitySet` name. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/r1sti8) |
+| `EntityTypeName` | Gets or sets the `EntityType` name. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/InPE7m) |
+| `State` | Gets or sets the `AuditEntryState`. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/yl2ESG) |
+| `StateName` | Gets or sets the `AuditEntryState` name. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/Gok4r5) |
+| `CreatedBy` | Gets or sets the `AuditEntry` created user. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/SooSeu) |
+| `CreatedDate` | Gets or sets the `AuditEntry` created date. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/LT6aSE) |
+| `XmlProperties` | Gets or sets audit properties formatted as `Xml`. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/Dcldvf) |
 
 <details>
   <summary>Database First SQL</summary>
@@ -574,27 +574,27 @@ Coming soon...
 ###### Entity
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `AuditDisplay(string name)` | Attribute to change the Audit entity or property display name. | [Try it](https://dotnetfiddle.net/y0wQ4E) |
-| `AuditExclude` | Attribute to exclude from the audit the entity or property. | [Try it](https://dotnetfiddle.net/iwD7qc) |
-| `AuditInclude` | Attribute to include in the audit the entity or property. Require to enable `Include` with `AuditManager` `UseIncludeDataAnnotation(true)` method. | [Try it](https://dotnetfiddle.net/OPkrkn) |
+| `AuditDisplay(string name)` | Attribute to change the Audit entity or property display name. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/y0wQ4E) |
+| `AuditExclude` | Attribute to exclude from the audit the entity or property. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/iwD7qc) |
+| `AuditInclude` | Attribute to include in the audit the entity or property. Require to enable `Include` with `AuditManager` `UseIncludeDataAnnotation(true)` method. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/OPkrkn) |
 
 
 ###### Property
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `AuditDisplay(string name)` | Attribute to change the Audit entity or property display. | [Try it](https://dotnetfiddle.net/ePMX3w) |
-| `AuditDisplayFormat(string dataFormatString)` | Attribute to change the Audit property display format. | [Try it](https://dotnetfiddle.net/rDWKqR) |
-| `AuditExclude` | Attribute to exclude from the audit the entity or property. | [Try it](https://dotnetfiddle.net/0caNE1) |
-| `AuditInclude` | Attribute to include in the audit the entity or property. Require to enable `Include` with `AuditManager` `UseIncludeDataAnnotation(true)` method.  | [Try it](https://dotnetfiddle.net/1aE47U) |
+| `AuditDisplay(string name)` | Attribute to change the Audit entity or property display. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/ePMX3w) |
+| `AuditDisplayFormat(string dataFormatString)` | Attribute to change the Audit property display format. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/rDWKqR) |
+| `AuditExclude` | Attribute to exclude from the audit the entity or property. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/0caNE1) |
+| `AuditInclude` | Attribute to include in the audit the entity or property. Require to enable `Include` with `AuditManager` `UseIncludeDataAnnotation(true)` method.  | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/1aE47U) |
 
 ### Extension Methods
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `Where<TEntityType>(this DbSet<AuditEntry> set)` | Gets the audit trail of all entries entry of `TEntityType` type. | [Try it](https://dotnetfiddle.net/Lm48H8) |
-| `Where<TEntityType>(this DbSet<AuditEntry> set, TEntityType entry)` | Gets the audit trail of the specific entry. | [Try it](https://dotnetfiddle.net/vSmMSn) |
-| `Where<TEntityType>(this DbSet<AuditEntry> set, params object[] keyValues)` | Gets the audit trail of the specific key. | [Try it](https://dotnetfiddle.net/dbtkiu) |
-| `Where<TEntityType>(this DbSet<XmlAuditEntry> set)` | Gets the audit trail of all entries entry of `TEntityType` type. | [Try it](https://dotnetfiddle.net/zIwUYc) |
-| `ToAuditEntries(this IEnumerable<XmlAuditEntry> items)` | Return a list of `XmlAuditEntry` converted into `AuditEntry`. | [Try it](https://dotnetfiddle.net/dVG40P) |
+| `Where<TEntityType>(this DbSet<AuditEntry> set)` | Gets the audit trail of all entries entry of `TEntityType` type. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/Lm48H8) |
+| `Where<TEntityType>(this DbSet<AuditEntry> set, TEntityType entry)` | Gets the audit trail of the specific entry. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/vSmMSn) |
+| `Where<TEntityType>(this DbSet<AuditEntry> set, params object[] keyValues)` | Gets the audit trail of the specific key. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/dbtkiu) |
+| `Where<TEntityType>(this DbSet<XmlAuditEntry> set)` | Gets the audit trail of all entries entry of `TEntityType` type. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/zIwUYc) |
+| `ToAuditEntries(this IEnumerable<XmlAuditEntry> items)` | Return a list of `XmlAuditEntry` converted into `AuditEntry`. | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/dVG40P) |
 
 ## Limitations
 
