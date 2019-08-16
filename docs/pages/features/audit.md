@@ -35,7 +35,7 @@ public static void Main()
 	}
 }
 ```
-Try it: [NET Framework]() | [NET Core]()[Try it](https://dotnetfiddle.net/1kVazO)
+Try it: [NET Framework](https://dotnetfiddle.net/1kVazO) | [NET Core](https://dotnetfiddle.net/dxUhEK)
 
 This feature allows you to handle various scenario such as:
 - [Saving audit trail in a database](#saving-audit-trail-in-a-database)
@@ -103,7 +103,7 @@ public static void Main()
 	}
 }
 ```
-Try it: [NET Framework]() | [NET Core]()[Try it](https://dotnetfiddle.net/gmlMIz)
+Try it: [NET Framework](https://dotnetfiddle.net/gmlMIz) | [NET Core](https://dotnetfiddle.net/5Sd9eQ)
 
 #### On Demand enabled
 To have the **Audit** feature on demand enabled, you activate it after the context is created.
@@ -140,7 +140,7 @@ public static void Main()
 	}
 }
 ```
-Try it: [NET Framework]() | [NET Core]()[Try it](https://dotnetfiddle.net/ewsolr)
+Try it: [NET Framework](https://dotnetfiddle.net/ewsolr) | [NET Core](https://dotnetfiddle.net/ItRyBp)
 
 ### Last Audit
 The latest audit can be accessed with the `LastAudit` property.
@@ -160,7 +160,7 @@ var lastAudit = context.Configuration.Audit.LastAudit;
 FiddleHelper.WriteTable("1 - LastAudit - Entries", lastAudit.Entries);
 FiddleHelper.WriteTable("2 - LastAudit - Properties", lastAudit.Entries.SelectMany(x => x.Properties));
 ```
-Try it: [NET Framework]() | [NET Core]()[Try it](https://dotnetfiddle.net/qoNEMi)
+Try it: [NET Framework](https://dotnetfiddle.net/qoNEMi) | [NET Core](https://dotnetfiddle.net/riY7U3)
 
 ### AutoSave Set
 To automatically save the audit trail in your database, you need to specify the `DbSet<>` in which audit entries will be added then saved.
@@ -169,8 +169,8 @@ One of those following set must be added to your context:
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `AuditEntry` | The `AuditEntry` class allows you to save one row per property (Only recommended for `Enterprise` version). The `DbSet<AuditEntry>` and `DbSet<AuditEntryProperty>` must be added to your context. | [Try it](https://dotnetfiddle.net/cg2SVF) |
-| `XmlAuditEntry` | The `XmlAuditEntry` class allows you to save your properties in an XML format. The `DbSet<XmlAuditEntry>` must be added to your context. | [Try it](https://dotnetfiddle.net/2HLtF4) |
+| `AuditEntry` | The `AuditEntry` class allows you to save one row per property (Only recommended for `Enterprise` version). The `DbSet<AuditEntry>` and `DbSet<AuditEntryProperty>` must be added to your context. | [NET Framework](https://dotnetfiddle.net/cg2SVF) / [NET Core](https://dotnetfiddle.net/wHXprT) |
+| `XmlAuditEntry` | The `XmlAuditEntry` class allows you to save your properties in an XML format. The `DbSet<XmlAuditEntry>` must be added to your context. | [NET Framework](https://dotnetfiddle.net/2HLtF4) / [NET Core](https://dotnetfiddle.net/9k5CGY) |
 
 ### AutoSave Action
 To automatically save the audit trail in another context or a log file, you need to specify an `AutoSaveAction`. This action will be executed after all saves are completed.
@@ -212,7 +212,7 @@ using (var context = new EntityContext())
 // Display Audit Trail
 Console.WriteLine(Log.ToString());
 ```
-Try it: [NET Framework]() | [NET Core]()[Try it](https://dotnetfiddle.net/s7Zk45)
+Try it: [NET Framework](https://dotnetfiddle.net/s7Zk45) | [NET Core](https://dotnetfiddle.net/Y3F4EY)
 
 ## Real Life Scenarios
 
@@ -267,7 +267,7 @@ public static void Main()
 	}
 }
 ```
-Try it: [NET Framework]() | [NET Core]()[Try it](https://dotnetfiddle.net/8fBiZj)
+Try it: [NET Framework](https://dotnetfiddle.net/8fBiZj) | [NET Core](https://dotnetfiddle.net/vsoPmT)
 
 ### Saving audit trail in a log file
 Your application need to keep an audit trail of all changes in a log file. You can automatically save the audit trail in a log file by specifying an `AutoSaveAction`.
@@ -325,7 +325,7 @@ public static void Main()
 	}
 }
 ```
-Try it: [NET Framework]() | [NET Core]()[Try it](https://dotnetfiddle.net/1JvBQ8)
+Try it: [NET Framework](https://dotnetfiddle.net/1JvBQ8) | [NET Core](https://dotnetfiddle.net/ONWxZL)
 
 ### Saving audit trail in a different database
 Your application need to keep an audit trail of all changes in a different database. You can automatically save the audit trail in a different database file by specifying an `AutoSaveAction`.
@@ -376,7 +376,7 @@ public static void Main()
 	}
 }
 ```
-Try it: [NET Framework]() | [NET Core]()[Try it](https://dotnetfiddle.net/JMVLsE)
+Try it: [NET Framework](https://dotnetfiddle.net/JMVLsE) | [NET Core](https://dotnetfiddle.net/b9dTrD)
 
 ### Displaying audit trail history
 Your application need to display the audit trail of all changes in a user interface. If your audit trail is saved in a database, you can retrieve and display audit entries by using your audit `DbSet<>`.
@@ -391,7 +391,7 @@ using (var context = new EntityContext())
 	FiddleHelper.WriteTable("2 - Audit Properties", auditEntries.SelectMany(x => x.Properties));
 }
 ```
-Try it: [NET Framework]() | [NET Core]()[Try it](https://dotnetfiddle.net/wfoPB1)
+Try it: [NET Framework](https://dotnetfiddle.net/wfoPB1) | [NET Core](https://dotnetfiddle.net/RHEm3C)
 
 ## Documentation
 
@@ -403,10 +403,10 @@ The `AuditManager` allows you to configure how the audit trail will be created, 
 
 | Name | Description | Default | Example |
 | :--- | :---------- | :-----: | :------ |
-| `IsEnabled` | Gets or sets if the `Audit` feature is enabled. By default, this feature is disabled not to impact the performance. | `false` | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/4xrM1d) |
-| `AutoSaveAction` | Gets or sets the `AutoSaveAction`. This option is usually used to automatically save the audit trail in a log file or different database. | `null` | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/YzYyE7) |
-| `AutoSaveSet` | Gets or sets the `AutoSaveSet`. This option is usually used to automatically save the audit trail in a database. | `null` | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/hXzGVu) |
-| `LastAudit` | Gets the last `Audit` trail. | `null` | [NET Framework]() / [NET Core]()[Try it](https://dotnetfiddle.net/8ce2Y1) |
+| `IsEnabled` | Gets or sets if the `Audit` feature is enabled. By default, this feature is disabled not to impact the performance. | `false` | [NET Framework](https://dotnetfiddle.net/4xrM1d) / [NET Core](https://dotnetfiddle.net/G0wYQp) |
+| `AutoSaveAction` | Gets or sets the `AutoSaveAction`. This option is usually used to automatically save the audit trail in a log file or different database. | `null` | [NET Framework](https://dotnetfiddle.net/YzYyE7) / [NET Core](https://dotnetfiddle.net/cn5rnx) |
+| `AutoSaveSet` | Gets or sets the `AutoSaveSet`. This option is usually used to automatically save the audit trail in a database. | `null` | [NET Framework](https://dotnetfiddle.net/hXzGVu) / [NET Core](https://dotnetfiddle.net/CTeosc) |
+| `LastAudit` | Gets the last `Audit` trail. | `null` | [NET Framework](https://dotnetfiddle.net/8ce2Y1) / [NET Core](https://dotnetfiddle.net/R1nGCP) |
 
 ###### Methods (Display)
 
