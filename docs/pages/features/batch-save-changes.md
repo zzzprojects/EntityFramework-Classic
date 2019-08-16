@@ -17,6 +17,7 @@ Try it: [NET Framework](https://dotnetfiddle.net/dJK5Vr) | [NET Core](https://do
 | :-------------- | -------------: | -------------: | -------------: |
 | SaveChanges     | 1,200 ms       | 2,400 ms       | 6,000 ms       |
 | BatchSaveChanges| 100 ms         | 200 ms         | 500 ms          |
+Try it: [NET Framework](https://dotnetfiddle.net/2MDZQh) | [NET Core](https://dotnetfiddle.net/ouVK6Z)
 
 > HINT: Performance may differ from a database to another. A lot of factors might affect the benchmark time such as index, column type, latency, throttling, etc.
 
