@@ -6,7 +6,7 @@ The **C# Eval Expression** features let you execute code dynamically.
 ```csharp
 var result = Eval.Execute("X + Y", new { X = 1, Y = 2 }); // return 3
 ```
-[Try it](https://dotnetfiddle.net/W9TwcP)
+Try it: [NET Framework](https://dotnetfiddle.net/W9TwcP) | [NET Core](https://dotnetfiddle.net/SCrswb)
 
 This feature is provided by the library [C# Eval Epression](https://eval-expression.net/) _(Included with EF Classic)_.
 
@@ -49,7 +49,7 @@ foreach(var item in list)
 	}
 }
 ```
-[Try it](https://dotnetfiddle.net/2sAvrj)
+Try it: [NET Framework](https://dotnetfiddle.net/2sAvrj) | [NET Core](https://dotnetfiddle.net/xPjYVr)
 
 ### Executing LINQ from json
 Your application need to filter returning entities depending on the json you receive.
@@ -90,7 +90,7 @@ foreach(var qc in queryCriterias)
 	}
 }
 ```
-[Try it](https://dotnetfiddle.net/UptHy0)
+Try it: [NET Framework](https://dotnetfiddle.net/UptHy0) | [NET Core](https://dotnetfiddle.net/5dp1qY)
 
 ## Learn more
 
