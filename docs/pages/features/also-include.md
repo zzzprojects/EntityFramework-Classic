@@ -13,7 +13,7 @@ ctx.OrderDetails
 	.ToList();
 ```
 
-[Try it](https://dotnetfiddle.net/tuONVZ)
+Try it: [NET Framework](https://dotnetfiddle.net/tuONVZ) | [NET Core](https://dotnetfiddle.net/LhSCEh)
 
 ### Note
 - If you want to reset the level to the root, use [`Include`](include.md)
@@ -35,4 +35,4 @@ ctx.OrderDetails
 	.ToList();
 ```
 
-[Try it](https://dotnetfiddle.net/33OIDZ)
+Try it: [NET Framework](https://dotnetfiddle.net/33OIDZ) | [NET Core](https://dotnetfiddle.net/Btyl3G)

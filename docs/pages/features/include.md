@@ -14,7 +14,7 @@ ctx.Customers
 			.AlsoInclude(product => product.Supplier)
 	.ToList();
 ```
-[Try it](https://dotnetfiddle.net/MkpoSo)
+Try it: [NET Framework](https://dotnetfiddle.net/MkpoSo) | [NET Core](https://dotnetfiddle.net/dyWV1T)
 
 ### Note
 - If you want to include items from the same level, use [`AlsoInclude`](also-include.md)
@@ -35,7 +35,7 @@ ctx.OrderDetails
 		.AlsoInclude(product => product.Supplier)
 	.ToList();
 ```
-[Try it](https://dotnetfiddle.net/2XJrc5)
+Try it: [NET Framework](https://dotnetfiddle.net/2XJrc5) | [NET Core](https://dotnetfiddle.net/5g8jcN)
 
 > It's planned to remove this limitation.
 

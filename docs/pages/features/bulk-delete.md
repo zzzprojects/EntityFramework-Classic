@@ -12,7 +12,7 @@ context.BulkDelete(customers);
 // Easy to customize
 context.BulkDelete(customers, options => options.ColumnPrimaryKeyExpression = customer => customer.Code);
 ```
-[Try it](https://dotnetfiddle.net/vnq5Dw)
+Try it: [NET Framework](https://dotnetfiddle.net/vnq5Dw) | [NET Core](https://dotnetfiddle.net/UP8x9D)
 
 ## Performance Comparison
 
@@ -21,7 +21,7 @@ context.BulkDelete(customers, options => options.ColumnPrimaryKeyExpression = cu
 | SaveChanges     | 1,200 ms       | 2,400 ms       | 6,000 ms       |
 | BulkDelete      | 50 ms          | 55 ms          | 75 ms         |
 
-[Try it](https://dotnetfiddle.net/BnBmqF)
+Try it: [NET Framework](https://dotnetfiddle.net/BnBmqF) | [NET Core](https://dotnetfiddle.net/cKxsEq)
 
 > HINT: Performance may differ from a database to another. A lot of factors might affect the benchmark time such as index, column type, latency, throttling, etc.
 
@@ -40,7 +40,7 @@ You need to delete a list of `Customer` but you dont have the IDs, you only have
 ```csharp
 context.BulkDelete(customers, options => options.ColumnPrimaryKeyExpression = customer => customer.Code);
 ```
-[Try it](https://dotnetfiddle.net/cGvtjF)
+Try it: [NET Framework](https://dotnetfiddle.net/cGvtjF) | [NET Core](https://dotnetfiddle.net/3uvfUv)
 
 ## Learn more
 

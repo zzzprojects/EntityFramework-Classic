@@ -12,7 +12,7 @@ context.BulkInsert(list);
 // Easy to customize
 context.BulkInsert(list, options => options.BatchSize = 100);
 ```
-[Try it](https://dotnetfiddle.net/7PnUvq)
+Try it: [NET Framework](https://dotnetfiddle.net/7PnUvq) | [NET Core](https://dotnetfiddle.net/Ws2dgA)
 
 ## Performance Comparison
 
@@ -21,7 +21,7 @@ context.BulkInsert(list, options => options.BatchSize = 100);
 | SaveChanges     | 1,200 ms       | 2,400 ms       | 6,000 ms       |
 | BulkInsert      | 50 ms          | 55 ms          | 75 ms          |
 
-[Try it](https://dotnetfiddle.net/hfbiys)
+Try it: [NET Framework](https://dotnetfiddle.net/hfbiys) | [NET Core](https://dotnetfiddle.net/KHmNWf)
 
 > HINT: Performance may differ from a database to another. A lot of factors might affect the benchmark time such as index, column type, latency, throttling, etc.
 
@@ -40,7 +40,7 @@ You need to insert a list of `Invoice` and include related `InvoiceItem`. By def
 ```csharp
 context.BulkInsert(invoices, options => options.IncludeGraph = true);
 ```
-[Try it](https://dotnetfiddle.net/DGkPHC)
+Try it: [NET Framework](https://dotnetfiddle.net/DGkPHC) | [NET Core](https://dotnetfiddle.net/mlFNqB)
 
 ### Bulk Insert customers that don't already exist
 You need to insert a list of `Customer`, but only the ones that doesn't already exists using the customer codes as the key.
@@ -54,7 +54,7 @@ context.BulkInsert(customers, options => {
     options.ColumnPrimaryKeyExpression = x => new { x.Code };
 });
 ```
-[Try it](https://dotnetfiddle.net/CtwBQw)
+Try it: [NET Framework](https://dotnetfiddle.net/CtwBQw) | [NET Core](https://dotnetfiddle.net/THtLSm)
 
 ### Bulk Insert specific columns
 You need to insert a list of `Customer` but only insert some specific column. The [ColumnInputExpression](https://entityframework-extensions.net/column#column-input) option let you choose a column to insert.
@@ -64,7 +64,7 @@ context.BulkInsert(customers, options => {
     options.ColumnInputExpression = x => new { x.Code, x.CreatedDate };
 });
 ```
-[Try it](https://dotnetfiddle.net/x5qTfp)
+Try it: [NET Framework](https://dotnetfiddle.net/x5qTfp) | [NET Core](https://dotnetfiddle.net/XBpAvg)
 
 ## Learn more
 
