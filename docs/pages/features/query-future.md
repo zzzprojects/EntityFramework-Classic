@@ -22,7 +22,7 @@ var ActiveCustomers = context.Customers.Where(x => x.IsActive).Future();
 FiddleHelper.WriteTable("Customers", customers.ToList());		
 FiddleHelper.WriteTable("Active Customers", ActiveCustomers);			
 ```
-[Try it](https://dotnetfiddle.net/DoWJ3t)
+Try it: [NET Framework](https://dotnetfiddle.net/DoWJ3t) | [NET Core](https://dotnetfiddle.net/vMGvuy)
 
 ## Documentation
 
@@ -32,7 +32,7 @@ FiddleHelper.WriteTable("Active Customers", ActiveCustomers);
 
 | Name | Description | Default | Example |
 | :--- | :---------- | :-----: | :------ |
-| `IsEnabled` | Gets or sets if the `QueryFuture` feature is enabled. | true | [Try it](https://dotnetfiddle.net/n6VcfE) |
+| `IsEnabled` | Gets or sets if the `QueryFuture` feature is enabled. | true | [NET Framework](https://dotnetfiddle.net/n6VcfE) / [NET Core](https://dotnetfiddle.net/ezWALV) |
 
 ### QueryFutureEnumerable<TEntityType>
   
@@ -53,7 +53,7 @@ The `QueryFutureEnumerable<TEntityType>` inherit from the `IEnumerable<T>` inter
 
 | Name | Description | Default | Example |
 | :--- | :---------- | :-----: | :------ |
-| `Value` | Gets the value of the future query. | null | [Try it](https://dotnetfiddle.net/ObIY3v) |
+| `Value` | Gets the value of the future query. | null | [NET Framework](https://dotnetfiddle.net/ObIY3v) / [NET Core](https://dotnetfiddle.net/xjEqrX) |
 
 ###### Methods
 
