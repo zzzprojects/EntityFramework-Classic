@@ -18,7 +18,7 @@ context.Customers
 context.Customers.Where(x => x.ID == userId).UpdateFromQuery(x => new Customer {IsActive = false});
 ```
 
-[Try it](https://dotnetfiddle.net/gSJJeh)
+Try it: [NET Framework](https://dotnetfiddle.net/gSJJeh) | [NET Core](https://dotnetfiddle.net/8JuppD)
 
 ## Purpose
 `Updating` entities using `SaveChanges` normally requires to load them first in the `ChangeTracker`. These additional round-trips are often not necessary.
