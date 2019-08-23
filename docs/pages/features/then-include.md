@@ -14,7 +14,7 @@ ctx.Customers
 	.ToList();
 ```
 
-[Try it](https://dotnetfiddle.net/o3xWDl)
+Try it: [NET Framework](https://dotnetfiddle.net/o3xWDl) | [NET Core](https://dotnetfiddle.net/QCESQA)
 
 ```csharp
 ctx.Customers
@@ -23,7 +23,7 @@ ctx.Customers
 	.ToList();
 ```
 
-[Try it](https://dotnetfiddle.net/0VC0W1)
+Try it: [NET Framework](https://dotnetfiddle.net/0VC0W1) | [NET Core](https://dotnetfiddle.net/CULZIt)
 
 ```csharp
 ctx.OrderDetails
@@ -34,7 +34,7 @@ ctx.OrderDetails
 	.ToList();
 ```
 
-[Try it](https://dotnetfiddle.net/DzQzed)
+Try it: [NET Framework](https://dotnetfiddle.net/DzQzed) | [NET Core](https://dotnetfiddle.net/FYIYZ8)
 
 ### Note
 - If you want to reset the level to the root, use [`Include`](include.md)
@@ -57,4 +57,4 @@ ctx.OrderDetails
 	.ToList();
 ```
 
-[Try it](https://dotnetfiddle.net/CFPbYm)
+Try it: [NET Framework](https://dotnetfiddle.net/CFPbYm) | [NET Core](https://dotnetfiddle.net/0ZJjVu)
