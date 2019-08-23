@@ -18,7 +18,7 @@ public class EntityContext : DbContext
 }
 ```
 
-[Try it](https://dotnetfiddle.net/thNOFY)
+Try it: [NET Framework](https://dotnetfiddle.net/thNOFY) | [NET Core](https://dotnetfiddle.net/t9KHwk)
 
 ## SQL Server Compact Example
 ```csharp
