@@ -64,5 +64,13 @@ Try it: [NET Framework](https://dotnetfiddle.net/SQ58gU) | [NET Core](https://do
 | `IsEnabled` | Gets or sets if the `BatchSaveChanges` feature is enabled. When disabled, a `SaveChanges` will be performed instead. | `true` | [NET Framework](https://dotnetfiddle.net/jo6QN1) / [NET Core](https://dotnetfiddle.net/NqAJ1Q) |
 | `UseBatchForSaveChanges` | Gets or sets if all `SaveChanges` call should be replaced internally by `BatchSaveChanges`. If you own a commercial license, we recommend to always set this value to true. | `false` | [NET Framework](https://dotnetfiddle.net/ceeM0J) / [NET Core](https://dotnetfiddle.net/F4NEpM) |
 
+###### Methods
+
+| Name | Description | Example |
+| :--- | :---------- | :------ |
+| `BatchSaveChanges()` | Saves all changes made in this context to the underlying database by combining sql command generated. | [NET Framework](https://dotnetfiddle.net/mtICR7) / [NET Core](https://dotnetfiddle.net/uiFeW9) |
+| `BatchSaveChangesAsync()` | Saves all changes asynchronously made in this context to the underlying database by combining sql command generated. | [NET Framework](https://dotnetfiddle.net/E8LJmC) / [NET Core](https://dotnetfiddle.net/wg4syB) |
+| `BatchSaveChangesAsync(cancellationToken)` | Saves all changes asynchronously made in this context to the underlying database by combining sql command generated. | [NET Framework](https://dotnetfiddle.net/1PLKzr) / [NET Core](https://dotnetfiddle.net/MFO4J9) |
+
 ## Limitations
 - All providers that don't support multi statements such as SQL Compact and Effort will automatically use `SaveChanges` instead.
