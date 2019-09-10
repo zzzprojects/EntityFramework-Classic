@@ -66,6 +66,21 @@ context.BulkInsert(customers, options => {
 ```
 Try it: [NET Framework](https://dotnetfiddle.net/x5qTfp) | [NET Core](https://dotnetfiddle.net/XBpAvg)
 
+## Documentation
+
+### BulkInsert
+
+###### Methods
+
+| Name | Description | Example |
+| :--- | :---------- | :------ |
+| `BulkInsert<T>(items)` | Bulk insert entities in your database. | [NET Framework](https://dotnetfiddle.net/hThOZA) / [NET Core](https://dotnetfiddle.net/78icWN)|
+| `BulkInsert<T>(items, options)` | Bulk insert entities in your database.  | [NET Framework](https://dotnetfiddle.net/JCoqCP) / [NET Core](https://dotnetfiddle.net/ygSotx)|
+| `BulkInsertAsync<T>(items)` | Bulk insert entities asynchronously in your database. | [NET Framework](https://dotnetfiddle.net/p8c3Z3) / [NET Core](https://dotnetfiddle.net/URNBzO)|
+| `BulkInsertAsync<T>(items, options)` | Bulk insert entities asynchronously in your database.  | [NET Framework](https://dotnetfiddle.net/pJuoy0) / [NET Core](https://dotnetfiddle.net/YE7dkP)|
+| `BulkInsertAsync<T>(items, cancellationToken)` | Bulk insert entities asynchronously in your database. | [NET Framework](https://dotnetfiddle.net/Ke5B5e) / [NET Core](https://dotnetfiddle.net/nNLf9I) |
+| `BulkInsertAsync<T>(items, options, cancellationToken)` | Bulk insert entities asynchronously in your database. | [NET Framework](https://dotnetfiddle.net/TKxYDS) / [NET Core](https://dotnetfiddle.net/ZvRUNj)|
+
 ## Learn more
 
 More documentation can be found here: [EF Extensions - Bulk Insert](https://entityframework-extensions.net/bulk-insert)
