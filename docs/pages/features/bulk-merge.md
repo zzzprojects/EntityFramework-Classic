@@ -78,6 +78,20 @@ context.BulkMerge(invoices, options => options.IncludeGraph = true);
 ```
 Try it: [NET Framework](https://dotnetfiddle.net/owLagp) | [NET Core](https://dotnetfiddle.net/hQfCEO)
 
+## Documentation
+
+### BulkMerge
+
+###### Methods
+
+| Name | Description | Example |
+| :--- | :---------- | :------ |
+| `BulkMerge<T>(items)` | Bulk merge entities in your database. | [NET Framework](https://dotnetfiddle.net/mNuYTm) / [NET Core](https://dotnetfiddle.net/C7prtD) |
+| `BulkMerge<T>(items, options)` | Bulk merge entities in your database.  | [NET Framework](https://dotnetfiddle.net/FznXCU) / [NET Core](https://dotnetfiddle.net/3B5JqX) |
+| `BulkMergeAsync<T>(items)` | Bulk merge entities asynchronously in your database. | [NET Framework](https://dotnetfiddle.net/T5qnNK) / [NET Core](https://dotnetfiddle.net/W3WRSp) |
+| `BulkMergeAsync<T>(items, cancellationToken)` | Bulk merge entities asynchronously in your database. | [NET Framework](https://dotnetfiddle.net/TYZXgS) / [NET Core](https://dotnetfiddle.net/KMXNx4) |
+| `BulkMergeAsync<T>(items, options, cancellationToken)` | Bulk merge entities asynchronously in your database. | [NET Framework](https://dotnetfiddle.net/joyorH) / [NET Core](https://dotnetfiddle.net/YPDwBl) |
+
 ## Learn more
 
 More documentation can be found here: [EF Extensions - Bulk Merge](https://entityframework-extensions.net/bulk-merge)
