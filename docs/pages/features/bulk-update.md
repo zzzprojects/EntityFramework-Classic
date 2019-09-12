@@ -61,6 +61,20 @@ context.BulkUpdate(invoices, options => options.IncludeGraph = true);
 ```
 Try it: [NET Framework](https://dotnetfiddle.net/ljXay5) | [NET Core](https://dotnetfiddle.net/ovvcp5)
 
+## Documentation
+
+### BulkUpdate
+
+###### Methods
+
+| Name | Description | Example |
+| :--- | :---------- | :------ |
+| `BulkUpdate<T>(items)` | Bulk update entities in your database. | [NET Framework](https://dotnetfiddle.net/nhDfC3) / [NET Core](https://dotnetfiddle.net/MBZH1g)|
+| `BulkUpdate<T>(items, options)` | Bulk update entities in your database.  | [NET Framework](https://dotnetfiddle.net/vBTSn1) / [NET Core](https://dotnetfiddle.net/cnaUpK)|
+| `BulkUpdateAsync<T>(items)` | Bulk update entities asynchronously in your database. | [NET Framework](https://dotnetfiddle.net/mztFjj) / [NET Core](https://dotnetfiddle.net/WUKxR9)|
+| `BulkUpdateAsync<T>(items, cancellationToken)` | Bulk update entities asynchronously in your database. | [NET Framework](https://dotnetfiddle.net/Fjkzm2) / [NET Core](https://dotnetfiddle.net/AljSYK) |
+| `BulkUpdateAsync<T>(items, options, cancellationToken)` | Bulk update entities asynchronously in your database. | [NET Framework](https://dotnetfiddle.net/U84QYD) / [NET Core](https://dotnetfiddle.net/iu37bl) |
+
 ## Learn more
 
 More documentation can be found here: [EF Extensions - Bulk Update](https://entityframework-extensions.net/bulk-update)
