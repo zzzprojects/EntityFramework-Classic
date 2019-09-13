@@ -36,6 +36,8 @@ var countries1 = await context.Countries.CacheAsync().ConfigureAwait(false);
 var countries2 = await context.Countries.CacheAsync().ConfigureAwait(false);
 ```
 
+Try it: [NET Framework](https://dotnetfiddle.net/r7JqVE) | [NET Core](https://dotnetfiddle.net/ZDHgex)
+
 ## Query Cache Query Deferred
 
 Immediate resolution methods like **Count()** and **FirstOrDefault()** cannot be cached since their expected behavior is to cache the count result or only the first item.
