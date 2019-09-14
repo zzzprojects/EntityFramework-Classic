@@ -42,10 +42,10 @@ The `QueryFutureEnumerable<TEntityType>` inherit from the `IEnumerable<T>` inter
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `ToArrayAsync()` | Converts this object to an array asynchronous. |  |
-| `ToArrayAsync(CancellationToken cancellationToken)` | Converts this object to an array asynchronous. |  |
-| `ToListAsync()` | Converts this object to a list asynchronous. |  |
-| `ToListAsync(CancellationToken cancellationToken)` | Converts this object to a list asynchronous. |  |
+| `ToArrayAsync()` | Converts this object to an array asynchronous. | [NET Framework](https://dotnetfiddle.net/pg1rnj) / [NET Core](https://dotnetfiddle.net/MljKoE) |
+| `ToArrayAsync(CancellationToken cancellationToken)` | Converts this object to an array asynchronous. | [NET Framework](https://dotnetfiddle.net/RBEL7B) / [NET Core](https://dotnetfiddle.net/EbmY1e) |
+| `ToListAsync()` | Converts this object to a list asynchronous. | [NET Framework](https://dotnetfiddle.net/JYXOMi) / [NET Core](https://dotnetfiddle.net/DGqyL1) |
+| `ToListAsync(CancellationToken cancellationToken)` | Converts this object to a list asynchronous. | [NET Framework](https://dotnetfiddle.net/RQkqUb) / [NET Core](https://dotnetfiddle.net/enqN1i) |
   
 ### QueryFutureValue<TResult>
   
