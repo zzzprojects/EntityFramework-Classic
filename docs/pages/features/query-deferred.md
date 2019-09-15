@@ -60,7 +60,7 @@ Try it: [NET Framework](https://dotnetfiddle.net/OshIRK) | [NET Core](https://do
 | Name | Description | Example |
 | :--- | :---------- | :------ |
 | `Execute()` | Execute the deferred expression and return the result. | [NET Framework](https://dotnetfiddle.net/byuQpD) / [NET Core](https://dotnetfiddle.net/dHXqhH) |
-| `ExecuteAsync()` | Execute asynchrounously the deferred expression and return the result. | [Coming soon](#) |
-| `ExecuteAsync(CancellationToken cancellationToken)` | Execute asynchrounously the deferred expression and return the result.  | [Coming soon](#)  |
+| `ExecuteAsync()` | Execute asynchrounously the deferred expression and return the result. | [NET Framework](https://dotnetfiddle.net/eK16Eh) / [NET Core](https://dotnetfiddle.net/Qm0RnT) |
+| `ExecuteAsync(CancellationToken cancellationToken)` | Execute asynchrounously the deferred expression and return the result.  | [NET Framework](https://dotnetfiddle.net/80edw0) / [NET Core](https://dotnetfiddle.net/JmBS0R)  |
 
 
