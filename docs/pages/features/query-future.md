@@ -59,5 +59,5 @@ The `QueryFutureEnumerable<TEntityType>` inherit from the `IEnumerable<T>` inter
 
 | Name | Description | Example |
 | :--- | :---------- | :------ |
-| `ValueAsync()` | Gets the value of the future query. |  |
-| `ValueAsync(CancellationToken cancellationToken)` | Gets the value of the future query. |  |
+| `ValueAsync()` | Gets the value of the future query. | [NET Framework](https://dotnetfiddle.net/hJ6VrE) / [NET Core](https://dotnetfiddle.net/r920Fj) |
+| `ValueAsync(CancellationToken cancellationToken)` | Gets the value of the future query. | [NET Framework](https://dotnetfiddle.net/sgbK5g) / [NET Core](https://dotnetfiddle.net/COg8Wi) |
