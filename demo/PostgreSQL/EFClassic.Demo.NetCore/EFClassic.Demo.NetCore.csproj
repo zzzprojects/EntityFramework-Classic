@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyName>EFClassic.Demo.NetCore</AssemblyName>
+    <RootNamespace>EFClassic.Demo.NetCore</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Z.EntityFramework.Classic" Version="7.1.11" />
+    <PackageReference Include="Z.EntityFramework.Classic.Npgsql" Version="7.1.6" />
+  </ItemGroup>
+
+</Project>
