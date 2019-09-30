@@ -1,0 +1,5 @@
+- [Getting Started](getting-started/overview.md)
+- Documentation
+	- [Documentation](features/bulk-insert.md)
+	- [Release Notes](https://github.com/zzzprojects/EntityFramework-Classic/releases)
+- [Online Examples](/online-examples)
