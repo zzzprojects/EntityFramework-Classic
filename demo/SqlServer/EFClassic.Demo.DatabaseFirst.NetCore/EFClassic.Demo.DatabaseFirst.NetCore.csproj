@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Z.EntityFramework.Classic" Version="7.1.11" />
+    <PackageReference Include="Z.EntityFramework.Classic" Version="7.1.18" />
   </ItemGroup>
 
   <ItemGroup>
