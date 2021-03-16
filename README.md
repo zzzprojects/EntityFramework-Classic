@@ -67,8 +67,6 @@ A **HUGE THANKS** for your help.
 
 ## More Projects
 
-## More Projects
-
 - [EntityFramework Extensions](https://entityframework-extensions.net/)
 - [Dapper Plus](https://dapper-plus.net/)
 - [C# Eval Expression](https://eval-expression.net/)
