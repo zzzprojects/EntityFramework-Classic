@@ -1,13 +1,13 @@
 # What's EF Classic?
-Entity Framework Classic is a supported version from the latest EF6 code base. It supports .NET Framework and .NET Core and overcomes some EF limitations by adding tons of must-haves built-in features.
+Entity Framework Classic is a supported version from the latest EF6 codebase. It supports .NET Framework and .NET Core and overcomes some EF limitations by adding tons of must-haves built-in features.
 
 Download: https://entityframework-classic.net/download
 
 ### Who is it for?
-If you are looking for performance enhancement, an Entity Framework version that's compatible with .NET Core, tons of new built-in features, and outstanding customer support, then EF Classic is for you!
+If you are looking for performance enhancement, an Entity Framework version that's compatible with .NET Core, tons of new built-in features, and outstanding customer support. In that case, EF Classic is for you!
 
 ### Why should you use it?
-EF Classic is a EF6 fork compatible with .NET Core. It's a limitless version that includes tons of must-haves built-in features. Need support or a particular feature? 
+EF Classic is an EF6 fork compatible with .NET Core. It's a limitless version that includes tons of must-haves built-in features. Need support or a particular feature? 
 
 ## Features
 
@@ -45,21 +45,20 @@ EF Classic is a EF6 fork compatible with .NET Core. It's a limitless version tha
 - [C# Eval Function](https://entityframework-classic.net/csharp-eval-function)
 
 ## What will happen to your other prime & free libraries on Entity Framework?
-Basically, nothing will change. We will keep supporting them all.
+Nothing will change. We will keep supporting them all.
 
 - [Entity Framework Extensions](https://entityframework-extensions.net/): EF Classic has a dependency to this library.
 - [Eval Expression.NET](https://eval-expression.net/): EF Classic has a dependency to this library.
 - [EF Effort](https://www.nuget.org/packages/Z.EntityFramework.Classic.Effort/): A version is available compatible with EF Classic
 - [EF GraphDiff](https://github.com/zzzprojects/GraphDiff): We are currently investigating to either rewrite this library or to release a version compatible with EF Classic
 - [Entity Framework Dynamic Filter](https://entityframework-dynamicfilters.net/): We will continue to support this library, but all features will be rewritten in EF Classic to add more flexibility.
-- [Entity Framework Plus](https://entityframework-plus.net/): We will continue to support this library, but all features will be re-written in EF Classic to add more flexibility.
+- [Entity Framework Plus](https://entityframework-plus.net/): We will continue to support this library, but all features will be rewritten in EF Classic to add more flexibility.
 
 ## Contribute
 The best way to contribute is by **spreading the word** about the library:
 
  - Blog it
  - Comment it
- - Fork it
  - Star it
  - Share it
  
@@ -67,13 +66,11 @@ A **HUGE THANKS** for your help.
 
 ## More Projects
 
-- [EntityFramework Extensions](https://entityframework-extensions.net/)
 - [Dapper Plus](https://dapper-plus.net/)
-- [C# Eval Expression](https://eval-expression.net/)
 - [Bulk Operations](https://bulk-operations.net/)
-- [SQL Eval Function](https://eval-sql.net/)
-- [LINQ To SQL Plus](https://linqtosql-plus.net/)
-- and much more! 
-To view all our free and paid librariries visit our [website](https://zzzprojects.com/).
+- [C# Eval Expression](https://eval-expression.net/)
+- and much more!
 
-Contact our outstanding customer support for any request. We usually answer within the next business day, hour, or minutes!
+To view all our free and paid projects, visit our [website](https://zzzprojects.com/).
+
+Contact our outstanding **[customer support](https://entityframework-extensions.net/contact-us)** for any request. We usually answer within the next day, hour, or minutes!
