@@ -55,6 +55,7 @@ Nothing will change. We will keep supporting them all.
 - [Entity Framework Plus](https://entityframework-plus.net/): We will continue to support this library, but all features will be rewritten in EF Classic to add more flexibility.
 
 ## Contribute
+
 The best way to contribute is by **spreading the word** about the library:
 
  - Blog it
