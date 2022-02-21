@@ -1,3 +1,0 @@
-- [Overview](overview.md)
-- [Community](community.md)
-- [Licensing](licensing.md)
